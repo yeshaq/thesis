@@ -13,5 +13,13 @@ textDump/
 *.log
 *.stdout
 *.stderr
+
+*.*~
+*.out
+*.toc
+*.snm
+*.nav
+*.aux
+
 .DS_Store
 *.svn-base
