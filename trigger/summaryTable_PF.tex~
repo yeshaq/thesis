@@ -1,0 +1,161 @@
+\documentclass{beamer}
+\setbeamertemplate{navigation symbols}{\thepage}
+\usepackage{verbatim}
+\usepackage{color}
+
+\begin{document}
+
+\title{AlphaT Trigger Turn on}
+\author{Y.~Eshaq\\
+  \today}
+\date{}
+%\date{\today}
+\setbeamertemplate{footline}{}
+\frame{\titlepage}
+%\begin{center}
+%\frame{
+%\setlength{\tabcolsep}{1pt}
+%\tiny
+%\vspace*{1.0cm}
+%\hspace*{-0.9cm}
+%\begin{tabular}{ c || c | c | c | c | c | c | c | c | c}
+%  nJet & $375-475$ & $475-575$ & $575-675$ & $675-775$ & $775-875$ & $875-975$ & $975-1075$ & $1075-1175$ & $1175<HT$\\ 
+%  \hline
+%  \hline                        
+%  $\le3$ & \input{../textDump/v27/tex_HT375_475_100_100_50_AlphaT_le3j.tex} \input{../textDump/v27/tex_HT475_575_100_100_50_AlphaT_le3j.tex} \input{../textDump/v27/tex_HT575_675_100_100_50_AlphaT_le3j.tex} \input{../textDump/v27/tex_HT675_775_100_100_50_AlphaT_le3j.tex} \input{../textDump/v27/tex_HT775_875_100_100_50_AlphaT_le3j.tex} \input{../textDump/v27/tex_HT875_975_100_100_50_AlphaT_le3j.tex} \input{../textDump/v27/tex_HT975_1075_100_100_50_AlphaT_le3j.tex} \input{../textDump/v27/tex_HT1075_1175_100_100_50_AlphaT_le3j.tex} \input{../textDump/v27/tex_HT1175_100_100_50_AlphaT_le3j.tex} \\
+%  \hline
+%  $\ge4$ & \input{../textDump/v27/tex_HT375_475_100_100_50_AlphaT_ge4j.tex} \input{../textDump/v27/tex_HT475_575_100_100_50_AlphaT_ge4j.tex} \input{../textDump/v27/tex_HT575_675_100_100_50_AlphaT_ge4j.tex} \input{../textDump/v27/tex_HT675_775_100_100_50_AlphaT_ge4j.tex} \input{../textDump/v27/tex_HT775_875_100_100_50_AlphaT_ge4j.tex} \input{../textDump/v27/tex_HT875_975_100_100_50_AlphaT_ge4j.tex} \input{../textDump/v27/tex_HT975_1075_100_100_50_AlphaT_ge4j.tex} \input{../textDump/v27/tex_HT1075_1175_100_100_50_AlphaT_ge4j.tex} \input{../textDump/v27/tex_HT1175_100_100_50_AlphaT_ge4j.tex} \\
+%
+%\end{tabular}
+%}
+
+
+\frame{
+
+\setlength{\tabcolsep}{1pt}
+\hspace*{-0.9cm}
+
+\begin{center}
+  $375-475~GeV$\\
+  \vspace*{0.7cm}
+  PF\\   
+  \begin{tabular}{ c || c | c | c }
+    nJet & $HT250 \otimes a_{T}0.55$ & $HT300 \otimes a_{T}0.53$ & $HT350 \otimes a_{T}0.52$ \\
+    \hline
+    \hline
+    $\le3j$ & \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT250xaT0p55_PF_le3j.tex} \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j.tex} \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT350xaT0p52_PF_le3j.tex}
+    \hline
+    $\ge4j$ & \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT250xaT0p55_PF_ge4j.tex} \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j.tex} \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j.tex}
+  \end{tabular}\\
+  \vspace*{0.3cm}
+  Calo\\
+  \begin{tabular}{ c || c | c | c }
+    nJet & $HT250 \otimes a_{T}0.55$ & $HT300 \otimes a_{T}0.53$ & $HT350 \otimes a_{T}0.52$ \\
+    \hline
+    \hline
+    $\le3j$ & \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT250xaT0p55_Calo_le3j.tex} \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT300xaT0p53_Calo_le3j.tex} \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT350xaT0p52_Calo_le3j.tex}
+    \hline
+    $\ge4j$ & \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT250xaT0p55_Calo_ge4j.tex} \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT300xaT0p53_Calo_ge4j.tex} \input{../textDump/v28/tex_HT375_475_100_100_50_AlphaT_HT350xaT0p52_Calo_ge4j.tex}
+  \end{tabular}
+
+\end{center}
+
+}
+
+\frame{
+
+\setlength{\tabcolsep}{1pt}
+\hspace*{-0.9cm}
+\small
+\begin{center}
+  $475-575~GeV$\\
+  \vspace*{0.7cm}
+  PF\\
+  \begin{tabular}{ c || c | c | c | c}
+    nJet & $HT250 \otimes a_{T}0.55$ & $HT300 \otimes a_{T}0.53$ & $HT350 \otimes a_{T}0.52$ & $HT400 \otimes a_{T}0.51$ \\
+    \hline
+    \hline
+    $\le3j$ & \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT250xaT0p55_PF_le3j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT300xaT0p53_PF_le3j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT400xaT0p51_PF_le3j.tex}
+    \hline
+    $\ge4j$ & \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT250xaT0p55_PF_ge4j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j.tex}
+  \end{tabular}\\
+  \vspace*{0.3cm}  
+  Calo\\
+  \begin{tabular}{ c || c | c | c | c}
+    nJet & $HT250 \otimes a_{T}0.55$ & $HT300 \otimes a_{T}0.53$ & $HT350 \otimes a_{T}0.52$ & $HT400 \otimes a_{T}0.51$ \\
+    \hline
+    \hline
+    $\le3j$ & \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT250xaT0p55_Calo_le3j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT300xaT0p53_Calo_le3j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT350xaT0p52_Calo_le3j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT400xaT0p51_Calo_le3j.tex}
+    \hline
+    $\ge4j$ & \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT250xaT0p55_Calo_ge4j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT300xaT0p53_Calo_ge4j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT350xaT0p52_Calo_ge4j.tex} \input{../textDump/v28/tex_HT475_575_100_100_50_AlphaT_HT400xaT0p51_Calo_ge4j.tex}
+  \end{tabular}
+
+\end{center}
+
+}
+
+
+\frame{
+  
+\setlength{\tabcolsep}{1pt}
+\hspace*{-0.9cm}
+
+\begin{center}
+  $575-675~GeV$\\
+  \vspace*{0.7cm}
+  PF\\   
+  \begin{tabular}{ c || c | c | c }
+    nJet & $HT300 \otimes a_{T}0.53$ & $HT350 \otimes a_{T}0.52$ & $HT400 \otimes a_{T}0.51$ \\
+    \hline
+    \hline
+    $\le3j$ & \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT300xaT0p53_PF_le3j.tex} \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT350xaT0p52_PF_le3j.tex} \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_le3j.tex}
+    \hline
+    $\ge4j$ & \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j.tex} \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j.tex} \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j.tex}
+  \end{tabular}\\
+  \vspace*{0.3cm}
+  Calo\\
+  \begin{tabular}{ c || c | c | c }
+    nJet & $HT300 \otimes a_{T}0.53$ & $HT350 \otimes a_{T}0.52$ & $HT400 \otimes a_{T}0.51$ \\
+    \hline
+    \hline
+    $\le3j$ & \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT300xaT0p53_Calo_le3j.tex} \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT350xaT0p52_Calo_le3j.tex} \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT400xaT0p51_Calo_le3j.tex}
+    \hline
+    $\ge4j$ & \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT300xaT0p53_Calo_ge4j.tex} \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT350xaT0p52_Calo_ge4j.tex} \input{../textDump/v28/tex_HT575_675_100_100_50_AlphaT_HT400xaT0p51_Calo_ge4j.tex}
+  \end{tabular}
+
+\end{center}
+
+}
+
+\frame{
+\setlength{\tabcolsep}{1pt}
+\vspace*{1.0cm}
+\hspace*{-0.9cm}
+\begin{center}
+PF\\
+\begin{tabular}{ c || c | c | c | c | c | c}
+  nJet & $675-775$ & $775-875$ & $875-975$ & $975-1075$ & $1075<HT$\\ 
+  \hline
+  \hline                        
+  $\le3$ & \input{../textDump/v28/tex_HT675_775_100_100_50_AlphaT_PF_le3j.tex} \input{../textDump/v28/tex_HT775_875_100_100_50_AlphaT_PF_le3j.tex} \input{../textDump/v28/tex_HT875_975_100_100_50_AlphaT_PF_le3j.tex} \input{../textDump/v28/tex_HT975_1075_100_100_50_AlphaT_PF_le3j.tex} \input{../textDump/v28/tex_HT1075_1175_100_100_50_AlphaT_PF_le3j.tex} \input{../textDump/v28/tex_HT1175_100_100_50_AlphaT_PF_le3j.tex} \\
+  \hline
+  $\ge4$ & \input{../textDump/v28/tex_HT675_775_100_100_50_AlphaT_PF_ge4j.tex} \input{../textDump/v28/tex_HT775_875_100_100_50_AlphaT_PF_ge4j.tex} \input{../textDump/v28/tex_HT875_975_100_100_50_AlphaT_PF_ge4j.tex} \input{../textDump/v28/tex_HT975_1075_100_100_50_AlphaT_PF_ge4j.tex} \input{../textDump/v28/tex_HT1075_1175_100_100_50_AlphaT_PF_ge4j.tex} \input{../textDump/v28/tex_HT1175_100_100_50_AlphaT_PF_ge4j.tex} \\
+\end{tabular}\\
+\vspace*{0.3cm}
+Calo\\
+\begin{tabular}{ c || c | c | c | c | c | c}
+  nJet & $675-775$ & $775-875$ & $875-975$ & $975-1075$ & $1075<HT$\\ 
+  \hline
+  \hline                        
+  $\le3$ & \input{../textDump/v28/tex_HT675_775_100_100_50_AlphaT_PF_le3j.tex} \input{../textDump/v28/tex_HT775_875_100_100_50_AlphaT_PF_le3j.tex} \input{../textDump/v28/tex_HT875_975_100_100_50_AlphaT_PF_le3j.tex} \input{../textDump/v28/tex_HT975_1075_100_100_50_AlphaT_PF_le3j.tex} \input{../textDump/v28/tex_HT1075_1175_100_100_50_AlphaT_PF_le3j.tex} \input{../textDump/v28/tex_HT1175_100_100_50_AlphaT_PF_le3j.tex} \\
+  \hline
+  $\ge4$ & \input{../textDump/v28/tex_HT675_775_100_100_50_AlphaT_PF_ge4j.tex} \input{../textDump/v28/tex_HT775_875_100_100_50_AlphaT_PF_ge4j.tex} \input{../textDump/v28/tex_HT875_975_100_100_50_AlphaT_PF_ge4j.tex} \input{../textDump/v28/tex_HT975_1075_100_100_50_AlphaT_PF_ge4j.tex} \input{../textDump/v28/tex_HT1075_1175_100_100_50_AlphaT_PF_ge4j.tex} \input{../textDump/v28/tex_HT1175_100_100_50_AlphaT_PF_ge4j.tex} \\
+
+\end{tabular}
+\end{center}
+}
+
+
+
+\end{document}
+
