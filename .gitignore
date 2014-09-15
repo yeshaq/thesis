@@ -1,0 +1,17 @@
+### directories ###
+
+plotDump/
+textDump/
+
+
+### file types ###
+
+*.sh
+*.pyc
+*.aux
+*.synctex.gz
+*.log
+*.stdout
+*.stderr
+.DS_Store
+*.svn-base
