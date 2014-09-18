@@ -1,0 +1,12 @@
+caloJet_ge2j_200 
+xcak5JetSumEtPat_eq0b: 
+
+HT bin, Purity, Data, MC, MC error, Correction, Correction error 
+200-225, 0.900, 17344.000, 17991.101, 90.890, 0.868, 0.004, 0.853 
+300-325, 0.870, 8739.000, 9238.414, 53.546, 0.823, 0.006, 0.797 
+caloJet_ge2j_200 
+xcak5JetSumEtPat_eq2b: 
+
+HT bin, Purity, Data, MC, MC error, Correction, Correction error 
+200-225, 0.819, 854.000, 650.248, 10.771, 1.075, 0.036, 1.092 
+300-325, 0.889, 1212.000, 1157.416, 14.048, 0.931, 0.022, 0.923 

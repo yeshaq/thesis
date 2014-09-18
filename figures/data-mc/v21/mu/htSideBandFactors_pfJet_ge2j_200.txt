@@ -1,0 +1,12 @@
+pfJet_ge2j_200 
+xcak5JetPFSumEtPat_eq0b: 
+
+HT bin, Purity, Data, MC, MC error, Correction, Correction error 
+200-225, 0.896, 17770.000, 18013.121, 85.926, 0.884, 0.004, 0.871 
+300-325, 0.863, 9147.000, 9325.909, 54.854, 0.846, 0.006, 0.822 
+pfJet_ge2j_200 
+xcak5JetPFSumEtPat_eq2b: 
+
+HT bin, Purity, Data, MC, MC error, Correction, Correction error 
+200-225, 0.826, 908.000, 736.769, 11.526, 1.018, 0.031, 1.022 
+300-325, 0.885, 1445.000, 1225.389, 14.404, 1.043, 0.026, 1.049 
