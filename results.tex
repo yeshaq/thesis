@@ -1,0 +1,175 @@
+\clearpage
+\section{Results\label{sec:results}}
+
+\subsection{Standard Model\label{sec:smInterp}}
+
+%In order to test the compatibility of the observed signal region
+%yields with the expectations from only SM processes for a given
+%category of events defined in terms of \njet and \nb, signal
+%contributions are fixed to zero and the likelihood function is
+%maximized over all parameters using RooFit~\cite{roofit} and
+%MINUIT~\cite{James:1975dr}. 
+%The SM expectations and the associated uncertainties are determined
+%through an ensemble of pseudo-experiments that consider all relevant
+%data samples under the SM-only hypothesis. The data control samples
+%considered by the fit for each event category are summarised in
+%Table~\ref{tab:fit-plots}. 
+%Table~\ref{tab:ensemble-summary-posteriori} summarises the observed
+%data yields and the fit result for all event categories and all signal
+%region bins. The resulting parameter values are listed in
+%Tables~\ref{tab:mlParameterValues0b_le3j}--\ref{tab:mlParameterValuesge4b_ge4j}
+%found in Appendix~\ref{app:ml-params}. 
+%
+%Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4jge4b} show
+%the \scalht-binned observed data yields (black filled circles) and the
+%SM expectations and uncertainties (dark blue solid line with light
+%blue bands) as determined by the fit for the hadronic signal region
+%and the \mj or all three (\mj, \mmj and \gj) control samples,
+%depending on the event category. The uncertainties in the SM
+%expectations reflect the statistical uncertainties in the considered
+%data samples and the systematic uncertainties in the transfer factors
+%that link the signal region and control samples. 
+%Tables~\ref{tab:ensemble-0b-le3j}--\ref{tab:ensemble-ge4b-ge4j} in
+%Appendix~\ref{app:ml-yields} summarise the observed data yields and
+%the fit result for all event categories and both signal region and
+%control sample bins (\ie the same information contained in
+%Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4jge4b}, but in
+%tabular form).
+%
+%For each of the eight categories of events defined by requirements on
+%\njet and \nb, the goodness-of-fit of the SM-only hypothesis is
+%determined by considering simultaneously up to eleven bins in \scalht
+%from the signal region and up to eleven or 30 bins from the data
+%control sample(s) depending on the event category. Goodness-of-fit is
+%determined using a method from~\cite{Cowan:358560}.  The value
+%\lk{data}{max} of the likelihood function at its maximum is noted.
+%The likelihood function (using the ML parameter values) is then used
+%as a p.d.f. for the observations to generate many pseudo-experiments.
+%For each pseudo-experiment, the likelihood function is again maximized
+%over all parameters, and the value \lk{}{max} entered in a histogram.
+%The quantile of \lk{data}{max} in this histogram is interpreted as a
+%$p$-value. The p-values obtained, shown in Figure~\ref{fig:fluct} (Top
+%Left), are found to be uniformly distributed in the range 0.0--1.0,
+%with the lowest p-value determined to be 0.17.
+%
+%The compatibility of the SM expectation and observed event count is
+%also evaluated for each of the 75 signal region bins. A profile
+%likelihood ratio is used to determine a p-value and the pull per
+%signal region bin. Figure~\ref{fig:fluct} shows the pull as a function
+%of the signal region bin (Top Right) and the pull (Bottom Left) and
+%p-value (Bottom Right) distributions. The pulls appear to be randomly
+%distributed across signal region bins with no obvious structure. The
+%pull distribution approximates a Gaussian-like behaviour. The
+%probability for the observed positive tail in the pull distribution to
+%occur by chance is higher than 0.5\%, and there is no excess of
+%outliers beyond $2\sigma$. In summary, the observed result is
+%consistent with an, albeit rare, statistical fluctuation.
+%
+%\begin{figure}[h!]
+%  \begin{center}
+%    \subfigure[p-values per event category.]{
+%      \includegraphics[width=0.45\textwidth, trim=0 190 290 20, clip=true]{figures/fit/v1/pValues} % lbrt
+%    } 
+%    \subfigure[Pull versus signal region bin.]{
+%      \includegraphics[width=0.45\textwidth, trim=0 0 0 30, clip=true]{figures/best_fit/data}
+%    } \\
+%    \subfigure[Pull per signal region bin.]{
+%      \includegraphics[width=0.45\textwidth, trim=0 0 0 0, clip=true]{figures/fit/v1/pull_per_bin_gaus}
+%    } 
+%    \subfigure[p-value per signal region bin.]{
+%      \includegraphics[width=0.45\textwidth, trim=0 0 0 0, clip=true]{figures/fit/v1/pvalue_per_bin}
+%    } \\
+%    \caption{Pulls and p-values. See text for details}
+%    \label{fig:fluct}
+%  \end{center}
+%\end{figure}
+%
+%Figures~\ref{fig:best-fit-control-only-le3j0b}--\ref{fig:best-fit-control-only-ge4jge4b}
+%show the observed data yields (black filled circles) and SM
+%expectations and associated uncertainties (dark green solid line with
+%light green bands). In this case, the hadronic signal region yields
+%are not considered and the SM predictions are determined solely from
+%the \mj or all three data control samples (depending on the event
+%category). Figures~\ref{fig:best-fit-control-only-le3j0b}--\ref{fig:best-fit-control-only-ge4jge4b}
+%and Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4jge4b}
+%correspond to ``a priori'' and ``a posteriori'' fits, respectively.
+%In addition, Table~\ref{tab:ensemble-summary-priori} summarises the
+%observed data yields and the fit result for all event categories and
+%all signal region bins for the ``a priori'' fit.  The uncertainties in
+%the SM expectations are smaller for the ``a posteriori'' fit due to
+%the additional information from hadronic signal region counts.
+%
+%\begin{landscape}
+%\begin{center}
+%\begin{table}[h!]
+%  \caption{Summary of the ``a posteriori'' fit.}
+%  \label{tab:ensemble-summary-posteriori}
+%  \centering
+%  \scriptsize
+%  \begin{tabular}{ llllllllllllll }
+%    \hline
+%    \hline
+%    \multicolumn{2}{c}{} & \multicolumn{11}{c}{\scalht (GeV)}                                                                                                                                                                                                                                            \\ 
+%    \njet                & \nb      &        & 200--275              & 275--325             & 325--375             & 375--475             & 475--575             & 575--675             & 675--775             & 775--875             & 875--975             & 975--1075           & 1075--$\infty$      \\ 
+%    \hline
+%    2--3                 & $0$      & SM\T   & $13235^{+119}_{-101}$ & $5417^{+73}_{-62}$   & $3562^{+69}_{-48}$   & $2482^{+38}_{-40}$   & $689^{+15}_{-13}$    & $231^{+13}_{-10}$    & $72.2^{+5.2}_{-4.0}$ & $28.1^{+3.2}_{-3.0}$ & $11.2^{+1.4}_{-1.6}$ & $6.0^{+1.1}_{-0.9}$ & $3.7^{+0.9}_{-0.7}$ \\ 
+%    2--3                 & $0$      & Data\T & $13310$               & $5404$               & $3580$               & $2475$               & $698$                & $224$                & $81$                 & $28$                 & $12$                 & $9$                 & $3$                 \\
+%    2--3                 & $1$      & SM\T   & $1743^{+32}_{-32}$    & $843^{+23}_{-26}$    & $580^{+23}_{-18}$    & $413^{+16}_{-14}$    & $102^{+5}_{-5}$      & $27.0^{+2.8}_{-2.9}$ & $9.1^{+1.2}_{-1.2}$  & $3.3^{+0.7}_{-0.7}$  & $2.3^{+0.7}_{-0.6}$  & $0.3^{+0.2}_{-0.1}$ & $0.2^{+0.1}_{-0.1}$ \\ 
+%    2--3                 & $1$      & Data\T & $1802$                & $835$                & $597$                & $416$                & $97$                 & $29$                 & $7$                  & $4$                  & $1$                  & $0$                 & $0$                 \\
+%    2--3                 & $2$      & SM\T   & $176^{+8}_{-6}$       & $115^{+6}_{-6}$      & $104^{+6}_{-5}$      & $68.1^{+4.7}_{-4.7}$ & $15.2^{+1.6}_{-1.5}$ & $3.3^{+0.5}_{-0.6}$  & $1.1^{+0.3}_{-0.3}$  & $0.2^{+0.1}_{-0.1}$  & $0.1^{+0.0}_{-0.0}$  & \multicolumn{2}{c}{}                      \\ 
+%    2--3                 & $2$      & Data\T & $174$                 & $119$                & $117$                & $70$                 & $18$                 & $7$                  & $1$                  & $0$                  & $0$                  & \multicolumn{2}{c}{}                      \\ 
+%    $\geq 4$             & $0$      & SM\T   & $104^{+6}_{-8}$       & $567^{+21}_{-20}$    & $454^{+20}_{-19}$    & $397^{+14}_{-14}$    & $250^{+11}_{-10}$    & $134^{+10}_{-8}$     & $55.5^{+4.4}_{-4.1}$ & $19.2^{+2.5}_{-2.1}$ & $9.8^{+1.6}_{-1.4}$  & $4.6^{+1.0}_{-1.0}$ & $4.2^{+1.0}_{-0.9}$ \\ 
+%    $\geq 4$             & $0$      & Data\T & $103$                 & $590$                & $455$                & $391$                & $274$                & $149$                & $56$                 & $18$                 & $12$                 & $7$                 & $8$                 \\
+%    $\geq 4$             & $1$      & SM\T   & $39.4^{+3.0}_{-3.0}$  & $216^{+9}_{-9}$      & $238^{+13}_{-14}$    & $179^{+9}_{-10}$     & $104^{+6}_{-6}$      & $36.4^{+3.5}_{-3.3}$ & $14.2^{+1.8}_{-1.8}$ & $8.6^{+1.5}_{-1.4}$  & $3.9^{+0.9}_{-0.8}$  & $1.1^{+0.4}_{-0.3}$ & $1.2^{+0.4}_{-0.4}$ \\ 
+%    $\geq 4$             & $1$      & Data\T & $38$                  & $207$                & $250$                & $181$                & $108$                & $41$                 & $10$                 & $14$                 & $6$                  & $1$                 & $1$                 \\
+%    $\geq 4$             & $2$      & SM\T   & $13.3^{+1.0}_{-1.0}$  & $77.1^{+4.4}_{-4.4}$ & $95.5^{+7.7}_{-6.7}$ & $77.4^{+5.7}_{-5.9}$ & $48.2^{+3.7}_{-3.7}$ & $18.4^{+3.1}_{-2.4}$ & $6.2^{+1.0}_{-0.9}$  & $1.7^{+0.4}_{-0.4}$  & $1.8^{+0.4}_{-0.3}$  & \multicolumn{2}{c}{}                      \\ 
+%    $\geq 4$             & $2$      & Data\T & $17$                  & $82$                 & $95$                 & $86$                 & $48$                 & $19$                 & $10$                 & $2$                  & $1$                  & \multicolumn{2}{c}{}                      \\ 
+%    $\geq 4$             & $3$      & SM\T   & $1.0^{+0.2}_{-0.2}$   & $8.2^{+0.8}_{-0.8}$  & $10.9^{+1.6}_{-1.5}$ & $8.2^{+1.1}_{-1.1}$  & $5.8^{+1.0}_{-0.8}$  & $2.2^{+0.6}_{-0.5}$  & $0.9^{+0.3}_{-0.2}$  & $0.2^{+0.1}_{-0.1}$  & $0.2^{+0.1}_{-0.1}$  & \multicolumn{2}{c}{}                      \\ 
+%    $\geq 4$             & $3$      & Data\T & $0$                   & $9$                  & $8$                  & $8$                  & $9$                  & $1$                  & $3$                  & $0$                  & $0$                  & \multicolumn{2}{c}{}                      \\ 
+%    $\geq 4$             & $\geq 4$ & SM\T   & $0.0^{+0.0}_{-0.0}$   & $0.1^{+0.1}_{-0.1}$  & $0.5^{+0.3}_{-0.3}$  & $0.9^{+0.3}_{-0.3}$  & \multicolumn{7}{l}{}                                                                                                                                         \\ 
+%    $\geq 4$             & $\geq 4$ & Data\T & $0$                   & $0$                  & $0$                  & $3$                  & \multicolumn{7}{l}{}                                                                                                                                         \\ 
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+%\end{center}
+%\end{landscape}
+%
+%\begin{landscape}
+%\begin{center}
+%\begin{table}[h!]
+%  \caption{Summary of the ``a priori'' fit.}
+%  \label{tab:ensemble-summary-priori}
+%  \centering
+%  \scriptsize
+%  \begin{tabular}{ llllllllllllll }
+%    \hline
+%    \hline
+%    \multicolumn{2}{c}{} & \multicolumn{11}{c}{\scalht (GeV)}                                                                                                                                                                                                                                              \\ 
+%    \njet                & \nb      &        & 200--275              & 275--325             & 325--375              & 375--475             & 475--575              & 575--675             & 675--775             & 775--875             & 875--975             & 975--1075           & 1075--$\infty$      \\ 
+%    \hline
+%    2--3                 & $0$      & SM\T   & $12391^{+368}_{-325}$ & $5566^{+325}_{-188}$ & $3424^{+205}_{-149}$  & $2473^{+131}_{-96}$  & $684^{+38}_{-34}$     & $231^{+18}_{-19}$    & $69.8^{+6.1}_{-6.6}$ & $27.9^{+3.9}_{-3.2}$ & $11.0^{+2.1}_{-1.8}$ & $5.4^{+0.8}_{-1.0}$ & $3.7^{+0.9}_{-0.8}$ \\ 
+%    2--3                 & $0$      & Data\T & $13310$               & $5404$               & $3580$                & $2475$               & $698$                 & $224$                & $81$                 & $28$                 & $12$                 & $9$                 & $3$                 \\ 
+%    2--3                 & $1$      & SM\T   & $1626^{+60}_{-47}$    & $862^{+48}_{-41}$    & $548^{+29}_{-35}$     & $413^{+28}_{-23}$    & $103^{+8}_{-7}$       & $26.6^{+3.1}_{-3.2}$ & $9.5^{+1.2}_{-1.6}$  & $3.1^{+0.9}_{-0.8}$  & $2.6^{+0.9}_{-0.8}$  & $0.4^{+0.2}_{-0.2}$ & $0.2^{+0.1}_{-0.1}$ \\ 
+%    2--3                 & $1$      & Data\T & $1802$                & $835$                & $597$                 & $416$                & $97$                  & $29$                 & $7$                  & $4$                  & $1$                  & $0$                 & $0$                 \\ 
+%    2--3                 & $2$      & SM\T   & $177^{+9}_{-7}$       & $113^{+7}_{-7}$      & $97.3^{+6.3}_{-6.6}$  & $66.0^{+6.3}_{-5.8}$ & $14.6^{+1.7}_{-1.4}$  & $2.9^{+0.5}_{-0.5}$  & $1.1^{+0.2}_{-0.3}$  & $0.2^{+0.1}_{-0.1}$  & $0.1^{+0.1}_{-0.0}$  & \multicolumn{2}{c}{}                      \\ 
+%    2--3                 & $2$      & Data\T & $174$                 & $119$                & $117$                 & $70$                 & $18$                  & $7$                  & $1$                  & $0$                  & $0$                  & \multicolumn{2}{c}{}                      \\ 
+%    $\geq 4$             & $0$      & SM\T   & $106^{+10}_{-10}$     & $520^{+32}_{-34}$    & $448^{+39}_{-54}$     & $369^{+31}_{-25}$    & $224^{+17}_{-15}$     & $109^{+14}_{-13}$    & $46.8^{+5.8}_{-6.1}$ & $19.2^{+2.8}_{-2.7}$ & $9.2^{+1.7}_{-1.7}$  & $3.7^{+1.1}_{-0.9}$ & $3.2^{+0.7}_{-0.7}$ \\ 
+%    $\geq 4$             & $0$      & Data\T & $103$                 & $590$                & $455$                 & $391$                & $274$                 & $149$                & $56$                 & $18$                 & $12$                 & $7$                 & $8$                 \\ 
+%    $\geq 4$             & $1$      & SM\T   & $39.8^{+3.2}_{-3.5}$  & $223^{+14}_{-12}$    & $211^{+25}_{-23}$     & $171^{+18}_{-15}$    & $98.7^{+10.1}_{-9.1}$ & $35.5^{+6.0}_{-5.1}$ & $14.8^{+2.2}_{-2.2}$ & $6.8^{+1.5}_{-1.2}$  & $3.2^{+0.9}_{-0.9}$  & $1.1^{+0.5}_{-0.4}$ & $1.2^{+0.4}_{-0.4}$ \\ 
+%    $\geq 4$             & $1$      & Data\T & $38$                  & $207$                & $250$                 & $181$                & $108$                 & $41$                 & $10$                 & $14$                 & $6$                  & $1$                 & $1$                 \\ 
+%    $\geq 4$             & $2$      & SM\T   & $13.0^{+1.0}_{-0.9}$  & $75.5^{+4.8}_{-4.8}$ & $96.1^{+11.4}_{-9.4}$ & $69.5^{+7.2}_{-8.3}$ & $43.9^{+4.8}_{-5.7}$  & $16.1^{+3.7}_{-2.7}$ & $5.2^{+1.2}_{-0.9}$  & $1.7^{+0.3}_{-0.4}$  & $1.9^{+0.5}_{-0.4}$  & \multicolumn{2}{c}{}                      \\ 
+%    $\geq 4$             & $2$      & Data\T & $17$                  & $82$                 & $95$                  & $86$                 & $48$                  & $19$                 & $10$                 & $2$                  & $1$                  & \multicolumn{2}{c}{}                      \\ 
+%    $\geq 4$             & $3$      & SM\T   & $1.0^{+0.2}_{-0.2}$   & $8.1^{+0.8}_{-0.8}$  & $11.7^{+1.9}_{-1.6}$  & $8.0^{+1.4}_{-1.2}$  & $5.3^{+1.2}_{-0.8}$   & $2.3^{+0.6}_{-0.5}$  & $0.8^{+0.2}_{-0.2}$  & $0.2^{+0.1}_{-0.1}$  & $0.2^{+0.1}_{-0.1}$  & \multicolumn{2}{c}{}                      \\ 
+%    $\geq 4$             & $3$      & Data\T & $0$                   & $9$                  & $8$                   & $8$                  & $9$                   & $1$                  & $3$                  & $0$                  & $0$                  & \multicolumn{2}{c}{}                      \\ 
+%    $\geq 4$             & $\geq 4$ & SM\T   & $0.0^{+0.0}_{-0.0}$  & $0.1^{+0.1}_{-0.1}$  & $0.6^{+0.3}_{-0.3}$   & $0.7^{+0.3}_{-0.3}$  & \multicolumn{7}{l}{}                                                                                                                                          \\ 
+%    $\geq 4$             & $\geq 4$ & Data\T & $0$                   & $0$                  & $0$                   & $3$                  & \multicolumn{7}{l}{}                                                                                                                                          \\ 
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+%\end{center}
+%\end{landscape}
+%
+\input{results_plots_a_posteriori}
+\input{results_plots_a_priori}

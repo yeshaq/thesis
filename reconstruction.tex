@@ -1,0 +1,213 @@
+\clearpage
+\section{Physics objects\label{sec:reconstruction}}
+
+The definitions of the physics objects used in this analysis follow
+the recommendations of the various Physics Object Groups (POGs).
+
+\subsection{Jets}
+
+%Jets are reconstructed from the energy deposits in the calorimeter
+%towers, clustered by the anti-$k_{\rm T}$ algorithm~\cite{antikt} with
+%a size parameter of $0.5$. The raw jet energies measured by the
+%calorimeter systems are corrected to remove the effects of additional,
+%overlapping pp collisions (pile-up)~\cite{Cacciari2008119,
+%  1126-6708-2008-04-005}, and to establish a uniform relative response
+%in $\eta$ and a calibrated absolute response in transverse momentum
+%\pt~\cite{Chatrchyan:2011ds}. Jets are identified using a Loose
+%working point~\cite{ref:jet-id} as summarised in
+%Table~\ref{tab:calojetid} and are subjected to \verb!L1FastJet!,
+%\verb!L2!, \verb!L3!, and \verb!L2L3Residual!
+%corrections~\cite{ref:jet-jes}.
+%
+%\begin{table}[!h]
+%  \caption{Criteria for the ``loose'' jet ID working point.\label{tab:calojetid}}
+%  \footnotesize
+%  \begin{center}
+%    \begin{tabular}{ll}
+%      \hline
+%      \hline
+%      Requirement                & Definition                                                       \\
+%      \hline
+%      f$_{HPD} < 0.98$           & Fractional contribution from the ``hottest'' Hybrid Photo Diode. \\
+%      f$_{EM} > 0.01$            & Minimum electromagnetic fractional component.                    \\
+%      N$^{90}_{\rm hits} \geq$ 2 & Number of channels containing at least 90\% of total energy      \\
+%      \hline
+%      \hline
+%    \end{tabular}
+%  \end{center}
+%\end{table}
+
+
+\subsection{b-tagged jets\label{sec:b-tagging}}
+
+%Jets originating from bottom quarks (``b-tagged jets'' or ``b-jets'')
+%are identified through vertices that are displaced with respect to the
+%primary interaction~\cite{CMS-PAS-BTV-12-001}. The algorithm used to tag
+%b-jets is the Combined Secondary Vertex tagger, using the "Medium"
+%working point, which is achieved by requiring a cut of $>$0.679 on the
+%algorithm discriminator variable and results in a gluon/light-quark
+%quark mis-tag rate of 1\% (where ``light'' means $u$, $d$ and $s$
+%quarks) and an efficiency in the range $60-70\%$ depending on the jet
+%\pt. This tagger is supported by the b-POG~\cite{CMS-PAS-BTV-12-001} and
+%its performance is well understood: the efficiency with which jets
+%from heavy quarks are identified and the purity of the selection have
+%been studied extensively with data and
+%simulation~\cite{CMS-PAS-BTV-12-001}.
+%%The algorithm performance has been also independently verified using a
+%%\ttbar MC sample and the measured efficiency and purity is in
+%%agreement with those provided by the b-POG~\cite{CMS-PAS-BTV-12-001}. The
+%%mis-tag rate of hadronically-decaying tau leptons has also been
+%%studied using MC. The effect on the final hadronic signal selection is
+%%found to be negligible. An additional b-jet-enriched QCD multijet
+%%sample was also tested and no events where found to survive the signal
+%%selection critera.
+
+\subsection{Muons}
+
+%Muons are identified according to the Tight working point definition
+%($\sim$95\% efficiency) of the muon identification
+%algorithm~\cite{ref:muon-id}. A PF-based ``combined relative''
+%isolation~\cite{ref:muon-id} is determined within a cone size $\Delta
+%R < 0.4$, and "$\Delta\beta$" corrections are applied to remove the
+%effects of pileup. Table~\ref{tab:muon-id} summarizes the
+%identification and isolation requirements. This object is used as a
+%veto as part of the hadronic signal region definition, as described in
+%Section~\ref{sec:vetoes}, and as part of the \mj and \mmj control
+%sample selections described in Section~\ref{sec:def-control-samples}.
+%
+%\begin{table}[h!]
+%  \caption{Muon identification (Tight working point).\label{tab:muon-id}}
+%  \centering
+%  \footnotesize
+%  \begin{tabular}{ lc }
+%    \hline
+%    \hline
+%    Global Muon                            & True      \\
+%    PFMuon                                 & True      \\
+%    $\chi^{2}$ fit                         & $<10$     \\
+%    Muon chamber hits                      & $>0$      \\
+%    Muon station hits                      & $>1$      \\
+%    Transverse impact $d_{xy}$             & $<0.2\mm$ \\
+%    Longitudinal dist $d_{z}$              & $<0.5\mm$ \\
+%    Pixel hits                             & $>0$      \\
+%    Track layer hits                       & $>5$      \\
+%    PF Isolation ($\Delta\beta$ corrected) & $<0.12$   \\
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+
+\subsection{Photons}
+%
+%Photons are identified according to the Tight working point definition 
+%($\sim$70\% efficiency) of the simple cut-based photon identification
+%algorithm~\cite{ref:photon-id-egamma}. PF-based
+%isolation~\cite{ref:photon-id-egamma} is determined within a cone size
+%$\Delta R < 0.3$ and $\rho \times A_{\textrm{eff}}$ corrections are
+%applied to remove the effects of
+%pileup. Table~\ref{tab:photon-id-egamma} summarises the identification
+%and isolation requirements. This object is used as a veto as part of
+%the hadronic signal region definition, as described in
+%Section~\ref{sec:vetoes}, and as part of the \gj control sample
+%selection described in Section~\ref{sec:def-control-samples}.
+%
+%
+%\begin{table}[ht!]
+%  \caption{Photon identification (Tight working point).\label{tab:photon-id-egamma}}
+%  \centering
+%  \footnotesize
+%  \begin{tabular}{ ccc }
+%    \hline
+%    \hline
+%    Categories                    & Barrel                             & EndCap                             \\
+%    \hline
+%    Conversion safe electron veto & Yes                                & Yes                                \\
+%    Single Tower H/E              & 0.05                               & 0.05                               \\
+%    $\sigma_{i\eta i\eta}$        & 0.11                               & 0.31                               \\
+%    PF charged hadron isolation   & 0.70                               & 0.50                               \\
+%    PF neutral hadron isolation   & 0.4 + 0.04 $\times$ $\pt^{\gamma}$  & 1.5 + 0.04 $\times$ $\pt^{\gamma}$  \\
+%    PF photon isolation           & 0.5 + 0.005 $\times$ $\pt^{\gamma}$ & 1.0 + 0.005 $\times$ $\pt^{\gamma}$ \\
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+
+\subsection{Electrons}
+
+%Electrons are identified according to the Loose working point
+%definition ($\sim$90\% efficiency) of the cut-based \verb!Egamma!
+%identification algorithm~\cite{ref:electron-id}. PF-based
+%isolation~\cite{ref:electron-isolation} is determined within a cone
+%size $\Delta R < 0.3$ and $\rho \times A_{\textrm{eff}}$ corrections
+%are applied to remove the effects of pileup. Table~\ref{tab:ele-id}
+%summarises the identification and isolation requirements. This object
+%is used as a veto as part of the hadronic signal region definition, as
+%described in Section~\ref{sec:vetoes}.
+%
+%\begin{table}[h!]
+%  \caption{Electron identification (Loose working point).\label{tab:ele-id}}
+%  \centering
+%  \footnotesize
+%  \begin{tabular}{ lcc }
+%    \hline
+%    \hline
+%    Categories                                               & Barrel    & EndCap    \\
+%    \hline
+%    $\Delta \eta_{In}$                                       & 0.007     & 0.009     \\
+%    $\Delta \phi_{In}$                                       & 0.15      & 0.10      \\
+%    $\sigma_{i\eta i\eta}$                                   & 0.01      & 0.03      \\
+%    H/E                                                      & 0.12      & 0.10      \\
+%    d0 (vtx)                                                 & 0.02      & 0.02      \\
+%    dZ (vtx)                                                 & 0.2       & 0.20      \\
+%    $\lvert(1/E_{\textrm{ECAL}} - 1/p_{\textrm{trk}})\rvert$ & 0.05      & 0.05      \\
+%    PF relative isolation                                    & 0.15      & 0.15      \\
+%    Vertex fit probability                                   & 10$^{-6}$ & 10$^{-6}$ \\
+%    Missing hits                                             & 1         & 1         \\
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+
+\subsection{Single isolated tracks}
+
+%A single isolated track (SIT) can be used to identify W bosons through
+%their leptonic decays: $\textrm{W} \ra \mu \nu$, $\textrm{W} \ra e
+%\nu$, and $\textrm{W} \ra \tau (\ra \ell) \nu$. Also, single prong
+%decays of the tau lepton can be identified: $\textrm{W} \ra \tau (\ra
+%h^{\pm} + n\pi^{0})\nu$. A single isolated track comprises a charged
+%PF candidate that satisfies the requirements listed in
+%Table~\ref{tab:sit-id}. The relative track isolation is determined
+%from the vectorial sum of neighbouring charged PF candidates within a
+%cone $\Delta R < 0.3$ and satisfying $\Delta z (\textrm{candidate,PV})
+%< 0.05\cm$ around the candidate isolated track. This object can be
+%used to efficiently suppress the ``lost lepton'' background from W and
+%\ttbar, as described in Section~\ref{sec:vetoes}. This definition is
+%based on the one used in SUS-13-011 (``single lepton stop search with
+%transverse mass'')~\cite{singleleptonstop}.
+%
+%\begin{table}[h!]
+%  \caption{Single isolated track identification.\label{tab:sit-id}}
+%  \centering
+%  \footnotesize
+%  \begin{tabular}{ lc }
+%    \hline
+%    \hline
+%    Track \Pt                      & $>10\gev$  \\
+%    $\Delta z (\textrm{track,PV})$ & $<0.05\cm$ \\
+%    Charge                         & $\neq 0$   \\
+%    Relative track isolation       & $<0.1$     \\
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+%
+%\subsection{Missing transverse energy}
+%
+%Missing transverse energy, \met, is defined by the type-I corrected
+%particle-flow (PF)-based MET algorithm~\cite{ref:MET-corrections}. The
+%\met variable is only used in the following two cases: to define of
+%the tranverse mass variable, \mt, which is in turn used as part of the
+%selection criteria that define the \mj control sample, described in
+%Section~\ref{sec:def-control-samples}; to define a cleaning filter
+%applied after the \alphat requirement, as described in
+%Section~\ref{sec:had-signal}.

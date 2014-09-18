@@ -1,0 +1,309 @@
+\clearpage
+\section{Data sets and Monte Carlo samples\label{sec:samples}}
+
+\subsection{Data sets\label{sec:datasets}}
+
+%The following datasets are used to populate the hadronic signal and
+%control samples. They correspond to the full data run of 2012 and an
+%integrated luminosity of $18.5 \pm 0.5\fbinv$. The official JSON from
+%the 7$^{\rm th}$~May~2013 is used to filter only certified luminosity
+%sections with the run range 190456--208686.
+%
+%The ``parked'' signal trigger \verb!HT200_AlphaT0p57! (see
+%Section~\ref{sec:signal_triggers}) was only available from
+%\verb!Run2012B! onwards and so the first $\sim$0.7\fbinv recorded
+%during \verb!Run2012A! is not used for the signal region and only for
+%the control samples.
+%
+%\begin{table}[h]
+%  \caption{Datasets.}
+%  \label{tab:datasets}
+%  \centering
+%  \scriptsize
+%  \begin{tabular}{ lc }
+%    \hline
+%    \hline
+%    Dataset & Luminosity (fb$^{-1}$) \\
+%    \hline
+%    \verb!/HTMHTParked/Run2012B-22Jan2013-v1/AOD! & 4.41 \\   
+%    \verb!/HTMHTParked/Run2012C-22Jan2013-v1/AOD! & 6.80 \\   
+%    \verb!/HTMHTParked/Run2012D-22Jan2013-v1/AOD! & 7.29 \\
+%    \multicolumn{1}{r}{Total} & 18.49 \\ [0.5ex]
+%    \verb!/HT/Run2012A-22Jan2013-v1/AOD! & n/a \\   
+%    \verb!/JetHT/Run2012B-22Jan2013-v1/AOD! & n/a \\   
+%    \verb!/JetHT/Run2012C-22Jan2013-v1/AOD! & n/a \\   
+%    \verb!/JetHT/Run2012D-22Jan2013-v1/AOD! & n/a \\
+%    \multicolumn{1}{r}{Total} & 18.33 \\ [0.5ex]
+%    \verb!/SingleMu/Run2012A-22Jan2013-v1/AOD! & 0.69 \\   
+%    \verb!/SingleMu/Run2012B-22Jan2013-v1/AOD! & 4.40 \\   
+%    \verb!/SingleMu/Run2012C-22Jan2013-v1/AOD! & 6.77 \\   
+%    \verb!/SingleMu/Run2012D-22Jan2013-v1/AOD! & 7.27 \\
+%    \multicolumn{1}{r}{Total} & 19.13 \\ [0.5ex] % 19.13
+%    \verb!/Photon/Run2012A-22Jan2013-v1/AOD! & 0.68 \\   
+%    \verb!/SinglePhoton/Run2012B-22Jan2013-v1/AOD! & 4.40 \\   
+%    \verb!/SinglePhoton/Run2012C-22Jan2013-v1/AOD! & 6.77 \\   
+%    \verb!/SinglePhotonParked/Run2012D-22Jan2013-v1/AOD! & 7.27 \\
+%    \multicolumn{1}{r}{Total} & 19.12 \\ [0.5ex] % 19.18
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+%
+\subsection{MC samples for signal and SM backgrounds\label{sec:mc-samples}}
+%
+%The SM background Monte Carlo samples for physics at 8\TeV are taken
+%from the \verb!Summer12! simulation production run with
+%\verb!CMSSW_5_3_X! with the \verb!PU_S10! scenario. The effective
+%luminosity of each MC sample is normalised to the integrated
+%luminosity of the corresponding dataset, as listed in
+%Table~\ref{tab:mc-sm}. 
+%The signal \MADGRAPH Monte Carlo samples, listed in
+%Table~\ref{tab:mc-signal}, are taken from a \verb!FastSim! simulation
+%production based on \verb!CMSSW_5_2_X!. 
+%All MC samples are reweighted on an event-by-event basis such that the
+%distribution of pile-up (PU) interactions matches that observed in
+%data. This is done using the recommended recipe and the PU JSON of
+%13$^{\rm th}$~December~2012.
+%
+%\begin{landscape}
+%  \begin{center}
+%    \begin{table}[h]
+%      \caption{MC samples for Standard Model processes.}
+%      \label{tab:mc-sm}
+%      \centering
+%      \tiny
+%      \begin{tabular}{ lrrrr }
+%        \hline
+%        Sample & N$_{\textrm{event}}$ & Cross section (pb) & Corrected Cross section (pb) & Luminosity (fb$^{-1}$) \\
+%        \hline
+%        \hline
+%        \verb!/WJetsToLNu_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!           & 57661905 & 37509.0 & 34133.2 & 1.5     \\   
+%        \verb!/WJetsToLNu_HT-150To200_8TeV-madgraph/Summer12_DR53X-PU_S10_START53_V7C-v1/AODSIM!                  & 21414209 & 253.8   & 234.53  & 84.4    \\  
+%        \verb!/WJetsToLNu_HT-200To250_8TeV-madgraph/Summer12_DR53X-PU_S10_START53_V7C-v1/AODSIM!                  & 9895771  & 116.5   & 103.94  & 84.9    \\  
+%        \verb!/WJetsToLNu_HT-250To300_8TeV-madgraph_v2/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!               & 4924990  & 57.6    & 51.34   & 85.5    \\  
+%        \verb!/WJetsToLNu_HT-300To400_8TeV-madgraph_v2/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!               & 5141023  & 48.4    & 42.41   & 106.2   \\ 
+%        \verb!/WJetsToLNu_HT-400ToInf_8TeV-madgraph_v2/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!               & 4923847  & 30.8    & 26.36   & 159.9   \\ 
+%        \verb!/ZJetsToNuNu_50_HT_100_TuneZ2Star_8TeV_madgraph(_ext)/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!  & 23743998 & 452.8   & 405.21  & 52.4    \\  
+%        \verb!/ZJetsToNuNu_100_HT_200_TuneZ2Star_8TeV_madgraph(_ext)/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM! & 9876059  & 190.4   & 173.76  & 51.9    \\  
+%        \verb!/ZJetsToNuNu_200_HT_400_TuneZ2Star_8TeV_madgraph(_ext)/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM! & 9649619  & 45.1    & 42.41   & 214.0   \\ 
+%        \verb!/ZJetsToNuNu_400_HT_inf_TuneZ2Star_8TeV_madgraph(_ext)/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM! & 5079710  & 6.26    & 5.81    & 811.5   \\ 
+%        \verb!/TT_CT10_TuneZ2star_8TeV-powheg-tauola/Summer12_DR53X-PU_S10_START53_V7A-v1(v2)/AODSIM!             & 27094723 & 234.0   & 271.44  & 115.8   \\ 
+%        \verb!/TTZJets_8TeV-madgraph_v2/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!                              & 210160   & 0.172   & 0.172   & 1221.9  \\
+%        \verb!/T_t-channel_TuneZ2star_8TeV-powheg-tauola/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!             & 3710227  & 56.4    & 56.4    & 65.8    \\  
+%        \verb!/Tbar_t-channel_TuneZ2star_8TeV-powheg-tauola/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!          & 1935072  & 30.7    & 30.7    & 63.0    \\  
+%        \verb!/T_s-channel_TuneZ2star_8TeV-powheg-tauola/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!             & 243961   & 3.79    & 3.79    & 64.4    \\  
+%        \verb!/Tbar_s-channel_TuneZ2star_8TeV-powheg-tauola/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!          & 139974   & 1.76    & 1.76    & 79.5    \\  
+%        \verb!/T_tW-channel-DR_TuneZ2star_8TeV-powheg-tauola/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!         & 497658   & 11.1    & 11.1    & 44.8    \\  
+%        \verb!/Tbar_tW-channel-DR_TuneZ2star_8TeV-powheg-tauola/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!      & 493460   & 11.1    & 11.1    & 44.5    \\  
+%        \verb!/DYJetsToLL_M-10To50filter_8TeV-madgraph/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!               & 7116223  & 13124.1 & 12205.4 & 0.5     \\   
+%        \verb!/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!      & 30171503 & 3503.7  & 3258.45 & 8.6     \\   
+%        \verb!/DYJetsToLL_HT-200To400_TuneZ2Star_8TeV-madgraph(_ext)/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM! & 6892777  & 24.3    & 22.24   & 283.7   \\ 
+%        \verb!/DYJetsToLL_HT-400ToInf_TuneZ2Star_8TeV-madgraph/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!       & 2695789  & 3.36    & 3.11    & 802.3   \\ 
+%        \verb!/GJets_HT-200To400_8TeV-madgraph/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!                       & 57891147 & 1140.8  & 1060.9  & 50.7    \\  
+%        \verb!/GJets_HT-400ToInf_8TeV-madgraph/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!                       & 9459562  & 124.7   & 115.97  & 75.9    \\  
+%        \verb!/WW_TuneZ2star_8TeV_pythia6_tauola/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!                     & 9888431  & 57.1    & 57.1    & 173.2   \\ 
+%        \verb!/WZ_TuneZ2star_8TeV_pythia6_tauola/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!                     & 9841248  & 12.6    & 12.6    & 781.1   \\ 
+%        \verb!/ZZ_TuneZ2star_8TeV_pythia6_tauola/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM!                     & 9751908  & 8.26    & 8.26    & 1180.6  \\
+%        \verb!/QCD_Pt-50to80_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v2!                        & 5950860  & 8148778 & 8148778 (LO) & 0.001   \\     
+%        \verb!/QCD_Pt-80to120_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v3!                       & 5962864  & 1033680 & 1033680 (LO) & 0.006   \\     
+%        \verb!/QCD_Pt-120to170_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v3!                      & 5985732  & 156293  & 156293  (LO) & 0.038   \\     
+%        \verb!/QCD_Pt-170to300_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1(v2)!                  & 20155180 & 34138   & 34138   (LO) & 0.590   \\     
+%        \verb!/QCD_Pt-300to470_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1(v2,v3)!               & 23588100 & 1759.5  & 1759.5  (LO) & 13.4    \\    
+%        \verb!/QCD_Pt-470to600_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v2!                      & 3978848  & 113.9   & 113.9   (LO) & 34.9    \\    
+%        \verb!/QCD_Pt-600to800_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v2!                      & 3964864  & 27.0    & 27.0    (LO) & 146.8   \\   
+%        \verb!/QCD_Pt-800to1000_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v2!                     & 3854563  & 3.55    & 3.55    (LO) & 1085.8  \\  
+%        \verb!/QCD_Pt-1000to1400_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1!                    & 1964088  & 0.738   & 0.738   (LO) & 2661.4  \\  
+%        \verb!/QCD_Pt-1400to1800_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1!                    & 1988062  & 0.0335  & 0.0335  (LO) & 59345.1 \\ 
+%        \verb!/QCD_Pt-1800_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1!                          & 977586   & 0.00183 & 0.00183 (LO) & 534200  \\
+%        \hline
+%      \end{tabular}
+%    \end{table}
+%  \end{center}
+%\end{landscape}
+%
+%\begin{landscape}
+%  \begin{center}
+%    \begin{table}[h]
+%      \caption{MC samples for simplified models.}
+%      \label{tab:mc-signal}
+%      \centering
+%      \tiny
+%      \begin{tabular}{ lll }
+%        \hline
+%        Model & Sample & Description \\
+%        \hline
+%        \hline
+%        \verb!T2cc! & \verb!/SMS-MadGraph_2J_T2cc_NoFilter_mStop-100to250_mLSP-20to230_8TeV-Pythia6Zstar/Summer12-START52_V9_FSIM-v1/AODSIM! & Original scan \\   
+%        \verb!T2cc! & \verb!/SMS-T2cc_NoFilter_mStop-175to250_mLSP-95to240_8TeV-Pythia6Z/Summer12-START52_V9_FSIM-v1/AODSIM! & Original scan \\   
+%        \verb!T2cc! & \verb!/SMS-T2cc_2J_mStop-250to350_mLSP-195to340_TuneZ2star_8TeV-madgraph-tauola/Summer12-START53_V19_FSIM-v2/AODSIM! & Scan extension \\   
+%        \verb!T2cc! & \verb!/SMS-8TeV_Pythia6Z_T2cc_3jets_mStop-200_mLSP-120/Summer12-START52_V9_FSIM-v1/AODSIM! & 3-parton sample \\   
+%        \verb!T2cc! & \verb!/SMS-8TeV_Pythia6Z_T2cc_3jets_mStop-200_mLSP-190/Summer12-START52_V9_FSIM-v1/AODSIM! & 3-parton sample \\   
+%        \hline
+%        \hline
+%      \end{tabular}
+%    \end{table}
+%  \end{center}
+%\end{landscape}
+%
+%%\subsection{Weighting MC samples according to the pile-up distribution
+%%  in data}
+%%
+%%All MC samples are reweighted on an event-by-event basis such that the
+%%distribution of pile-up (PU) interactions matches that observed in
+%%data. This is done using the recommended recipe and the PU JSON of
+%%9$^{\textrm{th}}$~September 2012. Figure~\ref{fig:nvtx} shows the
+%%number of reconstructed vertices in data and from simulation after
+%%reweighting the MC samples using the PU JSON. Event after reweighting,
+%%excellent agreement between data and MC is not expected given the
+%%difficulties in correctly modelling the number of reconstructed
+%%vertices in MC. However, good agreement is found between data and MC
+%%for the core of the distribution.
+%%
+%%\begin{figure}[!h]
+%%  \begin{center}
+%%    \includegraphics[width=0.6\textwidth]{figures/data-mc/v1/nvtx/Stack_nVertex_Muon_all_OneMuon_-1To-2b_log}
+%%    \caption{Comparison of the number of vertices reconstructed in
+%%      data and MC simulation for the single muon + jet control sample,
+%%      after reweighting all MC samples to match the distribution of PU
+%%      interactions observed in data.\label{fig:nvtx}}
+%%  \end{center}
+%%\end{figure}
+
+\subsection{Corrections to cross sections for SM samples\label{sec:k-factors}}
+
+%Event weights applied to inclusive MC samples are determined from the
+%number of events per sample, the theoretical cross section calculated
+%at NNLO precision for the given sample~\cite{twiki-xs}, and the
+%integrated luminosity of the dataset under consideration.
+%
+%Several MC samples of individual SM processes are binned according to
+%a generator-level variable, such as number of partons, partonic
+%\scalht, or boson \Pt, to improve the statistical precision in the
+%tails of these variable distributions. This analysis choses to use
+%samples binned according to partonic \scalht (\partonht), as this
+%choice of binning is the only option available for a complete set of
+%MC samples (W + jets, DY + jets, \znunu + jets, \gj). These binned
+%samples are provided with LO cross sections (taken from
+%\textsc{Prep}~\cite{prep}). The \kfactors required to go from LO to
+%NNLO cross sections are typically determined using corresponding
+%inclusive samples and applied to each \partonht-binned sample. 
+%
+%In 2013, studies~\cite{RobXS} revealed that the LO cross
+%sections calculated for MC samples binned according to \partonht are
+%inaccurate to a level as large as 10\%, leading to non-physical
+%discontinuities in the \partonht distribution constructed from the
+%binned samples of a given process. Similar behaviour is observed for
+%samples binned according to other generator-level variables. The ratio
+%plot in Fig.~\ref{fig:xsec_study} (a) clearly shows the non-physical
+%steps in the \partonht distribution for the binned \znunu + jets
+%sample, relative to the inclusive DY + jets sample. 
+%
+%\begin{figure}[h!]
+%  \begin{center}
+%    \subfigure[\label{fig:xsec_study_before}No corrections.]{
+%      \includegraphics[width=0.7\textwidth]{figures/xs_study/compar_genPartonHT_zmass_0_inc_inc_DYZJets_noCuts_sitv_log_HCPxS}
+%    } \\
+%    \subfigure[\label{fig:xsec_study_after}With corrections.]{
+%      \includegraphics[width=0.7\textwidth]{figures/xs_study/compar_genPartonHT_zmass_0_inc_inc_DYZJets_noCuts_sitv_log}
+%    } 
+%    \caption{Generator-level \partonht distributions from the
+%      inclusive DY + jets and the \partonht-binned \znunu + jets
+%      samples.}
+%    \label{fig:xsec_study}
+%  \end{center}
+%\end{figure}
+%
+%The cross sections for each binned sample are corrected to data using
+%a three-step process, described below.
+%
+%{\bf Step 1:} 
+%
+%Correction factors to the cross sections are determined by comparing
+%the generator-level \partonht distributions from the binned and
+%corresponding inclusive samples, \ie the normalisation of each binned
+%sample is clamped to that of the inclusive sample. This procedure is
+%applied to the W + jets and DY + jets samples, where an inclusive
+%sample is available. An inclusive sample for the \znunu + jets process
+%does not exist, and so the corrections are determined relative to the
+%DY + jets inclusive sample. Similarly, an inclusive sample for the \gj
+%process also does not exist and so the cross section for each binned
+%sample is adjusted to provide a smooth distribution, which is
+%subsequently compared to DY + jets inclusive sample for reference.
+%
+%{\bf Step 2:} 
+%
+%Once the generator-level \partonht distributions have been smoothed, a
+%further overall normalisation correction is determined for the \znunu
+%+ jets sample so that the normalisation relative to the DY + jets
+%sample reflects accurately the ratio of branching fractions $Z
+%\rightarrow \ell\ell$ and $Z \rightarrow \nu\nu$ (equal to
+%0.505). Figure~\ref{fig:xsec_study} (bottom) shows the
+%generator-level \partonht distributions for the binned \znunu + jets
+%and DY + jets samples and the ratio, which is smooth and correctly
+%reflects the relative branching fractions of 0.505.
+%
+%{\bf Step 3:} 
+%
+%In the high-\scalht and high-\met corner of kinematic phase space of
+%this and other SUSY analyses, the normalisation of MC samples do not
+%necessarily agree well with data. A data sideband in \scalht is used
+%to determine sample-specific \kfactors that are appropriate for the
+%\scalht-\met phase space covered by this analysis. The \kfactor (with
+%respect to an NNLO cross section) is determined for the following
+%samples: W + jets, $Z\rightarrow\mu\mu$ + jets, and \ttbar. The
+%correction derived for $Z\rightarrow\mu\mu$ + jets is also applied to
+%the \znunu + jets and \gj samples. All remaining SM processes
+%considered in this analysis provide only small contributions to the
+%total background counts and so NNLO cross sections are used.
+%
+%Three samples rich in W + jets, $Z\rightarrow\mu\mu$ + jets, and
+%\ttbar events are defined by requirements on the number of muons,
+%jets, and b-tagged jets, as summarised in Table~\ref{tab:xs}. A
+%sideband in \scalht is used to determine both the yields in data and
+%MC expectations. The sideband is defined by the region $150 < \scalht
+%< 200\gev$ and uses the same jet \pt thresholds ($73,73,37\gev$) as
+%the adjacent bin $200 < \scalht < 275\gev$. Trigger efficiency and
+%b-tag scale factor corrections are determined and applied to the MC
+%samples. The purity of the samples is high, typically $>90\%$, and any
+%contamination is corrected for. The \kfactor is determined by taking
+%the ratio of the data yield over the MC expectation in the
+%sideband. Table~\ref{tab:xs} summarises the \kfactors for the
+%different samples. 
+%
+%%The \kfactor for the W + jets and Z + jets samples are in agreement,
+%%as expected, and both samples require the MC normalisation to be
+%%reduced by $\sim$\% with respect to the theoretical NNLO cross
+%%section. The \ttbar normalisation is required to be increased by
+%%$\sim$10\%, again with respect to NNLO. 
+%
+%Finally, an important point to note is that the corrections to the
+%cross sections, derived with data sidebands, are only relevant for
+%data/MC comparison plots and the suite of closure tests defined in
+%Sec.~\ref{sec:bkgd-syst}. The transfer factors used to predict the SM
+%background counts, defined in Sec.~\ref{sec:backgrounds}, are {\it
+%  not} sensitive to changes in the cross sections.
+%
+%\begin{table}[!h]
+%  \caption{\kfactors determined from a data sideband for the different
+%    MC samples . All \kfactors are relative to theoretical cross
+%    sections calculated at NNLO. The \kfactors measured for the W +
+%    jets and Z + jets processes, which are in agreement, are also
+%    applied to the \znunu + jets and \gj samples. ``Corrected yield''
+%    reflects the observed data yield minus the contamination as given
+%    by MC.}
+%  \label{tab:xs}
+%  \centering
+%  \footnotesize
+%  \begin{tabular}{ llcccc }
+%    \hline
+%    \hline
+%    Process                       & Selection                         & Purity & Corrected yield & MC expectation      & \kfactor        \\
+%    \hline
+%    W + jets                      & \mj, \njetlow, $\nb = 0$          & 0.91   & 25737           & $27529.0 \pm 350.7$ & $0.93 \pm 0.01$ \\
+%    Z($\rightarrow\mu\mu$) + jets & \mmj, \njetlow, $\nb = 0$         & 0.98   & 1826            & $1947.3 \pm 59.5$   & $0.94 \pm 0.04$ \\
+%%    \ttbar                       & \mj, $\njet \geq 2$, $\nb \geq 2$ & 0.73   & 505             & $404.3 \pm 6.6$     & $1.25 \pm 0.05$ \\ 
+%    \ttbar                        & \mj, $\njet \geq 2$, $\nb \geq 2$ & 0.87   & 583             & $482.0 \pm 7.3$     & $1.21 \pm 0.05$ \\ % includes single top
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}

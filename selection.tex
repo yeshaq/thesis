@@ -1,0 +1,477 @@
+\clearpage
+\section{Event selection \label{sec:selection}}
+
+\subsection{Event vetoes for leptons, photons, and single isolated tracks\label{sec:vetoes}}
+
+%To suppress SM processes with genuine \met from neutrinos, events
+%containing an isolated electron~\cite{PAS-EGM-10-004} with $\pt >
+%20\GeV$ and $|\eta| < 2.5$ or an isolated muon~\cite{PAS-MUO-10-002}
+%with $\pt > 10\GeV$ and $|\eta| < 2.5$ are vetoed. To select a pure
+%multijet topology, events are vetoed in which an isolated
+%photon~\cite{PAS-EGM-10-006} with $\pt > 25\GeV$ and $|\eta| < 2.5$ is
+%found.  Further, to reduce the ``lost leptons'' backgrounds from W +
+%jets and \ttbar, events containing single isolated tracks with $\pt >
+%10\GeV$ and $|\eta| < 2.5$, as defined in
+%Section~\ref{sec:reconstruction}, are vetoed as part of the signal
+%region selection criteria.
+%
+%Figure~\ref{fig:sitv-plots} shows the comparison between data and
+%simulation for the variables used as part of the identification
+%criteria for a \ttbar-enriched sample of \mj events (in which the well
+%identiified muon is ignored by the veto) that satisfy $\njet \geq 4$,
+%$\nb = 2$, and $\scalht > 200\gev$. This sample of events is chosen
+%because the veto is particularly effective at reducing the lost lepton
+%background from \ttbar events. Good agreement in the shape is
+%observed. The offset in normalisation is due to the difference in the
+%\scalht shape for data and simulation (as explained further in
+%Section~\ref{sec:mc-samples}). However, this offset in normalisation
+%is not important due to the fact that the veto is applied not only as
+%part of the selection criteria for the signal region but also the \mj,
+%\mmj, and \gj control samples. In the case of the \mj and \mmj
+%samples, a further requirement is made such that events are not vetoed
+%due to the presence of a track from the well identified muons, by
+%requiring $\Delta R(\textrm{track},\mu) < 0.02$.
+%
+%%Table~\ref{tab:sitv-eff} gives an indication of the efficiency of the
+%%single isolated track veto (SITV) in the signal region for the
+%%different event categories (according to \njet and \nb). The ratios in
+%%the table comprise a numerator of the predicted counts for all SM
+%%backgrounds obtained with the SITV applied as part of the signal
+%%region selection criteria and a denominator of predicted counts
+%%without the veto applied. The predicted counts are obtained from
+%%``na\"ive predictions'' based on data control samples, as described in
+%%Section~\ref{sec:backgrounds}, which is considered more reliable than
+%%determining the ratios (\ie veto efficiencies) directly from
+%%simulation. The veto efficiency for signal models depends on the
+%%number of W bosons in the final state, but is typically $\sim90\%$ for
+%%models with zero W bosons and 70--80\% for models with two W
+%%bosons. Hence, the sensitivity to models can be significantly improved
+%%throuh the application of the single isolated track veto, particularly
+%%for models with 0--2 W bosons in the final state.
+%%
+%%\begin{table}[h!]
+%%  \caption{An estimate of the efficiency (subject to statistical
+%%    fluctuations) of the single isolated track veto for the signal
+%%    region according to the (\njet,\nb) event categories and \scalht
+%%    bin. %@@ STAT UNCERTAINTIES? 
+%%    \label{tab:sitv-eff}
+%%  }  
+%%  \centering
+%%  \scriptsize
+%%  \begin{tabular}{ lccccccccccc }
+%%    \hline
+%%    \hline
+%%                      & \multicolumn{11}{c}{\scalht bins (\GeV)}                                                                               \\
+%%    (\njet,\nb)       & 200--275 & 275--325 & 325--375 & 375--475 & 475--575 & 575--675 & 675--775 & 775--875 & 875--975 & 975--1075 & $>$1075 \\
+%%    \hline
+%%    (2-3,0)           & 0.79     & 0.79     & 0.78     & 0.79     & 0.76     & 0.77     & 0.82     & 0.79     & 0.72     & 0.77      & 0.82    \\
+%%    (2-3,1)           & 0.72     & 0.72     & 0.70     & 0.72     & 0.73     & 0.68     & 0.75     & 0.82     & 0.87     & 0.78      & 0.84    \\
+%%    (2-3,2)           & 0.68     & 0.66     & 0.67     & 0.69     & 0.64     & 0.77     & 0.64     & 0.71     & 0.83     & -         &         \\
+%%    ($\geq$4,0)       & 0.69     & 0.68     & 0.68     & 0.67     & 0.68     & 0.66     & 0.67     & 0.66     & 0.70     & 0.50      & 0.51    \\
+%%    ($\geq$4,1)       & 0.57     & 0.59     & 0.59     & 0.60     & 0.58     & 0.64     & 0.57     & 0.71     & 0.61     & 0.42      & 0.61    \\
+%%    ($\geq$4,2)       & 0.54     & 0.57     & 0.60     & 0.56     & 0.60     & 0.59     & 0.58     & 0.77     & 0.48     & -         &         \\
+%%    ($\geq$4,3)       & 0.53     & 0.61     & 0.65     & 0.57     & 0.61     & 0.60     & 0.60     & 0.58     & 0.88     & -         &         \\
+%%    ($\geq$4,$\geq$4) & 0.50     & 0.50     & 0.75     & 0.82     & -        & \multicolumn{6}{c}{}                                            \\
+%%    \hline
+%%    \hline
+%%  \end{tabular}
+%%\end{table}
+%
+%\begin{figure}[!h]
+%  \centering
+%  \subfigure[Track \Pt.]{
+%    \includegraphics[width=0.45\textwidth]{figures/noSITV/Stacked_pfCandsPt_3_btag_two_OneMuon_200_upwards}
+%  }
+%  \subfigure[$\Delta z (\textrm{track,PV})$.]{
+%    \includegraphics[width=0.45\textwidth]{figures/noSITV/Stacked_pfCandsDzPV_3_btag_two_OneMuon_200_upwards}
+%  } \\
+%  \subfigure[Relative track isolation.]{
+%    \includegraphics[width=0.45\textwidth]{figures/noSITV/Stacked_pfCandsDunno_3_btag_two_OneMuon_200_upwards}
+%  } 
+%  \subfigure[Track charge.]{
+%    \includegraphics[width=0.45\textwidth]{figures/noSITV/Stacked_pfCandsCharge_3_btag_two_OneMuon_200_upwards}
+%  } \\
+%  \caption{Data--MC comparison of variables used in the identification
+%    of single isolated tracks, for a \ttbar-enriched sample of \mj
+%    events (in which the well identiified muon is ignored by the veto)
+%    that satisfy $\njet \geq 4$, $\nb = 2$, and $\scalht >
+%    200\gev$.\label{fig:sitv-plots}}
+%\end{figure}
+%
+%\subsection{Hadronic pre-selection}
+%
+%Significant hadronic activity in the event is ensured by requiring
+%$\scalht > 200\GeV$. Events in the hadronic signal region (and the
+%three control regions described in Sec.~\ref{sec:backgrounds}) are
+%categorised according to the number of jets (\njet) reconstructed in
+%each event and the number of jets identified as originating from
+%bottom quarks (\nb) in each event. The resulting sub-samples comprise
+%events containing exactly two or three jets, or at least four jets,
+%plus exactly zero, one, two, three, or at least four b-jets. 
+%%\footnote{Possible systematic biases due to MC mismodelling of tagging
+%%  efficiencies for jets originating from bottom, charm, and ligh
+%%  flavour partons, which may lead to bin migration between the
+%%  different sub-samples, are addressed in Sec.~\ref{sec:bjets}.} 
+%By construction, $\nb \leq \njet$.
+%
+%Due to the rare nature of SM processes that can result in events
+%containing three or more b-jets (through a combination of genuine
+%b-jets and mistagged jets) {\it in association with significant} \met,
+%yields from MC typically carry large statistical uncertainties due to
+%the very limited number of MC events containing three or more b-jets
+%that satisfy the full selection criteria. To mitigate this problem, an
+%approach has been developed to provide yields with significantly
+%smaller statistical uncertainties for high b-jet multiplicities than
+%can be obtained with ``vanilla'' MC yields. This allows to maximise
+%the sensitivity to potential new physics signatures in final states
+%with multiple b-quark jets. The method, known as the ``formula''
+%method and described fully in Sec.~\ref{sec:bjets}, improves the
+%statistical power of the predictions from simulation, particularly for
+%$n_{\rm b} \ge 2$.
+%
+%Table~\ref{tab:ht-bins} details the available event categories
+%(\njet,\nb) and the choice of \scalht binning for each category and is
+%summarised as follows:
+%\begin{itemize}
+%\item all event categories use the binning scheme $\scalht =
+%  $200--275, 275--325, and 325--375\gev;
+%\item for events satisfying $0 \geq \nb \leq 1$, a further seven
+%  100\gev-wide bins in the region $375 < \scalht < 1075\gev$ are used
+%  plus a final open bin of $\scalht > 1075\gev$ (providing a total of
+%  eleven bins);
+%\item for events satisfying $2 \geq \nb \leq 3$, a further five
+%  100\gev-wide bins in the region $375 < \scalht < 875\gev$ are used
+%  plus a final open bin of $\scalht > 875\gev$ (providing a total of
+%  nine bins);
+%\item for events satisfying $\nb \geq 4$, a further single open bin of
+%  $\scalht > 375\gev$ is used (providing a total of four bins).
+%\end{itemize}
+%
+%The same binning scheme is used for all the data control samples. The
+%choice of threshold for the final open bin for each event category is
+%based on the yields expected/observed within the simulation and data
+%control samples. The lower bound of each \scalht bin is shifted higher
+%by 25\gev with respect to the corresponding threshold on the \scalht
+%leg of the signal trigger used to record the events for that signal
+%region bin, so that the lower bound coincides with the trigger
+%efficiency plateau. An exception is the $200 < \scalht < 275\gev$ bin,
+%for which the lower bound coincides with the threshold on the \scalht
+%leg of the signal trigger.
+%
+%\begin{table}[h!]
+%  \caption{(\njet,\nb) event categories and \scalht binning scheme.\label{tab:ht-bins}}
+%  \centering
+%  \scriptsize
+%  \begin{tabular}{ lrrrrrrrrrrr }
+%    \hline
+%    \hline
+%    (\njet,\nb)       & \multicolumn{11}{c}{\scalht bins (\GeV)}                                                                                \\
+%    \hline
+%    (2-3,0)           & 200--275 & 275--325 & 325--375 & 375--475 & 475--575 & 575--675 & 675--775 & 775--875 & 875--975 & 975--1075 & $>$1075  \\
+%    (2-3,1)           & 200--275 & 275--325 & 325--375 & 375--475 & 475--575 & 575--675 & 675--775 & 775--875 & 875--975 & 975--1075 & $>$1075  \\
+%    (2-3,2)           & 200--275 & 275--325 & 325--375 & 375--475 & 475--575 & 575--675 & 675--775 & 775--875 & $>$875   & \multicolumn{2}{c}{} \\
+%%    (2-3,3)          & 200--275 & 275--325 & 325--375 & 375--475 & 475--575 & 575--675 & 675--775 & 775--875 & $>$875   & \multicolumn{2}{c}{} \\
+%    ($\geq$4,0)       & 200--275 & 275--325 & 325--375 & 375--475 & 475--575 & 575--675 & 675--775 & 775--875 & 875--975 & 975--1075 & $>$1075  \\
+%    ($\geq$4,1)       & 200--275 & 275--325 & 325--375 & 375--475 & 475--575 & 575--675 & 675--775 & 775--875 & 875--975 & 975--1075 & $>$1075  \\
+%    ($\geq$4,2)       & 200--275 & 275--325 & 325--375 & 375--475 & 475--575 & 575--675 & 675--775 & 775--875 & $>$875   & \multicolumn{2}{c}{} \\
+%    ($\geq$4,3)       & 200--275 & 275--325 & 325--375 & 375--475 & 475--575 & 575--675 & 675--775 & 775--875 & $>$875   & \multicolumn{2}{c}{} \\
+%    ($\geq$4,$\geq$4) & 200--275 & 275--325 & 325--375 & $>$375   & \multicolumn{7}{c}{}                                                        \\
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+%
+%The jets considered in the analysis are required to have transverse
+%energy above the thresholds defined in
+%Table~\ref{tab:jet-pt-thresholds} and to be within the central tracker
+%acceptance ($|\eta| < 3.0$). The two highest-$\Et$ jets are subject to
+%a higher threshold, also detailed in
+%Table~\ref{tab:jet-pt-thresholds}, and the highest-$\Et$ jet is
+%subjected to a tighter $\eta$ acceptance requirement ($|\eta| <
+%2.5$). The variables \scalht and \mht are computed from the number of
+%jets, \njet, that satisfy the \Et requirements listed in
+%Table~\ref{tab:jet-pt-thresholds}.
+%
+%\begin{table}[h!]
+%  \caption{Jet \Et thresholds per \scalht bin.\label{tab:jet-pt-thresholds}}
+%  \centering
+%  \footnotesize
+%  \begin{tabular}{ lcccc }
+%    \hline
+%    \hline
+%    \scalht bin    & 200--275 & 275--325 & 325--375 & $>$375 \\
+%    \hline
+%    Lead jet       & 73.3     & 73.3     & 86.7     & 100.0  \\
+%    Second jet     & 73.3     & 73.3     & 86.7     & 100.0  \\
+%    All other jets & 36.7     & 36.7     & 43.3     & 50.0   \\
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+%
+%As done in Ref.~\cite{RA1Paper2012}, the jet $\Et$ thresholds are
+%scaled down from their nominal values of 100, 100, and 50\gev in the
+%low \scalht region $200 < \scalht < 375\gev$. This is done in order to
+%maintain comparable jet multiplicities, kinematics and background
+%admixtures as observed for the higher \scalht bins. The contribution
+%from \ttbar is particularly sensitive to the jet $\Et$ thresholds in
+%the lowest \scalht bins. Consequently, acceptance for stop-stop
+%production and decay, particularly for models with a small mass
+%splitting between the stop and LSP, is also improved.
+%
+%Events are vetoed if any additional jet satisfies both $\Et > 50\GeV$
+%and $|\eta| > 3$, or rare spurious signals are identified in the
+%calorimeters~\cite{1748-0221-5-03-T03014, CMS-NOTE-2010-012}, which
+%includes the application of all recommended ``\met filters'' as
+%defined at Ref.~\cite{ref:MET-filters}.
+%
+%\subsection{The hadronic signal region\label{sec:had-signal}}
+%
+%Following the hadronic pre-selection, the multijet background from QCD
+%is still several orders of magnitude larger than the typical signal
+%expected from SUSY. The multijet background can be rejected with very
+%high efficiency by requiring $\alphat > 0.55$ (plus the application of
+%two dedicated cleaning filters, described below in
+%Sec.~\ref{sec:had-signal}).
+%
+%These criteria are sufficient to suppress the QCD multijet
+%contribution to the sub-percent level with respect to the non-multijet
+%backgrounds for the region $\scalht > 325\gev$. For the regions $200 <
+%\scalht < 275\gev$ and $275 < \scalht < 325\gev$, higher thresholds of
+%0.65 and 0.60 are used, as detailed in
+%Table~\ref{tab:alphat-thresholds}. The method used to determine the
+%multijet prediction as a function of the \alphat threshold is
+%described in Section~\ref{sec:qcd}. The higher \alphat thresholds
+%provide added protection against the effect of jets below threshold
+%contributing significiantly to \mht, ensuring that the relative
+%multijet contribution is maintained at the sub-percent level, even for
+%the new region at very low \scalht (where the jets are softest and
+%resolutions are poor) and the higher pileup conditions experienced
+%during Run D. The choice of \scalht and \alphat thresholds are also
+%driven by trigger constraints.
+%
+%\begin{table}[h!]
+%  \caption{\alphat and (effective) \mht/\scalht and \mht thresholds per \scalht bin.\label{tab:alphat-thresholds}}
+%  \centering
+%  \footnotesize
+%  \begin{tabular}{ lcccc }
+%    \hline
+%    \hline
+%    \scalht bin  & 200--275   & 275--325   & 325--375   & $>$375       \\
+%    \hline
+%    \alphat      & 0.65       & 0.60       & 0.55       & 0.55         \\
+%    \mht/\scalht & $\sim$0.64 & $\sim$0.55 & $\sim$0.42 & $\sim$0.42   \\
+%    \mht         & $\sim$130  & $\sim$150  & $\sim$135  & $\gtrsim$155 \\
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+%
+%Finally, some additional cleaning filters are added following
+%the \alphat requirement to protect against pathological effects such
+%as reconstruction failures or severe energy losses due to detector
+%inefficiencies. 
+%
+%To protect against multiple jets failing the $\Et$ threshold, the
+%jet-based estimate of the missing transverse energy, \mht, is compared
+%to the Particle Flow estimate of missing transverse energy, $\pfmet$,
+%and events with $R_{\rm miss}=\mht/\pfmet > 1.25$ are rejected.
+%
+%To protect against severe energy losses, events with significant jet
+%mismeasurements caused by masked regions in the ECAL (which amount to
+%about 1\% of the ECAL channel count), or by missing instrumentation in
+%the barrel-endcap gap, are removed with the following procedure. The
+%jet-based estimate of the missing transverse energy, \mht, is used to
+%identify jets most likely to have given rise to the \mht as those
+%whose momentum is closest in $\phi$ to the total $\vec{\mht}$ which
+%results after removing them from the event.  The azimuthal distance
+%between this jet and the recomputed \mht is referred to as
+%$\Delta\phi^*$ in what follows. Events with $\Delta\phi^* < 0.5$ are
+%rejected if the distance in the ($\eta,\phi$) plane between the
+%selected jet and the closest masked ECAL region, $\Delta R_{\rm
+%  ECAL}$, is smaller than 0.3. Similarly, events are rejected if the
+%jet points within 0.3 in $\eta$ of the ECAL barrel-endcap gap at
+%$|\eta| = 1.5$. These final selections complete the definition of the
+%acceptance of the hadronic signal sample.
+%
+%\subsection{Hadronic control sample}
+%
+%A disjoint hadronic control sample consisting predominantly of
+%multijet events is defined by applying the hadronic pre-selection
+%criteria and inverting the \alphat and/or \mhtmet requirements for a
+%given \scalht region, which is used primarily in the estimation of any
+%residual background from QCD multijet events, described in
+%Sec.~\ref{sec:qcd}.
+%
+%\subsection{Breakdown of SM backgrounds in the hadronic signal
+%  region\label{sec:bkgd-comp}}
+%
+%In the absence of multijet events from QCD, the remaining significant
+%backgrounds in the signal region are expected to stem from SM
+%processes with genuine \met in the final state. For the low jet
+%multiplicity categories, the largest backgrounds with genuine \met are
+%generally from the associated production of W or Z bosons with jets,
+%followed by either the weak decays \znunu\ or \wtaunu, where the
+%$\tau$ decays hadronically and is identified as a jet, or by leptonic
+%decays that are outside acceptance or not rejected by the dedicated
+%electron or muon vetoes. For the higher jet multiplicity categories,
+%top quark production followed by semileptonic weak top quark decay
+%becomes important. The relative contribution from \ttbar is enhanced
+%or suppressed depending on the number of b-jets required. A breakdown
+%of the relative contributions of the SM backgrounds, as given by
+%simulation, in the different (\njet, \nb, \scalht) bins can be found
+%in Table~\ref{tab:backgrounds}. %@@ ADD PLOTS IN THE FUTURE
+%
+%\begin{table}[h!]
+%  \caption{Relative contribution (\%) to the total SM background
+%    counts in the hadronic signal region from \znunu, W+jets, \ttbar
+%    and other residual processes (single top, Drell-Yan, diboson, etc)
+%    for each event category and \scalht bin, as given by
+%    simulation.\label{tab:backgrounds}}   
+%  \centering
+%  \scriptsize
+%  \begin{tabular}{ llrrrrrrrrrrr }
+%    \hline
+%    \hline
+%    (\njet,\nb)       & Process  & \multicolumn{11}{c}{Lower bound on \scalht bin (\GeV)}                     \\
+%                      &          & 200 & 275 & 325 & 375 & 475 & 575 & 675 & 775 & 875 & 975 & 1075           \\
+%    \hline
+%    \hline
+%    (2-3,0)           & \znunu   & 55  & 58  & 58  & 61  & 66  & 69  & 72  & 75  & 73  & 68  & 80             \\
+%    (2-3,0)           & W+jets   & 38  & 35  & 36  & 34  & 31  & 29  & 26  & 23  & 26  & 32  & 20             \\
+%    (2-3,0)           & \ttbar   & 4   & 4   & 4   & 3   & 2   & 1   & 1   & 0   & 0   & 0   & 0              \\
+%    (2-3,0)           & residual & 3   & 3   & 2   & 2   & 1   & 1   & 1   & 1   & 1   & 0   & 0              \\
+%    \hline
+%    (2-3,1)           & \znunu   & 35  & 36  & 36  & 39  & 49  & 56  & 62  & 68  & 77  & 61  & 71             \\
+%    (2-3,1)           & W+jets   & 20  & 19  & 20  & 19  & 22  & 22  & 21  & 24  & 19  & 37  & 29             \\
+%    (2-3,1)           & \ttbar   & 37  & 38  & 38  & 37  & 25  & 18  & 14  & 6   & 4   & 0   & 0              \\
+%    (2-3,1)           & residual & 7   & 7   & 6   & 5   & 4   & 3   & 2   & 3   & 0   & 1   & 0              \\
+%    \hline
+%    (2-3,2)           & \znunu   & 28  & 22  & 17  & 18  & 24  & 28  & 29  & 78  & 52  & \multicolumn{2}{c}{} \\
+%    (2-3,2)           & W+jets   & 11  & 8   & 7   & 6   & 7   & 11  & 10  & 11  & 5   & \multicolumn{2}{c}{} \\
+%    (2-3,2)           & \ttbar   & 51  & 63  & 68  & 70  & 64  & 53  & 57  & 7   & 43  & \multicolumn{2}{c}{} \\
+%    (2-3,2)           & residual & 10  & 7   & 8   & 6   & 6   & 8   & 4   & 4   & 0   & \multicolumn{2}{c}{} \\
+%    \hline
+%%    (2-3,3)          & \znunu   & 12  & 13  & 6   & 6   & 9   & 15  & 8   & -   & -   & \multicolumn{2}{c}{} \\
+%%    (2-3,3)          & W+jets   & 4   & 3   & 3   & 2   & 1   & 4   & 0   & -   & -   & \multicolumn{2}{c}{} \\
+%%    (2-3,3)          & \ttbar   & 77  & 78  & 87  & 88  & 87  & 77  & 92  & -   & -   & \multicolumn{2}{c}{} \\
+%%    (2-3,3)          & residual & 6   & 7   & 4   & 4   & 2   & 4   & 8   & -   & -   & \multicolumn{2}{c}{} \\
+%%    \hline
+%    ($\geq$4,0)       & \znunu   & 47  & 46  & 44  & 46  & 51  & 57  & 61  & 58  & 66  & 68  & 60             \\
+%    ($\geq$4,0)       & W+jets   & 34  & 36  & 36  & 35  & 33  & 32  & 30  & 33  & 27  & 25  & 31             \\
+%    ($\geq$4,0)       & \ttbar   & 15  & 15  & 17  & 16  & 13  & 9   & 8   & 8   & 6   & 6   & 7              \\
+%    ($\geq$4,0)       & residual & 4   & 3   & 3   & 2   & 2   & 2   & 2   & 2   & 1   & 1   & 2              \\
+%    \hline
+%    ($\geq$4,1)       & \znunu   & 17  & 17  & 14  & 16  & 19  & 25  & 33  & 36  & 34  & 39  & 39             \\
+%    ($\geq$4,1)       & W+jets   & 12  & 12  & 10  & 11  & 12  & 13  & 13  & 17  & 16  & 14  & 16             \\
+%    ($\geq$4,1)       & \ttbar   & 66  & 67  & 72  & 69  & 63  & 56  & 50  & 42  & 49  & 45  & 45             \\
+%    ($\geq$4,1)       & residual & 5   & 5   & 4   & 4   & 6   & 7   & 4   & 5   & 1   & 1   & 1              \\
+%    \hline
+%    ($\geq$4,2)       & \znunu   & 7   & 7   & 5   & 6   & 6   & 8   & 14  & 16  & 9   & \multicolumn{2}{c}{} \\
+%    ($\geq$4,2)       & W+jets   & 6   & 4   & 2   & 3   & 3   & 4   & 3   & 7   & 4   & \multicolumn{2}{c}{} \\
+%    ($\geq$4,2)       & \ttbar   & 83  & 85  & 88  & 87  & 85  & 83  & 80  & 75  & 86  & \multicolumn{2}{c}{} \\
+%    ($\geq$4,2)       & residual & 5   & 5   & 5   & 4   & 6   & 6   & 3   & 2   & 1   & \multicolumn{2}{c}{} \\
+%    \hline
+%    ($\geq$4,3)       & \znunu   & 2   & 3   & 2   & 3   & 3   & 3   & 8   & 8   & 6   & \multicolumn{2}{c}{} \\
+%    ($\geq$4,3)       & W+jets   & 3   & 2   & 1   & 1   & 1   & 2   & 1   & 3   & 0   & \multicolumn{2}{c}{} \\
+%    ($\geq$4,3)       & \ttbar   & 90  & 92  & 92  & 93  & 91  & 91  & 88  & 89  & 91  & \multicolumn{2}{c}{} \\
+%    ($\geq$4,3)       & residual & 5   & 3   & 4   & 4   & 5   & 4   & 2   & 0   & 0   & \multicolumn{2}{c}{} \\
+%    \hline
+%    ($\geq$4,$\geq$4) & \znunu   & 0   & 6   & 0   & 0   & \multicolumn{7}{c}{}                               \\
+%    ($\geq$4,$\geq$4) & W+jets   & 0   & 0   & 0   & 0   & \multicolumn{7}{c}{}                               \\
+%    ($\geq$4,$\geq$4) & \ttbar   & 100 & 88  & 94  & 95  & \multicolumn{7}{c}{}                               \\
+%    ($\geq$4,$\geq$4) & residual & 0   & 6   & 3   & 5   & \multicolumn{7}{c}{}                               \\
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{table}
+%
+%\subsection{Key distributions for the hadronic signal
+%  region\label{sec:mc-data-comp}}
+%
+%Yields from simulation are not used in absolute terms to estimate
+%background counts from SM processes, but rather only as ratios. The
+%signal and control samples are defined to be kinematically similar,
+%thus any biases arising from mismodelling within the simulation are
+%expected to largely cancel, minimising the systematic uncertainties
+%associated with the ratios. \ie, we do not rely heavily on variable
+%shapes nor normalisations. However, it is nevertheless important to
+%demonstrate the quality of the MC simulation, which is done with the
+%data--MC comparison plots described below.
+%
+\begin{figure}[!h]
+  \centering
+  \subfigure[(2--3,0)]{
+    \includegraphics[width=0.4\textwidth,page=18]{figures/data-mc/v21/had/hadronicLook_375_pfJet_ge2j.pdf}
+  } 
+  \subfigure[($\geq 4$,$\geq 1$)]{
+    \includegraphics[width=0.4\textwidth,page=20]{figures/data-mc/v21/had/hadronicLook_375_pfJet_ge2j.pdf}
+  } 
+  \caption{Data--MC comparison of the \alphat distribution for the
+    hadronic signal region, following the application of the hadronic
+    pre-selection criteria and the requirements $\scalht > 375\GeV$
+    and $\alphat > 0.55$, for events satisfying (Left) \njetlow and
+    $\nb = 0$ and (Right) \njethigh and $\nb \geq 1$. Bands represent
+    the uncertainties due to the limited size of MC samples.}
+  \label{fig:figures_AlphaT_all}
+\end{figure}
+
+%Figure~\ref{fig:figures_AlphaT_all} show the \alphat distribution
+%after the application of the hadronic pre-selection criteria and the
+%requirements $\scalht > 375 \gev$ and $\alphat > 0.55$, for events
+%satisfying (Left) \njetlow and $\nb = 0$ and (Right) \njethigh and
+%$\nb \geq 1$, \ie samples enriched in Z and W bosons or \ttbar,
+%respectively. Figures~\ref{fig:figures_JetMulti_all}
+%and~\ref{fig:figures_Bjet_all} show the distributions of the number of
+%reconstructed jets and b-jets, respectively, for an inclusive
+%selection on \njet and \nb. Figures~\ref{fig:figures_HT_0}
+%and~\ref{fig:figures_HT_1} show the \scalht distributions obtained for
+%the event satisfying (\njetlow,$\njet = 0$) and (\njethigh,$\njet \geq
+%1$), respectively.  Similarly, figures~\ref{fig:figures_MHT_0}
+%and~\ref{fig:figures_MHT_1} show the \mht distributions for the event
+%satisfying (\njetlow, $\nb = 0$) and (\njethigh, $\nb \geq 1$),
+%respectively. These example distributions demonstrate the generally
+%good agreement that is observed between data and the expectations from
+%MC simulation. The offset in normalisation is due to the difference in
+%the \scalht shape for data and simulation, as shown in
+%Figures~\ref{fig:figures_HT_0} and~\ref{fig:figures_HT_1} and
+%discussed in Section~\ref{sec:mc-samples}. However, this offset in
+%normalisation is not important due to the use of transfer factors when
+%extrapolating from the control samples to the signal region, as
+%described further in Section~\ref{sec:backgrounds}.
+%
+\begin{figure}[h!]
+  \centering
+  \subfigure[\njet distribution ($\njet \geq 2$, $\nb \geq 0$).]{
+    \label{fig:figures_JetMulti_all}
+    \includegraphics[width=0.4\textwidth,page=89]{figures/data-mc/v21/had/hadronicLook_375_pfJet_ge2j.pdf}
+  } 
+  \subfigure[\nb distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_Bjet_all}
+    \includegraphics[width=0.4\textwidth,page=100]{figures/data-mc/v21/had/hadronicLook_375_pfJet_ge2j.pdf}
+  } \\
+  \subfigure[\mht distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_MHT_0}
+    \includegraphics[width=0.4\textwidth,page=83]{figures/data-mc/v21/had/hadronicLook_375_pfJet_ge2j.pdf}
+  } 
+  \subfigure[\mht distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_MET_1}
+    \includegraphics[width=0.4\textwidth,page=69]{figures/data-mc/v21/had/hadronicLook_375_pfJet_ge2j.pdf}
+  } \\
+  \subfigure[\scalht distribution (\njetlow, $\nb = 0$)]{
+    \label{fig:figures_HT_0}
+    \includegraphics[width=0.4\textwidth,page=123]{figures/data-mc/v21/had/hadronicLook_375_pfJet_ge2j.pdf}
+  } 
+  \subfigure[\scalht distribution (\njethigh, $\nb = 1$)]{
+    \label{fig:figures_HT_1}
+    \includegraphics[width=0.4\textwidth,page=119]{figures/data-mc/v21/had/hadronicLook_375_pfJet_ge2j.pdf}
+  } \\
+  \caption{\label{fig:control-plots-sig} Data--MC comparisons of key
+    variables for the hadronic signal region, following the
+    application of the full signal region selection criteria and the
+    requirements $\scalht > 375\GeV$ and $\alphat > 0.55$: (a) \njet,
+    (b) \nb, (c) \mht, and (d) \met distributions for an inclusive 
+    selection on \njet and \nb, and (e,f) \scalht  for the two 
+    event categories (\njetlow, $\nb = 0$) and (\njethigh, $\nb = 1$). }
+\end{figure}
+
