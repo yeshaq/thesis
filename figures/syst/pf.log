@@ -76,6 +76,30 @@ Chi2                      =      25.2995
 NDf                       =            7
 p0                        =   0.00732551   +/-   0.0283273   
 
+\begin{table}[!h]
+  \label{tab:syst-fits-ge4j}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+    &             & \multicolumn{4}{c}{Constant fit} \\
+    \cline{3-6}
+    Closure test  & Symbol & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & Circle & $0.011 \pm 0.04$ & 5.81 & 7 & 0.56 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Times & $-0.053 \pm 0.03$ & 8.02 & 7 & 0.33 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Invert. Triangle & $0.018 \pm 0.04$ & 6.23 & 7 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 0 b-tags) & Star & $0.034 \pm 0.02$ & 9.24 & 7 & 0.24 \\ 
+    \njetlow \ra \njethigh (\gj, 0 b-tags) & Diamond & $0.100 \pm 0.04$ & 12.20 & 7 & 0.09 \\ 
+    1 b-tags \ra 2 b-tags (\mj) & Triangle & $0.045 \pm 0.03$ & 9.36 & 7 & 0.23 \\ 
+    0 b-tags \ra 1 b-tags (\mj) & Square & $0.007 \pm 0.03$ & 25.30 & 7 & 0.00 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+
 
 
 
@@ -152,6 +176,30 @@ Minimizer is Linear
 Chi2                      =      25.2995
 NDf                       =            7
 p0                        =   0.00732551   +/-   0.0283273   
+
+\begin{table}[!h]
+  \label{tab:syst-fits-ge4j}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+    &             & \multicolumn{4}{c}{Constant fit} \\
+    \cline{3-6}
+    Closure test  & Symbol & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & Circle & $0.011 \pm 0.04$ & 5.81 & 7 & 0.56 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Times & $-0.053 \pm 0.03$ & 8.02 & 7 & 0.33 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Invert. Triangle & $0.018 \pm 0.04$ & 6.23 & 7 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 0 b-tags) & Star & $0.034 \pm 0.02$ & 9.24 & 7 & 0.24 \\ 
+    \njetlow \ra \njethigh (\gj, 0 b-tags) & Diamond & $0.100 \pm 0.04$ & 12.20 & 7 & 0.09 \\ 
+    1 b-tags \ra 2 b-tags (\mj) & Triangle & $0.045 \pm 0.03$ & 9.36 & 7 & 0.23 \\ 
+    0 b-tags \ra 1 b-tags (\mj) & Square & $0.007 \pm 0.03$ & 25.30 & 7 & 0.00 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
 ge4j
 1 0.0270903404576
 2 0.0445712283046
@@ -250,6 +298,31 @@ Chi2                      =      1.12033
 NDf                       =            7
 p0                        =    0.0396114   +/-   0.0217781   
 
+\begin{table}[!h]
+  \label{tab:syst-fits-le3j}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+    &             & \multicolumn{4}{c}{Constant fit} \\
+    \cline{3-6}
+    Closure test  & Symbol & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & Circle & $0.007 \pm 0.02$ & 3.91 & 7 & 0.79 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Times & $-0.053 \pm 0.03$ & 8.02 & 7 & 0.33 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Invert. Triangle & $0.018 \pm 0.04$ & 6.23 & 7 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 0 b-tags) & Star & $0.034 \pm 0.02$ & 9.24 & 7 & 0.24 \\ 
+    \njetlow \ra \njethigh (\gj, 0 b-tags) & Diamond & $0.100 \pm 0.04$ & 12.20 & 7 & 0.09 \\ 
+    1 b-tags \ra 2 b-tags (\mj, nJet=3) & Triangle & $-0.008 \pm 0.04$ & 3.20 & 7 & 0.87 \\ 
+    0 b-tags \ra 1 b-tags (\mj, nJet=2) & Cross & $0.111 \pm 0.03$ & 5.87 & 7 & 0.55 \\ 
+    0 b-tags \ra 1 b-tags (\mj, nJet=3) & Square & $0.040 \pm 0.02$ & 1.12 & 7 & 0.99 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+
 
 
 
@@ -337,6 +410,31 @@ Minimizer is Linear
 Chi2                      =      1.12033
 NDf                       =            7
 p0                        =    0.0396114   +/-   0.0217781   
+
+\begin{table}[!h]
+  \label{tab:syst-fits-le3j}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+    &             & \multicolumn{4}{c}{Constant fit} \\
+    \cline{3-6}
+    Closure test  & Symbol & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & Circle & $0.007 \pm 0.02$ & 3.91 & 7 & 0.79 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Times & $-0.053 \pm 0.03$ & 8.02 & 7 & 0.33 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Invert. Triangle & $0.018 \pm 0.04$ & 6.23 & 7 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 0 b-tags) & Star & $0.034 \pm 0.02$ & 9.24 & 7 & 0.24 \\ 
+    \njetlow \ra \njethigh (\gj, 0 b-tags) & Diamond & $0.100 \pm 0.04$ & 12.20 & 7 & 0.09 \\ 
+    1 b-tags \ra 2 b-tags (\mj, nJet=3) & Triangle & $-0.008 \pm 0.04$ & 3.20 & 7 & 0.87 \\ 
+    0 b-tags \ra 1 b-tags (\mj, nJet=2) & Cross & $0.111 \pm 0.03$ & 5.87 & 7 & 0.55 \\ 
+    0 b-tags \ra 1 b-tags (\mj, nJet=3) & Square & $0.040 \pm 0.02$ & 1.12 & 7 & 0.99 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
 le3j
 1 0.0285990260695
 2 0.0394980874076

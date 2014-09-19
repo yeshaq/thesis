@@ -6,9 +6,9 @@ alphaT
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      1.22801
-NDf                       =            7
-p0                        =   -0.0189272   +/-   0.0380092   
+Chi2                      =      1.45031
+NDf                       =            6
+p0                        =   -0.0201099   +/-   0.0379588   
 
 
 
@@ -17,9 +17,9 @@ jBinOneTojBinTwoMuOneB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      6.23304
-NDf                       =            7
-p0                        =    -0.135403   +/-   0.0290337   
+Chi2                      =      5.80931
+NDf                       =            6
+p0                        =    -0.135581   +/-   0.0290284   
 
 
 
@@ -28,9 +28,9 @@ jBinOneTojBinTwoMuTwoB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =       5.0199
+Chi2                      =      5.29769
 NDf                       =            6
-p0                        =   -0.0666723   +/-   0.0453749   
+p0                        =   -0.0666016   +/-   0.0453864   
 
 
 
@@ -39,9 +39,9 @@ jBinOneTojBinTwoMuZeroB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      12.5458
-NDf                       =            7
-p0                        =   -0.0321372   +/-   0.0217721   
+Chi2                      =      12.2436
+NDf                       =            6
+p0                        =   -0.0321086   +/-   0.0217705   
 
 
 
@@ -50,9 +50,9 @@ jBinOneTojBinTwoPhotZeroB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      5.12477
-NDf                       =            7
-p0                        =    0.0473321   +/-   0.043178    
+Chi2                      =      4.92221
+NDf                       =            6
+p0                        =    0.0476839   +/-   0.0431282   
 
 
 
@@ -61,9 +61,9 @@ oneBtoTwoB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      11.6588
-NDf                       =            7
-p0                        =    0.0646557   +/-   0.035597    
+Chi2                      =      11.4822
+NDf                       =            6
+p0                        =    0.0645602   +/-   0.0355933   
 
 
 
@@ -72,9 +72,33 @@ zeroBtoOneB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      25.2782
-NDf                       =            7
-p0                        =   -0.0591762   +/-   0.0295666   
+Chi2                      =      25.2859
+NDf                       =            6
+p0                        =   -0.0592002   +/-   0.0295662   
+
+\begin{table}[!h]
+  \label{tab:syst-fits-ge4j}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+    &             & \multicolumn{4}{c}{Constant fit} \\
+    \cline{3-6}
+    Closure test  & Symbol & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & Circle & $-0.020 \pm 0.04$ & 1.45 & 6 & 0.96 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Times & $-0.136 \pm 0.03$ & 5.81 & 6 & 0.44 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Invert. Triangle & $-0.067 \pm 0.05$ & 5.30 & 6 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 0 b-tags) & Star & $-0.032 \pm 0.02$ & 12.24 & 6 & 0.06 \\ 
+    \njetlow \ra \njethigh (\gj, 0 b-tags) & Diamond & $0.048 \pm 0.04$ & 4.92 & 6 & 0.55 \\ 
+    1 b-tags \ra 2 b-tags (\mj) & Triangle & $0.065 \pm 0.04$ & 11.48 & 6 & 0.07 \\ 
+    0 b-tags \ra 1 b-tags (\mj) & Square & $-0.059 \pm 0.03$ & 25.29 & 6 & 0.00 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
 
 
 
@@ -83,9 +107,9 @@ alphaT
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      1.22801
-NDf                       =            7
-p0                        =   -0.0189272   +/-   0.0380092   
+Chi2                      =      1.45031
+NDf                       =            6
+p0                        =   -0.0201099   +/-   0.0379588   
 
 
 
@@ -94,9 +118,9 @@ jBinOneTojBinTwoMuOneB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      6.23304
-NDf                       =            7
-p0                        =    -0.135403   +/-   0.0290337   
+Chi2                      =      5.80931
+NDf                       =            6
+p0                        =    -0.135581   +/-   0.0290284   
 
 
 
@@ -105,9 +129,9 @@ jBinOneTojBinTwoMuTwoB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =       5.0199
+Chi2                      =      5.29769
 NDf                       =            6
-p0                        =   -0.0666723   +/-   0.0453749   
+p0                        =   -0.0666016   +/-   0.0453864   
 
 
 
@@ -116,9 +140,9 @@ jBinOneTojBinTwoMuZeroB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      12.5458
-NDf                       =            7
-p0                        =   -0.0321372   +/-   0.0217721   
+Chi2                      =      12.2436
+NDf                       =            6
+p0                        =   -0.0321086   +/-   0.0217705   
 
 
 
@@ -127,9 +151,9 @@ jBinOneTojBinTwoPhotZeroB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      5.12477
-NDf                       =            7
-p0                        =    0.0473321   +/-   0.043178    
+Chi2                      =      4.92221
+NDf                       =            6
+p0                        =    0.0476839   +/-   0.0431282   
 
 
 
@@ -138,9 +162,9 @@ oneBtoTwoB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      11.6588
-NDf                       =            7
-p0                        =    0.0646557   +/-   0.035597    
+Chi2                      =      11.4822
+NDf                       =            6
+p0                        =    0.0645602   +/-   0.0355933   
 
 
 
@@ -149,9 +173,33 @@ zeroBtoOneB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      25.2782
-NDf                       =            7
-p0                        =   -0.0591762   +/-   0.0295666   
+Chi2                      =      25.2859
+NDf                       =            6
+p0                        =   -0.0592002   +/-   0.0295662   
+
+\begin{table}[!h]
+  \label{tab:syst-fits-ge4j}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+    &             & \multicolumn{4}{c}{Constant fit} \\
+    \cline{3-6}
+    Closure test  & Symbol & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & Circle & $-0.020 \pm 0.04$ & 1.45 & 6 & 0.96 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Times & $-0.136 \pm 0.03$ & 5.81 & 6 & 0.44 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Invert. Triangle & $-0.067 \pm 0.05$ & 5.30 & 6 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 0 b-tags) & Star & $-0.032 \pm 0.02$ & 12.24 & 6 & 0.06 \\ 
+    \njetlow \ra \njethigh (\gj, 0 b-tags) & Diamond & $0.048 \pm 0.04$ & 4.92 & 6 & 0.55 \\ 
+    1 b-tags \ra 2 b-tags (\mj) & Triangle & $0.065 \pm 0.04$ & 11.48 & 6 & 0.07 \\ 
+    0 b-tags \ra 1 b-tags (\mj) & Square & $-0.059 \pm 0.03$ & 25.29 & 6 & 0.00 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
 ge4j
 1 0.0459013308391
 2 0.0459013308391
@@ -159,8 +207,7 @@ ge4j
 4 0.0874046062946
 5 0.119191173705
 6 0.119191173705
-7 0.158743032363
-8 0.158743032363
+7 0.163973915801
 
 
 
@@ -169,9 +216,9 @@ alphaT
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      5.28617
-NDf                       =            7
-p0                        =   -0.0401139   +/-   0.0241751   
+Chi2                      =       5.2765
+NDf                       =            6
+p0                        =   -0.0401822   +/-   0.0241741   
 
 
 
@@ -180,9 +227,9 @@ jBinOneTojBinTwoMuOneB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      6.23304
-NDf                       =            7
-p0                        =    -0.135403   +/-   0.0290337   
+Chi2                      =      5.80931
+NDf                       =            6
+p0                        =    -0.135581   +/-   0.0290284   
 
 
 
@@ -191,9 +238,9 @@ jBinOneTojBinTwoMuTwoB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =       5.0199
+Chi2                      =      5.29769
 NDf                       =            6
-p0                        =   -0.0666723   +/-   0.0453749   
+p0                        =   -0.0666016   +/-   0.0453864   
 
 
 
@@ -202,9 +249,9 @@ jBinOneTojBinTwoMuZeroB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      12.5458
-NDf                       =            7
-p0                        =   -0.0321372   +/-   0.0217721   
+Chi2                      =      12.2436
+NDf                       =            6
+p0                        =   -0.0321086   +/-   0.0217705   
 
 
 
@@ -213,9 +260,9 @@ jBinOneTojBinTwoPhotZeroB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      5.12477
-NDf                       =            7
-p0                        =    0.0473321   +/-   0.043178    
+Chi2                      =      4.92221
+NDf                       =            6
+p0                        =    0.0476839   +/-   0.0431282   
 
 
 
@@ -224,9 +271,9 @@ oneBtoTwoB3
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      5.34722
-NDf                       =            7
-p0                        =     0.014585   +/-   0.0419826   
+Chi2                      =      5.38124
+NDf                       =            6
+p0                        =    0.0144652   +/-   0.0419795   
 
 
 
@@ -235,9 +282,9 @@ zeroBtoOneB2
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      3.83847
-NDf                       =            7
-p0                        =    0.0937831   +/-   0.0344438   
+Chi2                      =      3.63372
+NDf                       =            6
+p0                        =    0.0930911   +/-   0.0343649   
 
 
 
@@ -246,9 +293,34 @@ zeroBtoOneB3
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      2.03435
-NDf                       =            7
-p0                        =    0.0323264   +/-   0.0225758   
+Chi2                      =      2.01473
+NDf                       =            6
+p0                        =    0.0323222   +/-   0.0225757   
+
+\begin{table}[!h]
+  \label{tab:syst-fits-le3j}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+    &             & \multicolumn{4}{c}{Constant fit} \\
+    \cline{3-6}
+    Closure test  & Symbol & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & Circle & $-0.040 \pm 0.02$ & 5.28 & 6 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Times & $-0.136 \pm 0.03$ & 5.81 & 6 & 0.44 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Invert. Triangle & $-0.067 \pm 0.05$ & 5.30 & 6 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 0 b-tags) & Star & $-0.032 \pm 0.02$ & 12.24 & 6 & 0.06 \\ 
+    \njetlow \ra \njethigh (\gj, 0 b-tags) & Diamond & $0.048 \pm 0.04$ & 4.92 & 6 & 0.55 \\ 
+    1 b-tags \ra 2 b-tags (\mj, nJet=3) & Triangle & $0.014 \pm 0.04$ & 5.38 & 6 & 0.50 \\ 
+    0 b-tags \ra 1 b-tags (\mj, nJet=2) & Cross & $0.093 \pm 0.03$ & 3.63 & 6 & 0.73 \\ 
+    0 b-tags \ra 1 b-tags (\mj, nJet=3) & Square & $0.032 \pm 0.02$ & 2.01 & 6 & 0.92 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
 
 
 
@@ -257,9 +329,9 @@ alphaT
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      5.28617
-NDf                       =            7
-p0                        =   -0.0401139   +/-   0.0241751   
+Chi2                      =       5.2765
+NDf                       =            6
+p0                        =   -0.0401822   +/-   0.0241741   
 
 
 
@@ -268,9 +340,9 @@ jBinOneTojBinTwoMuOneB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      6.23304
-NDf                       =            7
-p0                        =    -0.135403   +/-   0.0290337   
+Chi2                      =      5.80931
+NDf                       =            6
+p0                        =    -0.135581   +/-   0.0290284   
 
 
 
@@ -279,9 +351,9 @@ jBinOneTojBinTwoMuTwoB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =       5.0199
+Chi2                      =      5.29769
 NDf                       =            6
-p0                        =   -0.0666723   +/-   0.0453749   
+p0                        =   -0.0666016   +/-   0.0453864   
 
 
 
@@ -290,9 +362,9 @@ jBinOneTojBinTwoMuZeroB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      12.5458
-NDf                       =            7
-p0                        =   -0.0321372   +/-   0.0217721   
+Chi2                      =      12.2436
+NDf                       =            6
+p0                        =   -0.0321086   +/-   0.0217705   
 
 
 
@@ -301,9 +373,9 @@ jBinOneTojBinTwoPhotZeroB
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      5.12477
-NDf                       =            7
-p0                        =    0.0473321   +/-   0.043178    
+Chi2                      =      4.92221
+NDf                       =            6
+p0                        =    0.0476839   +/-   0.0431282   
 
 
 
@@ -312,9 +384,9 @@ oneBtoTwoB3
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      5.34722
-NDf                       =            7
-p0                        =     0.014585   +/-   0.0419826   
+Chi2                      =      5.38124
+NDf                       =            6
+p0                        =    0.0144652   +/-   0.0419795   
 
 
 
@@ -323,9 +395,9 @@ zeroBtoOneB2
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      3.83847
-NDf                       =            7
-p0                        =    0.0937831   +/-   0.0344438   
+Chi2                      =      3.63372
+NDf                       =            6
+p0                        =    0.0930911   +/-   0.0343649   
 
 
 
@@ -334,9 +406,34 @@ zeroBtoOneB3
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      2.03435
-NDf                       =            7
-p0                        =    0.0323264   +/-   0.0225758   
+Chi2                      =      2.01473
+NDf                       =            6
+p0                        =    0.0323222   +/-   0.0225757   
+
+\begin{table}[!h]
+  \label{tab:syst-fits-le3j}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+    &             & \multicolumn{4}{c}{Constant fit} \\
+    \cline{3-6}
+    Closure test  & Symbol & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & Circle & $-0.040 \pm 0.02$ & 5.28 & 6 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Times & $-0.136 \pm 0.03$ & 5.81 & 6 & 0.44 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & Invert. Triangle & $-0.067 \pm 0.05$ & 5.30 & 6 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 0 b-tags) & Star & $-0.032 \pm 0.02$ & 12.24 & 6 & 0.06 \\ 
+    \njetlow \ra \njethigh (\gj, 0 b-tags) & Diamond & $0.048 \pm 0.04$ & 4.92 & 6 & 0.55 \\ 
+    1 b-tags \ra 2 b-tags (\mj, nJet=3) & Triangle & $0.014 \pm 0.04$ & 5.38 & 6 & 0.50 \\ 
+    0 b-tags \ra 1 b-tags (\mj, nJet=2) & Cross & $0.093 \pm 0.03$ & 3.63 & 6 & 0.73 \\ 
+    0 b-tags \ra 1 b-tags (\mj, nJet=3) & Square & $0.032 \pm 0.02$ & 2.01 & 6 & 0.92 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
 le3j
 1 0.0320545873444
 2 0.0375287336067
@@ -344,5 +441,4 @@ le3j
 4 0.111494351721
 5 0.111494351721
 6 0.111494351721
-7 0.111494351721
-8 0.160744491715
+7 0.132379128886
