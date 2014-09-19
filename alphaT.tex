@@ -1,0 +1,195 @@
+%\includeonly{Introduction_thesis, The_Belle_Experiment, event_selection, cut_summary_table, continuum_suppression, branching_fraction_measurement, determination_of_signal_yield, gsim_and_toy_test, calibration, four_d_data_fit, bkgd_sub_mkpi, 4d_2d_toy, gsim_bias_correction, syst_wkst_wkpi, br_ul_sig, polarization, conclusion, bibliography}
+
+%\includeonly{syst_wkst_wkpi, bibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  PhD Thesis: master LATEX file 
+%  -----------------------------
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,letter,twoside,psfig,epsfig,titlepage]{report}
+%\documentclass[11pt,a4paper,twoside,psfig,epsfig,titlepage]{report}
+%\documentclass[11pt,a4paper,,psfig,epsfig, titlepage]{report}
+
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[square,numbers,sort&compress]{natbib}
+\usepackage{url}
+\usepackage{braket}
+\usepackage[normal,small]{caption2}
+\usepackage{afterpage}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{fancyheadings}
+%\usepackage{doublespace}
+\usepackage{xspace}
+%\usepackage[mediumspace]{SIunits}
+\usepackage{enumerate}
+\usepackage{setspace}
+
+\input epsf
+\usepackage{tabularx}
+\usepackage{epsfig}
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\usepackage{graphicx}
+\usepackage{amssymb}
+%\usepackage{header}
+\usepackage{epstopdf}
+\usepackage{feynmf}
+\usepackage{color}
+%\input{ptdr-definitions}
+\input{symbols}
+\input{mydefs}
+\usepackage{natbib}
+
+%\unitlength=1mm
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+\setlength{\captionmargin}{1.2cm}
+
+% Use the Adobe Postscript fonts...
+\renewcommand{\rmdefault}{ptm}%{ptm}
+%%\renewcommand{\ttdefault}{pcr}%{pcr}
+\renewcommand{\sfdefault}{phv}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This part does a nice little line on the top of every page with
+% chapter number and page number..
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{headings}
+\pagestyle{fancyplain}
+
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparwidth}
+
+\addtolength{\extrarowheight}{1pt}
+
+% remember chapter title
+\renewcommand{\chaptermark}[1]%
+{\markboth{#1}{}}
+% section number and title
+\renewcommand{\sectionmark}[1]%
+{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]%
+{\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]%
+{\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+
+\setlength{\unitlength}{2mm}
+\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\newcommand{\pageone}{}
+
+\doublespacing
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{{\boldmath Search for New Physics in All-hadronic Events with AlphaT in 8 TeV data at CERN}}
+
+\author{Yossof Eshaq\vspace{4mm}\\
+  %\scalebox{0.3}{\includegraphics{belle.eps}} \vspace{5.0mm} \\
+  {\sl Submitted in Partial Fulfillment of the }\\
+  {\sl Requirements for the Degree}
+  {\sl Doctor of Philosophy}\\[2cm]
+  Supervised by Professor Aran Garcia-Bellido\\[2cm]
+  Department of Physics & Astronomy\\
+  Arts, Sciences and Engineering\\
+  University of Rocheser\\[1cm]
+}
+  
+%\date{\textcolor{red}{Version 3\\ Oct. 30, 2008}}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearemptydoublepage
+
+\pagenumbering{roman}
+
+\addcontentsline{toc}{section}{Abstract} 
+
+\abstract{ An inclusive search for supersymmetric processes that
+produce final states with jets and missing transverse energy is
+performed in pp collisions at a centre-of-mass energy of $\sqrt{s} =
+8\TeV$. The data sample corresponds to an integrated luminosity of
+18.5\fbinv collected by the CMS experiment at the LHC. In this search,
+a dimensionless kinematic variable, \alphat, is used to discriminate
+between events with genuine and misreconstructed missing transverse
+energy. The search is based on an examination of the number of
+reconstructed jets per event, the scalar sum of transverse energies of
+these jets, and the number of these jets identified as originating
+from bottom quarks. The results are interpreted with various
+simplified models, with a special emphasis on models with a compressed
+mass spectrum.}
+
+
+%%%% ACKNOWLEDGEMENTS -----------------------------------------------------------
+%\clearemptydoublepage
+%\clearemptydoublepage
+%\include{acknowledgements}
+%\addcontentsline{toc}{section}{Acknowledgments}
+%\clearpage
+
+
+%%% CONTENTS--------------------------------------------------------------
+%\clearemptydoublepage
+%\addcontentsline{toc}{section}{Contents}
+%\tableofcontents
+%
+%\clearemptydoublepage
+%\addcontentsline{toc}{section}{List of Figures}
+%\listoffigures
+%
+%\clearemptydoublepage
+%\addcontentsline{toc}{section}{List of Tables}
+%\listoftables
+%
+%\clearemptydoublepage
+%
+%
+%%%% CHAPTERS-------------------------------------------------------------
+\pagenumbering{arabic}
+
+%\input introduction
+\input theory
+\input lhcAndCms
+\input alphat
+\input samples
+\input trigger
+\input reconstruction
+\input selection
+%\input backgrounds
+\input systematics
+%\input statistics
+%\input signal
+\input results
+%\input interpretation
+%\input conclusions
+
+
+\appendix
+
+%\input{results_parameters}
+\input{results_tables}
+%\input{app_signal}
+%\input{app_naive}
+%%\input{app_fit}
+%\input{results_plots_a_priori_two_sigma_bands}
+%\input{fits_with_signal}
+%%\input{app_cross_checks}
+
+\clearpage
+\bibliographystyle{plain}
+\bibliography{alphaT}
+
+\end{document}   
