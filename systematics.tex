@@ -1,59 +1,51 @@
 \clearpage
 \section{Closure tests and systematic uncertainties on transfer factors\label{sec:bkgd-syst}}
 
-Since the transfer factors are obtained from simulation, an
-appropriate systematic uncertainty is assigned to each factor to
-account for theoretical uncertainties~\cite{Bern:2011pa} and
-limitations in the simulation modelling of event kinematics and
-instrumental effects. This section describes how the systematic
-uncertainties are determined from closure tests in data.
+Limitations in simulating detector effects and event kinematics 
+requires us to apply appropriate systematics uncertainties 
+on the simulation-based translation factors.  The following section 
+describes how we obatain these systematic uncertainty through the 
+method of closure tests.
+%Since the transfer factors are obtained from simulation, an
+%appropriate systematic uncertainty is assigned to each factor to
+%account for theoretical uncertainties~\cite{Bern:2011pa} and
+%limitations in the simulation modelling of event kinematics and
+%instrumental effects. This section describes how the systematic
+%uncertainties are determined from closure tests in data.
 
 \subsection{Closure tests\label{sec:closure-tests-desc}}
 
-%The sensitivity of the transfer factors to potential limitations in
-%the simulation modelling is established through sets of closure tests,
-%which confront data yields measured in one data control (sub-)sample
-%against the predictions determined from another data control
-%(sub-)sample as a function of \scalht. \ie, an extrapolation is made
-%from one control (sub-)sample to another (rather than to the signal
-%region) in bins of \scalht via appropriate transfer factors, again
-%determined from simulation. A large ensemble (\ie hundreds) of
-%statistically independent closure tests are performed between a number
-%of control (sub-)samples to identify any potential sources of bias in
-%the transfer factors.
-%
-%%This is a very conservative approach, as the difference in the
-%%composition of the sub-samples used in the closure tests is typically
-%%much greater than any difference expected between any given control
-%%sample and the signal region. Concrete examples are described in
-%%Sec.~\ref{sec:bkgd-syst}.
-%
-%The level of statistical consistency between the predicted and
-%observed yields of each closure test in the ensemble is inspected, in
-%the absence of any assumed systematic uncertainty. The level of
-%agreement between the predicted and observed yields is expressed as
-%the ratio $(\nobs - \npre)/\npre$ while considering only the
-%statistical uncertainties on \npre and \nobs. Therefore, the level of
-%closure is defined by the statistical significance of a deviation in
-%the ratio from zero. A set of closure tests comprise ratios determined
-%for each \scalht bin. In this way, a set of closure tests allow to
-%establish the presence of significant biases or otherwise, and any
-%possible dependence on \scalht. If statistically significant biases
-%are observed, further studies are required to understand and correct
-%for these biases.
-%
-%Under the assumption of closure for the full ensemble of tests,
-%systematic uncertainties on the transfer factors are derived for reach
-%\njet and \nb category and \scalht regions. The treatment for
-%estimating the systematic uncertainties on the transfer factors is
-%described in Section~\ref{sec:syst-from-closure}.
-%
-%Eight sets of closure tests use the three data control samples to
-%probe key ingredients of the simulation modelling of the SM
-%backgrounds with genuine \met as a function of \scalht, as shown in
-%Fig.~\ref{fig:closure}. This is done for the two jet multiplicity bins
-%separately: (a) $2 \leq \njet \leq 3$ and (b) $\njet \geq 4$.
-%
+At its core, the method compares an observed yield (\nobs) and a predicted
+yield (\npre) in a sub-sample of a control region.  The predicted yield is constructed
+by translating from a statisically independent data sample to the data sample of
+interest by the use of the proper translation factor.  For example, for a given HT bin,
+a prediction for the \njethigh, \nb=1, \mj sample can made by translating from the
+\njetlow, \nb=1, \mj in data via the translation factor: 
+\begin{equation}
+  \label{equ:tf-ratio-closure}
+  \frac{N_{\rm MC}^{\rm \mj}(\scalht,\njethigh, \nb=1)}{N_{\rm MC}^{\rm \mj}(\scalht,\njetlow,\nb=1)} 
+\end{equation}
+
+The agreement betwen \nobs and \npre is expressed as $(\nobs - \npre)/\npre$.
+Assuming only statistical uncertainties on \nobs and \npre, deviation of the 
+ratio from zero defines our level of closure. A closure test set is defined
+as ratios for each \scaleht. Looking at the ratio as a function
+of \scaleht allows the measurment of statistical significant biases from zero and/or 
+any dependence on \scaleht.  If statistically significant biases
+are observed, further studies are required to understand and correct
+for these biases.
+
+Eight sets of closure tests probe key ingredients of the simulation modelling 
+of the SM backgrounds with genuine \met as a function of \scalht, as shown in
+Fig.~\ref{fig:closure}. This is done for the two jet multiplicity bins
+separately: (a) $2 \leq \njet \leq 3$ and (b) $\njet \geq 4$.
+
+Under the assumption of closure for the full ensemble of tests,
+systematic uncertainties on the transfer factors are derived for each
+\njet category and \scalht regions. The treatment for
+estimating the systematic uncertainties on the transfer factors is
+described in Section~\ref{sec:syst-from-closure}.
+
 \begin{figure}[h!]
   \begin{center}
     \subfigure[$2 \leq \njet \leq 3$]{\includegraphics[width=0.7\textwidth]{figures/syst/closureTests_pf_take21_le3j.pdf}} \\
@@ -318,9 +310,9 @@ uncertainties are determined from closure tests in data.
 %    \hline
 %  \end{tabular}
 %\end{table}
-%
-%\subsection{Systematic uncertainties from closure tests\label{sec:syst-from-closure}}
-%
+
+\subsection{Systematic uncertainties from closure tests\label{sec:syst-from-closure}}
+
 %Once it is established that no significantly large bias or trend is
 %observed for any set of closure tests, then systematic uncertainties
 %are determined. The statistical precision of the closure tests is
