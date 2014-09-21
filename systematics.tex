@@ -6,12 +6,6 @@ requires us to apply appropriate systematics uncertainties
 on the simulation-based translation factors.  The following section 
 describes how we obatain these systematic uncertainty through the 
 method of closure tests.
-%Since the transfer factors are obtained from simulation, an
-%appropriate systematic uncertainty is assigned to each factor to
-%account for theoretical uncertainties~\cite{Bern:2011pa} and
-%limitations in the simulation modelling of event kinematics and
-%instrumental effects. This section describes how the systematic
-%uncertainties are determined from closure tests in data.
 
 \subsection{Closure tests\label{sec:closure-tests-desc}}
 
@@ -19,7 +13,7 @@ At its core, the method compares an observed yield (\nobs) and a predicted
 yield (\npre) in a sub-sample of a control region.  The predicted yield is constructed
 by translating from a statisically independent data sample to the data sample of
 interest by the use of the proper translation factor.  For example, for a given HT bin,
-a prediction for the \njethigh, \nb=1, \mj sample can made by translating from the
+a prediction for the \njethigh, \nb=1, \mj sample can be made by translating from the
 \njetlow, \nb=1, \mj in data via the translation factor: 
 \begin{equation}
   \label{equ:tf-ratio-closure}
@@ -29,7 +23,7 @@ a prediction for the \njethigh, \nb=1, \mj sample can made by translating from t
 The agreement betwen \nobs and \npre is expressed as $(\nobs - \npre)/\npre$.
 Assuming only statistical uncertainties on \nobs and \npre, deviation of the 
 ratio from zero defines our level of closure. A closure test set is defined
-as ratios for each \scaleht. Looking at the ratio as a function
+as ratios for each \scaleht bin. Looking at the ratio as a function
 of \scaleht allows the measurment of statistical significant biases from zero and/or 
 any dependence on \scaleht.  If statistically significant biases
 are observed, further studies are required to understand and correct
@@ -51,8 +45,8 @@ described in Section~\ref{sec:syst-from-closure}.
     \subfigure[$2 \leq \njet \leq 3$]{\includegraphics[width=0.7\textwidth]{figures/syst/closureTests_pf_take21_le3j.pdf}} \\
     \subfigure[$\njet \geq 4$]{\includegraphics[width=0.7\textwidth]{figures/syst/closureTests_pf_take21_ge4j.pdf}} \\
     \caption{Sets of closure tests (open symbols) overlaid on top of
-      the systematic uncertainty used for each of the five \scalht
-      regions (shaded bands) and for the two different jet
+      the systematic uncertainty used for each of the \scalht
+      region (shaded bands) and for the two different jet
       multiplicity bins: (a) $2 \leq \njet \leq 3$ and (b) $\njet \geq
       4$.  }
     \label{fig:closure}
@@ -126,7 +120,9 @@ order $10^{-4}$, which corresponds to a percent-level change per
 %\scalht-independent. 
 
 \begin{table}[!h]
-  \caption{\njetlow bin. }
+  \caption{A summary of the results obtained from fits of zeroeth
+    order polynomials (\ie a constant) to four sets of closure tests
+    performed in the \njetlow bin.}
   \label{tab:syst-fits-le3j}
   \centering
   \footnotesize
@@ -147,7 +143,10 @@ order $10^{-4}$, which corresponds to a percent-level change per
 \end{table}
 
 \begin{table}[!h]
-  \caption{\njethigh bin. }
+  \caption{A summary of the results obtained from fits of zeroeth
+    order polynomials (\ie a constant) to three sets of closure tests
+    performed in the \njethigh bin. $^{\dag} $Further explanation of this
+    fit can be found in the text.}   
   \label{tab:syst-fits-ge4j}
   \centering
   \footnotesize
@@ -168,7 +167,11 @@ order $10^{-4}$, which corresponds to a percent-level change per
 \end{table}
 
 \begin{table}[!h]
-  \caption{closure in jet multiplicty }
+  \caption{A summary of the results obtained from fits of zeroeth
+    order polynomials (\ie a constant) to four sets of closure tests
+    (\njetlow \ra \njethigh) that probe the accuracy of the MC
+    modelling of the \njet distribution observed in data, using the
+    three data control samples. } 
   \label{tab:syst-fits-njet}
   \centering
   \footnotesize
@@ -194,18 +197,13 @@ order $10^{-4}$, which corresponds to a percent-level change per
 
 Once it is established that no significantly large bias or trend is
 observed for any set of closure tests, then systematic uncertainties
-are determined. The statistical precision of the closure tests is
-considered a suitable benchmark for determining the systematic
-uncertainties that are assigned to the transfer factors, as it is only
-the statistical uncertainties associated with the tests that limit our
-knowledge of whether closure is actually achieved or otherwise.
+are determined. 
 
-Independent systematics are determined for seven regions in \scalht,
-as indicated in Table~\ref{tab:syst-values}. For each \scalht region,
-the systematic uncertainty is estimated by taking the quadrature sum
-of the weighted mean and sample variance for the closure tests within
-the given \scalht region. This procedure yields the values quoted in
-Table~\ref{tab:syst-values}.
+Systematics are determined for each \scalht bin,as indicated in 
+Table~\ref{tab:syst-values}. For each \scalht region, the systematic
+uncertainty is estimated by taking the quadrature sum of the weighted 
+mean and sample variance for the closure tests within the given \scalht region.
+This procedure yields the values quoted in Table~\ref{tab:syst-values}.
 
 The effect of uncertainties related to the modelling of b-quark jets
 in simulation on the transfer factors is found to be negligible, at
@@ -245,59 +243,4 @@ kinematics).  This approach of decorrelating the \scalht regions
 should be contrasted against the fits shown in
 Figure~\ref{fig:closure-fits} that do assume a correlated behaviour in
 \scalht.
-%% while some fits outside bands, could argue to use correlation. plus
-%% fit uncertainties not shown. 
-%
-%%\subsection{Conservative closure tests and systematic uncertainties\label{sec:conservative}} 
-%%
-%%As mentioned briefly above, several sets of closure tests are
-%%considered to be very conservative, due to the significant differences
-%%in background composition and event kinematics between the two
-%%sub-samples used in the closure test relative to the (much smaller)
-%%differences between each control sample and the corresponding
-%%background(s) in the signal region. The accurate mirroring of the
-%%signal region and control samples is due to kinematically-similar
-%%event selections and the fact that the predictions are always made
-%%using the same (\njet, \nb, \scalht) bin. Conversely, suitable
-%%examples of conservative closure tests are: the two tests that change
-%%the \nb requirement (within the \mj sample), the test that uses the
-%%\mj and \mmj samples, and the three tests that change the \njet
-%%requirement (for each control sample).
-%%
-%%Consequently, the systematics derived from these conservative closure
-%%tests are also considered to be conservative. One important test of
-%%this statement is the sensitivity of the transfer factors to the
-%%admixture of W + jets and \ttbar in the signal region and \mj control
-%%sample. This is demonstrated by Fig.~\ref{fig:vary-xs-le3j} in
-%%Appendix~\ref{app:vary-xs}, which shows the effect of varying the
-%%cross sections of the W + jets and \ttbar by by $+$20\% and $-$20\%,
-%%respectively, on the closure tests performed in the \njet multiplicity
-%%bin \njetlow. Similarly, Fig.~\ref{fig:vary-xs-ge4j} shows the effect
-%%in the \njet multiplicity bin \njethigh. This variation in cross
-%%sections (in opposite directions) is considered to be extreme and is
-%%motivated (loosely) by the uncertainty on the experimental
-%%measurements of the W + jets and \ttbar inclusive cross sections.
-%%
-%%Given these variations in cross sections, the level of closure for
-%%several tests is subsequently degraded significantly and introduces
-%%apparently significant biases. However, the effect on the transfer
-%%factors used in the analysis (to ``translate'' an observation in a
-%%control sample to a prediction in the signal region) is negligible due
-%%to the ``mirroring'' of the signal region and control
-%%samples. Table~\ref{tab:vary-xs} demonstrates this by showing the
-%%effect on the transfer factors used to predict the W + jets and
-%%\ttbar backgrounds when varying the cross sections of W + jets and
-%%\ttbar by $+$20\% and $-$20\%, respectively. (In this case, no
-%%requirement is made on \njet, but the same behaviour is observed for
-%%the exclusive \njet bins.) While the artificial biases introduced to
-%%the closure tests are as large as $\sim$30\%, most apparent in the
-%%lowest \scalht bins, the effect of the transfer factors used in the
-%%analysis is typically at the percent level and only as large as
-%%$5\%$. 
-%%
-%%Hence, given the robust behaviour of the transfer factors with
-%%respect to large (and opposite) variations in the W + jets and \ttbar
-%%cross sections, one can assume with confidence that any bias in the
-%%transfer factors is adequately (and conservatively) covered by the
-%%systematic uncertainties -- of at least 10\% -- used in the analysis.
 
