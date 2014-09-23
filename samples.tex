@@ -180,89 +180,80 @@ are determined using corresponding inclusive samples and applied to each binned 
 
 Studies conducted by other analyses ~\cite{RobXS} revealed that some LO cross
 sections calculated for MC samples binned according to \partonht are
-inaccurate to a level as large as 10\%, leading to non-physical
-discontinuities in the \partonht distribution constructed from the
-binned samples of a given process.  The following describes a procedure for 
-correcting the xs of the \wlnu \partonht binned samples.  Other analyses created similar 
-procedures have to correct the \zmumu \partonht binned samples, this analysis
-uses those measured corrections as k-factors.  
+inaccurate to a level as large as 10\%, leading to non-physical discontinuities 
+in the \partonht distribution constructed from the binned samples of a given process.
+Futhermore, due to an error in production, the \wlnu \; \scalht binned samples exhibit 
+\scalht-depended biases. The following paragraphs describes a procedure to measure 
+corrections to the discontinuites and biases of the \wlnu \; \partonht binned samples 
+as a function of \scalht. Other analyses created similar procedures to correct 
+the \zmumu \; \partonht binned samples, this analysis uses those measured corrections 
+as k-factors.  
 
-\begin{figure}[h!]
+\begin{figure}[h!t]
   \begin{center}
-    \subfigure[\label{fig:xsec_study_before}No corrections.]{
-      \includegraphics[width=0.45\textwidth,]{figures/samples/xs_wj_lv_mg_ht_incl_over_excl-2.pdf}
-    } 
-    \subfigure[\label{fig:xsec_study_before}No corrections.]{
-      \includegraphics[width=0.45\textwidth,]{figures/samples/xs_wj_lv_mg_ht_incl_over_excl-6.pdf}
+    \subfigure[\label{fig:xsec_study_before}Parton \scalht distrbution for the \wlnu inclusive sample (blue) and
+    \wlnu \nparton binned sample (orange.)]{
+      \includegraphics[width=0.6\textwidth,]{figures/samples/xs_wj_lv_mg_ht_incl_over_excl-2.pdf}
     } \\
-    \subfigure[\label{fig:xsec_study_after}With corrections.]{
-      \includegraphics[width=0.7\textwidth,]{figures/samples/xs_wj_lv_mg_ht_incl_over_excl-7.pdf}
+    \subfigure[\label{fig:xsec_study_before}Fitted Parton \scalht distrbution for the \wlnu \partonht sample (purple) and
+    \wlnu \nparton binned sample (orange.)]{
+      \includegraphics[width=0.6\textwidth,]{figures/samples/xs_wj_lv_mg_ht_incl_over_excl-6.pdf}
+    } \\
+    \subfigure[\label{fig:xsec_study_after}Event weight determined from ration of figure~\ref{fig:xsec_study} (b)]{
+      \includegraphics[width=0.6\textwidth,]{figures/samples/xs_wj_lv_mg_ht_incl_over_excl-7.pdf}
     } 
-    \caption{Generator-level \partonht distributions from the
-      inclusive DY + jets and the \partonht-binned \znunu + jets
-      samples.}
+    \caption{Generator-level \partonht distributions and measured weights}
     \label{fig:xsec_study}
   \end{center}
 \end{figure}
 
-The leading-order cross sections for each binned sample are corrected using
-a three-step process, described below.
+%The leading-order cross sections for each binned sample are corrected using
+%a three-step process, described below.
 
-{\bf Step 1:} 
+%{\bf Step 1:} 
 As a first step, we wish to reweigh the cross sections of the \partonht binned samples such that
-their \partonht distributions match that of the inclusive sample. Due to
+their \partonht distributions match that of the inclusive sample's. Due to
 the inclusive sample's limited statitistics in the tails of \scalht distribution, 
 we instead use the \nparton binned's \partonht distribution which is verified to agree well 
-with the inclusive sample ~\ref{fig:xsec_study} (a).  furthermore, both distributions 
-are fitted using a double exponetional of the form $exp(a+b*x + c*x^{1.05})$
-~\ref{fig:xsec_study} (b). Finally the ratio of the distributions is applied as 
-\partonht dependent event weight ~\ref{fig:xsec_study}(c).
+with the inclusive sample figure~\ref{fig:xsec_study} (a).  Additionally, to smooth statistical
+flucutations, both distributions are fitted using a double exponetional of the form $exp(a+b*x + c*x^{1.05})$
+for \scalht $> 500\gev$ figure~\ref{fig:xsec_study} (b). The ratio of the distributions figure~\ref{fig:xsec_study}(c) 
+is applied as \partonht dependent event weight.
 
-{\bf Step 3:} 
-
-The normalization of the MC samples do not agree well with data in 
-the high-\scalht and high-\met corner of kinematic phase space of
-this and other SUSY analyses.  Therefore a data sideband in \scalht is used
-to determine sample-specific \kfactors that are appropriate for the
-\scalht-\met phase space covered by this analysis. The \kfactor (with
-respect to an NNLO cross section) is determined for the following
-samples: W + jets and \ttbar. The corrections of the The drell-yann 
-and $Z\rightarrow\mu\mu$ + jets are discussed at the end of this section.
-Other background contributions are expected to be small and therefore no other
-corrections are applied. 
-
-Samples rich in W + jets, and \ttbar events are defined by requirements 
-on the number of muons, jets, and b-tagged jets, as summarised in Table~\ref{tab:xs}. A
-sideband in \scalht is used to determine both the yields in data and
+In the high-\scalht and high-\met corner of kinematic phase space of this analysis 
+(and other SUSY analyses) the overall normalization of MC samples do not 
+agree well with data. Therefore a data sideband in \scalht is used
+to determine sample-specific corrections that are appropriate for the
+\scalht-\met phase space covered by this analysis. This correction is determined 
+for the \wlnu and \ttbar samples by impososing requirements on the number of muons, 
+jets, and b-tagged jets, to obtain samples rich in W + jets, and \ttbar events.
+A sideband in \scalht is used to determine both the yields in data and
 MC expectations. The sideband is defined by the region $200 < \scalht
 < 225\gev$ and uses the jet \pt thresholds ($73,73,37\gev$) to maintain 
-comparable jet multiplicities, kinematics and background admixtures as observed for the
+comparable jet multiplicities, kinematics. and background admixtures as observed for the
 higher HT bins. Trigger efficiency and b-tag scale factor corrections 
-are determined and applied to the MC samples. The purity of the samples 
-is high, typically $>90\%$, and any contamination is corrected for. 
-The \kfactor is determined by taking the ratio of the data yield over 
-the MC expectation in the sideband. Table~\ref{tab:xs} summarises the \kfactors for the
-different samples. 
+are determined and applied to the MC samples. The purity of the samples are $>80\%$ and
+any contamination is taken into account. The correction is determined by 
+taking the ratio of the data yield over the MC expectation in the sideband. 
+Table~\ref{tab:xs} summarises the selection and corrections for the different samples. 
 
-Finally, an important point to note is that the corrections to the
-cross sections, derived with data sidebands, are only relevant for
-data/MC comparison plots and the suite of closure tests defined in
-Sec.~\ref{sec:bkgd-syst}. The transfer factors used to predict the SM
-background counts, defined in Sec.~\ref{sec:backgrounds}, are {\it
-  not} sensitive to changes in the cross sections.
-
+%Finally, an important point to note is that the corrections to the
+%cross sections, derived with data sidebands, are only relevant for
+%data/MC comparison plots and the suite of closure tests defined in
+%Sec.~\ref{sec:bkgd-syst}. The transfer factors used to predict the SM
+%background counts, defined in Sec.~\ref{sec:backgrounds}, are {\it
+%  not} sensitive to changes in the cross sections.
+%
 \begin{table}[!h]
-  \caption{\kfactors determined from a data sideband for the different
-    MC samples . All \kfactors are relative to theoretical cross
-    sections calculated at NNLO. ``Corrected yield''  reflects the 
-    observed data yield minus the contamination as given by MC.}
+  \caption{Correctins determined from a data sideband for the W + jets and \ttbar samples. 
+  ``Corrected yield'' reflects the observed data yield minus the contamination as given by MC.}
   \label{tab:xs}
   \centering
   \footnotesize
   \begin{tabular}{ llcccc }
     \hline
     \hline
-    Process                       & Selection                         & Purity & Corrected yield & MC expectation      & \kfactor        \\
+    Process                       & Selection                         & Purity & Corrected yield & MC expectation      & Correction Factor        \\
     \hline
     W + jets                      & \mj, \njetlow, $\nb = 0$          & 0.90   & 15682           & $18013.1 \pm 85.9$ & $0.87 \pm 0.01$ \\
     \ttbar                        & \mj, $\njet \geq 2$, $\nb \geq 2$ & 0.83   & 752           & $736.7 \pm 11.5$ & $1.02 \pm 0.05$ \\
