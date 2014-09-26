@@ -1,25 +1,28 @@
 \clearpage
 \section{Results\label{sec:results}}
 
+The likelihood described in ref:likelihood is used to
+relate yields, uncertainties. It is constructed using ROOTFIT
+~\cite{roofit} and maximized using MINUIT~\cite{James:1975dr}.
+
 \subsection{Standard Model\label{sec:smInterp}}
 
-%In order to test the compatibility of the observed signal region
-%yields with the expectations from only SM processes for a given
-%category of events defined in terms of \njet and \nb, signal
-%contributions are fixed to zero and the likelihood function is
-%maximized over all parameters using RooFit~\cite{roofit} and
-%MINUIT~\cite{James:1975dr}. 
-%The SM expectations and the associated uncertainties are determined
-%through an ensemble of pseudo-experiments that consider all relevant
-%data samples under the SM-only hypothesis. The data control samples
-%considered by the fit for each event category are summarised in
-%Table~\ref{tab:fit-plots}. 
-%Table~\ref{tab:ensemble-summary-posteriori} summarises the observed
-%data yields and the fit result for all event categories and all signal
-%region bins. The resulting parameter values are listed in
-%Tables~\ref{tab:mlParameterValues0b_le3j}--\ref{tab:mlParameterValuesge4b_ge4j}
-%found in Appendix~\ref{app:ml-params}. 
-%
+To test compatiblity with a Standard Model only hypothesis,
+the signal term is removed from the likelihood model. The parameters 
+maximizing the likeliood are summarized in Ref:Table. The uncertainty on 
+these parameters are obtained by constrcting a probablity density
+function (p.d.f) from the maximized likelihood, then generating 
+ensemble of peudo-experiments from this p.d.f. and maxmizing the same 
+likelihood form for each pseudo-experiment, resulting in an esemble of parameters.
+The $68\%$ quantile of each ensemeble defines the quoted uncertainty on the 
+corresponding parameters.
+
+Table~\ref{tab:ensemble-summary-posteriori} summarises the observed
+data yields and the fit result for all event categories and all signal
+region bins. The resulting parameter values are listed in
+Tables~\ref{tab:mlParameterValues0b_le3j}--\ref{tab:mlParameterValuesge4b_ge4j}
+found in Appendix~\ref{app:ml-params}. 
+
 %Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4jge4b} show
 %the \scalht-binned observed data yields (black filled circles) and the
 %SM expectations and uncertainties (dark blue solid line with light
@@ -36,22 +39,22 @@
 %Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4jge4b}, but in
 %tabular form).
 %
-%For each of the eight categories of events defined by requirements on
-%\njet and \nb, the goodness-of-fit of the SM-only hypothesis is
-%determined by considering simultaneously up to eleven bins in \scalht
-%from the signal region and up to eleven or 30 bins from the data
-%control sample(s) depending on the event category. Goodness-of-fit is
-%determined using a method from~\cite{Cowan:358560}.  The value
-%\lk{data}{max} of the likelihood function at its maximum is noted.
-%The likelihood function (using the ML parameter values) is then used
-%as a p.d.f. for the observations to generate many pseudo-experiments.
-%For each pseudo-experiment, the likelihood function is again maximized
-%over all parameters, and the value \lk{}{max} entered in a histogram.
-%The quantile of \lk{data}{max} in this histogram is interpreted as a
-%$p$-value. The p-values obtained, shown in Figure~\ref{fig:fluct} (Top
-%Left), are found to be uniformly distributed in the range 0.0--1.0,
-%with the lowest p-value determined to be 0.17.
-%
+For each of the eight categories of events defined by requirements on
+\njet and \nb, the goodness-of-fit of the SM-only hypothesis is
+determined by considering simultaneously up to eleven bins in \scalht
+from the signal region and up to eleven or 30 bins from the data
+control sample(s) depending on the event category. Goodness-of-fit is
+determined using a method from~\cite{Cowan:358560}.  The value
+\lk{data}{max} of the likelihood function at its maximum is noted.
+The likelihood function (using the ML parameter values) is then used
+as a p.d.f. for the observations to generate many pseudo-experiments.
+For each pseudo-experiment, the likelihood function is again maximized
+over all parameters, and the value \lk{}{max} entered in a histogram.
+The quantile of \lk{data}{max} in this histogram is interpreted as a
+$p$-value. The p-values obtained, shown in Figure~\ref{fig:fluct} (Top
+Left), are found to be uniformly distributed in the range 0.0--1.0,
+with the lowest p-value determined to be 0.17.
+
 %The compatibility of the SM expectation and observed event count is
 %also evaluated for each of the 75 signal region bins. A profile
 %likelihood ratio is used to determine a p-value and the pull per
@@ -65,11 +68,11 @@
 %outliers beyond $2\sigma$. In summary, the observed result is
 %consistent with an, albeit rare, statistical fluctuation.
 %
-%\begin{figure}[h!]
-%  \begin{center}
-%    \subfigure[p-values per event category.]{
-%      \includegraphics[width=0.45\textwidth, trim=0 190 290 20, clip=true]{figures/fit/v1/pValues} % lbrt
-%    } 
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[p-values per event category.]{
+      \includegraphics[width=0.45\textwidth, trim=0 190 290 20, clip=true]{figures/fit/v21/pValues} % lbrt
+    } 
 %    \subfigure[Pull versus signal region bin.]{
 %      \includegraphics[width=0.45\textwidth, trim=0 0 0 30, clip=true]{figures/best_fit/data}
 %    } \\
@@ -79,11 +82,11 @@
 %    \subfigure[p-value per signal region bin.]{
 %      \includegraphics[width=0.45\textwidth, trim=0 0 0 0, clip=true]{figures/fit/v1/pvalue_per_bin}
 %    } \\
-%    \caption{Pulls and p-values. See text for details}
-%    \label{fig:fluct}
-%  \end{center}
-%\end{figure}
-%
+    \caption{Pulls and p-values. See text for details}
+    \label{fig:fluct}
+  \end{center}
+\end{figure}
+
 %Figures~\ref{fig:best-fit-control-only-le3j0b}--\ref{fig:best-fit-control-only-ge4jge4b}
 %show the observed data yields (black filled circles) and SM
 %expectations and associated uncertainties (dark green solid line with
