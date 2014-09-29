@@ -8,50 +8,40 @@ relate yields, uncertainties. It is constructed using ROOTFIT
 \subsection{Standard Model\label{sec:smInterp}}
 
 To test compatiblity with a Standard Model only hypothesis,
-the signal term is removed from the likelihood model. The parameters 
-maximizing the likeliood are summarized in Ref:Table. The uncertainty on 
-these parameters are obtained by constrcting a probablity density
-function (p.d.f) from the maximized likelihood, then generating 
+the signal term is removed from the likelihood model. The parameter values 
+maximizing the likelihood function are listed in 
+Tables~\ref{tab:mlParameterValues0b_le3j}--\ref{tab:mlParameterValues2b_ge4j}
+found in Appendix~\ref{app:ml-params}. The resulting SM yields
+along with the observed data yields are summarized in Tables~\ref{app:ml-yields}. 
+The uncertainty on the yields are obtained by constructing a probability density
+function (p.d.f) from the maximized likelihood, then generating an
 ensemble of peudo-experiments from this p.d.f. and maxmizing the same 
-likelihood form for each pseudo-experiment, resulting in an esemble of parameters.
+likelihood form for each pseudo-experiment, resulting in an esemble of yields.
 The $68\%$ quantile of each ensemeble defines the quoted uncertainty on the 
-corresponding parameters.
+corresponding yield.
 
-Table~\ref{tab:ensemble-summary-posteriori} summarises the observed
-data yields and the fit result for all event categories and all signal
-region bins. The resulting parameter values are listed in
-Tables~\ref{tab:mlParameterValues0b_le3j}--\ref{tab:mlParameterValuesge4b_ge4j}
-found in Appendix~\ref{app:ml-params}. 
+Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4j2b} show
+the \scalht-binned observed data yields (black filled circles) and the
+SM expectations and uncertainties (dark blue solid line with light
+blue bands) as determined by the fit for the hadronic signal region
+and the \mj or both (\mj,\gj) control samples, depending on the event
+category. The uncertainties in the SM expectations obtained from the 
+ensemble of pseudo-experiments reflect the statistical uncertainties in
+the considered data samples and the systematic uncertainties
+in the transfer factors as discused in section~\ref{sec:bkgd-syst}.
+Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4j2b} are summarized
+in tabular format in Tables~\ref{tab:ensemble-0b le3j}--\ref{tab:ensemble-2b ge4j} 
+in appendix~\ref{app:ml-yields} along with observed data yields and the fit 
+result for all event categories and both signal region and control sample bins.
 
-%Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4jge4b} show
-%the \scalht-binned observed data yields (black filled circles) and the
-%SM expectations and uncertainties (dark blue solid line with light
-%blue bands) as determined by the fit for the hadronic signal region
-%and the \mj or all three (\mj, \mmj and \gj) control samples,
-%depending on the event category. The uncertainties in the SM
-%expectations reflect the statistical uncertainties in the considered
-%data samples and the systematic uncertainties in the transfer factors
-%that link the signal region and control samples. 
-%Tables~\ref{tab:ensemble-0b-le3j}--\ref{tab:ensemble-ge4b-ge4j} in
-%Appendix~\ref{app:ml-yields} summarise the observed data yields and
-%the fit result for all event categories and both signal region and
-%control sample bins (\ie the same information contained in
-%Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4jge4b}, but in
-%tabular form).
-%
-For each of the eight categories of events defined by requirements on
-\njet and \nb, the goodness-of-fit of the SM-only hypothesis is
-determined by considering simultaneously up to eleven bins in \scalht
-from the signal region and up to eleven or 30 bins from the data
-control sample(s) depending on the event category. Goodness-of-fit is
-determined using a method from~\cite{Cowan:358560}.  The value
-\lk{data}{max} of the likelihood function at its maximum is noted.
-The likelihood function (using the ML parameter values) is then used
-as a p.d.f. for the observations to generate many pseudo-experiments.
-For each pseudo-experiment, the likelihood function is again maximized
-over all parameters, and the value \lk{}{max} entered in a histogram.
-The quantile of \lk{data}{max} in this histogram is interpreted as a
-$p$-value. The p-values obtained, shown in Figure~\ref{fig:fluct} (Top
+For each \nb, \njet category, the goodness-of-fit of the SM-only hypothesis 
+is determined by considering simultaneously all \scalht bins entering
+the likelihood. The goodness-of-fit described in ~\cite{Cowan:358560} is obtained
+by comparing the nominal maximized likelihood value \lk{data}{max} to 
+the corresponding ensemble of values, \lk{}{max}. The quantile which \lk{data}{max}
+falls in the distributions is interpreted as a p-value.
+
+The p-values obtained, shown in Figure~\ref{fig:fluct} (Top
 Left), are found to be uniformly distributed in the range 0.0--1.0,
 with the lowest p-value determined to be 0.17.
 
@@ -103,41 +93,40 @@ with the lowest p-value determined to be 0.17.
 %the additional information from hadronic signal region counts.
 %
 %\begin{landscape}
-%\begin{center}
-%\begin{table}[h!]
-%  \caption{Summary of the ``a posteriori'' fit.}
-%  \label{tab:ensemble-summary-posteriori}
-%  \centering
-%  \scriptsize
-%  \begin{tabular}{ llllllllllllll }
-%    \hline
-%    \hline
-%    \multicolumn{2}{c}{} & \multicolumn{11}{c}{\scalht (GeV)}                                                                                                                                                                                                                                            \\ 
-%    \njet                & \nb      &        & 200--275              & 275--325             & 325--375             & 375--475             & 475--575             & 575--675             & 675--775             & 775--875             & 875--975             & 975--1075           & 1075--$\infty$      \\ 
-%    \hline
-%    2--3                 & $0$      & SM\T   & $13235^{+119}_{-101}$ & $5417^{+73}_{-62}$   & $3562^{+69}_{-48}$   & $2482^{+38}_{-40}$   & $689^{+15}_{-13}$    & $231^{+13}_{-10}$    & $72.2^{+5.2}_{-4.0}$ & $28.1^{+3.2}_{-3.0}$ & $11.2^{+1.4}_{-1.6}$ & $6.0^{+1.1}_{-0.9}$ & $3.7^{+0.9}_{-0.7}$ \\ 
-%    2--3                 & $0$      & Data\T & $13310$               & $5404$               & $3580$               & $2475$               & $698$                & $224$                & $81$                 & $28$                 & $12$                 & $9$                 & $3$                 \\
-%    2--3                 & $1$      & SM\T   & $1743^{+32}_{-32}$    & $843^{+23}_{-26}$    & $580^{+23}_{-18}$    & $413^{+16}_{-14}$    & $102^{+5}_{-5}$      & $27.0^{+2.8}_{-2.9}$ & $9.1^{+1.2}_{-1.2}$  & $3.3^{+0.7}_{-0.7}$  & $2.3^{+0.7}_{-0.6}$  & $0.3^{+0.2}_{-0.1}$ & $0.2^{+0.1}_{-0.1}$ \\ 
-%    2--3                 & $1$      & Data\T & $1802$                & $835$                & $597$                & $416$                & $97$                 & $29$                 & $7$                  & $4$                  & $1$                  & $0$                 & $0$                 \\
-%    2--3                 & $2$      & SM\T   & $176^{+8}_{-6}$       & $115^{+6}_{-6}$      & $104^{+6}_{-5}$      & $68.1^{+4.7}_{-4.7}$ & $15.2^{+1.6}_{-1.5}$ & $3.3^{+0.5}_{-0.6}$  & $1.1^{+0.3}_{-0.3}$  & $0.2^{+0.1}_{-0.1}$  & $0.1^{+0.0}_{-0.0}$  & \multicolumn{2}{c}{}                      \\ 
-%    2--3                 & $2$      & Data\T & $174$                 & $119$                & $117$                & $70$                 & $18$                 & $7$                  & $1$                  & $0$                  & $0$                  & \multicolumn{2}{c}{}                      \\ 
-%    $\geq 4$             & $0$      & SM\T   & $104^{+6}_{-8}$       & $567^{+21}_{-20}$    & $454^{+20}_{-19}$    & $397^{+14}_{-14}$    & $250^{+11}_{-10}$    & $134^{+10}_{-8}$     & $55.5^{+4.4}_{-4.1}$ & $19.2^{+2.5}_{-2.1}$ & $9.8^{+1.6}_{-1.4}$  & $4.6^{+1.0}_{-1.0}$ & $4.2^{+1.0}_{-0.9}$ \\ 
-%    $\geq 4$             & $0$      & Data\T & $103$                 & $590$                & $455$                & $391$                & $274$                & $149$                & $56$                 & $18$                 & $12$                 & $7$                 & $8$                 \\
-%    $\geq 4$             & $1$      & SM\T   & $39.4^{+3.0}_{-3.0}$  & $216^{+9}_{-9}$      & $238^{+13}_{-14}$    & $179^{+9}_{-10}$     & $104^{+6}_{-6}$      & $36.4^{+3.5}_{-3.3}$ & $14.2^{+1.8}_{-1.8}$ & $8.6^{+1.5}_{-1.4}$  & $3.9^{+0.9}_{-0.8}$  & $1.1^{+0.4}_{-0.3}$ & $1.2^{+0.4}_{-0.4}$ \\ 
-%    $\geq 4$             & $1$      & Data\T & $38$                  & $207$                & $250$                & $181$                & $108$                & $41$                 & $10$                 & $14$                 & $6$                  & $1$                 & $1$                 \\
-%    $\geq 4$             & $2$      & SM\T   & $13.3^{+1.0}_{-1.0}$  & $77.1^{+4.4}_{-4.4}$ & $95.5^{+7.7}_{-6.7}$ & $77.4^{+5.7}_{-5.9}$ & $48.2^{+3.7}_{-3.7}$ & $18.4^{+3.1}_{-2.4}$ & $6.2^{+1.0}_{-0.9}$  & $1.7^{+0.4}_{-0.4}$  & $1.8^{+0.4}_{-0.3}$  & \multicolumn{2}{c}{}                      \\ 
-%    $\geq 4$             & $2$      & Data\T & $17$                  & $82$                 & $95$                 & $86$                 & $48$                 & $19$                 & $10$                 & $2$                  & $1$                  & \multicolumn{2}{c}{}                      \\ 
-%    $\geq 4$             & $3$      & SM\T   & $1.0^{+0.2}_{-0.2}$   & $8.2^{+0.8}_{-0.8}$  & $10.9^{+1.6}_{-1.5}$ & $8.2^{+1.1}_{-1.1}$  & $5.8^{+1.0}_{-0.8}$  & $2.2^{+0.6}_{-0.5}$  & $0.9^{+0.3}_{-0.2}$  & $0.2^{+0.1}_{-0.1}$  & $0.2^{+0.1}_{-0.1}$  & \multicolumn{2}{c}{}                      \\ 
-%    $\geq 4$             & $3$      & Data\T & $0$                   & $9$                  & $8$                  & $8$                  & $9$                  & $1$                  & $3$                  & $0$                  & $0$                  & \multicolumn{2}{c}{}                      \\ 
-%    $\geq 4$             & $\geq 4$ & SM\T   & $0.0^{+0.0}_{-0.0}$   & $0.1^{+0.1}_{-0.1}$  & $0.5^{+0.3}_{-0.3}$  & $0.9^{+0.3}_{-0.3}$  & \multicolumn{7}{l}{}                                                                                                                                         \\ 
-%    $\geq 4$             & $\geq 4$ & Data\T & $0$                   & $0$                  & $0$                  & $3$                  & \multicolumn{7}{l}{}                                                                                                                                         \\ 
-%    \hline
-%    \hline
-%  \end{tabular}
-%\end{table}
-%\end{center}
+\begin{center}
+\begin{table}[h!]
+  \caption{Summary of hadronic yields from fit.}
+  \label{tab:ensemble-summary-posteriori}
+  \centering
+  \scriptsize
+\begin{tabular}{ lllllllll }
+
+\hline
+& 375--475                       & 475--575                       & 575--675                       & 675--775                       & 775--875                       & 875--975                       & 975--1075                      & 1075--$\infty$                 \\ [1.000000ex]
+\hline
+0b le3j SM \T   & $2637^{+50}_{-48}$             & $759^{+24}_{-23}$              & $252^{+14}_{-13}$              & $76.5^{+6.6}_{-4.7}$           & $33.7^{+3.5}_{-3.7}$           & $11.8^{+2.1}_{-2.3}$           & $6.3^{+1.4}_{-1.2}$            & $3.2^{+0.9}_{-0.9}$            \\ 
+0b le3j Data \T & $2627$                         & $762$                          & $253$                          & $77$                           & $32$                           & $9$                            & $9$                            & $4$                            \\ 
+\hline
+1b le3j SM \T   & $413^{+15}_{-14}$              & $111^{+6}_{-4}$                & $35.8^{+3.4}_{-2.7}$           & $10.1^{+1.6}_{-1.3}$           & $3.7^{+0.8}_{-0.8}$            & $1.6^{+0.6}_{-0.7}$            & $0.5^{+0.3}_{-0.4}$            & $0.1^{+0.1}_{-0.0}$            \\ 
+1b le3j Data \T & $440$                          & $116$                          & $37$                           & $15$                           & $3$                            & $2$                            & $1$                            & $0$                            \\ 
+\hline
+2b le3j SM \T   & $63.0^{+3.9}_{-4.1}$           & $18.0^{+1.3}_{-1.4}$           & $4.2^{+0.6}_{-0.5}$            & $1.1^{+0.2}_{-0.2}$            & $0.2^{+0.1}_{-0.1}$            & $0.0^{+0.0}_{-0.0}$            & $0.0^{+0.0}_{-0.0}$            & $0.0^{+0.0}_{-0.0}$            \\ 
+2b le3j Data \T & $80$                           & $19$                           & $8$                            & $3$                            & $0$                            & $0$                            & $0$                            & $0$                            \\ 
+\hline
+0b ge4j SM \T   & $460^{+16}_{-15}$              & $298^{+12}_{-11}$              & $146^{+7}_{-7}$                & $66.0^{+4.4}_{-5.5}$           & $27.1^{+3.2}_{-3.5}$           & $14.0^{+2.0}_{-1.9}$           & $6.5^{+1.4}_{-1.5}$            & $3.2^{+1.0}_{-1.0}$            \\ 
+0b ge4j Data \T & $470$                          & $302$                          & $158$                          & $66$                           & $28$                           & $15$                           & $6$                            & $2$                            \\ 
+\hline
+1b ge4j SM \T   & $192^{+9}_{-8}$                & $122^{+6}_{-6}$                & $44.8^{+3.2}_{-3.7}$           & $17.1^{+2.4}_{-2.0}$           & $6.8^{+1.2}_{-1.3}$            & $5.4^{+1.5}_{-1.5}$            & $2.4^{+1.0}_{-0.8}$            & $1.2^{+0.8}_{-0.8}$            \\ 
+1b ge4j Data \T & $196$                          & $132$                          & $44$                           & $14$                           & $8$                            & $6$                            & $2$                            & $0$                            \\ 
+\hline
+2b ge4j SM \T   & $74.2^{+4.2}_{-4.4}$           & $47.0^{+3.2}_{-3.3}$           & $20.1^{+2.0}_{-1.8}$           & $7.7^{+1.3}_{-1.1}$            & $1.9^{+0.3}_{-0.3}$            & $0.9^{+0.2}_{-0.2}$            & $0.4^{+0.1}_{-0.1}$            & $0.4^{+0.2}_{-0.1}$            \\ 
+2b ge4j Data\T & $72$                           & $52$                           & $31$                           & $12$                           & $1$                            & $2$                            & $0$                            & $1$                            \\ 
+\hline
+  \end{tabular}
+\end{table}
+\end{center}
 %\end{landscape}
-%
+
 %\begin{landscape}
 %\begin{center}
 %\begin{table}[h!]
@@ -175,4 +164,4 @@ with the lowest p-value determined to be 0.17.
 %\end{landscape}
 %
 \input{results_plots_a_posteriori}
-\input{results_plots_a_priori}
+%\input{results_plots_a_priori}
