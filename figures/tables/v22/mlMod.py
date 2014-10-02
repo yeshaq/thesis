@@ -12,7 +12,7 @@ files = [
 
 for file in files:
     cmd1 = "sed -i 's/\\\documentclass/%\\\documentclass/' "
-    cmd2 = "sed -i 's/\\begin{doc/%\\begin{doc/' "
+    cmd2 = r"sed -i 's/\\begin{doc/%\\begin{doc/' "
     cmd3 = "sed -i 's/\\\end{doc/%\\\end{doc/' "
     cmdList = [cmd1,cmd2,cmd3]
     for cmd in cmdList:
