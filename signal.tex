@@ -61,7 +61,7 @@ is summarised in Table~\ref{tab:simplified-models}.
 \subsection{Efficiency times acceptance\label{sec:t2cc-eff}}
 
 The signal efficiency times acceptance is measured in the same binning
-as the analysis binning (\njet,\bjet,\scalht). To reduce the number of
+as the analysis binning (\njet,\nb,\scalht). To reduce the number of
 figures in this section to a manageable level, the total efficiency for
 only the relevant event categories and inclusive selection on 
 \scalht ($>200\gev$) is shown. 
@@ -70,6 +70,28 @@ Figure~\ref{fig:sms-eff-t2cc} (Appendix~\ref{app:t2cc}) shows the
 expected signal efficiency times acceptance for the hadronic selection
 \texttt{T2cc} in the four most sensitive (\njet,\nb) event categories:
 (2--3,0), (2--3,1), ($\geq 4$,0), and ($\geq 4$,1). 
+
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[Hadronic Selection Efficiency, (2--3,0)]{
+      \includegraphics[width=0.4\textwidth,page=6]{figures/sms/t2cc/v1/T2cc_eff}
+    } 
+    \subfigure[Hadronic Selection Efficiency, (2--3,1)]{
+      \includegraphics[width=0.4\textwidth,page=7]{figures/sms/t2cc/v1/T2cc_eff}
+    } 
+    \subfigure[Hadronic Selection Efficiency, ($\geq 4$,0)]{
+      \includegraphics[width=0.4\textwidth,page=1]{figures/sms/t2cc/v1/T2cc_eff}
+    } 
+    \subfigure[Hadronic Selection Efficiency, ($\geq 4$,1)]{
+      \includegraphics[width=0.4\textwidth,page=2]{figures/sms/t2cc/v1/T2cc_eff}
+    } 
+    \caption{Hadronic selection efficiency times acceptance for \texttt{T2cc}
+      for the relevant event categories defined by \njet and \nb.
+      Note the different z-axis scales.}
+    \label{fig:sms-eff-t2cc}
+  \end{center}
+\end{figure}
+
 
 %The choice of which categories to use is made by inspecting
 %Figure~\ref{fig:sms-t2cc-sig} (Appendix~\ref{app:t2cc}), which shows
@@ -112,7 +134,7 @@ in the likelihood model.
 %requirement). Further, any potential signal contamination is fully
 %accounted for in the likelihood model.
 
-clearpage
+\clearpage
 \section{Systematic uncertainties on signal efficiency times 
   acceptance\label{sec:sms-syst}}
 
@@ -160,28 +182,15 @@ uncertainty, before details on specific models are provided.
 %
 \subsection{PDF uncertainties\label{sec:pdf-sets}}
 
-\newcommand{\lcr}{Left: $\frac{\epsilon_{CTEQ6L1}}{\epsilon_{CT10}}$,
-  center: $\frac{\epsilon_{CTEQ6L1}}{\epsilon_{MSTW08}}$, right:
-  $\frac{\epsilon_{CTEQ6L1}}{\epsilon_{NNPDF2.1}}$}
-
-The signal samples are produced with the \verb!CTEQ6L1! PDF set by
-default. The signal acceptance is compared with that obtained with
-three alternative PDF sets: \verb!CT10!, \verb!NNPDF2.1!, and
-\verb!MSTW2008!. The envelope and its uncertainties are determined
-following the PDF4LHC recommendation~\cite{pdf4lhc} to determine the
-uncertainty in signal efficiency due to knowledge of the PDFs, as
-described below.
-
-The signal efficiency times acceptance, inclusive with respect the
-usual event categories (\ie $\njet \geq 2$, $\nb \geq 0$, and
-$\scalht>200~\gev$), is determined for given values of
-$m_\mathrm{SUSY}$ and $m_\mathrm{LSP}$ in a particular signal model
-for a given PDF set. The efficiency times acceptance for the central
-value of each PDF set is compared with the one used to generate the
-signal events. The change is typically a few percent and increases
-slowly with increasing $m_{SUSY}$. This difference in efficiency times
-acceptance for the various PDF sets is currently covered by a
-systematic uncertainty, as decribed below. 
+The simulated signal events were produced with the \verb!CTEQ6L1! PDF
+set by default.  As recommended by PDF4LHC~\cite{pdf4lhc}, the uncertainty
+in signal efficiency due to knowledge of the PDFs is obtained by comparing 
+the signal efficiency with that obtained with three newer alternative PDF 
+sets: \verb!CT10!, \verb!NNPDF2.1!, and \verb!MSTW2008!. Using the envelope
+formula in the reference, a single value is calculated from the three alternate
+PDF sets. Figures ~\ref{fig:sms-pdf-t2cc} and ~\ref{fig:sms-pdf-t2tt} in Appendix
+ ~\ref{app:signal} summarize the uncertainty measured for T2cc and T2tt 
+for the relevant categories. 
 
 %\subsection{Jet energy scale\label{sec:sms-syst-jes}}
 %
