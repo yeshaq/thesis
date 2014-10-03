@@ -2,17 +2,16 @@
 \section{Closure tests and systematic uncertainties on transfer factors\label{sec:bkgd-syst}}
 
 Limitations in simulating detector effects and event kinematics 
-requires us to apply appropriate systematics uncertainties 
-on the simulation-based translation factors.  The following section 
-describes how we obatain these systematic uncertainty through the 
-method of closure tests.
+requires us to apply appropriate systematic uncertainties 
+on the simulation-based translation factors. The following section 
+describes how we obtain these uncertainties through the method of closure tests.
 
 \subsection{Closure tests\label{sec:closure-tests-desc}}
 
 At its core, the method compares an observed yield (\nobs) and a predicted
 yield (\npre) in a sub-sample of a control region.  The predicted yield is constructed
-by translating from a statisically independent data sample to the data sample of
-interest by the use of the proper translation factor.  For example, for a given HT bin,
+by translating from a statistically independent data sample to the data sample of
+interest by the use of the proper translation factor.  For example, in a given HT bin,
 a prediction for the \njethigh, \nb=1, \mj sample can be made by translating from the
 \njetlow, \nb=1, \mj in data via the translation factor: 
 \begin{equation}
@@ -20,16 +19,16 @@ a prediction for the \njethigh, \nb=1, \mj sample can be made by translating fro
   \frac{N_{\rm MC}^{\rm \mj}(\scalht,\njethigh, \nb=1)}{N_{\rm MC}^{\rm \mj}(\scalht,\njetlow,\nb=1)} 
 \end{equation}
 
-The agreement betwen \nobs and \npre is expressed as $(\nobs - \npre)/\npre$.
+The agreement between \nobs and \npre is expressed as $(\nobs - \npre)/\npre$.
 Assuming only statistical uncertainties on \nobs and \npre, deviation of the 
 ratio from zero defines our level of closure. A closure test set is defined
 as ratios for each \scalht bin. Looking at the ratio as a function
-of \scalht allows the measurment of statistical significant biases from zero and/or 
+of \scalht allows the measurement of statistical significant biases from zero and/or 
 any dependence on \scalht.  If statistically significant biases
 are observed, further studies are required to understand and correct
 for these biases.
 
-Eight sets of closure tests probe key ingredients of the simulation modelling 
+Eight sets of closure tests probe key ingredients of the simulation modeling 
 of the SM backgrounds with genuine \met as a function of \scalht, as shown in
 Fig.~\ref{fig:closure}. This is done for the two jet multiplicity bins
 separately: (a) $2 \leq \njet \leq 3$ and (b) $\njet \geq 4$.
@@ -54,11 +53,11 @@ described in Section~\ref{sec:syst-from-closure}.
 \end{figure}
 
 As described in section ?? The \alphat requirement is not imposed 
-in the \mj control sample. Therfore it is important to verify the 
+in the \mj control sample. Therefore it is important to verify the 
 approach of using \mj samples without an \alphat requirement to 
 make background predictions in the signal region.  The first set of
-closure tests (denoted by cirlces) attempts to do this by probing
-the modelling of the \alphat distribution in genuine \met events as a
+closure tests (denoted by circles) attempts to do this by probing
+the modeling of the \alphat distribution in genuine \met events as a
 function of \scalht.  The tests compares data yields in the \mj
 sample with an \alphat requirement against predictions determined in a
 \mj sample with the \alphat requirement inverted. 
@@ -69,14 +68,14 @@ events from the $W$ + jets and \ttbar processes. These tests are
 conservative, since by construction, the admixture changes little when
 translating from the \mj control region to the signal region, whereas the 
 closure tests use sub-samples with different b-tag requirements and 
-therfore have very different admixtures of W + jets and \ttbar events.  
-In the \njetlow bin, the test is sub-divided into seperate jet categories.
-These tests also probe the modelling of the reconstruction of b-quark jets, 
+therefore have very different admixtures of W + jets and \ttbar events.  
+In the \njetlow bin, the test is sub-divided into separate jet categories.
+These tests also probe the modeling of the reconstruction of b-quark jets, 
 although this also addressed more fully by dedicated studies that 
 determine systematic uncertainties via the method described in
 Sec.~\ref{sec:btag-syst}.
 
-The remaining tests probe the simulation modelling of
+The remaining tests probe the simulation modeling of
 the jet multiplicity in the \mj and \gj samples, which is checked due 
 to the exclusive binning in jet multiplicity. As in the case of the 
 W + jets / \ttbar admixture, this set of tests  is a very conservative
@@ -84,10 +83,10 @@ W + jets / \ttbar admixture, this set of tests  is a very conservative
 whereas the closure tests translate between the two bins.
 
 Tables~\ref{tab:syst-fits-le3j} and \ref{tab:syst-fits-ge4j}, which
-summarize the results obtained from fits of zeroeth order polynomials
+summarize the results obtained from fits of zeroth order polynomials
 (\ie a constant) to the sets of closure tests performed in the \njetlow 
 and \njethigh bins.  Table~\ref{tab:syst-fits-njet} lists the fits result
-common to both jet multiplicites. The best fit value and its uncertainty
+common to both jet multiplicities. The best fit value and its uncertainty
 is listed for each set of closure tests, along with the $\chi^{2}$, the number
 of degrees of freedom, and the p-value of the fit. The best fit value
 for the constant parameter is indicative of the level of closure, as
@@ -108,19 +107,9 @@ yields an acceptable fit result, as indicated in
 Table~\ref{tab:syst-fits-ge4j}, which points to a simple fluctuation
 rather than any systematic bias.
 
-%In addition to the fits described above, linear fits are also
-%performed. The best fit values for the slope terms and the $p$-values
-%obtained from each fit are summarised in
-%Tables~\ref{tab:syst-fits-le3j}, \ref{tab:syst-fits-ge4j}, and
-%\ref{tab:syst-fits-njet}. Typically, the best fit values are of the
-%order $10^{-4}$, which corresponds to a percent-level change per
-%100\GeV.
-%However, in all cases, the best values values are fully compatible
-%with zero (within 1$\sigma$), indicating that the level of closure is
-%\scalht-independent. 
 
 \begin{table}[!h]
-  \caption{A summary of the results obtained from fits of zeroeth
+  \caption{A summary of the results obtained from fits of zeroth
     order polynomials (\ie a constant) to four sets of closure tests
     performed in the \njetlow bin.}
   \label{tab:syst-fits-le3j}
@@ -143,7 +132,7 @@ rather than any systematic bias.
 \end{table}
 
 \begin{table}[!h]
-  \caption{A summary of the results obtained from fits of zeroeth
+  \caption{A summary of the results obtained from fits of zeroth
     order polynomials (\ie a constant) to three sets of closure tests
     performed in the \njethigh bin. $^{\dag} $Further explanation of this
     fit can be found in the text.}   
@@ -167,10 +156,10 @@ rather than any systematic bias.
 \end{table}
 
 \begin{table}[!h]
-  \caption{A summary of the results obtained from fits of zeroeth
+  \caption{A summary of the results obtained from fits of zeroth
     order polynomials (\ie a constant) to four sets of closure tests
     (\njetlow \ra \njethigh) that probe the accuracy of the MC
-    modelling of the \njet distribution observed in data, using the
+    modeling of the \njet distribution observed in data, using the
     three data control samples. } 
   \label{tab:syst-fits-njet}
   \centering
@@ -193,29 +182,49 @@ rather than any systematic bias.
 
 
 
-\subsection{Systematic uncertainties from closure tests\label{sec:syst-from-closure}}
+\subsection{Systematic uncertainties from closure tests and Trigger\label{sec:syst-from-closure}}
 
 Once it is established that no significantly large bias or trend is
 observed for any set of closure tests, then systematic uncertainties
 are determined. 
 
-Systematics are determined for each \scalht bin,as indicated in 
-Table~\ref{tab:syst-values}. For each \scalht region, the systematic
+Systematics are determined for each \scalht bin, as indicated in 
+Table~\ref{tab:syst-values-from-ct}. For each \scalht region, the systematic
 uncertainty is estimated by taking the quadrature sum of the weighted 
 mean and sample variance for the closure tests within the given \scalht region.
-This procedure yields the values quoted in Table~\ref{tab:syst-values}.
+This procedure yields the values quoted in Table~\ref{tab:syst-values-from-ct}.
 
-The effect of uncertainties related to the modelling of b-quark jets
-in simulation on the transfer factors is found to be negligible, at
-the percent level as discussed in Section~\ref{sec:btag-syst}, in
-comparison to the aforementioned \njet- and \scalht-dependent
-systematic uncertainties.
+As the closure tests do not translate from control region to signal region, they
+do not probe the uncertainty in the signal trigger efficiencies.  To account for 
+this, a trigger uncertainty of 5\% is added in quadrature to the uncertainty values obtained via the 
+closure tests and the total is summarized in Table~\ref{tab:total-syst-values}.
 
 \begin{table}[!h]
-  \caption{A summary of the magnitude of the systematic uncertainties (\%)
+  \caption{A summary of the magnitude of the systematic uncertainties (\%) obtain
+    from closure tests, according to \njet and \scalht region.}
+  \label{tab:syst-values-from-ct}
+  \centering
+  \footnotesize
+  \begin{tabular}{ ccccccccc }
+    \hline
+    \hline
+            & \multicolumn{7}{c}{\scalht region (GeV)}                                \\
+    \cline{2-9}
+    \njet   & 375--475 & 475--525 & 525--675 & 675--775 & 775--875 & 875-975 & 1075-1075 & $>1175$ \\
+    \hline                                                                                                                                  
+    2--3    & 3        & 4        & 5        & 11       & 11       & 16      & 16        & 16     \\
+    $\geq$4 & 3        & 4        & 6        & 13       & 13       & 13      & 13        & 20     \\
+    \hline                                                                                                                                  
+    \hline
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[!h]
+  \caption{A summary of the magnitude of the total systematic uncertainties (\%)
     assigned to the transfer factors, according to \njet and \scalht
     region.}
-  \label{tab:syst-values}
+  \label{tab:total-syst-values}
   \centering
   \footnotesize
   \begin{tabular}{ ccccccccc }
@@ -233,14 +242,11 @@ systematic uncertainties.
 \end{table}
 
 Figure~\ref{fig:closure} shows the sets of closure tests overlaid on
-top of grey bands that represent the \scalht-dependent systematic
-uncertainties in Table~\ref{tab:syst-values}. These systematic
+top of gray bands that represent the \scalht-dependent systematic
+uncertainties in Table~\ref{tab:syst-values-from-ct}. These systematic
 uncertainties are assumed to fully uncorrelated between the different
-b jet multiplicity categories and also the seven \scalht regions,
+b jet multiplicity categories and also the eight \scalht regions,
 which is a conservative approach given that one can expect some
 correlation between adjacent \scalht bins (due to comparable
-kinematics).  This approach of decorrelating the \scalht regions
-should be contrasted against the fits shown in
-Figure~\ref{fig:closure-fits} that do assume a correlated behaviour in
-\scalht.
+kinematics).
 
