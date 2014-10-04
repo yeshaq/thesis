@@ -251,62 +251,56 @@ presence of initial state radiation.
   \end{tabular}
 \end{table}
 
-%\subsection{b-tag scale factor corrections\label{sec:sms-syst-btag}}
-%
-%For the \verb!FastSim! signal simulation samples, the ``formula''
-%method described in Section~\ref{sec:bjets} is not used and instead an
-%event-by-event weight is applied directly to the simulated events
-%following a prescription from the BTV POG. Furthermore, the use of the
-%\verb!FastSim! framework in the reconstruction introduces an extra
-%set of scale-factor corrections, to be applied simultaneously with
-%those correcting the \verb!FullSim! simulation to the data.
-%
-%The magnitude of the corrections depends on the generator-level
-%content, as well as the $b$-tagged status of the matched
-%reconstruction-level jets. As an example, consider an event with 2
-%generator $b$-jets matched to 2 reconstruction-level jets, of which
-%only 1 fires the b-tagger, and 2 generator non-$b$-jets, also matched
-%to 2 reconstruction-level jets, of which also only 1 fires the
-%$b$-tagger. The probability for this to happen is given by:
-%
-%\begin{equation}
-%  \begin{split}
-%    P = \epsilon(p_{T}^{jet1}, \eta^{jet1}) \\ 
-%    \times (1 - \epsilon(p_{T}^{jet2}, \eta^{jet2})) \\ 
-%    \times m(p_{T}^{jet3}, \eta^{jet3}, ID^{jet3}) \\ 
-%    \times (1-m(p_{T}^{jet4}, \eta^{jet4}, ID^{jet4}))
-%  \end{split}
-%\end{equation}
-%
-%where $\epsilon(p_{T}, \eta)$ and $m(p_{T}, \eta)$ are the $b$-tagging
-%efficiency and mis-tagging rates respectively, as measured in the SM
-%MC samples in a particular selection i.e. hadronic or muon, in a
-%particular $H_{T}$ bin. The weight to correct this event is therefore
-%given by:
-%
-%\begin{equation}
-%  \label{equ:blah1}
-%  w=\frac{SF_{b}\epsilon\times(1-SF_{b}\epsilon)\times SF_{c,light}m
-%    \times (1-SF_{c,light}m)}{\epsilon\times(1-\epsilon)\times m \times
-%    (1-m)} 
-%\end{equation}
-%
-%where the relevant dependences are implied. Once all events have been
-%reweighted this way, the yields in each $b$-tag bin represent the
-%corrected MC yields. The scale factors in this case represent the
-%scale factors from Ref.~\cite{btagpogtwiki} multiplied by the
-%\verb!FastSim!-to-\verb!FullSim! correction factors. The
-%\verb!FastSim!-to-\verb!FullSim! correction factors are summarised in
-%\texttt{AN-2012-175}. The central value for these corrections is the
-%same for all SMS samples, and is taken as the ratio between the
-%effiency/mis-tagging rates of \ttbar samples produced with
-%\verb!FullSim! and \verb!FastSim!. Similar to the differences between
-%\verb!FullSim! and data, the b-tagging efficiency is higher in
-%\verb!FastSim! than in \verb!FullSim! (thus needs a correction less
-%than one), and the mistag rate is lower (thus needs a correction
-%larger than one).
-%%The 2011 recipe and values are unchanged in 2012.
-%
+\subsection{b-tag scale factor corrections\label{sec:sms-syst-btag}}
+
+The uncertainty on the btag scale-factors described in section [REF]
+is 
+The magnitude of the corrections depends on the generator-level
+content, as well as the $b$-tagged status of the matched
+reconstruction-level jets. As an example, consider an event with 2
+generator $b$-jets matched to 2 reconstruction-level jets, of which
+only 1 fires the b-tagger, and 2 generator non-$b$-jets, also matched
+to 2 reconstruction-level jets, of which also only 1 fires the
+$b$-tagger. The probability for this to happen is given by:
+
+\begin{equation}
+  \begin{split}
+    P = \epsilon(p_{T}^{jet1}, \eta^{jet1}) \\ 
+    \times (1 - \epsilon(p_{T}^{jet2}, \eta^{jet2})) \\ 
+    \times m(p_{T}^{jet3}, \eta^{jet3}, ID^{jet3}) \\ 
+    \times (1-m(p_{T}^{jet4}, \eta^{jet4}, ID^{jet4}))
+  \end{split}
+\end{equation}
+
+where $\epsilon(p_{T}, \eta)$ and $m(p_{T}, \eta)$ are the $b$-tagging
+efficiency and mis-tagging rates respectively, as measured in the SM
+MC samples in a particular selection i.e. hadronic or muon, in a
+particular $H_{T}$ bin. The weight to correct this event is therefore
+given by:
+
+\begin{equation}
+  \label{equ:blah1}
+  w=\frac{SF_{b}\epsilon\times(1-SF_{b}\epsilon)\times SF_{c,light}m
+    \times (1-SF_{c,light}m)}{\epsilon\times(1-\epsilon)\times m \times
+    (1-m)} 
+\end{equation}
+
+where the relevant dependences are implied. Once all events have been
+reweighted this way, the yields in each $b$-tag bin represent the
+corrected MC yields. The scale factors in this case represent the
+scale factors from Ref.~\cite{btagpogtwiki} multiplied by the
+\verb!FastSim!-to-\verb!FullSim! correction factors. The
+\verb!FastSim!-to-\verb!FullSim! correction factors are summarised in
+\texttt{AN-2012-175}. The central value for these corrections is the
+same for all SMS samples, and is taken as the ratio between the
+effiency/mis-tagging rates of \ttbar samples produced with
+\verb!FullSim! and \verb!FastSim!. Similar to the differences between
+\verb!FullSim! and data, the b-tagging efficiency is higher in
+\verb!FastSim! than in \verb!FullSim! (thus needs a correction less
+than one), and the mistag rate is lower (thus needs a correction
+larger than one).
+%The 2011 recipe and values are unchanged in 2012.
+
 
 %\subsection{Systematic uncertainties for T2cc\label{sec:sms-t2cc}}
 %
