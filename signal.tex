@@ -92,6 +92,19 @@ expected signal efficiency times acceptance for the hadronic selection
   \end{center}
 \end{figure}
 
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[\njetlow, $\nb = 1$.]{
+     \includegraphics[width=0.48\textwidth,page=2]{figures/sms/t2tt/v1/t2tt_pfJet_totalUnc.pdf}
+    }
+    \subfigure[\njetlow, $\nb = 2$.]{
+     \includegraphics[width=0.48\textwidth,page=3]{figures/sms/t2tt/v1/t2tt_pfJet_totalUnc.pdf}
+    }\\       
+    \caption{\label{fig:sms-total-t2tt}The total systematic
+      uncertainty in the signal efficiency times acceptance for all
+      relevant event categories for the \texttt{T2tt} intepretation.}
+  \end{center}
+\end{figure}
 
 %The choice of which categories to use is made by inspecting
 %Figure~\ref{fig:sms-t2cc-sig} (Appendix~\ref{app:t2cc}), which shows
@@ -146,7 +159,7 @@ in \scalht to gain statistical power. This section details the methods
 used to determine the magnitude of the systematic uncertainties to be applied. 
 Four sources of uncertainty are measured: the jet energy scale,
 the parton distribution functions, initial state radiation and b-tag scale
-factors. Two other uncertainties are quoted: the uncertainty in the luminosity
+factors. Two other uncertainties are quoted: the uncertainty in the luminosity, 
 measurment and the ``dead ECAL'' filter used in the candidate signal
 event selection. Each contribution is considered to be independent 
 and all contributions are summed in quadrature to obtain a total 
@@ -192,53 +205,52 @@ PDF sets. Figures ~\ref{fig:sms-pdf-t2cc} and ~\ref{fig:sms-pdf-t2tt} in Appendi
  ~\ref{app:signal} summarize the uncertainty measured for T2cc and T2tt 
 for the relevant categories. 
 
-%\subsection{Jet energy scale\label{sec:sms-syst-jes}}
-%
-%The relative change in the signal efficiency times acceptance is
-%determined when varying the energy of all jets in an event up or down
-%according to a \pt- and $\eta$-dependent jet energy scale uncertainty
-%(\ie vary the event scale up and down), as recommended by the JetMET
-%POG. This procedure is followed per mass point per event category for
-%an inclusive selection on \scalht ($> 200\gev$). 
-%
-%\subsection{Initial state radiation\label{sec:sms-syst-isr}}
-%
-%Signal samples are corrected to account for observed discrepencies
-%with respect to data that are attributed to the mismodelling of
-%initial state radiation in accordance with the procedure from the SUSY
-%PAG~\cite{susy-isrrw}. In line with these corrections,
-%sparticle-system \Pt dependent systematic variations are applied as
-%shown in Table~\ref{tab:sms-syst-isr-factors}.  Events are reweighted
-%according to the vectorial sum of the momenta of the pair-produced
-%sparticles. In addition to the central weight, further variations
-%about the central weight according to the uncertainty in the weight is
-%applied in order to determine the systematic uncertainty associated
-%with the correction. These systematic uncertainties are determined per
-%mass point per event category for an inclusive selection on \scalht
-%($> 200\gev$).
-%The resulting systematic uncertainties are largest near the diagonal
-%where selected events contain significant amounts of boost due to the
-%presence of initial state radiation. 
-%
-%\begin{table}[!h]
-%  \caption{Sparticle system \Pt dependent corrections and systematic
-%    weight variations.} 
-%  \label{tab:sms-syst-isr-factors}
-%  \centering
-%  \footnotesize
-%  \begin{tabular}{ lcc }
-%    \hline
-%    Sparticle system \Pt (GeV) & Central Weight & Systematic Variation \\
-%    \hline
-%    $0 < \Pt < 120$            & 1.00           & $\pm$ 0.0            \\
-%    $120 < \Pt < 150$          & 0.95           & $\pm$ 0.05           \\
-%    $150 < \Pt < 250$          & 0.90           & $\pm$ 0.10           \\
-%    $\Pt > 250$                & 0.80           & $\pm$ 0.20           \\
-%    \hline
-%    \hline
-%  \end{tabular}
-%\end{table}
-%
+\subsection{Jet energy scale\label{sec:sms-syst-jes}}
+
+The relative change in the signal efficiency times acceptance is
+determined when varying the energy of all jets in an event up or down
+according to a \pt- and $\eta$-dependent jet energy scale uncertainty
+(\ie vary the event scale up and down), as recommended by the JetMET
+POG. This procedure is followed per mass point per event category for
+an inclusive selection on \scalht ($> 375\gev$). 
+
+\subsection{Initial state radiation\label{sec:sms-syst-isr}}
+
+Signal samples produced with MADGRAPH exhibit discripencies that 
+have been attributed to the mismodelling of initial state radiation.
+These discripencies are corrected as recommended by the SUSY 
+PAG~\cite{susy-isrrw}. As per prescripton, events are reweighted
+according to the vectorial sum of the momenta of the pair-produced
+sparticles. The sparticle-system \Pt dependent weights are summarized in  
+Table~\ref{tab:sms-syst-isr-factors}.   In addition to the central weight, 
+further variations about the central weight according to the uncertainty 
+in the weight is applied in order to determine the systematic uncertainty
+associated with the correction. These systematic uncertainties are determined per
+mass point per event category for an inclusive selection on \scalht
+($> 375\gev$).
+The resulting systematic uncertainties are largest near the diagonal
+where selected events contain significant amounts of boost due to the
+presence of initial state radiation. 
+
+\begin{table}[!h]
+  \caption{Sparticle system \Pt dependent corrections and systematic
+    weight variations.} 
+  \label{tab:sms-syst-isr-factors}
+  \centering
+  \footnotesize
+  \begin{tabular}{ lcc }
+    \hline
+    Sparticle system \Pt (GeV) & Central Weight & Systematic Variation \\
+    \hline
+    $0 < \Pt < 120$            & 1.00           & $\pm$ 0.0            \\
+    $120 < \Pt < 150$          & 0.95           & $\pm$ 0.05           \\
+    $150 < \Pt < 250$          & 0.90           & $\pm$ 0.10           \\
+    $\Pt > 250$                & 0.80           & $\pm$ 0.20           \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
 %\subsection{b-tag scale factor corrections\label{sec:sms-syst-btag}}
 %
 %For the \verb!FastSim! signal simulation samples, the ``formula''
@@ -295,164 +307,7 @@ for the relevant categories.
 %larger than one).
 %%The 2011 recipe and values are unchanged in 2012.
 %
-%\subsection{\texorpdfstring{\mht/\met}{MHT/MET} cleaning cut\label{sec:sms-syst-mht-met}}
-%
-%%Figure~\ref{fig:mht-met-eff} compares the \mht/\met distributions
-%%obtained from data and simulation in the \mj control sample with an
-%%inclusive selection on \nb and $\scalht > 200\gev$, the requirement
-%%$\alphat > 0.55$, and for the two jet multiplicity bins, \njetlow and
-%%\njethigh. These samples largely comprises events from the W + jets
-%%and \ttbar processes, which have significant, genuine \met. Hence, the
-%%efficiency of the $\mht/\met < 1.25$ requirement is expected to be
-%%high, and is indeed observed to be $>$95\%.
-%
-%The efficiencies observed in data and simulation for the requirement
-%$\mht/\met < 1.25$ are summarised in Table~\ref{tab:mht-met} for the
-%two jet multiplicity categories, \njetlow and \njethigh, and the
-%analysis \scalht bins in the region $200 < \scalht < 375\gev$. These
-%event samples comprise events from the W + jets and \ttbar processes,
-%which have significant, genuine \met. Hence, the efficiency of the
-%$\mht/\met < 1.25$ requirement is expected to be high, and is indeed
-%observed to be $>$95\%. Also shown is the ratio of these two
-%efficiencies, which should be unity. Any deviation from unity is taken
-%to represent the uncertainties on the simulation modelling of this
-%variable for processes with significant, genuine \met. The observed
-%differences are at the percent level, demonstrating that the
-%simulation models this variable to a level that is sufficient for this
-%analysis.
-%
-%This approach covers the differences in the efficiencies determined
-%from data and \verb!FullSim!. A further assumption is that the
-%behaviour of the \mht/\met variable for simplified models produced
-%with \verb!FastSim! is comparable to that for the dominant SM
-%backgrounds, such as W + jets and \ttbar.
-%
-%\begin{table}[!h]
-%  \caption{Efficiencies for the requirement $\mht/\met < 1.25$ obtained
-%    from data ($\varepsilon_{\rm data}$) and simulation
-%    ($\varepsilon_{\rm MC}$) in the \mj control sample with an
-%    inclusive selection on \nb, the requirement $\alphat > 0.55$, for
-%    the analysis bins at low \scalht, and for the two jet multiplicity
-%    bins, \njetlow and \njethigh. Also quoted are the ratios of these
-%    efficiencies ($\varepsilon_{\rm MC}/\varepsilon_{\rm data}$),
-%    which is representative of the simulation performance with respect
-%    to the \mht/\met variable.  
-%  }
-%  \label{tab:mht-met}
-%  \centering
-%  \footnotesize
-%  \begin{tabular}{ ccccc }
-%    \hline
-%    \hline
-%    \njet    & \scalht (GeV) & $\varepsilon_{\rm MC}$ & $\varepsilon_{\rm data}$ & $\varepsilon_{\rm MC}/\varepsilon_{\rm data}$ \\
-%    \hline
-%    2--3     & 200--275      & $0.95 \pm 0.00$        & $0.95 \pm 0.01$          & $1.00 \pm 0.01$                               \\
-%    2--3     & 275--325      & $0.97 \pm 0.01$        & $0.97 \pm 0.02$          & $1.00 \pm 0.02$                               \\
-%    2--3     & 325--375      & $0.97 \pm 0.01$        & $0.97 \pm 0.02$          & $1.00 \pm 0.02$                               \\
-%    2--3     & 375--475      & $0.98 \pm 0.01$        & $0.98 \pm 0.03$          & $1.00 \pm 0.03$                               \\
-%    $\geq 4$ & 200--275      & $0.90 \pm 0.02$        & $0.92 \pm 0.04$          & $0.98 \pm 0.04$                               \\
-%    $\geq 4$ & 275--325      & $0.92 \pm 0.01$        & $0.93 \pm 0.02$          & $0.99 \pm 0.02$                               \\
-%    $\geq 4$ & 325--375      & $0.92 \pm 0.01$        & $0.93 \pm 0.04$          & $0.99 \pm 0.04$                               \\
-%    $\geq 4$ & 375--475      & $0.95 \pm 0.02$        & $0.95 \pm 0.04$          & $1.00 \pm 0.04$                               \\
-%    \hline
-%    \hline
-%  \end{tabular}
-%\end{table}
-%
-%\subsection{Dead ECAL filter\label{sec:sms-syst-dead-ecal}}
-%
-%The ratio of efficiencies observed in data and simulation for the dead
-%ECAL filter are summarised in Table~\ref{tab:mht-met} for the two jet
-%multiplicity categories, \njetlow and \njethigh, and an inclusive
-%selection on \scalht ($>200\gev$). These event samples comprise events
-%from the W + jets and \ttbar processes, which two dominant SM
-%backgrounds for the signal region. Hence, the efficiencies of the dead
-%ECAL filter measured with these samples is expected to be
-%representative of the performance in the signal region.
-%
-%%The efficiencies observed in data and simulation for the dead ECAL
-%%filter are summarised in Table~\ref{tab:mht-met} for the two jet
-%%multiplicity categories, \njetlow and \njethigh, and an inclusive
-%%selection on \scalht ($>200\gev$). These event samples comprise events
-%%from the W + jets and \ttbar processes, which two dominant SM
-%%backgrounds for the signal region. Hence, the efficiencies of the dead
-%%ECAL filter measured with these samples is expected to be
-%%representative of the performance in the signal region.
-%
-%%Also shown is the ratio of these two efficiencies, which should be
-%%unity. Any deviation from unity is taken to represent the
-%%uncertainties on the simulation modelling of this variable. The
-%%observed differences are at the percent level, demonstrating that the
-%%simulation models this variable to a level that is sufficient for this
-%%analysis.
-%
-%This approach covers the differences in the efficiencies determined
-%from data and \verb!FullSim!. A further assumption is that the
-%behaviour of the dead ECAL filter for simplified models produced with
-%\verb!FastSim! is comparable to that for the dominant SM backgrounds,
-%such as W + jets and \ttbar.
-%
-%\begin{table}[!h]
-%  \caption{
-%    Ratios of efficiencies ($\varepsilon_{\rm MC}/\varepsilon_{\rm
-%      data}$) for the dead ECAL filter obtained from data and
-%    simulation in the \mj control sample with an inclusive selection
-%    on \nb and \scalht ($>200\gev$), and for the two jet multiplicity
-%    bins, \njetlow and \njethigh.  
-%%    Efficiencies for the dead ECAL filter obtained
-%%    from data ($\varepsilon_{\rm data}$) and simulation
-%%    ($\varepsilon_{\rm MC}$) in the \mj control sample with an
-%%    inclusive selection on \nb and \scalht ($>200\gev$), and for the
-%%    two jet multiplicity bins, \njetlow and \njethigh. Also quoted are
-%%    the ratios of these efficiencies ($\varepsilon_{\rm
-%%      MC}/\varepsilon_{\rm data}$), which is representative of the
-%%    simulation performance with respect to the dead ECAL filter.
-%  }
-%  \label{tab:dead-ecal}
-%  \centering
-%  \footnotesize
-%  %\begin{tabular}{ ccccc }
-%  \begin{tabular}{ ccc }
-%    \hline
-%    \hline
-%    %\njet    & \scalht (GeV) & $\varepsilon_{\rm MC}$ & $\varepsilon_{\rm data}$ & $\varepsilon_{\rm MC}/\varepsilon_{\rm data}$ \\
-%    \njet     & \scalht (GeV) & $\varepsilon_{\rm MC}/\varepsilon_{\rm data}$                                                     \\
-%    \hline
-%    %2--3     & $>200$        & $0.64 \pm 0.01$        & $0.64 \pm 0.01$          & $1.00 \pm 0.01$                               \\
-%    %$\geq 4$ & $>200$        & $0.58 \pm 0.01$        & $0.59 \pm 0.01$          & $0.98 \pm 0.01$                               \\
-%    2--3      & $>200$        & $1.00 \pm 0.01$                                                                                   \\
-%    $\geq 4$  & $>200$        & $0.98 \pm 0.01$                                                                                   \\
-%    \hline
-%    \hline
-%  \end{tabular}
-%\end{table}
-%
-%%\subsubsection{Lepton and photon vetoes\label{sec:sms-syst-vetoes}}
-%%
-%%Figure~\ref{fig:sms-lepton-veto-ineff} shows the fraction of expected
-%%signal yield that is rejected by the lepton and photon vetoes for
-%%various simplified models.  The vetoes are applied immediately after a
-%%filter with identical logic but based on truth information. Hence, any
-%%observed inefficiency represents the fraction of signal events that
-%%should not be vetoed. Figs.\ref{fig:sms-lepton-veto-near} and
-%%\ref{fig:sms-lepton-veto-far} show correspondingly the distributions
-%%of the signal inefficiency for all model points "near" to and "far"
-%%from the diagonal in the simplified models, respectively. Generally,
-%%the inefficencies are observed to be very small, and are taken
-%%directly as a systematic uncertainty.
-%%
-%%The uncertainty on the efficiency of the lepton and photon vetoes is
-%%established by considering the efficiency of the vetoes after applying
-%%filters with identical logic but based on truth information. If the
-%%efficiency is not 100\%, then this represents the fraction of signal
-%%events that should not be vetoed. This deviation from 100\% is taken
-%%directly as the systematic uncertainty on the efficiency. Generally,
-%%the efficencies are observed to be close to 100\% and so the
-%%systematic uncertainties are correspondingly small, of the order
-%%$\sim$1\%, as summarised in Tables~\ref{tab:sms-syst-near} and
-%%\ref{tab:sms-syst-far}. Systematic uncertainties are only non-zero for
-%%models with third-generation quarks in the final state.
-%
+
 %\subsection{Systematic uncertainties for T2cc\label{sec:sms-t2cc}}
 %
 %Figure~\ref{fig:sms-pdf-t2cc} (Appendix~\ref{app:t2cc}) shows the
