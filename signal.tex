@@ -50,7 +50,7 @@ is summarised in Table~\ref{tab:simplified-models}.
     Model             & Production/decay mode & (\njet,\nb) event categories considered        \\ 
     \hline
     \texttt{T2cc}     & \Ttwocc               & (2--3,0), ($\geq 4$,0), ($\geq 4$,1) \\ % (2--3,1), 
-    \texttt{T2tt}     & \Ttwott               & ($\leq 3$,1), ($\leq 4$,2) \\
+    \texttt{T2tt}     & \Ttwott               & ($\leq 3$,1), ($\leq 3$,2) \\
     \hline
     \hline
   \end{tabular}
@@ -326,8 +326,7 @@ in the \verb!T2cc! mass plane for the relevant categories.
   \caption{Representative ranges for each contribution to the total
     systematic uncertainty in the signal efficiency times acceptance
     for each relevant event category for the \texttt{T2cc}
-    interpretation. See text for further details on other
-    (fixed) contributions to the total systematic uncertainty. 
+    interpretation.
     \label{tab:sms-syst-t2cc}
   }   
   \centering
@@ -338,14 +337,43 @@ in the \verb!T2cc! mass plane for the relevant categories.
     Range      & Min.   & Max.                & Min.   & Max.                    & Min. & Max.                      & Min.  & Max.        \\
     \hline
     PDF        & 0.00   & 0.05                & 0.00   & 0.05                    & 0.00 & 0.10                      &         \\
-    JES        & 0.00   & 0.08                & 0.06   & 0.22                    & 0.01 & 0.30 	                    &             \\
-    ISR        & 0.09   & 0.21                & 0.16   & 0.24                    & 0.15 & 0.24 	                    &             \\
-    b-tag SF   & 0.01   & 0.02                & 0.01   & 0.02                    & 0.03 & 0.04 	                    &             \\
+    JES        & 0.00   & 0.10                & 0.00   & 0.10                    & 0.00 & 0.15 	                    &             \\
+    ISR        & 0.15   & 0.25                & 0.10   & 0.15                    & 0.15 & 0.30 	                    &             \\
+    b-tag SF   & 0.00   & 0.08                & 0.00   & 0.10                    & 0.00 & 0.15 	                    &             \\
     Luminosity &        &                     &        &                         &      &      	                    & 0.026 & 0.026        \\
     Trigger    &        &                     &        &                         &      &                           & 0.05 & 0.05        \\
     Dead Ecal  &        &                     &        &                         &      &      	                    & 0.03 & 0.03        \\
     \hline
-    Total syst & 0.12   & 0.21                & 0.22   & 0.32 & 0.23 & 0.39 &      &             \\
+    Total syst & 0.18   & 0.25                & 0.19   & 0.30                    & 0.20 & 0.38                      &      &             \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+  \caption{Representative ranges for each contribution to the total
+    systematic uncertainty in the signal efficiency times acceptance
+    for each relevant event category for the \texttt{T2tt}
+    interpretation.
+    \label{tab:sms-syst-t2cc}
+  }   
+  \centering
+  \begin{tabular}{ lcccccccc }
+    \hline
+    \hline
+    Category   & \multicolumn{2}{c}{(2--3,1)} & \multicolumn{2}{c}{(2--3,2)}  & \multicolumn{2}{c}{($\geq 2$,$\geq 0$)} \\
+    Range      & Min.   & Max.                & Min.   & Max.                     & Min.  & Max.        \\
+    \hline
+    PDF        & 0.00   & 0.10                & 0.00   & 0.10                     &         \\
+    JES        & 0.00   & 0.10                & 0.00   & 0.05                     &             \\
+    ISR        & 0.00   & 0.20                & 0.00   & 0.22                     &             \\
+    b-tag SF   & 0.00   & 0.05                & 0.00   & 0.10                     &             \\
+    Luminosity &        &                     &        &                          & 0.026 & 0.026        \\
+    Trigger    &        &                     &        &                          & 0.05 & 0.05        \\
+    Dead Ecal  &        &                     &        &                          & 0.03 & 0.03        \\
+    \hline
+    Total syst & 0.05   & 0.25                & 0.05   & 0.30                     &      &             \\
     \hline
     \hline
   \end{tabular}
