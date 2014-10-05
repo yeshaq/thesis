@@ -9,7 +9,7 @@
 %  -----------------------------
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[11pt,letter,twoside,psfig,epsfig,titlepage]{report}
+\documentclass[11pt,letter,twoside,psfig,epsfig,titlepage]{article}
 %\documentclass[11pt,a4paper,twoside,psfig,epsfig,titlepage]{report}
 %\documentclass[11pt,a4paper,,psfig,epsfig, titlepage]{report}
 
@@ -42,6 +42,7 @@
 \usepackage{epstopdf}
 \usepackage{feynmf}
 \usepackage{color}
+\usepackage[section]{placeins}
 %\input{ptdr-definitions}
 \input{symbols}
 \input{mydefs}
@@ -109,8 +110,8 @@
 }
 %\date{\textcolor{red}{Version 3\\ Oct. 30, 2008}}
 \maketitle
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\clearemptydoublepage
 
 %\pagenumbering{roman}
@@ -183,7 +184,8 @@ mass spectrum.}
 \input{app_signal}
 
 \clearpage
-\bibliographystyle{plain}
 \bibliography{alphaT}
+\bibliographystyle{plain}
+
 
 \end{document}   
