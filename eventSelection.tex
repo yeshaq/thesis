@@ -46,15 +46,16 @@ differ offline. In this analysis, cross-triggers at the HLT
 based on quantities \scalht and \alphat (labelled as \verb!HTxxx_AlphaT0pyy!) 
 are used with various thresholds to record candidate events for the hadronic (signal)
 region. In order to keep the cross-trigger's computational time low, the online quantaties
-are constructed using simple calorimeter based jets (calo jets), and the use of
+are constructed using calorimeter based jets (calo jets), and the use of
 partcle-flow jets in this analysis is expected to introduce inefficiencies.
 
 Each \scalht bin is seeded by a single trigger chosen based on the
 efficiency of the trigger in that \scalht bin. The \alphat thresholds of the
 \verb!HTxxx_AlphaT0pyy! triggers were tuned according to the threshold
-on the \scalht leg in order to fully suppress QCD multijet events
+on the \scalht leg in order to fully suppress QCD multijet events~\cite{RA1Paper2012}
 and simultaneously satisfying other criteria, such as maintaining
 acceptable trigger rates.
+
 
 
 %Table~\ref{tab:htalphat-triggers} summarises the thresholds used for
@@ -70,6 +71,34 @@ defined in Section~\ref{sec:def-control-samples}). A cut of $\Delta
 {\rm R} > 0.5$ is placed between all muons and jets in each event, and
 only jets are considered in the calculation of \scalht, \mht, and
 \alphat, \ie the muon is ignored.
+
+\begin{table}[!h]
+  \caption{List of signal triggers and their efficiencies (\%), as
+    measured in data. The trigger efficiency is $\sim$100\% for all
+    bins above $\scalht > 675\gev$.}  
+  \label{tab:htalphat-triggers}
+  \centering
+  \footnotesize
+  \begin{tabular}{ cccccc }
+    \hline
+    \hline
+    Offline \scalht       & Offline \alphat & L1 seed (\verb!L1_?!)         & Trigger (\verb!HLT_?!)  & \multicolumn{2}{c}{Efficiency (\%)}          \\ [0.5ex]
+    region (\gev)         & threshold       & (highest thresholds)          &                         & $2 \leq \njet \leq 3$ & $\njet \geq 4$       \\ [0.5ex]
+    \hline
+    %$200 < \scalht < 275$ & 0.65            & \verb!DoubleJetC64!           & \verb!HT200_AlphaT0p57! & $81.8^{+0.4}_{-0.4}$  & $78.9^{+0.3}_{-0.4}$ \\
+    %$275 < \scalht < 325$ & 0.60            & \verb!DoubleJetC64!           & \verb!HT200_AlphaT0p57! & $95.2^{+0.3}_{-0.4}$  & $90.0^{+1.2}_{-1.3}$ \\
+    %$325 < \scalht < 375$ & 0.55            & \verb!DoubleJetC64 OR HTT175! & \verb!HT300_AlphaT0p53! & $97.9^{+0.3}_{-0.3}$  & $95.6^{+0.9}_{-1.0}$ \\
+    $375 < \scalht < 475$ & 0.55            & \verb!DoubleJetC64 OR HTT175! & \verb!HT300_AlphaT0p53! & $94.2^{+0.5}_{-0.6}$  & $90.5^{+1.2}_{-1.3}$ \\
+    $475 < \scalht < 575$ & 0.55            & \verb!DoubleJetC64 OR HTT175! & \verb!HT350_AlphaT0p52! & $96.2^{+0.8}_{-0.9}$  & $94.6^{+1.2}_{-1.4}$ \\
+    $575 < \scalht < 675$ & 0.55            & \verb!DoubleJetC64 OR HTT175! & \verb!HT400_AlphaT0p51! & $95.4^{+1.4}_{-1.8}$  & $98.7^{+0.7}_{-1.12}$ \\
+    $\scalht > 675$       & 0.55            & \verb!DoubleJetC64 OR HTT175! & \verb!HT400_AlphaT0p51! & $100^{+0.0}_{-2.0}$  & $100^{+0.0}_{-2.0}$ \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+
+
 %
 %Table~\ref{tab:htalphat-triggers} summarises the measured efficiencies
 %for the \verb!HTxxx_AlphaT0pyy! triggers in the relevant \scalht
