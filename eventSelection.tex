@@ -63,8 +63,8 @@ acceptable trigger rates.
 %
 The \verb!HTxxx_AlphaT0pyy! trigger efficiencies are measured with a
 reference (\ie, unbiased) event sample recorded by an unprescaled,
-loosely-isolated, eta-restricted single muon trigger,
-\verb!HLT_IsoMu24_eta2p1!, within the \verb!SingleMu! dataset. A
+loosely-isolated, eta-restricted single muon 
+trigger, \verb!HLT_IsoMu24_eta2p1!, within the \verb!SingleMu! dataset. A
 sample of events containing at least one isolated muon with $\pt >
 25\gev$ and $|\eta| < 2.1$ is used (similar to the \mj control sample
 defined in Section~\ref{sec:def-control-samples}). A cut of $\Delta
@@ -98,99 +98,168 @@ only jets are considered in the calculation of \scalht, \mht, and
 \end{table}
 
 
-
-%
-%Table~\ref{tab:htalphat-triggers} summarises the measured efficiencies
-%for the \verb!HTxxx_AlphaT0pyy! triggers in the relevant \scalht
-%bins. The trigger efficiencies are measured for both \njet
-%multiplicity bins. The efficiencies are generally observed to be high,
+Table~\ref{tab:htalphat-triggers} summarises the measured efficiencies
+for the \verb!HTxxx_AlphaT0pyy! triggers in the relevant \scalht
+bins. The trigger efficiencies are measured for both \njet
+multiplicity bins. %The efficiencies are generally observed to be high,
 %$\sim$100\%, except for the low \scalht region $200 < \scalht <
 %325\gev$. The inefficiencies at low \scalht are mainly due to the L1
-%seeds for which thresholds were raised to a relatively high level in
-%order to maintain trigger rates in the high-pileup conditions towards
-%the end of Run 1. The inefficiencies are slightly larger in the higher
-%jet multiplicity category due to a larger number of jets summing to
-%the same \scalht, resulting in softer
-%jets. Figures~\ref{fig:eff-alphat-le3j} and~\ref{fig:eff-alphat-ge4j}
-%show the efficiency curves for the \verb!HTxxx_AlphaT0pyy! triggers in
-%the three lowest \scalht bins, for the \njetlow and \njethigh
-%categories, respectively. The efficiencies are also determined at the
-%level of event categories and no dependence on \nb is observed, with
-%efficiencies agreeing within statistical uncertainties.
-%
+seeds for which thresholds were raised to a relatively high level in
+order to maintain trigger rates in the high-pileup conditions towards
+the end of Run 1. The inefficiencies are slightly larger in the higher
+jet multiplicity category due to a larger number of jets summing to
+the same \scalht, resulting in softer
+jets. Figures~\ref{fig:eff-alphat-le3j} and~\ref{fig:eff-alphat-ge4j}
+show the efficiency curves for the \verb!HTxxx_AlphaT0pyy! triggers in
+the three lowest \scalht bins, for the \njetlow and \njethigh
+categories, respectively. The efficiencies are also determined at the
+level of event categories and no dependence on \nb is observed, with
+efficiencies agreeing within statistical uncertainties.
+
 
 \begin{figure}[!h]
   \begin{center}
-    \subfigure[Differential, $375 < \scalht < 475 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j_RunAtFNAL.pdf}
-    }
-    \subfigure[Cumulative, $375 < \scalht < 475 \gev$]{
+    \subfigure[\njetlow, $375 < \scalht < 475 \gev$]{
       \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j_RunAtFNAL.pdf}
-    } \\
-    \subfigure[Differential, $475 < \scalht < 525 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}
-    } 
-    \subfigure[Cumulative, $475 < \scalht < 525 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}
-    } \\
-    \subfigure[Differential, $525 < \scalht < 675 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=18]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_le3j_RunAtFNAL.pdf}
     }
-    \subfigure[Cumulative, $525 < \scalht < 675 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_le3j_RunAtFNAL.pdf}
-    } \\
-    \caption{\label{fig:eff-alphat-le3j}
-      (Left) Differential and (Right) cumulative efficiency turn-on 
-      curves for the \scalht-\alphat cross triggers (as summarised in 
-      Table~\ref{tab:htalphat-triggers}) that record events for the
-      three lowest \scalht bins  for events satisfying \njetlow. 
-    }
-  \end{center}
-\end{figure}
-%
-\begin{figure}[!h]
-  \begin{center}
-    \subfigure[Differential, $375 < \scalht < 475 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j_RunAtFNAL.pdf}
-    }
-    \subfigure[Cumulative, $375 < \scalht < 475 \gev$]{
+    \subfigure[\njethigh, $375 < \scalht < 475 \gev$]{
       \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j_RunAtFNAL.pdf}
     } \\
-    \subfigure[Differential, $475 < \scalht < 525 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}
+    \subfigure[\njetlow, $475 < \scalht < 525 \gev$]{
+      \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}
     } 
-    \subfigure[Cumulative, $475 < \scalht < 525 \gev$]{
+    \subfigure[\njethigh, $475 < \scalht < 525 \gev$]{
       \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}
     } \\
-    \subfigure[Differential, $525 < \scalht < 675 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=18]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
+    \subfigure[\njetlow, $525 < \scalht < 675 \gev$]{
+      \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
     }
-    \subfigure[Cumulative, $525 < \scalht < 675 \gev$]{
+    \subfigure[\njethigh, $525 < \scalht < 675 \gev$]{
       \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
     } \\
-    \caption{\label{fig:eff-alphat-ge4j}
-      (Left) Differential and (Right) cumulative efficiency turn-on 
-      curves for the \scalht-\alphat cross triggers (as summarised in 
-      Table~\ref{tab:htalphat-triggers}) that record events for the
-      three lowest \scalht bins  for events satisfying \njethigh. 
+    \caption{\label{fig:eff-alphat-le3j}
+      Cumulative efficiency turn-on curves for the \scalht-\alphat 
+      cross triggers (as summarised in Table~\ref{tab:htalphat-triggers}) 
+      that record events for the three lowest \scalht bins for events 
+      satisfying \njetlow (left) and \njethigh (right). 
     }
+  \end{center}
+\end{figure}
+%
+%\begin{figure}[!h]
+%  \begin{center}
+%    \subfigure[Differential, $375 < \scalht < 475 \gev$]{
+%      \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j_RunAtFNAL.pdf}
+%    }
+%    \subfigure[Cumulative, $375 < \scalht < 475 \gev$]{
+%      \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j_RunAtFNAL.pdf}
+%    } \\
+%    \subfigure[Differential, $475 < \scalht < 525 \gev$]{
+%      \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}
+%    } 
+%    \subfigure[Cumulative, $475 < \scalht < 525 \gev$]{
+%      \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}
+%    } \\
+%    \subfigure[Differential, $525 < \scalht < 675 \gev$]{
+%      \includegraphics[width=0.4\textwidth,page=18]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_le3j_RunAtFNAL.pdf}
+%    }
+%    \subfigure[Cumulative, $525 < \scalht < 675 \gev$]{
+%      \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_le3j_RunAtFNAL.pdf}
+%    } \\
+%    \caption{\label{fig:eff-alphat-le3j}
+%      (Left) Differential and (Right) cumulative efficiency turn-on 
+%      curves for the \scalht-\alphat cross triggers (as summarised in 
+%      Table~\ref{tab:htalphat-triggers}) that record events for the
+%      three lowest \scalht bins  for events satisfying \njetlow. 
+%    }
+%  \end{center}
+%\end{figure}
+
+%begin{figure}[!h]
+% \begin{center}
+%   \subfigure[Differential, $375 < \scalht < 475 \gev$]{
+%     \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j_RunAtFNAL.pdf}
+%   }
+%   \subfigure[Cumulative, $375 < \scalht < 475 \gev$]{
+%     \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j_RunAtFNAL.pdf}
+%   } \\
+%   \subfigure[Differential, $475 < \scalht < 525 \gev$]{
+%     \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}
+%   } 
+%   \subfigure[Cumulative, $475 < \scalht < 525 \gev$]{
+%     \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}
+%   } \\
+%   \subfigure[Differential, $525 < \scalht < 675 \gev$]{
+%     \includegraphics[width=0.4\textwidth,page=18]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
+%   }
+%   \subfigure[Cumulative, $525 < \scalht < 675 \gev$]{
+%     \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
+%   } \\
+%   \caption{\label{fig:eff-alphat-ge4j}
+%     (Left) Differential and (Right) cumulative efficiency turn-on 
+%     curves for the \scalht-\alphat cross triggers (as summarised in 
+%     Table~\ref{tab:htalphat-triggers}) that record events for the
+%     three lowest \scalht bins  for events satisfying \njethigh. 
+%   }
+% \end{center}
+%end{figure}
+\FloatBarrier
+
+\subsubsection{Muon and photon control samples\label{sec:muon_triggers}}
+
+Events for the muon control sample are recorded with the \verb!HLT_IsoMu24_eta2p1! 
+trigger. Figure~\ref{fig:eff-muon} (left) shows the \verb!HLT_IsoMu24_eta2p1! 
+trigger efficiency as determined in bins of number of primary vertices 
+for muon $\pt >$ 25 \gev and $|\eta| <$ 2.1 by the muon POG~\cite{ref:muon-eff}.
+Figure~\ref{fig:eff-muon} (right) shows the disribution of the number 
+of vertices in the muon control sample seeded by the \verb!HLT_IsoMu24_eta2p1!. 
+The efficiency at the mean number of vertices (nVtx = 13) is taken as flat
+trigger efficiency across \njet, \nb and \scalht. This measurement 
+agrees well with direct tag and probe measurments in bins of 
+\njet, \nb, \scalht done elsewhere. [REF]
+
+\begin{figure}[!h]
+  \begin{center}
+  \subfigure{
+    \includegraphics[width=0.3\textwidth,]{figures/trigger/muonEffvsNvtx}
+    }   
+  \subfigure{
+   \includegraphics[width=0.42\textwidth,page=65]{figures/data-mc/v21/mu/muonLook_pfJet_ge2j_375.pdf}
+   }\\     
+    \caption{\label{fig:eff-muon}
+    (left) Muon trigger efficiency as a function of
+    number of primary vertices for muon $\pt>$ 25 \gev and
+    $|\eta| <$ 2.1., (right) number of primary vertices
+    in muon control sample.} 
+ 
+  \end{center}
+\end{figure}
+
+Events for the photon control sample are recorded with the
+\verb!HLT_Photon150! trigger, which is $\sim100\%$ efficient for
+$E_{\rm T}^{\rm photon} > 165\gev$ and $\scalht > 375\gev$, as shown
+in Figure~\ref{fig:eff-photon}. The efficiency measurement is made
+using the \verb!HLT_Photon90! trigger as a reference, and we assume
+that the \verb!L1_SingleEG22! seed is fully efficient.
+
+\begin{figure}[!h]
+  \begin{center}
+  \subfigure[\njetlow]{
+    \includegraphics[width=0.43\textwidth,page=6]{figures/trigger/g_barrel_375_caloJet_le3j_}
+    }   
+  \subfigure[\njethigh]{
+   \includegraphics[width=0.43\textwidth,page=6]{figures/trigger/g_barrel_375_caloJet_ge4j_}
+   }\\     
+    \caption{\label{fig:eff-photon}
+    Cumulative efficiency turn-on curves for the \texttt{HLT\_Photon150} trigger 
+    as a function of photon \pt for events satisfying \njetlow 
+    (left) and \njethigh (right).} 
   \end{center}
 \end{figure}
 
 
-\subsubsection{Muon control samples\label{sec:muon_triggers}}
-
-%The procedure to determine the muon trigger efficiency follows the
-%recommendations of the muon POG~\cite{ref:muon-eff}. Events for the
-%\mj and \mmj control samples are recorded with a loosely-isolated,
-%$\eta$-restricted muon trigger \verb!HLT_IsoMu24_eta2p1!. The muon
-%trigger efficiency is determined for each of the \mj and \mmj control
-%samples according to the binning scheme in \njet and \scalht. Events
-%with muons satisfying the acceptance requirements $\pt > 25\gev$ and
-%$|\eta| < 2.1$ are considered.
-%
-%The \verb!HLT_IsoMu24_eta2p1! trigger efficiency is determined from
-%data in bins of muon $\pt$ and $|\eta|$ by the muon POG from a
+\FloatBarrier
+% from a
 %tag-and-probe method~\cite{ref:muon-eff}. These efficiencies are
 %weighted by MC yields binned according to the muon $\pt$ and $|\eta|$
 %in order to determine a single weighted efficiency measurement per
