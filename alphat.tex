@@ -1,6 +1,47 @@
 \clearpage
 \section{Definition of \texorpdfstring{\alphat}{AlphaT}\label{sec:alphat}}
-%
+
+The major source of all-hadronic final states
+A major challenge of search with \met is the reduction of the 
+overwhelming presence of mulit-jet events with no signficant \met.  
+
+The variable, \alphat, introduced in 2008 by Randall and 
+Tucker-Smith~\cite{Randall:2008rw, RA1Paper} effectively supresses multi-jet 
+events with no significant met without relying on the measurment
+of \met. By construction it also introduces robustness againt  mismeasurements 
+of transverse eneriges in multi-jet systems.  \alphat can be defined as
+\begin{equation}
+\label{eq:alphat}
+\alphat\, =\, \frac{\Et^{{\rm j}_2}}{M_\text{T}} \, ,
+\end{equation}
+
+where $\Et^{\rm j_2}$ is the transverse energy of the less energetic
+jet and $M_\text{T}$ is the transverse mass of the dijet system,
+defined as
+
+\begin{equation}
+  \label{eq:mt}
+  M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
+    \right)^2 - \left( \sum_{i=1}^2 p_x^{{\rm j}_i} \right)^2 - \left(
+      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2} \, .
+\end{equation}
+
+where $\Et^{{\rm j}_i}$, $p_x^{{\rm j}_i}$, and $p_y^{{\rm j}_i}$ are,
+respectively, the transverse energy and $x$ or $y$ components of the
+transverse momentum of jet ${\rm j}_i$.
+
+
+
+% Historically, \met based cuts have been used to reduce 
+%this background, but relative to other physics objects, the measurement of
+%\met is particularly sensitive to the beam conditions and detector performance. 
+%This difficulty is compounded by the high-energy, high-luminosity hadron 
+%collider environment at the LHC and the lack of precise theoretical 
+%predictions for the kinematic properties and cross sections of multijet events. 
+%Hence it is very challenging to control and model accurately the multijet 
+%background in the high-\met phase space that is typical of SUSY searches.
+
+
 %The \alphat~\cite{Randall:2008rw, RA1Paper} variable is used to
 %efficiently reject multijet events without significant \met or with
 %transverse energy mismeasurements, while retaining a large sensitivity
@@ -28,27 +69,27 @@
 %%and is observed to be robust against the effects of pileup. 
 %For dijet events, the \alphat variable is defined
 %as~\cite{Randall:2008rw, RA1Paper}:
-%
-%\begin{equation}
-%\label{eq:alphat}
-%\alphat\, =\, \frac{\Et^{{\rm j}_2}}{M_\text{T}} \, ,
-%\end{equation}
-%
-%where $\Et^{\rm j_2}$ is the transverse energy of the less energetic
-%jet and $M_\text{T}$ is the transverse mass of the dijet system,
-%defined as
-%
-%\begin{equation}
-%  \label{eq:mt}
-%  M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
-%    \right)^2 - \left( \sum_{i=1}^2 p_x^{{\rm j}_i} \right)^2 - \left(
-%      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2} \, .
-%\end{equation}
-%
-%where $\Et^{{\rm j}_i}$, $p_x^{{\rm j}_i}$, and $p_y^{{\rm j}_i}$ are,
-%respectively, the transverse energy and $x$ or $y$ components of the
-%transverse momentum of jet ${\rm j}_i$.
-%
+
+\begin{equation}
+\label{eq:alphat}
+\alphat\, =\, \frac{\Et^{{\rm j}_2}}{M_\text{T}} \, ,
+\end{equation}
+
+where $\Et^{\rm j_2}$ is the transverse energy of the less energetic
+jet and $M_\text{T}$ is the transverse mass of the dijet system,
+defined as
+
+\begin{equation}
+  \label{eq:mt}
+  M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
+    \right)^2 - \left( \sum_{i=1}^2 p_x^{{\rm j}_i} \right)^2 - \left(
+      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2} \, .
+\end{equation}
+
+where $\Et^{{\rm j}_i}$, $p_x^{{\rm j}_i}$, and $p_y^{{\rm j}_i}$ are,
+respectively, the transverse energy and $x$ or $y$ components of the
+transverse momentum of jet ${\rm j}_i$.
+
 %For a perfectly measured dijet event with $\Et^{\rm j_1} = \Et^{\rm
 %  j_2}$ and jets back-to-back in $\phi$, and in the limit in which the
 %momentum of each jet is large compared with its mass, the value of
