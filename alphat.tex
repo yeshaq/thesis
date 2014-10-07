@@ -1,15 +1,18 @@
 \clearpage
 \section{Definition of \texorpdfstring{\alphat}{AlphaT}\label{sec:alphat}}
 
-The major source of all-hadronic final states
-A major challenge of search with \met is the reduction of the 
-overwhelming presence of mulit-jet events with no signficant \met.  
-
-The variable, \alphat, introduced in 2008 by Randall and 
-Tucker-Smith~\cite{Randall:2008rw, RA1Paper} effectively supresses multi-jet 
+Multi-jet events stemming from QCD contribute overwhelmingly to
+all-hadronic events recorded by the detector. Generally, these QCD events
+have no significant inbalance in transverse energy and can 
+be reduced with a requirement for high-\met. Yet, this approach has proven difficult, 
+as the calculation of \met is sensitive to detector effects and conditions, 
+and additionaly, in the high-\met phase space systematic uncertainties become difficult
+to control. The variable, \alphat, introduced in 2008 by Randall and 
+Tucker-Smith~\cite{Randall:2008rw} effectively supresses multi-jet 
 events with no significant met without relying on the measurment
-of \met. By construction it also introduces robustness againt  mismeasurements 
-of transverse eneriges in multi-jet systems.  \alphat can be defined as
+of \met. By construction it also introduces robustness against mismeasurements 
+of transverse eneriges in multi-jet systems.  In the simplest case of a two-jet system,
+\alphat is defined as
 \begin{equation}
 \label{eq:alphat}
 \alphat\, =\, \frac{\Et^{{\rm j}_2}}{M_\text{T}} \, ,
@@ -23,123 +26,65 @@ defined as
   \label{eq:mt}
   M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
     \right)^2 - \left( \sum_{i=1}^2 p_x^{{\rm j}_i} \right)^2 - \left(
-      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2} \, .
+      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2} \, = \,\sqrt{\scalht^2 + \left(\mht\right)^2} \,  .
 \end{equation}
 
 where $\Et^{{\rm j}_i}$, $p_x^{{\rm j}_i}$, and $p_y^{{\rm j}_i}$ are,
 respectively, the transverse energy and $x$ or $y$ components of the
-transverse momentum of jet ${\rm j}_i$.
-
-
-
-% Historically, \met based cuts have been used to reduce 
-%this background, but relative to other physics objects, the measurement of
-%\met is particularly sensitive to the beam conditions and detector performance. 
-%This difficulty is compounded by the high-energy, high-luminosity hadron 
-%collider environment at the LHC and the lack of precise theoretical 
-%predictions for the kinematic properties and cross sections of multijet events. 
-%Hence it is very challenging to control and model accurately the multijet 
-%background in the high-\met phase space that is typical of SUSY searches.
-
-
-%The \alphat~\cite{Randall:2008rw, RA1Paper} variable is used to
-%efficiently reject multijet events without significant \met or with
-%transverse energy mismeasurements, while retaining a large sensitivity
-%to new physics with final-state signatures containing significant
-%\met.
-%
-%The measurement of \met typically relies on independent sources of
-%information from each of the calorimeter, tracking, and muon
-%subdetectors~\cite{cms-met}. Relative to other physics objects, this
-%measurement is particularly sensitive to the beam conditions and
-%detector performance. This difficulty is compounded by the
-%high-energy, high-luminosity hadron collider environment at the LHC
-%and the lack of precise theoretical predictions for the kinematic
-%properties and cross sections of multijet events. Hence it is very
-%challenging to control and model accurately the multijet background in
-%the high-\met phase space that is typical of SUSY searches.
-%
-%Given these difficulties, the variable \alphat was developed to avoid
-%direct reliance on a measurement of \met, instead depending solely on
-%the measurements of the transverse energies and (relative) azimuthal
-%angles of jets, which are reconstructed from energy deposits in the
-%calorimeter towers~\cite{Chatrchyan:2011ds}.  The variable is
-%intrinsically robust against the presence of jet energy
-%mismeasurements in multijet systems.
-%%and is observed to be robust against the effects of pileup. 
-%For dijet events, the \alphat variable is defined
-%as~\cite{Randall:2008rw, RA1Paper}:
+transverse momentum of jet ${\rm j}_i$. In well measured QCD dijet events, 
+transverse momentum conservation requires the $\pT$ of the two jets to be 
+of equal magnitude and back-to-back in the plane transverse to the beam.
+The value of \alphat for these type of events can be best seen
+after transforming equation~\ref{eq:mt} into CMS coordinates:
 
 \begin{equation}
-\label{eq:alphat}
-\alphat\, =\, \frac{\Et^{{\rm j}_2}}{M_\text{T}} \, ,
+  \label{eq:mt-polar}
+  \alphat\, = \,\frac{\Et^{{\rm j}_2}}{\sqrt{2\Et^{{\rm j}_1}
+   \Et^{{\rm j}_2} \left(1-cos\left(\Delta\phi\right)\right)}}\, .
 \end{equation}
 
-where $\Et^{\rm j_2}$ is the transverse energy of the less energetic
-jet and $M_\text{T}$ is the transverse mass of the dijet system,
-defined as
+Well balanced back-to-back jets have \alphat values of 0.5 
+For the case of an imbalance in the measured transverse energies 
+of back-to-back jets \alphat is reduced to values smaller than 0.5, 
+this gives the variable its robustness with respect to jet energy 
+mismeasurements. In the case where the two jets are not back-to-back
+in the transverse plane but rather the dijet system balances genuine \met, 
+for example in leptonically decaying W boson recoiling off a syetem
+of jets, the values of \alphat can exceed 0.5.
+Figure 
+from ~\cite{RA1Paper2012}
+
+An extension of \alphat calculation can be made for systems of 
+more than two jets~\cite{cms-pas-sus-09001} by clustering the jets into a 
+two pseudo-jets system. A pseudo-jet's $\Et$ is calculated
+as the scalar sum of the contributing jets' transverse energy, while the total
+transverse energy of the system, \scalht, is defined as the scalar sum of the 
+pseudo-jet's transverse energy: $\scalht = \Et^{{\rm pj}_1}+\Et^{{\rm pj}_2}$.
+All combinations of the n-jet system are tested, and the configuration which
+balances the constructed pseudo-jets' \Et is chosen, ie the combinations which
+minimized $\dht = \Et^{{\rm pj}_1}-\Et^{{\rm pj}_2}$. As balanced QCD events
+are expected to have small \dht, this simple clustering criterion provides the best
+separation between QCD events and events with genuine \met. 
+Equation~(\ref{eq:alphat}) can therefore be generalised as:
 
 \begin{equation}
-  \label{eq:mt}
-  M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
-    \right)^2 - \left( \sum_{i=1}^2 p_x^{{\rm j}_i} \right)^2 - \left(
-      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2} \, .
+  \label{eq:alphat2}
+  \alphat\, = \,\frac{1}{2} \times \frac{\scalht -
+    \dht}{\sqrt{\scalht^2 - \mht^2}} \, = \,\frac{1}{2} \times 
+  \frac{1 - (\dht/\scalht)}{\sqrt{1 - (\mht/\scalht)^2}} \, . 
 \end{equation}
 
-where $\Et^{{\rm j}_i}$, $p_x^{{\rm j}_i}$, and $p_y^{{\rm j}_i}$ are,
-respectively, the transverse energy and $x$ or $y$ components of the
-transverse momentum of jet ${\rm j}_i$.
+In the limit that  $\dht \rightarrow 0$, the ratio of missing energy and
+visible energy can be expressed as a function of \alphat:
 
-%For a perfectly measured dijet event with $\Et^{\rm j_1} = \Et^{\rm
-%  j_2}$ and jets back-to-back in $\phi$, and in the limit in which the
-%momentum of each jet is large compared with its mass, the value of
-%\alphat is 0.5. For the case of an imbalance in the measured
-%transverse energies of back-to-back jets, \alphat is reduced to a
-%value smaller than 0.5, which gives the variable its intrinsic
-%robustness with respect to jet energy mismeasurements. Values
-%significantly greater than 0.5 are observed when the two jets are not
-%back-to-back and are recoiling against significant, genuine \met.
-%
-%The definition of the \alphat variable can be generalised for events
-%with two or more jets as follows. The mass scale of the physics
-%processes being probed is characterised by the scalar sum of the
-%transverse energy $\Et$ of jets considered in the analysis, defined as
-%$\scalht = \sum_{i=1}^{\njet} \Et^{{\rm j}_i}$, where \njet is the
-%number of jets with \Et above a predefined threshold. The estimator
-%for \met is given by the magnitude of the transverse momenta
-%$\vec{\pt}$ vectorial sum over these jets, defined as $\mht =
-%|\sum_{i=1}^{N_{\rm jet}} \vec{\pt}^{{\rm j}_i}|$.
-%
-%For events with three or more jets, a pseudo-dijet system is formed by
-%combining the jets in the event into two pseudo-jets. The total \Et
-%for each of the two pseudo-jets is calculated as the scalar sum of the
-%measured \Et of the contributing jets. The combination chosen is the
-%one that minimises the absolute \Et difference between the two
-%pseudo-jets, \dht. This simple clustering criterion provides the best
-%separation between multijet events and events with genuine
-%\met. Equation~(\ref{eq:alphat}) can therefore be generalised as:
-%
-%\begin{equation}
-%  \label{eq:alphat2}
-%  \alphat\, = \,\frac{1}{2} \times \frac{\scalht -
-%    \dht}{\sqrt{\scalht^2 - \mht^2}} \, = \,\frac{1}{2} \times 
-%  \frac{1 - (\dht/\scalht)}{\sqrt{1 - (\mht/\scalht)^2}} \, . 
-%\end{equation}
-%
-%In the presence of jet energy mismeasurements, the direction and
-%magnitude of the apparent missing transverse energy, \mht, and energy
-%imbalance of the pseudo-dijet system, \dht, are highly correlated.
-%This correlation is much weaker for R-parity-conserving SUSY with each
-%of the two decay chains producing the LSP.
-%
-%It is useful to consider the limiting case $\dht \rightarrow 0$ to
-%understand the relationship between \alphat and the ratio \mht/\scalht:
-%
-%\begin{equation}
-%  \label{eq:alphat3}
-%  \frac{\mht}{\scalht} \, = \, \sqrt{ 1 - \frac{1}{4 \cdot \alphat^2} }
-%\end{equation}
-%
+\begin{equation}
+  \label{eq:alphat3}
+  \frac{\mht}{\scalht} \, = \, \sqrt{ 1 - \frac{1}{4 \cdot \alphat^2} }
+\end{equation}
+
+This analysis uses an \alphat threshold of 0.55, which results in events
+having more than 40\% percent in missing transverse energy as visible transverse
+energy. For an event of \scalht=375\gev, this amounts to nearly 160 GeV in \mht.  
 %For reference, under the assumption of $\dht = 0$, the values of
 %$\alphat = 0.55$, 0.60, and 0.65 map onto values of the ratio
 %$\mht/\scalht = 0.42$, 0.55, and 0.64.
