@@ -47,12 +47,31 @@ Well balanced back-to-back jets have \alphat values of 0.5
 For the case of an imbalance in the measured transverse energies 
 of back-to-back jets \alphat is reduced to values smaller than 0.5, 
 this gives the variable its robustness with respect to jet energy 
-mismeasurements. In the case where the two jets are not back-to-back
-in the transverse plane but rather the dijet system balances genuine \met, 
-for example in leptonically decaying W boson recoiling off a syetem
-of jets, the values of \alphat can exceed 0.5.
-Figure 
-from ~\cite{RA1Paper2012}
+mismeasurements. Figure~\ref{fig:alphat_dist} shows the \alphat 
+distribution in two jet multiplicity bins for events passing 
+an HT trigger and basic pre-selection requirments. Multi-jet 
+events from QCD drop to neglible levels above $\alphat>$ 0.55
+while events with genuine \met continue to populate bins in excess
+of  $\alphat>$ 0.55.
+
+In the case where the two 
+jets are not back-to-back in the transverse plane but rather the 
+dijet system balances genuine \met, for example in leptonically 
+decaying W boson recoiling off a syetem of jets, the values of 
+\alphat can exceed 0.5.
+
+\begin{figure}[h!t]
+  \begin{center}
+    \subfigure[\label{fig:alphat_le3j}]{
+      \includegraphics[width=0.45\textwidth,]{figures/data-mc/AlphaT_le3j.png}
+    } 
+    \subfigure[\label{fig:alphat_ge4j}]{
+      \includegraphics[width=0.45\textwidth,]{figures/data-mc/AlphaT_ge4j.png}
+    } \\
+    \caption{\alphat distribution from~\cite{RA1Paper2012} }
+    \label{fig:alphat_dist}
+  \end{center}
+\end{figure}
 
 An extension of \alphat calculation can be made for systems of 
 more than two jets~\cite{cms-pas-sus-09001} by clustering the jets into a 
@@ -83,8 +102,8 @@ visible energy can be expressed as a function of \alphat:
 \end{equation}
 
 This analysis uses an \alphat threshold of 0.55, which results in events
-having more than 40\% percent in missing transverse energy as visible transverse
-energy. For an event of \scalht=375\gev, this amounts to nearly 160 GeV in \mht.  
+having more than 40\% percent as much missing transverse energy as visible transverse
+energy. For an event with $\scalht=$~375~\gev, this amounts to nearly 160 GeV in \mht.  
 %For reference, under the assumption of $\dht = 0$, the values of
 %$\alphat = 0.55$, 0.60, and 0.65 map onto values of the ratio
 %$\mht/\scalht = 0.42$, 0.55, and 0.64.
