@@ -1,6 +1,7 @@
 \clearpage
-\section{Hadronic Event Selection\label{sec:eventSelection}}
-As discused in [REF], all-hadronic SUSY signatures consist of events with
+\section{Event Selection\label{sec:eventSelection}}
+
+As discused in~\ref{sec:susy}, all-hadronic SUSY signatures consist of events with
 no isolated and detectable objects apart from energetic jets. To search
 for an excess in such events, it is convenient to use a jet-based variable,
 \scalht, to quantify the energy in an event.  \scalht is defined as the scalar
@@ -34,233 +35,133 @@ and 25\% of the reconstructed tracks to be of good quality. Addionally, various 
 prescribed by the MET group[REF] are applied. Events containing muons with inconsistent
 energy are flagged by the muon pog [REF] and filtered out of the analysis. 
 
-\subsection{Triggers}
+\include{reconstruction}
 
-\subsubsection{Hadronic signal region and control samples\label{sec:signal_triggers}} 
+\include{trigger}
 
-Only events passing one or more HLT triggers based on online quantanties 
-are recorded to be analyzed. For any analysis, in general, it is 
-not expected that all recorded events reconstructed offline, pass the online
-trigger as detector conditions, energy corrections, and object-based quantaties
-differ offline. In this analysis, cross-triggers at the HLT
-based on quantities \scalht and \alphat (labelled as \verb!HTxxx_AlphaT0pyy!) 
-are used with various thresholds to record candidate events for the hadronic (signal)
-region. In order to keep the cross-trigger's computational time low, the online quantaties
-are constructed using calorimeter based jets (calo jets), and the use of
-partcle-flow jets in this analysis is expected to introduce inefficiencies.
+\subsection{Object vetoes}
 
-Each \scalht bin is seeded by a single trigger chosen based on the
-efficiency of the trigger in that \scalht bin. The \alphat thresholds of the
-\verb!HTxxx_AlphaT0pyy! triggers were tuned according to the threshold
-on the \scalht leg in order to fully suppress QCD multijet events~\cite{RA1Paper2012}
-and simultaneously satisfying other criteria, such as maintaining
-acceptable trigger rates.
+Standard Model processes with genuine \met from escaping neutrinos can
+also produce leptons. Vetoing events with reconstructed leptons help supress
+this background.  Events containing an isolated electron~\cite{PAS-EGM-10-004} 
+with $\pt >%20\GeV$ and $|\eta| < 2.5$ or an isolated muon~\cite{PAS-MUO-10-002}
+with $\pt > 10\GeV$ and $|\eta| < 2.5$ are vetoed. In order to keep this search
+all-hadronic and not overlap with other analyses in CMS[REF], events with isolated
+photons~\cite{PAS-EGM-10-006}  with $\pt > 25\GeV$ and $|\eta| < 2.5$ are also rejected.
+Events which have a single isolated track~\ref{sec:sit} but no object 
+associated with them are also rejected.
 
 
 
-%Table~\ref{tab:htalphat-triggers} summarises the thresholds used for
-%the \verb!HTxxx_AlphaT0pyy! triggers. 
-%
-The \verb!HTxxx_AlphaT0pyy! trigger efficiencies are measured with a
-reference (\ie, unbiased) event sample recorded by an unprescaled,
-loosely-isolated, eta-restricted single muon 
-trigger, \verb!HLT_IsoMu24_eta2p1!, within the \verb!SingleMu! dataset. A
-sample of events containing at least one isolated muon with $\pt >
-25\gev$ and $|\eta| < 2.1$ is used (similar to the \mj control sample
-defined in Section~\ref{sec:def-control-samples}). A cut of $\Delta
-{\rm R} > 0.5$ is placed between all muons and jets in each event, and
-only jets are considered in the calculation of \scalht, \mht, and
-\alphat, \ie the muon is ignored.
+\subsection{Hadronic pre-selection}
 
-\begin{table}[!h]
-  \caption{List of signal triggers and their efficiencies (\%), as
-    measured in data. The trigger efficiency is $\sim$100\% for all
-    bins above $\scalht > 675\gev$.}  
-  \label{tab:htalphat-triggers}
+Events are categorized into two jet multiplicites: $\njetlow$ and 
+$\njethigh$.  Each event in these categories is further binned by the number
+of jets identified as orginating from b quarks ($\bjets$). Events having 
+three or more b-tagged jets are not considered in the analysis.      
+Significant hadronic activity in the events is ensured by requiring
+$\scalht > 375\GeV$. As described in~\ref{sec:trigger}, events are further
+binned in 100~\gev bins starting from $\scalht = 375\GeV$ and ending with an open-ended
+bin $\scalht > 1075~\gev$. The two highest-$\Et$ jets are subject to a 
+higher threshold, also detailed in
+Table~\ref{tab:jet-pt-thresholds}, and the highest-$\Et$ jet is
+subjected to a tighter $\eta$ acceptance requirement ($|\eta| <
+2.5$). The variables \scalht and \mht are computed from the number of
+jets, \njet, that satisfy the \Et requirements listed in
+Table~\ref{tab:jet-pt-thresholds}. 
+
+
+
+\begin{table}[h!]
+  \caption{Jet \Et thresholds per \scalht bin.\label{tab:jet-pt-thresholds}}
   \centering
   \footnotesize
-  \begin{tabular}{ cccccc }
+  \begin{tabular}{ lcccc }
     \hline
     \hline
-    Offline \scalht       & Offline \alphat & L1 seed (\verb!L1_?!)         & Trigger (\verb!HLT_?!)  & \multicolumn{2}{c}{Efficiency (\%)}          \\ [0.5ex]
-    region (\gev)         & threshold       & (highest thresholds)          &                         & $2 \leq \njet \leq 3$ & $\njet \geq 4$       \\ [0.5ex]
+    \scalht bin    & $>$375  \\
     \hline
-    %$200 < \scalht < 275$ & 0.65            & \verb!DoubleJetC64!           & \verb!HT200_AlphaT0p57! & $81.8^{+0.4}_{-0.4}$  & $78.9^{+0.3}_{-0.4}$ \\
-    %$275 < \scalht < 325$ & 0.60            & \verb!DoubleJetC64!           & \verb!HT200_AlphaT0p57! & $95.2^{+0.3}_{-0.4}$  & $90.0^{+1.2}_{-1.3}$ \\
-    %$325 < \scalht < 375$ & 0.55            & \verb!DoubleJetC64 OR HTT175! & \verb!HT300_AlphaT0p53! & $97.9^{+0.3}_{-0.3}$  & $95.6^{+0.9}_{-1.0}$ \\
-    $375 < \scalht < 475$ & 0.55            & \verb!DoubleJetC64 OR HTT175! & \verb!HT300_AlphaT0p53! & $94.2^{+0.5}_{-0.6}$  & $90.5^{+1.2}_{-1.3}$ \\
-    $475 < \scalht < 575$ & 0.55            & \verb!DoubleJetC64 OR HTT175! & \verb!HT350_AlphaT0p52! & $96.2^{+0.8}_{-0.9}$  & $94.6^{+1.2}_{-1.4}$ \\
-    $575 < \scalht < 675$ & 0.55            & \verb!DoubleJetC64 OR HTT175! & \verb!HT400_AlphaT0p51! & $95.4^{+1.4}_{-1.8}$  & $98.7^{+0.7}_{-1.12}$ \\
-    $\scalht > 675$       & 0.55            & \verb!DoubleJetC64 OR HTT175! & \verb!HT400_AlphaT0p51! & $100^{+0.0}_{-2.0}$  & $100^{+0.0}_{-2.0}$ \\
+    Lead jet       & 100.0  \\
+    Second jet     & 100.0  \\
+    All other jets &  50.0  \\
     \hline
     \hline
   \end{tabular}
 \end{table}
 
+\include{alphat}
 
-Table~\ref{tab:htalphat-triggers} summarises the measured efficiencies
-for the \verb!HTxxx_AlphaT0pyy! triggers in the relevant \scalht
-bins. The trigger efficiencies are measured for both \njet
-multiplicity bins. %The efficiencies are generally observed to be high,
-%$\sim$100\%, except for the low \scalht region $200 < \scalht <
-%325\gev$. The inefficiencies at low \scalht are mainly due to the L1
-seeds for which thresholds were raised to a relatively high level in
-order to maintain trigger rates in the high-pileup conditions towards
-the end of Run 1. The inefficiencies are slightly larger in the higher
-jet multiplicity category due to a larger number of jets summing to
-the same \scalht, resulting in softer
-jets. Figures~\ref{fig:eff-alphat-le3j} and~\ref{fig:eff-alphat-ge4j}
-show the efficiency curves for the \verb!HTxxx_AlphaT0pyy! triggers in
-the three lowest \scalht bins, for the \njetlow and \njethigh
-categories, respectively. The efficiencies are also determined at the
-level of event categories and no dependence on \nb is observed, with
-efficiencies agreeing within statistical uncertainties.
+\subsection{The hadronic signal region\label{sec:had-signal}}
 
+Following the hadronic pre-selection, the multijet background from QCD
+is still several orders of magnitude larger than the typical signal
+expected from SUSY. The multijet background can be rejected with very
+high efficiency by requiring $\alphat > 0.55$ (plus the application of
+two dedicated cleaning filters, described below in
+Sec.~\ref{sec:had-signal}).
 
-\begin{figure}[!h]
-  \begin{center}
-    \subfigure[\njetlow, $375 < \scalht < 475 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j_RunAtFNAL.pdf}
-    }
-    \subfigure[\njethigh, $375 < \scalht < 475 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j_RunAtFNAL.pdf}
-    } \\
-    \subfigure[\njetlow, $475 < \scalht < 525 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}
-    } 
-    \subfigure[\njethigh, $475 < \scalht < 525 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}
-    } \\
-    \subfigure[\njetlow, $525 < \scalht < 675 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
-    }
-    \subfigure[\njethigh, $525 < \scalht < 675 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
-    } \\
-    \caption{\label{fig:eff-alphat-le3j}
-      Cumulative efficiency turn-on curves for the \scalht-\alphat 
-      cross triggers (as summarised in Table~\ref{tab:htalphat-triggers}) 
-      that record events for the three lowest \scalht bins for events 
-      satisfying \njetlow (left) and \njethigh (right). 
-    }
-  \end{center}
-\end{figure}
-%
-%\begin{figure}[!h]
-%  \begin{center}
-%    \subfigure[Differential, $375 < \scalht < 475 \gev$]{
-%      \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j_RunAtFNAL.pdf}
-%    }
-%    \subfigure[Cumulative, $375 < \scalht < 475 \gev$]{
-%      \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j_RunAtFNAL.pdf}
-%    } \\
-%    \subfigure[Differential, $475 < \scalht < 525 \gev$]{
-%      \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}
-%    } 
-%    \subfigure[Cumulative, $475 < \scalht < 525 \gev$]{
-%      \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}
-%    } \\
-%    \subfigure[Differential, $525 < \scalht < 675 \gev$]{
-%      \includegraphics[width=0.4\textwidth,page=18]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_le3j_RunAtFNAL.pdf}
-%    }
-%    \subfigure[Cumulative, $525 < \scalht < 675 \gev$]{
-%      \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_le3j_RunAtFNAL.pdf}
-%    } \\
-%    \caption{\label{fig:eff-alphat-le3j}
-%      (Left) Differential and (Right) cumulative efficiency turn-on 
-%      curves for the \scalht-\alphat cross triggers (as summarised in 
-%      Table~\ref{tab:htalphat-triggers}) that record events for the
-%      three lowest \scalht bins  for events satisfying \njetlow. 
-%    }
-%  \end{center}
-%\end{figure}
+These criteria are sufficient to suppress the QCD multijet
+contribution to the sub-percent level with respect to the non-multijet
+backgrounds for the region $\scalht > 325\gev$. For the regions $200 <
+\scalht < 275\gev$ and $275 < \scalht < 325\gev$, higher thresholds of
+0.65 and 0.60 are used, as detailed in
+Table~\ref{tab:alphat-thresholds}. The method used to determine the
+multijet prediction as a function of the \alphat threshold is
+described in Section~\ref{sec:qcd}. The higher \alphat thresholds
+provide added protection against the effect of jets below threshold
+contributing significiantly to \mht, ensuring that the relative
+multijet contribution is maintained at the sub-percent level, even for
+the new region at very low \scalht (where the jets are softest and
+resolutions are poor) and the higher pileup conditions experienced
+during Run D. The choice of \scalht and \alphat thresholds are also
+driven by trigger constraints.
 
-%begin{figure}[!h]
-% \begin{center}
-%   \subfigure[Differential, $375 < \scalht < 475 \gev$]{
-%     \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j_RunAtFNAL.pdf}
-%   }
-%   \subfigure[Cumulative, $375 < \scalht < 475 \gev$]{
-%     \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j_RunAtFNAL.pdf}
-%   } \\
-%   \subfigure[Differential, $475 < \scalht < 525 \gev$]{
-%     \includegraphics[width=0.4\textwidth,page=20]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}
-%   } 
-%   \subfigure[Cumulative, $475 < \scalht < 525 \gev$]{
-%     \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}
-%   } \\
-%   \subfigure[Differential, $525 < \scalht < 675 \gev$]{
-%     \includegraphics[width=0.4\textwidth,page=18]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
-%   }
-%   \subfigure[Cumulative, $525 < \scalht < 675 \gev$]{
-%     \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
-%   } \\
-%   \caption{\label{fig:eff-alphat-ge4j}
-%     (Left) Differential and (Right) cumulative efficiency turn-on 
-%     curves for the \scalht-\alphat cross triggers (as summarised in 
-%     Table~\ref{tab:htalphat-triggers}) that record events for the
-%     three lowest \scalht bins  for events satisfying \njethigh. 
-%   }
-% \end{center}
-%end{figure}
-\FloatBarrier
+\begin{table}[h!]
+  \caption{\alphat and (effective) \mht/\scalht and \mht thresholds per \scalht bin.\label{tab:alphat-thresholds}}
+  \centering
+  \footnotesize
+  \begin{tabular}{ lcccc }
+    \hline
+    \hline
+    \scalht bin  & 200--275   & 275--325   & 325--375   & $>$375       \\
+    \hline
+    \alphat      & 0.65       & 0.60       & 0.55       & 0.55         \\
+    \mht/\scalht & $\sim$0.64 & $\sim$0.55 & $\sim$0.42 & $\sim$0.42   \\
+    \mht         & $\sim$130  & $\sim$150  & $\sim$135  & $\gtrsim$155 \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
 
-\subsubsection{Muon and photon control samples\label{sec:muon_triggers}}
+Finally, some additional cleaning filters are added following
+the \alphat requirement to protect against pathological effects such
+as reconstruction failures or severe energy losses due to detector
+inefficiencies. 
 
-Events for the muon control sample are recorded with the \verb!HLT_IsoMu24_eta2p1! 
-trigger. Figure~\ref{fig:eff-muon} (left) shows the \verb!HLT_IsoMu24_eta2p1! 
-trigger efficiency as determined in bins of number of primary vertices 
-for muon $\pt >$ 25 \gev and $|\eta| <$ 2.1 by the muon POG~\cite{ref:muon-eff}.
-Figure~\ref{fig:eff-muon} (right) shows the disribution of the number 
-of vertices in the muon control sample seeded by the \verb!HLT_IsoMu24_eta2p1!. 
-The efficiency at the mean number of vertices (nVtx = 13) is taken as flat
-trigger efficiency across \njet, \nb and \scalht. This measurement 
-agrees well with direct tag and probe measurments in bins of 
-\njet, \nb, \scalht done elsewhere. [REF]
+To protect against multiple jets failing the $\Et$ threshold, the
+jet-based estimate of the missing transverse energy, \mht, is compared
+to the Particle Flow estimate of missing transverse energy, $\pfmet$,
+and events with $R_{\rm miss}=\mht/\pfmet > 1.25$ are rejected.
 
-\begin{figure}[!h]
-  \begin{center}
-  \subfigure{
-    \includegraphics[width=0.3\textwidth,]{figures/trigger/muonEffvsNvtx}
-    }   
-  \subfigure{
-   \includegraphics[width=0.42\textwidth,page=65]{figures/data-mc/v21/mu/muonLook_pfJet_ge2j_375.pdf}
-   }\\     
-    \caption{\label{fig:eff-muon}
-    (left) Muon trigger efficiency as a function of
-    number of primary vertices for muon $\pt>$ 25 \gev and
-    $|\eta| <$ 2.1., (right) number of primary vertices
-    in muon control sample.} 
- 
-  \end{center}
-\end{figure}
-
-Events for the photon control sample are recorded with the
-\verb!HLT_Photon150! trigger, which is $\sim100\%$ efficient for
-$E_{\rm T}^{\rm photon} > 165\gev$ and $\scalht > 375\gev$, as shown
-in Figure~\ref{fig:eff-photon}. The efficiency measurement is made
-using the \verb!HLT_Photon90! trigger as a reference, and we assume
-that the \verb!L1_SingleEG22! seed is fully efficient.
-
-\begin{figure}[!h]
-  \begin{center}
-  \subfigure[\njetlow]{
-    \includegraphics[width=0.43\textwidth,page=6]{figures/trigger/g_barrel_375_caloJet_le3j_}
-    }   
-  \subfigure[\njethigh]{
-   \includegraphics[width=0.43\textwidth,page=6]{figures/trigger/g_barrel_375_caloJet_ge4j_}
-   }\\     
-    \caption{\label{fig:eff-photon}
-    Cumulative efficiency turn-on curves for the \texttt{HLT\_Photon150} trigger 
-    as a function of photon \pt for events satisfying \njetlow 
-    (left) and \njethigh (right).} 
-  \end{center}
-\end{figure}
+To protect against severe energy losses, events with significant jet
+mismeasurements caused by masked regions in the ECAL (which amount to
+about 1\% of the ECAL channel count), or by missing instrumentation in
+the barrel-endcap gap, are removed with the following procedure. The
+jet-based estimate of the missing transverse energy, \mht, is used to
+identify jets most likely to have given rise to the \mht as those
+whose momentum is closest in $\phi$ to the total $\vec{\mht}$ which
+results after removing them from the event.  The azimuthal distance
+between this jet and the recomputed \mht is referred to as
+$\Delta\phi^*$ in what follows. Events with $\Delta\phi^* < 0.5$ are
+rejected if the distance in the ($\eta,\phi$) plane between the
+selected jet and the closest masked ECAL region, $\Delta R_{\rm
+  ECAL}$, is smaller than 0.3. Similarly, events are rejected if the
+jet points within 0.3 in $\eta$ of the ECAL barrel-endcap gap at
+$|\eta| = 1.5$. These final selections complete the definition of the
+acceptance of the hadronic signal sample.
 
 
-\FloatBarrier
 
-%\subsection{event selection}
 %
 %Once all the signal selection requirements have been imposed, the
 %contribution from QCD multijet events is expected to be negligible, as
