@@ -210,13 +210,6 @@ $\mht/\pfmet$ described in ~\ref{sec:finalSelection} is also applied,
 where the \pfmet is adjusted to account for the transverse momentum of the 
 identified, isolated muon.
 
-% Events are vetoed if either of the following conditions are met:
-% $\Delta R(\mu,\textrm{jet}_i) < 0.5$, running over all jets $i$; or
-% a second muon candidate exists that is either loose, non-isolated or
-% outside acceptance and the two muons have an invariant mass that
-% satisfies $m_{Z} - 25 < M_{\mu_1\mu_2} < m_{Z} + 25$ (to suppress
-% $Z\rightarrow\mu\mu$).
-
 %\subsubsection{The \texorpdfstring{\mmj}{di-muon plus jets} control sample}
 %
 %The \znunu\ + jets process forms an irreducible background and can be
@@ -246,26 +239,20 @@ identified, isolated muon.
 %momenta of the two identified, isolated muons. The \mmj sample can be
 %used to make predictions in all the \scalht bins, providing coverage
 %at low \scalht where the \gj sample cannot.
-%
-%\subsubsection{The \texorpdfstring{\gj}{photon plus jets} control sample}
-%
-%The \znunu\ + jets process can also be estimated using the \gj
-%process, which has a larger cross section and kinematic properties
-%similar to those of \znunu\ events when the photon is
-%ignored~\cite{PAS-SUS-08-002,Bern:2011pa}. The \gj sample is defined
-%by requiring exactly one photon satisfying tight isolation criteria
-%and within an acceptance of $\pt > 165\gev$ and $|\eta| <
-%1.45$. Furthermore, events are vetoed if $\Delta
-%R(\gamma,\textrm{jet}_j) < 1.0$ is satisfied, running over all jets
-%$j$. As for the muon-based samples, the photon is not considered in
-%the calculation of event-level variables such as \scalht, \mht and
-%\alphat. All cuts on jet-based quantities are consistent with those
-%applied in the hadronic search region, and the same \HT binning is
-%used. Given that the photon is ignored, the \gj sample can only be
-%used for the region $\scalht > 375\gev$ due to the photon acceptance
-%of $\pt > 165\gev$ (enforced by the trigger) and the requirement
-%$\alphat > 0.55$.
-%
+
+\subsubsection{The \texorpdfstring{\gj}{photon plus jets} control sample}
+
+The \znunu + jets background is estimated using \gj events which
+have a higer cross-section but similar kinematic properties as 
+\znunu + jets when the photon is ignored~\cite{PAS-SUS-08-002,Bern:2011pa}. 
+The \gj sample is obtained by requiring exactly one tightly 
+identified and isolated photon (as defined in section~\ref{sec:reconstruction})
+with a transverse momentum of at least 165\gev. The photon is required to be contained 
+within the barrel of the detector, ie $|\eta| <1.44$. and to not overlap with 
+any reconstructed jets ($\Delta R(\gamma,\textrm{jet}) < 1.0$.)
+All other selections are consistant with the hadronic search region
+including the \alphat>0.55 cut.
+
 %\subsection{Increasing the acceptance of the muon control samples\label{sec:larger}}
 %
 %As described in Sec.~\ref{sec:def-control-samples} above, the
