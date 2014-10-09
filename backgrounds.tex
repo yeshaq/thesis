@@ -24,6 +24,14 @@ a lost lepton and neutrino becomes a large background source.
 For events with two reconstructed b-quark jets, \ttbar production
 dominates the background. 
 
+This analysis uses a ``data-driven'' method to estimate backgrounds
+in the hadronic signal model. Data control samples are used to predict
+background SM yields instead of direct measurement in MC simulations. 
+This approach has two benefits, 1. The beam and detector conditions 
+for the hadronic and control samples are very similar. 2. The information 
+used from MC simulation is in the form of ratios~\ref{sec:background-method}, 
+which has the benefit of canceling potential sysetematic effects in simulation.
+
 Two control samples are used to estimate the background. To esimate the
 \znunu + jets background, $\gamma$ + jets events, which have the same
 kinematic properties as \znunu + jets when the photon is ingored but 
@@ -165,43 +173,46 @@ The control sample selections are described in the subsequent sections.
 %%be used to give an expectation for the \znunu + jets background for
 %%all b-jet categories in the signal region.
 %
-%\subsection{Definition of the control samples\label{sec:def-control-samples}}
+\subsection{Definition of the control samples\label{sec:def-control-samples}}
+
+\include{controlTriggers}
+
+\subsubsection{The \texorpdfstring{\mj}{muon plus jets} control sample}
 %
-%\subsubsection{The \texorpdfstring{\mj}{muon plus jets} control sample}
-%
-%Events from the \wj and \ttbar processes are found in the hadronic
-%signal sample due to unidentified leptons (either out of acceptance or
-%not reconstructed) and hadronic tau decays originating from
-%high-p$_{T}$ W bosons. An estimate of these background processes is
-%obtained through the use of a \mj sample. The selection criteria for
-%this sample are chosen to identify W bosons decaying to a muon and a
-%neutrino in the phase-space of the signal. The muon is not considered
-%in the calculation of event-level variables such as \scalht, \mht and
-%\alphat. All cuts on such jet-based quantities are consistent with
-%those applied in the hadronic search region and the same \njet, \nb,
-%and \scalht binning is used. The only exception is that no \alphat
-%requirement is made, as motivated by the discussion in
-%Sec.~\ref{sec:larger}. In order to select events containing W bosons,
-%exactly one tight isolated muon within an acceptance of \PT $>$ 30
-%\gev and $|\eta| <$ 2.1 is required (due to the trigger), and the
-%transverse mass of the W candidate must satisfy $30 < \mt(\mu,\pfmet)
-%< 125\gev$ (to suppress QCD multijet and potential signal
-%events). Events are vetoed if $\Delta R(\mu,\textrm{jet}_i) < 0.5$
-%running over all jets $i$. The single isolated track veto, described
-%in Sections~\ref{sec:reconstruction} and~\ref{sec:vetoes}, is also
-%applied, which considers all single isolated tracks in the event
-%except that associated with the identified, isolated muon. Finally,
-%the cleaning cut $\mht/\pfmet$ is also applied, as done in the signal
-%region, where the \pfmet is adjusted to account for the transverse
-%momentum of the identified, isolated muon.
-%
-%% Events are vetoed if either of the following conditions are met:
-%% $\Delta R(\mu,\textrm{jet}_i) < 0.5$, running over all jets $i$; or
-%% a second muon candidate exists that is either loose, non-isolated or
-%% outside acceptance and the two muons have an invariant mass that
-%% satisfies $m_{Z} - 25 < M_{\mu_1\mu_2} < m_{Z} + 25$ (to suppress
-%% $Z\rightarrow\mu\mu$).
-%
+\wj and \ttbar processes are found in the hadronic signal region when 
+the decay lepton isn't reconstructed or falls out of acceptance.  
+Additionally, a tau lepton from a high-p$_{T}$ W boson can decay
+into quarks.  An estimate of these background processes is
+obtained through the use of a \mj sample. A selection criteria
+is chosen to identify W bosons decaying to a muon and a
+neutrino in the phase-space of the signal. The muon is not considered
+in the calculation of event-level variables such as \scalht, \mht and
+\alphat as to mimic a loss of a lepton in the hadronic signal region.
+All cuts on such jet-based quantities are consistent with
+those applied in the hadronic search region and the same \njet, \nb,
+and \scalht binning is used. The only exception is that no \alphat
+requirement is made, as motivated by the discussion in
+Sec.~\ref{sec:larger}. In order to select events containing W bosons,
+exactly one tight isolated muon within an acceptance of \PT $>$ 30
+\gev and $|\eta| <$ 2.1 is required (due to the trigger), and the
+transverse mass of the W candidate must satisfy $30 < \mt(\mu,\pfmet)
+< 125\gev$ (to suppress QCD multijet and potential signal
+events). Events are vetoed if $\Delta R(\mu,\textrm{jet}_i) < 0.5$
+running over all jets $i$. The single isolated track veto, described
+in Sections~\ref{sec:reconstruction} and~\ref{sec:vetoes}, is also
+applied, which considers all single isolated tracks in the event
+except that associated with the identified, isolated muon. Finally,
+the cleaning cut $\mht/\pfmet$ is also applied, as done in the signal
+region, where the \pfmet is adjusted to account for the transverse
+momentum of the identified, isolated muon.
+
+% Events are vetoed if either of the following conditions are met:
+% $\Delta R(\mu,\textrm{jet}_i) < 0.5$, running over all jets $i$; or
+% a second muon candidate exists that is either loose, non-isolated or
+% outside acceptance and the two muons have an invariant mass that
+% satisfies $m_{Z} - 25 < M_{\mu_1\mu_2} < m_{Z} + 25$ (to suppress
+% $Z\rightarrow\mu\mu$).
+
 %\subsubsection{The \texorpdfstring{\mmj}{di-muon plus jets} control sample}
 %
 %The \znunu\ + jets process forms an irreducible background and can be
