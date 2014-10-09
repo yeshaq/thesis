@@ -59,31 +59,6 @@ transfer factor:
 N_{\rm DY} + N_{\gamma} + N_{\rm top} + N_{\rm di-boson}
 \end{equation}
 
-%When constructing the transfer factors, the MC expectations for the
-%following SM processes are considered: W + jets ($N_{\rm W}$), \ttbar
-%+ jets ($N_{\ttbar}$), \znunu\ + jets ($N_{\znunu}$), DY + jets
-%($N_{\mathrm DY}$), \gj ($N_\gamma$), single top + jets
-%production via the s, t, and tW-channels ($N_{\rm top}$), and WW +
-%jets, WZ + jets, and ZZ + jets ($N_{\rm di-boson}$). Details on the MC
-%samples used are given in Sec.~\ref{sec:mc-samples}. All MC samples
-%are normalised to the intergrated luminosity of the appopriate data
-%sample.
-%
-%While ``na\"ive'' predictions can be made using
-%Equ.~\ref{equ:pred-method}, the fitting prcedure that provides the
-%final result is defined formally by the likelihood model described in
-%Sec.~\ref{sec:statistics}. In summary, the observation in each bin
-%(defined in terms of the variables \njet, \nb, and \scalht) of the
-%signal sample is modelled as Poisson-distributed about the sum of a SM
-%expectation (and a potential signal contribution). The components of
-%this SM expectation are related to the expected yields in the control
-%samples via transfer factors derived from simulation, as described
-%in Sec.~\ref{sec:background-method}. The observations in each bin
-%(again defined by \njet, \nb, and \scalht) of the control samples are
-%similarly modelled as Poisson-distributed about the expectated yields
-%for each control sample. In this way, for a given bin, the observed
-%yields in the signal and control samples are all connected via the
-%transfer factors derived from simulation.
 
 As described in [REF], depending on the b-tag category, one or both
 control samples are used to predict the backgrounds in the signal region.
@@ -129,6 +104,9 @@ enter the numerator of each transfer factor:
 The control samples used to predict the SM backgrounds for each 
 event category are summarised in Table~\ref{tab:fit-plots}.
 
+This analysis benefits from using translation factos has potential systematic
+effects from simulation are expected to cancel out in the translation factor.
+The control sample selections are described in the subsequent sections. 
 
 \begin{table}[ht!]
   \caption{Summary of control samples used to predict the SM
@@ -150,6 +128,7 @@ event category are summarised in Table~\ref{tab:fit-plots}.
     \hline
   \end{tabular}
 \end{table}
+
 
 %The selection criteria for the three control samples closely resemble
 %those for the signal region, differing mainly through the use of a
