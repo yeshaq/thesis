@@ -1,18 +1,18 @@
 \clearpage
 \section{Event Selection\label{sec:eventSelection}}
 
-As discused in~\ref{sec:susy}, all-hadronic SUSY signatures consist of events with
+As discussed in~\ref{sec:susy}, all-hadronic SUSY signatures consist of events with
 no isolated and detectable objects apart from energetic jets. To search
 for an excess in such events, it is convenient to use a jet-based variable,
 \scalht, to quantify the energy in an event.  \scalht is defined as the scalar
-sum of the transverse energy of the jets in the event. The challanges due to large
+sum of the transverse energy of the jets in the event. The challenges due to large
 backgrounds in a search for an excess in all-hadronic events becomes evident 
-when compairing observed data events overlaid with simulated events from 
+when comparing observed data events overlaid with simulated events from 
 SM processes as a function of \scalht Figure [REF].
  
 The dominant background are azimuthally-balanced multi-jet events, stemming from QCD
 processes. This search reduces this background to negligible levels in the
-selected region by employing the \alphat variable further discussd in section [REF].
+selected region by employing the \alphat variable further discussed in section [REF].
 Furthermore, by construction, \alphat also reduces backgrounds from severely mis-measured
 jets. 
 
@@ -22,16 +22,16 @@ In absence of the multi-jet background, the remaining significant backgrounds ar
 The data analyzed was recorded by CMS in 2012 between April 5th and Dec. 5th and
 totals 19.47$\pm$ 2.6\%. The collected data is certified on a run-by-run 
 basis, where initial automatic certification requires the LHC beams to be declared
-stable and all CMS subdetectors ON. Further monitoring of the data was done realtime
+stable and all CMS subdetectors ON. Further monitoring of the data was done real time
 by experts of each subdetector trough analysis of histograms updated and filled
-each lumi section. Final cerfitication was done offline, and lumi sections passing
+each lumi section. Final certification was done offline, and lumi sections passing
 all criteria were listed in a Golden JSON file to be used by all analyses. 
 
 \subsection{Event quality}
 
 Each event is subjected to a series of commonly used filters in CMS to ensure good
 quality data. Minimal requirements are that at least one primary vertex is identified 
-and 25\% of the reconstructed tracks to be of good quality. Addionally, various filters 
+and 25\% of the reconstructed tracks to be of good quality. Additionally, various filters 
 prescribed by the MET group[REF] are applied. Events containing muons with inconsistent
 energy are flagged by the muon pog [REF] and filtered out of the analysis. 
 
@@ -42,7 +42,7 @@ energy are flagged by the muon pog [REF] and filtered out of the analysis.
 \subsection{Object vetoes}
 
 Standard Model processes with genuine \met from escaping neutrinos can
-also produce leptons. Vetoing events with reconstructed leptons help supress
+also produce leptons. Vetoing events with reconstructed leptons help suppress
 this background.  Events containing an isolated electron~\cite{PAS-EGM-10-004} 
 with $\pt > 20\GeV$ and $|\eta| < 2.5$ or an isolated muon~\cite{PAS-MUO-10-002}
 with $\pt > 10\GeV$ and $|\eta| < 2.5$ are vetoed. In order to keep this search
@@ -55,9 +55,9 @@ associated with them are also rejected.
 
 \subsection{Hadronic pre-selection}
 
-Events are categorized into two jet multiplicites: $\njetlow$ and 
+Events are categorized into two jet multiplicities: $\njetlow$ and 
 $\njethigh$.  Each event in these categories is further binned by the number
-of jets identified as orginating from b quarks ($\nb$). Events having 
+of jets identified as originating from b quarks ($\nb$). Events having 
 three or more b-tagged jets are not considered in the analysis.      
 Significant hadronic activity in the events is ensured by requiring
 $\scalht > 375\GeV$. As described in~\ref{sec:trigger}, events are further
@@ -95,12 +95,12 @@ Table~\ref{tab:jet-pt-thresholds}.
 
 After applying the \alphat selection~\ref{sec:alphat}, the remaining 
 events are expected to have little contamination from balanced QCD events.  
-Furhtermore, events with back-to-back mismeasured jets are also rejectd. Nonetheless
+Furthermore, events with back-to-back measured jets are also rejected. Nonetheless
 two topological cases still need to considered.
 
 Protect from accepting events with \mht due to jets with similar values of 
 the azymuthal angle ($\phi$) that fail to pass the jet Et threshold. Such jets would
-not be considered in the caclculation of \scalht and as a result, they would bias the 
+not be considered in the calculation of \scalht and as a result, they would bias the 
 \mht calculation. The events are rejected by comparing the \met calculation from 
 jets as defined in~\ref{sec:reconstruction} with the missing transverse energy, 
 $\pfmet$, and events with $R_{\rm miss}=\mht/\pfmet > 1.25$ are rejected.
@@ -108,7 +108,7 @@ $\pfmet$, and events with $R_{\rm miss}=\mht/\pfmet > 1.25$ are rejected.
 The other, is a protection from severe mismeasurments of jets that are absorbed
 by masked crystals in the ECAL. These crystals, which make up 1\% of the 
 total crystal count, give only partial record of the energy deposited thereby introducing
-``fake'' \mht in the event. As a filther, the quantaty:
+``fake'' \mht in the event. As a filter, the quantity:
 
 \begin{equation}
   \label{eq:dphistart}
