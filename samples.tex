@@ -3,7 +3,7 @@
 
 \subsection{Data sets\label{sec:datasets}}
 
-The data analysed consist of the full run of 2012.  
+The data analyzed consist of the full run of 2012.  
 
   
 The following datasets are used to populate the hadronic signal and
@@ -52,7 +52,7 @@ sections with the run range 190456--208686.
 The SM background Monte Carlo samples for physics at 8\TeV are taken
 from the \verb!Summer12! simulation production run with
 \verb!CMSSW_5_3_X! with the \verb!PU_S10! scenario. The effective
-luminosity of each MC sample is normalised to the integrated
+luminosity of each MC sample is normalized to the integrated
 luminosity of the corresponding dataset, as listed in
 Table~\ref{tab:mc-sm}. 
 The signal \MADGRAPH Monte Carlo samples, listed in
@@ -168,11 +168,11 @@ data. This is done using the recommended recipe and the PU JSON of
 
 \subsection{Corrections to cross sections for SM samples\label{sec:k-factors}}
 
-A simulated event is weighted by the total numer of events in the MC sample, 
-the thoeritical cross section, and total luminosiy of the data being studied.
-The MC Pog provides next-to-next-to leading order (NNLO) thoeritical cross section
+A simulated event is weighted by the total number of events in the MC sample, 
+the theoretical cross section, and total luminosity of the data being studied.
+The MC Pog provides next-to-next-to leading order (NNLO) theoretical cross section
 for un-filtered (inclusive) SM samples~\cite{twiki-xs}. In an attempt to 
-provide higher statistics in tails of distrubtion analyses often cut on 
+provide higher statistics in tails of distribution analyses often cut on 
 (ie \partonht, \nparton, \pthat), MC samples are provided binned in these
  variables. Only the leading-order (LO) cross sections are provided~\cite{prep} 
 but in general, the \kfactors required to go from LO to NNLO cross sections
@@ -182,20 +182,20 @@ Studies conducted by other analyses ~\cite{RobXS} revealed that some LO cross
 sections calculated for MC samples binned according to \partonht are
 inaccurate to a level as large as 10\%, leading to non-physical discontinuities 
 in the \partonht distribution constructed from the binned samples of a given process.
-Futhermore, due to an error in production, the \wlnu \; \scalht binned samples exhibit 
+Furthermore, due to an error in production, the \wlnu \; \scalht binned samples exhibit 
 \scalht-depended biases. The following paragraphs describes a procedure to measure 
-corrections to the discontinuites and biases of the \wlnu \; \partonht binned samples 
+corrections to the discontinuities and biases of the \wlnu \; \partonht binned samples 
 as a function of \scalht. Other analyses created similar procedures to correct 
 the \zmumu \; \partonht binned samples, this analysis uses those measured corrections 
 as k-factors.  
 
 \begin{figure}[h!t]
   \begin{center}
-    \subfigure[\label{fig:xsec_study_before}Parton \scalht distrbution for the \wlnu inclusive sample (blue) and
+    \subfigure[\label{fig:xsec_study_before}Parton \scalht distribution for the \wlnu inclusive sample (blue) and
     \wlnu \nparton binned sample (orange.)]{
       \includegraphics[width=0.6\textwidth,]{figures/samples/xs_wj_lv_mg_ht_incl_over_excl-2.pdf}
     } \\
-    \subfigure[\label{fig:xsec_study_before}Fitted Parton \scalht distrbution for the \wlnu \partonht sample (purple) and
+    \subfigure[\label{fig:xsec_study_before}Fitted Parton \scalht distribution for the \wlnu \partonht sample (purple) and
     \wlnu \nparton binned sample (orange.)]{
       \includegraphics[width=0.6\textwidth,]{figures/samples/xs_wj_lv_mg_ht_incl_over_excl-6.pdf}
     } \\
@@ -213,10 +213,10 @@ as k-factors.
 %{\bf Step 1:} 
 As a first step, we wish to reweigh the cross sections of the \partonht binned samples such that
 their \partonht distributions match that of the inclusive sample's. Due to
-the inclusive sample's limited statitistics in the tails of \scalht distribution, 
+the inclusive sample's limited statistics in the tails of \scalht distribution, 
 we instead use the \nparton binned's \partonht distribution which is verified to agree well 
 with the inclusive sample figure~\ref{fig:xsec_study} (a).  Additionally, to smooth statistical
-flucutations, both distributions are fitted using a double exponetional of the form $exp(a+b*x + c*x^{1.05})$
+fluctuations, both distributions are fitted using a double exponential of the form $exp(a+b*x + c*x^{1.05})$
 for \scalht $> 500\gev$ figure~\ref{fig:xsec_study} (b). The ratio of the distributions figure~\ref{fig:xsec_study}(c) 
 is applied as \partonht dependent event weight.
 
@@ -225,7 +225,7 @@ In the high-\scalht and high-\met corner of kinematic phase space of this analys
 agree well with data. Therefore a data sideband in \scalht is used
 to determine sample-specific corrections that are appropriate for the
 \scalht-\met phase space covered by this analysis. This correction is determined 
-for the \wlnu and \ttbar samples by impososing requirements on the number of muons, 
+for the \wlnu and \ttbar samples by imposing requirements on the number of muons, 
 jets, and b-tagged jets, to obtain samples rich in W + jets, and \ttbar events.
 A sideband in \scalht is used to determine both the yields in data and
 MC expectations. The sideband is defined by the region $200 < \scalht
@@ -235,7 +235,7 @@ higher HT bins. Trigger efficiency and b-tag scale factor corrections
 are determined and applied to the MC samples. The purity of the samples are $>80\%$ and
 any contamination is taken into account. The correction is determined by 
 taking the ratio of the data yield over the MC expectation in the sideband. 
-Table~\ref{tab:xs} summarises the selection and corrections for the different samples. 
+Table~\ref{tab:xs} summarizes the selection and corrections for the different samples. 
 
 %Finally, an important point to note is that the corrections to the
 %cross sections, derived with data sidebands, are only relevant for
@@ -245,7 +245,7 @@ Table~\ref{tab:xs} summarises the selection and corrections for the different sa
 %  not} sensitive to changes in the cross sections.
 %
 \begin{table}[!h]
-  \caption{Correctins determined from a data sideband for the W + jets and \ttbar samples. 
+  \caption{Corrections determined from a data sideband for the W + jets and \ttbar samples. 
   ``Corrected yield'' reflects the observed data yield minus the contamination as given by MC.}
   \label{tab:xs}
   \centering
