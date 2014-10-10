@@ -3,16 +3,15 @@
 \subsubsection{Hadronic signal region and control samples\label{sec:signal_triggers}} 
 
 Only events passing one or more HLT triggers based on online quantities 
-are recorded to be analyzed. For any analysis, in general, it is 
-not expected that all recorded events reconstructed offline, pass the online
+are recorded to be analyzed. In any analysis, it is generally not expected 
+that all recorded events reconstructed offline, pass the online 
 trigger as detector conditions, energy corrections, and object-based quantities
 differ offline. In this analysis, cross-triggers at the HLT
 based on quantities \scalht and \alphat (labeled as \verb!HTxxx_AlphaT0pyy!) 
-are used with various thresholds to record candidate events for the hadronic (signal)
+are used with various thresholds to record candidate events for the hadronic search
 region. In order to keep the cross-trigger's computational time low, the online quantities
 are constructed using calorimeter based jets (calo jets), and the use of
 particle-flow jets in this analysis is expected to introduce inefficiencies.
-
 Each \scalht bin is seeded by a single trigger chosen based on the
 efficiency of the trigger in that \scalht bin. The \alphat thresholds of the
 \verb!HTxxx_AlphaT0pyy! triggers were tuned according to the threshold
@@ -20,18 +19,13 @@ on the \scalht leg in order to fully suppress QCD multijet events~\cite{RA1Paper
 and simultaneously satisfying other criteria, such as maintaining
 acceptable trigger rates.
 
-
-
-%Table~\ref{tab:htalphat-triggers} summarises the thresholds used for
-%the \verb!HTxxx_AlphaT0pyy! triggers. 
-%
 The \verb!HTxxx_AlphaT0pyy! trigger efficiencies are measured with a
 reference (\ie, unbiased) event sample recorded by an unprescaled,
-loosely-isolated, eta-restricted single muon 
-trigger, \verb!HLT_IsoMu24_eta2p1!, within the \verb!SingleMu! dataset. A
-sample of events containing at least one isolated muon with $\pt >
-25\gev$ and $|\eta| < 2.1$ is used (similar to the \mj control sample
-defined in Section~\ref{sec:def-control-samples}). A cut of $\Delta
+loosely-isolated, eta-restricted single muon trigger,$\,$      $\verb!HLT_IsoMu24_eta2p1!$,
+within the \verb!SingleMu! dataset. A sample of events containing at 
+least one isolated muon with $\pt > 25\gev$ and $|\eta| < 2.1$ is used 
+(similar to the \mj control sample defined in 
+section~\ref{sec:def-control-samples}). A cut of $\Delta
 {\rm R} > 0.5$ is placed between all muons and jets in each event, and
 only jets are considered in the calculation of \scalht, \mht, and
 \alphat, \ie the muon is ignored.
@@ -70,16 +64,12 @@ multiplicity bins. %The efficiencies are generally observed to be high,
 %325\gev$. The inefficiencies at low \scalht are mainly due to the L1
 seeds for which thresholds were raised to a relatively high level in
 order to maintain trigger rates in the high-pileup conditions towards
-the end of Run 1. The inefficiencies are slightly larger in the higher
+the end of Run 1. The efficiencies are slightly lower in the higher
 jet multiplicity category due to a larger number of jets summing to
-the same \scalht, resulting in softer
-jets. Figures~\ref{fig:eff-alphat-le3j} and~\ref{fig:eff-alphat-ge4j}
-show the efficiency curves for the \verb!HTxxx_AlphaT0pyy! triggers in
-the three lowest \scalht bins, for the \njetlow and \njethigh
-categories, respectively. The efficiencies are also determined at the
-level of event categories and no dependence on \nb is observed, with
-efficiencies agreeing within statistical uncertainties.
-
+the same \scalht, resulting in softer jets. 
+Figure~\ref{fig:eff-alphat-le3j} shows the efficiency curves 
+for the \verb!HTxxx_AlphaT0pyy! triggers in the three lowest \scalht bins, 
+for the \njetlow and \njethigh categories.
 
 \begin{figure}[!h]
   \begin{center}
@@ -96,7 +86,7 @@ efficiencies agreeing within statistical uncertainties.
       \includegraphics[width=0.4\textwidth,page=30]{figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}
     } \\
     \subfigure[\njetlow, $525 < \scalht < 675 \gev$]{
-      \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
+      \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_le3j_RunAtFNAL.pdf}
     }
     \subfigure[\njethigh, $525 < \scalht < 675 \gev$]{
       \includegraphics[width=0.4\textwidth,page=27]{figures/trigger/plotDump/v29/HT575_675_100_100_50_AlphaT_HT400xaT0p51_PF_ge4j_RunAtFNAL.pdf}
