@@ -16,34 +16,22 @@ level 2 and 3 correct the jet energy response to be $\eta$ and $\pt$ independent
 Further residual corrections are applied on data which correct for 
 small remaining discripencies in the modelling of the response. The acceptance of
 ``fake'' jets is supressed by requring that jets pass jet identitifcation at the 
-Loose working point~\cite{ref:jet-id}. Only jets with transverse momentum $\pt >$ 50\gev 
-and pseudo-rapidity $|\eta| <$ 3.0 are considered in the analysis. 
-Jets originating from bottom quarks (b-jets) are identified 
-through vertices that are displaced with respect to the primary 
+Loose working point~\cite{ref:jet-id}. This requires that the jet is comprised
+of more than one particle and that those particles cannot all be neutral hadrons 
+(i.e. neutrons) or all neutral particle deposits in the ECAL (i.e. photons).
+Additionaly if the jet is reconstructed outside outside the tracker's 
+instrumatation, the jet is required to have more than one charged 
+constituent, of which not all of them deposit their energy in the ECAL. 
+Only jets reconstructed within the calorimeters' barrel and endcap, 
+i.e. $|\eta| <$ 3.0, and with transverse momentum $\pt >$ 50\gev  
+are considered in the analysis. Jets originating from bottom quarks 
+(b-jets) are identified through vertices that are displaced with respect to the primary 
 interaction~\cite{CMS-PAS-BTV-12-001}. The algorithm used to tag b-jets 
 is the Combined Secondary Vertex tagger, using the "Medium" working point, 
 which is achieved by requiring a cut of $>$0.679 on the algorithm discriminator 
 variable and results in a gluon/light-quark quark mis-tag rate of 1\% 
 (where ``light'' means $u$, $d$ and $s$ quarks) and an efficiency in the 
 range $60-70\%$ depending on the jet \pt. 
-
-%\begin{table}[!h]
-%  \caption{Criteria for the ``loose'' jet ID working point.\label{tab:calojetid}}
-%  \footnotesize
-%  \begin{center}
-%    \begin{tabular}{ll}
-%      \hline
-%      \hline
-%      Requirement                & Definition                                                       \\
-%      \hline
-%      f$_{HPD} < 0.98$           & Fractional contribution from the ``hottest'' Hybrid Photo Diode. \\
-%      f$_{EM} > 0.01$            & Minimum electromagnetic fractional component.                    \\
-%      N$^{90}_{\rm hits} \geq$ 2 & Number of channels containing at least 90\% of total energy      \\
-%      \hline
-%      \hline
-%    \end{tabular}
-%  \end{center}
-%\end{table}
 
 \subsection{Muons}
 
