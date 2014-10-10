@@ -70,7 +70,7 @@ N_{\rm DY} + N_{\gamma} + N_{\rm top} + N_{\rm di-boson}
 
 As described in [REF], depending on the b-tag category, one or both
 control samples are used to predict the backgrounds in the signal region.
-For the  b-jet multiplicity bins $n_b = 0$ and $n_b = 1$, the \mg and 
+For the  b-jet multiplicity bins $n_b = 0$ and $n_b = 1$, the \mj and 
 \gj control samples are used to predict to total background. The \gj control
 sample is used to predict the \znunu + jets background and the expected yield
 obtained from the \znunu sample enters the numerator of each transfer
@@ -81,7 +81,7 @@ factor:
   N_{\rm MC}^{\rm signal}(\scalht,\njet,0 \leq \nb \leq 1) = N_{\znunu}
 \end{equation}
 
-for the same \bjet categories, The \mj control sample is used to predict 
+for the same b-tag categories, The \mj control sample is used to predict 
 the remaining SM background processes, namely the W + jets, \ttbar + jets,
 Drell-Yan, di-boson and single top backgrounds, and the total expected yield
 from these processes enter the The numerator of each transfer factor:
@@ -178,7 +178,7 @@ The control sample selections are described in the subsequent sections.
 \include{controlTriggers}
 
 \subsubsection{The \texorpdfstring{\mj}{muon plus jets} control sample}
-%
+
 \wj and \ttbar processes are found in the hadronic signal region 
 when the decay lepton is missed by the lepton veto, either 
 because it was not reconstructed properly, fell out of acceptance 
@@ -188,57 +188,30 @@ simulation to estimate these background, a \mj control sample is
 used where the selection criteria is chosen to identify W bosons 
 decaying to a muon and a neutrino. Then by removing the muon from 
 the event, one effectively selects a sample of W boson decaying to 
-a neutrino and a lost lepton. The muon is not considered in the 
-calculation of \scalht, \mht, or \alphat and cuts on such jet-based 
-quantities are kept consistent with those applied in the hadronic 
-search region with the only exception being that no \alphat requirement 
-is made, as motivated by the discussion in Sec.~\ref{sec:larger}. 
-
-In order to select events containing W bosons, exactly one tight 
-isolated muon~\ref{sec:reconstruction} within an acceptance of 
-\PT $>$ 30 \gev and $|\eta| <$ 2.1 is required, and the
-transverse mass of the W candidate, 
+a neutrino and a lost lepton. In order to select events containing 
+W bosons, exactly one tight isolated muon~\ref{sec:reconstruction} 
+within an acceptance of \PT $>$ 30 \gev and $|\eta| <$ 2.1 is required, 
+and the transverse mass of the W candidate, 
 $M_{T} = \sqrt{2\pt^{\mu}\met(1-cos(\Delta\phi(\vec{\pt}^{\mu},\met))}$ 
-must between 30 and 125~\gev. This latter helps suppress QCD multijet 
-and potential signal events. Events are vetoed if a muon is found inside
+must between 30 and 125~\gev.  Events are vetoed if a muon is found inside
 the radius of a jet, i.e. $\Delta R(\mu,\textrm{jet}) < 0.5$.
 The single isolated track veto, described in sections~\ref{sec:reconstruction} 
 and~\ref{sec:vetoes}, is also applied, which considers all 
 single isolated tracks in the event except that associated with 
-the identified, isolated muon. Lastly, the cleaning cut the cleaning cut 
+the identified, isolated muon. The cleaning cut 
 $\mht/\pfmet$ described in ~\ref{sec:finalSelection} is also applied, 
-where the \pfmet is adjusted to account for the transverse momentum of the 
-identified, isolated muon.
-
-%\subsubsection{The \texorpdfstring{\mmj}{di-muon plus jets} control sample}
-%
-%The \znunu\ + jets process forms an irreducible background and can be
-%estimated using the \zmumu + jets process, which has similar kinematic
-%properties but a different acceptance and a smaller branching ratio. A
-%background estimate is obtained through the use of a \mmj sample. Most
-%of the selection criteria are identical to those for the \mj sample,
-%but the few that differ are tuned to identify Z bosons decaying to two
-%muons in the kinematic phase space of the signal region. The muons are
-%not considered in the calculation of event-level variables such as
-%\scalht, \mht and \alphat. All cuts on such jet-based quantities are
-%consistent with those applied in the hadronic search region and the
-%same \njet, \nb, and \scalht binning is used. The only exception is
-%that no \alphat requirement is made, as motivated by the discussion in
-%Sec.~\ref{sec:larger}. In order to select an event sample containing Z
-%bosons, exactly two tight isolated muons within an acceptance of $\Pt
-%> 30\gev$ and $|\eta| < 2.1$ are required (due to the trigger). The
-%invariant mass of the two muons must satisfy $m_{Z} - 25 <
-%M_{\mu_1\mu_2} < m_{Z} + 25$. Events are vetoed if $\Delta
-%R(\mu_{i},\textrm{jet}_j) < 0.5$ is satisfied, running over all muons
-%$i$ and all jets $j$. The single isolated track veto, described in
-%Sections~\ref{sec:reconstruction} and~\ref{sec:vetoes}, is also
-%applied, considering all single isolated tracks in the event except
-%those associated with the two identified, isolated muons. Finally, the
-%cleaning cut $\mht/\pfmet$ is also applied, as done in the signal
-%region, where the \pfmet is adjusted to account for the transverse
-%momenta of the two identified, isolated muons. The \mmj sample can be
-%used to make predictions in all the \scalht bins, providing coverage
-%at low \scalht where the \gj sample cannot.
+where the \pfmet is adjusted to exclude the muon's transverse momentum.
+This modification ensures that the quantities \mht and \pfmet can be 
+compared. Lastly, while all other jet-based quantaties, like \scalht 
+and \mht, are kept consistent with those applied in the hadronic 
+search region, the \alphat requirement is removed. This modification 
+increases the statistical power of the sample and is only made possible 
+by the control sample's kinematic cuts which ensure the selection of
+electroweak processes while ensuring negligible contamination from
+multi-jet QCD events. Because the control sample is used to extrapolate
+yields in a signal region which includes the \alphat requirement, a closure
+test as been devised and explained in~\ref{sec:closture-tests} to demonstrate
+that no signficant biases is seen from the exclusion of the \alphat cut.
 
 \subsubsection{The \texorpdfstring{\gj}{photon plus jets} control sample}
 
@@ -247,11 +220,12 @@ have a higer cross-section but similar kinematic properties as
 \znunu + jets when the photon is ignored~\cite{PAS-SUS-08-002,Bern:2011pa}. 
 The \gj sample is obtained by requiring exactly one tightly 
 identified and isolated photon (as defined in section~\ref{sec:reconstruction})
-with a transverse momentum of at least 165\gev. The photon is required to be contained 
-within the barrel of the detector, ie $|\eta| <1.44$. and to not overlap with 
-any reconstructed jets ($\Delta R(\gamma,\textrm{jet}) < 1.0$.)
-All other selections are consistant with the hadronic search region
-including the \alphat>0.55 cut.
+with a transverse momentum of at least 165\gev. The photon is required 
+to be contained within the barrel of the detector, ie $|\eta_{\gamma}| <1.44$, 
+and to not overlap with any reconstructed jets ($\Delta R(\gamma,\textrm{jet}) < 1.0$.)
+As in the muon control sample, the $\metvec$ is modified to exclude the photon 
+when imposing the $\mht/\pfmet<1.25$ selection cut.  All other selections are 
+consistant with the hadronic search region including the $\alphat > 0.55$ cut.
 
 %\subsection{Increasing the acceptance of the muon control samples\label{sec:larger}}
 %
@@ -273,6 +247,7 @@ including the \alphat>0.55 cut.
 %muon(s), and imposing acceptance windows on the invariant mass of the
 %di-muon sytem or the transverse mass of the muon-\pfmet system, as
 %described above. 
+
 %%The absence of QCD multijet events is demonstrated by the control
 %%distributions shown in Sec.~\ref{sec:est-control-samples} below. 
 %Thus, the acceptance of the two muon control samples can be
