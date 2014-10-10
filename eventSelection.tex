@@ -3,7 +3,7 @@
 
 As discussed in section~\ref{sec:SUSY}, all-hadronic SUSY signatures consist of events with
 no isolated and detectable objects apart from energetic jets. One can quantify the
-total visible energy in these type of events with the quantity, \scalht, the sum of 
+total visible energy in these type of events with the quantity, \scalht, the scalar sum of 
 the transverse energy of the jets in the event. The challenges due to large
 backgrounds in a search for an excess in all-hadronic events becomes evident 
 when comparing observed data events overlaid with simulated events from 
@@ -25,7 +25,7 @@ The dominant background are azimuthally-balanced (i.e. back-to-back in the azimu
 $\phi$) multi-jet events, stemming from QCD processes. This search reduces this background 
 to negligible levels in the hadronic search region by employing the \alphat variable further 
 discussed in section~\ref{sec:alphat}. Furthermore, by construction, \alphat also reduces 
-backgrounds from mis-measured back-to-back jets. In absence of the multi-jet QCD events,
+backgrounds from mis-measured back-to-back jets. In the absence of the multi-jet QCD events,
 the remaining significant backgrounds are SM process with genuine \met. The expected 
 yield of these backgrounds are measured using two control samples. The following sections
 describe the identification of objects used in the hadronic and control samples, while the 
@@ -34,20 +34,22 @@ chapter~\ref{sec:background}.
 
 \subsection{Data}
 The data analyzed was recorded by CMS in 2012 between April 5th and Dec. 5th and
-totals 19.47$\pm$ 2.6\%. The collected data is certified on a run-by-run 
+totals 19.47$\pm$ 0.5 \fbinv. The collected data is certified on a run-by-run 
 basis, where initial automatic certification requires the LHC beams to be declared
-stable and all CMS subdetectors ON. Further monitoring of the data was done real time
+stable and all CMS subdetectors ON. Further monitoring of the data was done in real-time
 by experts of each subdetector trough analysis of histograms updated and filled
-each lumi section. Final certification was done offline, and lumi sections passing
+each luminosity section. Final certification was done offline, and luminosity sections passing
 all criteria were listed in a Golden JSON file to be used by all analyses. 
 
 \subsection{Event quality}
 
 Each event is subjected to a series of commonly used filters in CMS to ensure good
 quality data. Minimal requirements are that at least one primary vertex is identified 
-and 25\% of the reconstructed tracks to be of good quality. Additionally, various filters 
-prescribed by the MET group[REF] are applied. Events containing muons with inconsistent
-energy are flagged by the muon pog [REF] and filtered out of the analysis. 
+and 25\% of the reconstructed tracks to be of good quality. Additionally, various event 
+cleaning filters prescribed by the MET group~\cite{ref:MET-filters} are applied. These 
+filters reject events containing known problems, such as: muons with inconsistent energy or 
+muons created by beam-gas interactions, spurious noise spikes in the calorimeter, tracking
+failures, and calibration lasers polluting overlapping with physics collsions. 
 
 \include{reconstruction}
 
@@ -102,7 +104,7 @@ Table~\ref{tab:jet-pt-thresholds}.
 
 \include{alphat}
 
-\subsection{final selections\label{finalselection}}
+\subsection{Final selections\label{sec:finalSelections}}
 
 After applying the \alphat selection~\ref{sec:alphat}, the remaining 
 events are expected to have little contamination from balanced QCD events.  
