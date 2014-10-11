@@ -44,7 +44,7 @@ all criteria were listed in a Golden JSON file to be used by all analyses.
 \subsection{Event quality}
 
 Each event is subjected to a series of commonly used filters in CMS to ensure good
-quality data. Minimal requirements are that at least one primary vertex is identified 
+data quality. Minimal requirements are that at least one primary vertex is identified 
 and 25\% of the reconstructed tracks to be of good quality. Additionally, various event 
 cleaning filters prescribed by the MET group~\cite{ref:MET-filters} are applied. These 
 filters reject events containing known problems, such as: muons with inconsistent energy or 
@@ -57,15 +57,25 @@ failures, and calibration lasers polluting overlapping with physics collsions.
 
 \subsection{Object vetoes}
 
-Standard Model processes with genuine \met from escaping neutrinos can
-also produce leptons. Vetoing events with reconstructed leptons help suppress
-this background.  Events containing an isolated electron~\cite{PAS-EGM-10-004} 
-with $\pt > 20\GeV$ and $|\eta| < 2.5$ or an isolated muon~\cite{PAS-MUO-10-002}
-with $\pt > 10\GeV$ and $|\eta| < 2.5$ are vetoed. In order to keep this search
-all-hadronic and not overlap with other analyses in CMS[REF], events with isolated
-photons~\cite{PAS-EGM-10-006}  with $\pt > 25\GeV$ and $|\eta| < 2.5$ are also rejected.
-Events which have a single isolated track~\ref{sec:sit} but no object 
-associated with them are also rejected.
+The background in this search can be seperated into two exclusive 
+categories: reducible and irreducible. The latter refers to backgrounds 
+that have the same final state as the signal and therfore any cut imposed 
+to reduce the background would also reduce signal. The process 
+\znunu + jets is the only process in this category for this search. 
+All other backgrounds are reducible, meaning that if no information 
+in the event is lost and all cuts were fully efficient, the background 
+could be eliminated without loss of signal. Object vetos are used to supress 
+reducible backgrounds. This search uses lepton vetos to reject events 
+where a W boson decays to a neutrino and a lepton. Events containing 
+an isolated electron~\cite{PAS-EGM-10-004} with $\pt > 20\GeV$ 
+and $|\eta| < 2.5$ or an isolated muon~\cite{PAS-MUO-10-002}
+with $\pt > 10\GeV$ and $|\eta| < 2.5$ are vetoed. In order to keep this 
+search all-hadronic and not overlap with other analyses in 
+CMS~\cite{CMS-PAS-SUS-14-008,photon7TeV},
+events with isolated photons~\cite{PAS-EGM-10-006}  with $\pt > 25\GeV$ 
+and $|\eta| < 2.5$ are also rejected. Events which have a single 
+isolated track~\ref{sec:sit} but no object associated with them are 
+also rejected.
 
 \subsection{Hadronic pre-selection}
 
