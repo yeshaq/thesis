@@ -88,7 +88,7 @@ $\njethigh$.  Each event in these categories is further binned by the number
 of jets identified as originating from b quarks ($\nb$). Events having 
 three or more b-tagged jets are not considered in the analysis.      
 Significant hadronic activity in the events is ensured by requiring
-$\scalht > 375\GeV$. As described in section~\ref{sec:trigger}, events are further
+$\scalht > 375\GeV$. As described in section~\ref{sec:signal_triggers}, events are further
 binned in 100~\gev bins starting from $\scalht = 375\GeV$ and ending with 
 an open-ended bin $\scalht > 1075~\gev$. The two highest-$\pt$ jets are 
 subject to a higher threshold, $\pt>100\gev$ and the highest-$\Et$ jet 
@@ -118,24 +118,21 @@ The variables \scalht and \mht are computed from the number of jets,
 \subsection{Final selections\label{sec:finalSelections}}
 
 After applying the \alphat selection described in section~\ref{sec:alphat}, 
-the remaining events are expected to have little contamination from balanced QCD events.  
-However, certain types of rare backgrounds caused by detector innefficiencies
-can lead to values of \alphat greater than 0.55. Most of these can be
-rejected by dedicated vetoes provided by the CMS MET group as described in 
-section~\ref{sec:met-filters}, but two remaining types of rare backgrounds 
-still need to be considered.
-
-To protect from accepting events with \mht due to jets with similar values of 
-the azymuthal angle ($\phi$) that fail to pass the jet \pt threshold. Such jets would
-not be considered in the calculation of \scalht and as a result, they would bias the 
-\mht calculation. The events are rejected by comparing the \met calculation from 
-jets as defined in~\ref{sec:reconstruction} with the missing transverse energy, 
-$\pfmet$, and events with $R_{\rm miss}=\mht/\pfmet > 1.25$ are rejected.
-
-The other, is a protection from severe mismeasurments of jets that are absorbed
-by masked crystals in the ECAL. These crystals, which make up 1\% of the 
-total crystal count, give only partial record of the energy deposited thereby introducing
-``fake'' \mht in the event. As a filter, the quantity:
+the remaining events are expected to have little contamination 
+from balanced multi-jet QCD events. Furthermore, QCD events with mismeasured jets are
+largly rejected since they fall below the \alphat threshold.  However, 
+two types of rare backgrounds from multi-jet events can lead to values of \alphat 
+greater than 0.55. The first is rare circumstance in which several jets with similar 
+values of the azymuthal angle ($\phi$) fail to pass the jet \pt threshold. 
+Such jets would not be considered in the calculation of \scalht and as a result, 
+they would bias the \mht calculation. The events are rejected by comparing the 
+\mht  with the missing transverse energy, $\pfmet$ as defined in~\ref{sec:recMET}, and events 
+with $R_{\rm miss}=\mht/\pfmet > 1.25$ are rejected.
+The second type of rare background is the severe mismeasurment of jets 
+that are absorbed by inneficient crystals in the ECAL. These crystals, 
+which make up 1\% of the total crystal count, give only partial record 
+of the energy deposited thereby introducing ``fake'' \mht in the event. 
+As a filter, the quantity:
 
 \begin{equation}
   \label{eq:dphistart}
