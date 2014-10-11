@@ -30,7 +30,7 @@ the remaining significant backgrounds are SM process with genuine \met. The expe
 yield of these backgrounds are measured using two control samples. The following sections
 describe the identification of objects used in the hadronic and control samples, while the 
 detailed description of the background and control samples are left for 
-chapter~\ref{sec:background}.
+chapter~\ref{sec:backgrounds}.
 
 \subsection{Data}
 The data analyzed was recorded by CMS in 2012 between April 5th and Dec. 5th and
@@ -55,27 +55,31 @@ failures, and calibration lasers polluting overlapping with physics collsions.
 
 \include{trigger}
 
-\subsection{Object vetoes}
+\subsection{Object vetoes\label{sec:vetoes}}
 
-The background in this search can be seperated into two exclusive 
-categories: reducible and irreducible. The latter refers to backgrounds 
-that have the same final state as the signal and therfore any cut imposed 
-to reduce the background would also reduce signal. The process 
-\znunu + jets is the only process in this category for this search. 
+The background in this search can be seperated into two types: 
+reducible and irreducible. The latter refers to backgrounds that 
+have the same final state as the signal and therfore any cut imposed 
+to reduce the background would also reduce the signal. The process 
+\znunu + jets is the only irreducible background in this search. 
 All other backgrounds are reducible, meaning that if no information 
 in the event is lost and all cuts were fully efficient, the background 
-could be eliminated without loss of signal. Object vetos are used to supress 
-reducible backgrounds. This search uses lepton vetos to reject events 
-where a W boson decays to a neutrino and a lepton. Events containing 
+could be eliminated without loss of signal. To suppress \wj and \ttbar
+events this analysis uses object vetos to reject events where a W boson 
+decays to a neutrino and a lepton. Events containing 
 an isolated electron~\cite{PAS-EGM-10-004} with $\pt > 20\GeV$ 
 and $|\eta| < 2.5$ or an isolated muon~\cite{PAS-MUO-10-002}
 with $\pt > 10\GeV$ and $|\eta| < 2.5$ are vetoed. In order to keep this 
 search all-hadronic and not overlap with other analyses in 
-CMS~\cite{CMS-PAS-SUS-14-008,photon7TeV},
-events with isolated photons~\cite{PAS-EGM-10-006}  with $\pt > 25\GeV$ 
-and $|\eta| < 2.5$ are also rejected. Events which have a single 
-isolated track~\ref{sec:sit} but no object associated with them are 
-also rejected.
+CMS~\cite{CMS-PAS-SUS-14-008,photon7TeV}, events with isolated 
+photons~\cite{PAS-EGM-10-006} with $\pt > 25\GeV$ 
+and $|\eta| < 2.5$ are also rejected. Events with a single isolated 
+track~\ref{sec:recSIT} and no object associated with it can indicate that
+a lepton was ``lost'' (i.e. either fallen out of acceptance or poorly 
+reconstructed), hence such events are vetoed. Detector and selection 
+ineffiencies restrict the complete elimination of reducible backgrounds, 
+as such, the method to estimate expected SM yields is described 
+in section~\ref{sec:backgrounds}.
 
 \subsection{Hadronic pre-selection}
 
