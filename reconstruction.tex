@@ -1,8 +1,8 @@
 \clearpage
 \subsection{Physics objects\label{sec:reconstruction}}
 
-The definitions of the physics objects used in this analysis follow
-the recommendations of the various Physics Object Groups (POGs).
+The following subsections describe the definitions of the physics objects 
+used in this analysis.
 
 \subsubsection{Jets\label{recJet}}
 
@@ -40,27 +40,27 @@ Muons are identified according to the Tight working point definition
 algorithm~\cite{ref:muon-id}. The algorithm works to reject cosmic muons or 
 muons from decays in flight for consideration in the analysis. 
 A PF-based ``combined relative'' isolation~\cite{ref:muon-id} is determined 
-within a cone size $\Delta R < 0.4$, and "$\Delta\beta$" corrections 
-are applied to remove the effects of pileup. Table~\ref{tab:muon-id} summarizes the
+within a cone size $\Delta R < 0.4$, and corrections are applied to 
+remove the effects of pileup. Table~\ref{tab:muon-id} summarizes the
 identification and isolation requirements. 
 
 \begin{table}[h!]
   \caption{Muon identification (Tight working point).\label{tab:muon-id}}
   \centering
   \footnotesize
-  \begin{tabular}{ lc }
+  \begin{tabular}{ lcc }
     \hline
     \hline
-    Global Muon                            & True      \\
-    PFMuon                                 & True      \\
-    $\chi^{2}$ fit                         & $<10$     \\
-    Muon chamber hits                      & $>0$      \\
-    Muon station hits                      & $>1$      \\
-    Transverse impact $d_{xy}$             & $<0.2\mm$ \\
-    Longitudinal dist $d_{z}$              & $<0.5\mm$ \\
-    Pixel hits                             & $>0$      \\
-    Track layer hits                       & $>5$      \\
-    PF Isolation ($\Delta\beta$ corrected) & $<0.12$   \\
+    Global Muon                            & True       \\        
+    PFMuon                                 & True       \\
+    $\chi^{2}$ fit                         & $<10$      \\
+    Muon chamber hits                      & $>0$       \\
+    Muon station hits                      & $>1$       \\
+    Transverse impact $d_{xy}$             & $<0.2\mm$  \\
+    Longitudinal dist $d_{z}$              & $<0.5\mm$  \\
+    Pixel hits                             & $>0$       \\
+    Track layer hits                       & $>5$       \\
+    PF Isolation ($\Delta\beta$ corrected) & $<0.12$    \\
     \hline
     \hline
   \end{tabular}
@@ -70,12 +70,14 @@ identification and isolation requirements.
 %
 Selected photons must satisfy the Tight working point definition 
 ($\sim$70\% efficiency) of the simple cut-based photon identification
-algorithm~\cite{ref:photon-id-egamma}. Pile-up corrected isolation is 
-determined within a cone size $\Delta R < 0.3$ using the PF-based 
-isolation algorithm~\cite{ref:photon-id-egamma}. 
-Table~\ref{tab:photon-id-egamma} summarises the identification
-and isolation requirements. 
-
+algorithm~\cite{ref:photon-id-egamma}. The ECAL energy deposits from electrons
+are checked to have come from a converted photon. The ratio of energy deposits 
+between HCAL and ECAL for a solid cone of size $\Delta R = 0.15$ is required to 
+less than 5\%. A maximum is set on the width of the clusted energy deposit, 
+$\sigma_{i\eta i\eta}$, as decay photons from neutral pions typically have larger
+widths. Pile-up corrected isolation is determined within a cone of size $\Delta R < 0.3$ 
+using the PF-based isolation algorithm~\cite{ref:photon-id-egamma}.
+Table~\ref{tab:photon-id-egamma} summarises the identification and isolation requirements.
 \begin{table}[ht!]
   \caption{Photon identification (Tight working point).\label{tab:photon-id-egamma}}
   \centering
@@ -98,13 +100,13 @@ and isolation requirements.
 \FloatBarrier
 \subsubsection{Electrons\label{sec:recElectron}}
 
-Electrons are identified according to the Veto working point
+Electrons are identified according to the ``Veto'' working point
 definition ($\sim$95\% efficiency) of the cut-based \verb!Egamma!
 identification algorithm~\cite{ref:electron-id}. PF-based
 isolation~\cite{ref:electron-isolation} is determined within a cone
-size $\Delta R < 0.3$ and $\rho \times A_{\textrm{eff}}$ corrections
-are applied to remove the effects of pileup. Table~\ref{tab:ele-id}
-summarises the identification and isolation requirements. 
+size $\Delta R < 0.3$ and corrections are applied to remove the effects 
+of pileup. Table~\ref{tab:ele-id} summarises the identification 
+and isolation requirements. 
 
 \begin{table}[h!]
   \caption{Electron identification (Loose working point).\label{tab:ele-id}}
