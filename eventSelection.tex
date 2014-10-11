@@ -41,7 +41,7 @@ by experts of each subdetector trough analysis of histograms updated and filled
 each luminosity section. Final certification was done offline, and luminosity sections passing
 all criteria were listed in a Golden JSON file to be used by all analyses. 
 
-\subsection{Event quality}
+\subsection{Event quality\label{sec:met-filters}}
 
 Each event is subjected to a series of commonly used filters in CMS to ensure good
 data quality. Minimal requirements are that at least one primary vertex is identified 
@@ -117,13 +117,16 @@ The variables \scalht and \mht are computed from the number of jets,
 
 \subsection{Final selections\label{sec:finalSelections}}
 
-After applying the \alphat selection~\ref{sec:alphat}, the remaining 
-events are expected to have little contamination from balanced QCD events.  
-Furthermore, events with back-to-back measured jets are also rejected. Nonetheless
-two topological cases still need to considered.
+After applying the \alphat selection described in section~\ref{sec:alphat}, 
+the remaining events are expected to have little contamination from balanced QCD events.  
+However, certain types of rare backgrounds caused by detector innefficiencies
+can lead to values of \alphat greater than 0.55. Most of these can be
+rejected by dedicated vetoes provided by the CMS MET group as described in 
+section~\ref{sec:met-filters}, but two remaining types of rare backgrounds 
+still need to be considered.
 
-Protect from accepting events with \mht due to jets with similar values of 
-the azymuthal angle ($\phi$) that fail to pass the jet Et threshold. Such jets would
+To protect from accepting events with \mht due to jets with similar values of 
+the azymuthal angle ($\phi$) that fail to pass the jet \pt threshold. Such jets would
 not be considered in the calculation of \scalht and as a result, they would bias the 
 \mht calculation. The events are rejected by comparing the \met calculation from 
 jets as defined in~\ref{sec:reconstruction} with the missing transverse energy, 
