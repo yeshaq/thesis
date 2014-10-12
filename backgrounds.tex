@@ -25,9 +25,9 @@ This analysis uses a ``data-driven'' method to estimate backgrounds
 in the hadronic search region. Data control samples are used to predict
 background SM yields instead of direct measurement in MC simulations. 
 This approach has two benefits, 1. The beam and detector conditions 
-for the hadronic and control samples are very similar. 2. The information 
+for the hadronic and control data samples are very similar. 2. The information 
 used from MC simulation is largly in the form of ratios~\ref{sec:background-method}, 
-which has the benefit of canceling potential systematic effects in simulation.
+which has the benefit of canceling potential systematic effects from simulation.
 
 Two control samples are used to estimate the background. To estimate the
 \znunu + jets background, $\gamma$ + jets events, which have the same
@@ -36,7 +36,9 @@ different acceptance~\cite{PAS-SUS-08-002,Bern:2011pa}, are used. A \mj control
 sample is used to estimated all remaining background including the 
 dominant \wj and \ttbar process.
 
-The following sections describe the estimation method and control selection.
+The final results are obtained through a maximum likelihood fit described
+in chapter~\ref{sec:statistics}. The following sections describe 
+the estimation method and control selections used in the final fit.
 
 \subsection{Overview of the method\label{sec:background-method}}
 
@@ -52,7 +54,9 @@ by translating from the observed data yield in a control region
       control}}}_\text{translation factor}\! \times \; \nobs^{\rm
     control}   
 \end{equation}
-The sum of expected yields from all MC samples, obtained for the
+In the ﬁnal ﬁt, the expected yield is used rather than the observed yield
+$\nobs^{\rm  control}$, nonetheless the observed yield is used here for 
+illustritation. The sum of expected yields from all MC samples, obtained for the
 relevant control sample selection, enter the denominator of each
 transfer factor:
 \begin{equation}
