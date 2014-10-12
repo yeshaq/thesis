@@ -1,17 +1,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\section{Likelihood model}
+\section{Statistical framework}
 \label{sec:statistics}
-
-Consider a given category of event as defined by \njet and \nb.
+The observations in the hadronic and control regions described in 
+chapter~\ref{sec:backgrounds} are interpreted through a likelihood model 
+constructed in the following section. The method to set a limit on the 
+cross-section of signal models is described in section~\ref{sec:cls}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Hadronic sample}
+\subsection{Likelihood model\label{likelihood}}
+
+\subsubsection{Hadronic sample}
 \label{sec:hadronicLikelihood}
 
-Let $N$ be the number of bins of \HT, which need not have equal width.
-Let $n^i$ represent the number of events observed satisfying all
-selection requirements in each \HT bin $i$.  Then the likelihood of
+For a given \njet and \nb category, 
+let $N$ be the number of bins of \HT. Let $n^i$ represent 
+the number of events observed satisfying all selection requirements 
+in each \HT bin $i$.  Then the likelihood of
 the observations is written this way:
 
 \begin{equation}
@@ -30,8 +35,8 @@ assumed that:
 \end{equation}
 
 where $\ewk^i$ is the expected yield of electroweak events in bin $i$.
-By construction, the contribution from QCD events is expected to be negligible, 
-Sec.~\ref{sec:qcd}
+Due to the choice in \alphat and \scalht thresholds, the contribution 
+from QCD events is expected to be negligible, Sec.~\ref{sec:alphat}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,7 +80,7 @@ Sec.~\ref{sec:qcd}
 %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Electroweak control samples\label{sec:ewk}}
+\subsubsection{Electroweak control samples\label{sec:ewk}}
 
 Let \fZinv{i} represent the expected yield from \znunu in bin $i$
 divided by the expected electroweak background $\ewk^{i}$.  It is
@@ -228,7 +233,7 @@ The photon and di-muon likelihoods are dropped, as are the parameters
 \fZinv{}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Contributions from signal}
+\subsubsection{Contributions from signal}
 \label{sec:signalContrib}
 
 Let $x$ represent the cross section for a particular signal model, and
@@ -256,7 +261,7 @@ L_{sig}=\mathrm{Logn}(1.0 |\,\rho_{sig}, \delta) \quad .
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Total likelihood}
+\subsubsection{Total likelihood}
 \label{sec:totalLikelihood}
 
 The likelihood function for a given selection $k$ is the product of
@@ -298,3 +303,6 @@ L = L_{sig}\times \prod_k L_{hadronic}^k
 \times L_{\mu}^k \times L_{ph}^k \times L_{\mu\mu}^k \times L_{\rm EWK\, syst.}^k \quad .
 \end{equation}
 
+
+
+\subsection{CLs\label{sec:cls}}
