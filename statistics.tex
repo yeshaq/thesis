@@ -16,9 +16,8 @@ cross-section of signal models is described in section~\ref{sec:cls}.
 For a given \njet and \nb category, 
 let $N$ be the number of bins of \HT. Let $n^i$ represent 
 the number of events observed satisfying all selection requirements 
-in each \HT bin $i$.  Then the likelihood of
-the observations is written this way:
-
+in each \HT bin $i$.  The likelihood of the observerations can be written
+as:
 \begin{equation}
 L_{hadronic}=\prod_i \mathrm{Pois}(n^i |\, b^i + s^i)
 \label{eq:hadronicLikelihood}
@@ -26,17 +25,17 @@ L_{hadronic}=\prod_i \mathrm{Pois}(n^i |\, b^i + s^i)
 
 where $b^i$ represents the expected Standard Model background in bin
 $i$, $s^i$ represents the expected number of signal events in bin $i$,
-and $\mathrm{Pois}$ represents the Poisson distribution.  It is
-assumed that:
+and $\mathrm{Pois}$ represents the Poisson distribution:
 
 \begin{equation}
-  b^i\equiv \ewk^i
-  \label{eq:ewkTotal}
+\mathrm{Pois}\left(k;\lambda\right)= \frac{\lambda^k \exp^{\left(-\lambda\right)}}{k!}
+\label{eq:poisson}
 \end{equation}
 
-where $\ewk^i$ is the expected yield of electroweak events in bin $i$.
 Due to the choice in \alphat and \scalht thresholds, the contribution 
-from QCD events is expected to be negligible, Sec.~\ref{sec:alphat}
+from QCD events is expected to be negligible, Sec.~\ref{sec:alphat}. Therfore,
+it is assumed that $b^i\equiv \ewk^i$ where $\ewk^i$ is the expected 
+yield of electroweak events in bin $i$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -82,39 +81,45 @@ from QCD events is expected to be negligible, Sec.~\ref{sec:alphat}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Electroweak control samples\label{sec:ewk}}
 
-Let \fZinv{i} represent the expected yield from \znunu in bin $i$
-divided by the expected electroweak background $\ewk^{i}$.  It is
-a floating parameter limited between zero and one.
+The electroweak background can be split into its reducible and 
+irreducible backgrounds, i.e. $\ewk^i =  \zInv{i} + ttW^{i}$.
+Where $\zInv{i}$ represents the contribution from \znunu + jets
+events in \HT bin $i$ of the hadronically selected sample, 
+and the variable $ttW^{i}$ represents the contribution from 
+all other backgrounds in \HT bin $i$ of the hadronically 
+selected sample.  
+%Let \fZinv{i} represent the fraction of 
+%\znunu + jets events in the total background $\ewk^{i}$. 
+%It is a floating parameter limited between zero and one.
+%Each contribution to the total electroweak re-written background can be 
+%rewritten asLet:
+%
+%\begin{equation}
+%  \zInv{i} \equiv \fZinv{i} \times \ewk^i 
+%  \label{eq:ZinvEwk}
+%\end{equation}
+%
+%\begin{equation}
+%  ttW^{i} \equiv (1-\fZinv{i})\times \ewk^i
+%  \label{eq:ttWEwk}
+%\end{equation}
+%
+%The variable $\zInv{i}$ thus represents the expected number of \znunu
+%events in \HT bin $i$ of the hadronically selected sample, and the
+%variable $ttW^i$ represents the expected number of events from SM
+%$W$-boson production (including top quark decays) ing \HT bin $i$ of
+%the hadronically selected sample.
 
-Let:
+In each bin $i$ of \HT, there are two measurements: $n_{ph}^i$,
+$n_{\mu}^i$, representing the event counts in the photon and single-muon.  
+Each of these measurements has a corresponding yield in simulated 
+data: $MC_{ph}^i$, $MC_{\mu}^i$.  The simulation also 
+gives expected amounts of $\zInv{}$ and $t\bar{t}+W$ in 
+the hadronically-selected sample: $MC_{\zInv{}}^i$ and 
+$MC_{t\bar{t}+W}^i$.  After defining
 
 \begin{equation}
-  \zInv{i} \equiv \fZinv{i} \times \ewk^i 
-  \label{eq:ZinvEwk}
-\end{equation}
-
-\begin{equation}
-  ttW^{i} \equiv (1-\fZinv{i})\times \ewk^i
-  \label{eq:ttWEwk}
-\end{equation}
-
-The variable $\zInv{i}$ thus represents the expected number of \znunu
-events in \HT bin $i$ of the hadronically selected sample, and the
-variable $ttW^i$ represents the expected number of events from SM
-$W$-boson production (including top quark decays) in \HT bin $i$ of
-the hadronically selected sample.
-
-In each bin $i$ of \HT, there are three measurements: $n_{ph}^i$,
-$n_{\mu}^i$, and $n_{\mu\mu}^i$, representing the event counts in the
-photon, single-muon, and double-muon control samples.  Each of these
-measurements has a corresponding yield in simulated data: $MC_{ph}^i$,
-$MC_{\mu}^i$, and $MC_{\mu\mu}^i$.  The simulation also gives expected
-amounts of $\zInv{}$ and $t\bar{t}+W$ in the hadronically-selected
-sample: $MC_{\zInv{}}^i$ and $MC_{t\bar{t}+W}^i$.  After defining
-
-\begin{equation}
-r_{ph}^i = \frac{MC_{ph}^i}{MC_{\zInv{}}^i};\, r_{\mu\mu}^i =
-\frac{MC_{\mu\mu}^i}{MC_{\zInv{}}^i};\, r_{\mu}^i =
+r_{ph}^i = \frac{MC_{ph}^i}{MC_{\zInv{}}^i};\, r_{\mu}^i =
 \frac{MC_{\mu}^i}{MC_{t\bar{t}+W}^i}\quad ,
 \end{equation}
 
@@ -125,13 +130,13 @@ these likelihood functions are used:
 L_{ph}= \prod_i \mathrm{Pois}(n_{ph}^i |\, \rho_{phZ}^j \cdot
 r_{ph}^{i} \cdot \zInv{i})
 \end{equation}
-
-\begin{equation}
-\label{eq:mumuLikelihood}
-L_{\mu\mu}=\prod_i \mathrm{Pois}(n_{\mu\mu}^i |\, \rho_{\mu\mu Z}^j
-\cdot r_{\mu\mu}^{i} \cdot \zInv{i})
-\end{equation}
-
+%
+%\begin{equation}
+%\label{eq:mumuLikelihood}
+%L_{\mu\mu}=\prod_i \mathrm{Pois}(n_{\mu\mu}^i |\, \rho_{\mu\mu Z}^j
+%\cdot r_{\mu\mu}^{i} \cdot \zInv{i})
+%\end{equation}
+%
 \begin{equation}
 \label{eq:muonLikelihood}
 L_{\mu}=\prod_i \mathrm{Pois}(n_{\mu}^i |\, \rho_{\mu W}^j \cdot
@@ -142,24 +147,20 @@ Equation~\ref{eq:photonLikelihood} can be used to estimate the maximum
 likelihood value for $\zInv{i}$ (the expectation for the \znunu\ +
 jets background in the hadronic signal region) given the observations
 $n_{ph}^i$ in the photon control sample and the ratios $r_{ph}^i$. A
-similar construction is used when estimating $\zInv{i}$ from the
-di-muon control sample (Equ.~\ref{eq:mumuLikelihood}) and $ttW^{i}$
-from the single muon control sample
-(Equ.~\ref{eq:muonLikelihood}). The measurements in each of the
-control samples and the hadronic signal region, along with the ratios
-$r_{ph}^{i}$, $r_{\mu\mu}^{i}$, and $r_{\mu}^{i}$, are all considered
-simultaneously through the relationships defined in
-Equs.~\ref{eq:ewkTotal}, \ref{eq:ZinvEwk}, and
-\ref{eq:ttWEwk}. The ratios $r_{ph}^{i}$, $r_{\mu\mu}^{i}$, and
-$r_{\mu}^{i}$ are simply the inverse of the translation factor (1/TF)
-defined in Equ.~\ref{equ:pred-method}
-(Sec.~\ref{sec:background-method}). More specifically, $MC_{ph}^i$,
-$MC_{\mu}^i$, and $MC_{\mu\mu}^i$ are the yields obtained from MC
-after applying the selection criteria for the photon, single muon and
-di-muon samples, as defined by Equ.~\ref{equ:ratio-denom}
-(Sec.~\ref{sec:background-method}). The variables $MC_{t\bar{t}+W}^i$ and
-$MC_{\zInv{}}^i$ are defined by Equs.~\ref{equ:ratio-numer-mj} and
-\ref{equ:ratio-numer-mmj} (Sec.~\ref{sec:background-method}), respectively.
+similar construction is used when estimating $ttW^{i}$ from the single 
+muon control sample (Equ.~\ref{eq:muonLikelihood}). The measurements in 
+each of the control samples and the hadronic search region, along with 
+the ratios $r_{ph}^{i}$ and $r_{\mu}^{i}$, are all considered
+simultaneously through the relationship $\ewk^i =  \zInv{i} + ttW^{i}$.
+The ratios $r_{ph}^{i}$, $r_{\mu\mu}^{i}$, and $r_{\mu}^{i}$ are simply 
+the inverse of the translation factor (1/TF) defined in 
+Equ.~\ref{equ:pred-method} (Sec.~\ref{sec:background-method}). More 
+specifically, $MC_{ph}^i$ and $MC_{\mu}^i$ are the yields obtained from MC
+after applying the selection criteria for the photon and single muon samples, 
+as defined by Equ.~\ref{equ:ratio-denom} (Sec.~\ref{sec:background-method}). 
+The variables $MC_{t\bar{t}+W}^i$ and $MC_{\zInv{}}^i$ are defined by 
+Equs.~\ref{equ:ratio-numer-gj} and~\ref{equ:ratio-numer-mj} 
+(Sec.~\ref{sec:background-method}), respectively.
 
 The parameters $\rho_{phZ}^j$, $\rho_{\mu\mu Z}^j$, and $\rho_{\mu
   W}^j$ represent ``correction factors'' that accommodate the
