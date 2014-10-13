@@ -83,7 +83,7 @@ yield of electroweak events in bin $i$.
 
 The electroweak background can be split into its reducible and 
 irreducible backgrounds, i.e. $\ewk^i =  \zInv{i} + ttW^{i}$.
-Where $\zInv{i}$ represents the contribution from \znunu + jets
+$\zInv{i}$ represents the contribution from \znunu + jets
 events in \HT bin $i$ of the hadronically selected sample, 
 and the variable $ttW^{i}$ represents the contribution from 
 all other backgrounds in \HT bin $i$ of the hadronically 
@@ -152,7 +152,7 @@ muon control sample (Equ.~\ref{eq:muonLikelihood}). The measurements in
 each of the control samples and the hadronic search region, along with 
 the ratios $r_{ph}^{i}$ and $r_{\mu}^{i}$, are all considered
 simultaneously through the relationship $\ewk^i =  \zInv{i} + ttW^{i}$.
-The ratios $r_{ph}^{i}$, $r_{\mu\mu}^{i}$, and $r_{\mu}^{i}$ are simply 
+The ratios $r_{ph}^{i}$ and $r_{\mu}^{i}$ are simply 
 the inverse of the translation factor (1/TF) defined in 
 Equ.~\ref{equ:pred-method} (Sec.~\ref{sec:background-method}). More 
 specifically, $MC_{ph}^i$ and $MC_{\mu}^i$ are the yields obtained from MC
@@ -162,19 +162,18 @@ The variables $MC_{t\bar{t}+W}^i$ and $MC_{\zInv{}}^i$ are defined by
 Equs.~\ref{equ:ratio-numer-gj} and~\ref{equ:ratio-numer-mj} 
 (Sec.~\ref{sec:background-method}), respectively.
 
-The parameters $\rho_{phZ}^j$, $\rho_{\mu\mu Z}^j$, and $\rho_{\mu
+The parameters $\rho_{phZ}^j$ and $\rho_{\mu
   W}^j$ represent ``correction factors'' that accommodate the
 systematic uncertainties associated with the control-sample-based
-background constraints.  The quantities $\sigma_{phZ}^j$,
-$\sigma_{\mu\mu Z}^j$, and $\sigma_{\mu W}^j$ represent the relative
+background constraints.  The quantities $\sigma_{phZ}^j$
+and $\sigma_{\mu W}^j$ represent the relative
 systematic uncertainties for the control sample constraints, taken
 into account with the following terms:
 
 \begin{equation}
 \label{eq:ewkSyst}
 L_{\rm EWK\, syst.}=\prod_j \mathrm{Logn}( 1.0 |\,\rho_{\mu W}^j,
-\sigma_{\mu W}^j)\times \mathrm{Logn}( 1.0 |\,\rho_{\mu\mu Z}^j,
-\sigma_{\mu\mu Z}^j)\times \mathrm{Logn}( 1.0 |\,\rho_{phZ}^j,
+\sigma_{\mu W}^j)\times \mathrm{Logn}( 1.0 |\,\rho_{ph Z}^j,
 \sigma_{phZ}^j) \quad ,
 \end{equation}
 
@@ -188,37 +187,36 @@ distribution~\cite{cousins-log-normal}:
 k=1+\sigma_{\mathrm rel.}\quad. 
 \end{equation}
 
-Seven (resp. one) parameters per control sample are used to span up to
-eleven (resp. four) \HT bins, as shown in Table~\ref{tab:systMap}.
+One systematic parameter is assinged per \HT bin.
 
-\begin{table}\centering
-\caption{The systematic parameters used in \HT bins.  Left: categories
-  with up to eleven bins; right: category with four bins.}
-\label{tab:systMap}
-\footnotesize
-\begin{tabular}{lccccccccccc}
-\hline
-\hline
-\HT bin ($i$)         & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
-\hline
-syst. parameter ($j$) & 0 & 1 & 2 & 3 & 3 & 4 & 4 & 5 & 5 & 6 & 6 \\
-\hline
-\hline
-\end{tabular} \ \ 
-\begin{tabular}{lccccc}
-\hline
-\hline
-\HT bin ($i$)         & 0 & 1 & 2 & 3\\
-\hline
-syst. parameter ($j$) & 0 & 0 & 0 & 0\\
-\hline
-\hline
-\end{tabular}
-\end{table}
-
+%\begin{table}\centering
+%\caption{The systematic parameters used in \HT bins.  Left: categories
+%  with up to eleven bins; right: category with four bins.}
+%\label{tab:systMap}
+%\footnotesize
+%\begin{tabular}{lccccccccccc}
+%\hline
+%\hline
+%\HT bin ($i$)         & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+%\hline
+%syst. parameter ($j$) & 0 & 1 & 2 & 3 & 3 & 4 & 4 & 5 & 5 & 6 & 6 \\
+%\hline
+%\hline
+%\end{tabular} \ \ 
+%\begin{tabular}{lccccc}
+%\hline
+%\hline
+%\HT bin ($i$)         & 0 & 1 & 2 & 3\\
+%\hline
+%syst. parameter ($j$) & 0 & 0 & 0 & 0\\
+%\hline
+%\hline
+%\end{tabular}
+%\end{table}
+%
 \newcommand{\rpi}{\ensuremath{r_{\mu}^{\prime\ i}}\xspace}
 
-Alternatively, the single muon sample can be used to constrain the
+For the categories where $\nb=2$, the single muon sample is used to constrain the
 total EWK background thus:
 
 \begin{equation}
@@ -230,18 +228,17 @@ L_{\mu}=\prod_i \mathrm{Pois}(n_{\mu}^i |\, \rho_{\mu W}^j \cdot
 \rpi \cdot \ewk^{i} + s_{\mu}^i)\quad .
 \end{equation}
 
-The photon and di-muon likelihoods are dropped, as are the parameters
-\fZinv{}.
+The photon likelihood is dropped and spliting $\ewk^i$ is no longer
+nescessary thus $\zInv{i}$ and $ttW^{i}$ can be dropped. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Contributions from signal}
 \label{sec:signalContrib}
 
 Let $x$ represent the cross section for a particular signal model, and
-let $l$ represent the recorded luminosity.  Let $\epsilon^{i}_{had}$
-(resp.  $\epsilon^{i}_{\mu}$) be the analysis efficiency as simulated
-for the model in \HT bin $i$ of the hadronic (resp. single muon
-control) sample.  Let $\delta$ represent the relative uncertainty on
+let $l$ represent the recorded luminosity.  Let $\epsilon^{i}_{had}$ 
+be the analysis efficiency as simulated for the model in \HT bin $i$ 
+of the hadronic sample.  Let $\delta$ represent the relative uncertainty on
 the signal yield, assumed to be fully correlated among the bins, and
 let $\rho_{sig}$ represent the ``correction factor'' to the signal
 yield which accommodates this uncertainty.  Let $f$ represent an
@@ -250,10 +247,7 @@ an allowed interval shall be determined.
 
 Then the expected hadronic signal yield $s^i$ from
 Equation~\ref{eq:hadronicLikelihood} is written as $s^i \equiv
-f\rho_{sig} xl\epsilon_{had}^i$, and the ``signal contamination'' in
-the muon control sample $s_{\mu}^i$ from
-Equation~\ref{eq:muonLikelihood} is treated analogously: $s_{\mu}^i
-\equiv f\rho_{sig} xl\epsilon_{\mu}^i$.  The systematic uncertainty on
+f\rho_{sig} xl\epsilon_{had}^i$. The systematic uncertainty on
 the signal efficiency is included via an additional term in the
 likelihood:
 
@@ -270,38 +264,39 @@ the terms described in the previous sections:
 
 \begin{equation}
 L^k = L_{hadronic}^k \times L_{\mu}^k \times L_{ph}^k \times
-L_{\mu\mu}^k\times L_{\rm EWK\, syst.}^k \quad .
+L_{\rm EWK\, syst.}^k \quad .
 \end{equation}
 
-In a category with 11 \HT bins and three control samples (single muon,
-di-muon, and photon), there are 40 nuisance parameters:
-$\{\ewk^{i}\}_{i=0}^{10}$, $\{\fZinv{i}\}_{i=0}^{10}$, $\rho_{phZ}^j$
-(with $j=3,4,5,6$), $\rho_{\mu\mu Z}^j$, $\rho_{\mu W}^j$, (with
-$j=0,1,2,3,4,5,6$).  In a category with eight \HT bins and one control
-sample (single muon), there are 18 nuisance parameters (drop
-$\{\fZinv{i}\}_{i=0}^{10}$, $\rho_{phZ}^j$, $\rho_{\mu\mu Z}^j$).  In
-a category with three \HT bins and one control sample (single muon),
-there are five nuisance parameters: $\ewk^{0,1,2,3}$, $\rho_{\mu
-  W}^0$.  When considering signal, there is also the parameter
-$\rho_{sig}$; when multiple categories are fit simultaneously, the
-total likelihood is
+A final reparametrization of the variables $\zInv{}$ and $ttW$ is made
+by indroducing, $f_{\rm Zinv}$, the fraction of \znunu + jets events in the total
+electroweak background:
 
-%In a category with eleven \HT bins and three control samples (single
-%muon, di-muon, and photon), there are 40 nuisance parameters:
-%$\{\ewk^{i}\}_{i=0}^{10}$, $\{\fZinv{i}\}_{i=0}^{10}$, $\rho_{phZ}^j$
-%(with $j=3,4,5,6$), $\rho_{\mu\mu Z}^j$, $\rho_{\mu W}^j$, (with
-%$j=0,1,2,3,4,5,6$).  In a category with nine \HT bins and one control
-%sample (single muon), there are 15 nuisance parameters (drop
-%$\{\fZinv{i}\}_{i=0}^{10}$, $\rho_{phZ}^j$, $\rho_{\mu\mu Z}^j$).  In
-%a category with three \HT bins and one control sample (single muon),
-%there are five nuisance parameters: $\ewk^{0,1,2,3}$, $\rho_{\mu
-%  W}^0$.  When considering signal, there is also the parameter
-%$\rho_{sig}$; when multiple categories are fit simultaneously, the
-%total likelihood is
+\begin{equation}
+  \zInv{i} \equiv \fZinv{i} \times \ewk^i 
+  \label{eq:ZinvEwk}
+\end{equation}
+
+\begin{equation}
+  ttW^{i} \equiv (1-\fZinv{i})\times \ewk^i
+  \label{eq:ttWEwk}
+\end{equation}
+
+
+This reparametrization allows representing the fit results with the floating
+parameters $\ewk^{i}$ which is convenient for comparison to the observed data
+in the hadronic region. 
+
+In a category with 8 \HT bins and two control samples, there are 
+32 nuisance parameters: $\{\ewk^{i}\}_{i=0}^{7}$, $\{\fZinv{i}\}_{i=0}^{7}$, $\{\rho_{phZ}\}_{i=0}^{7}$,
+$\{\rho_{muZ}\}_{i=0}^{7}$. In the $\nb = 2$ categories there are 
+18 nuisance parameters: $\{\ewk^{i}\}_{i=0}^{7}$, $\{\fZinv{i}\}_{i=0}^{7}$, 
+$\{\rho_{muZ}\}_{i=0}^{7}$.  When considering signal, 
+there is also the parameter $\rho_{sig}$; when multiple categories 
+are fit simultaneously, the total likelihood is
 
 \begin{equation}
 L = L_{sig}\times \prod_k L_{hadronic}^k
-\times L_{\mu}^k \times L_{ph}^k \times L_{\mu\mu}^k \times L_{\rm EWK\, syst.}^k \quad .
+\times L_{\mu}^k \times L_{ph}^k \times L_{\rm EWK\, syst.}^k \quad .
 \end{equation}
 
 
