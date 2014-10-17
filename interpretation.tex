@@ -1,167 +1,149 @@
 \clearpage
-\subsection{SUSY\label{sec:interpretation}}
+\section{Limits on SMS production cross sections\label{sec:interpretation}}
 
-Limits are set in the parameter space of a set of simplified models
-that characterise both third-generation squark production and
-compressed spectra scenarios, where the mass difference between the
-primary produced sparticle (e.g. a squark or a gluino) and the LSP is
-rather small. The \cls method described in greated detail in 
-section~\ref{sec:cls}, is used to compute the limits. The sampling 
-distributions for the test statistic are built by generating 
-pseudo-data from the likelihood
-function, using the respective maximum-likelihood values of the
-nuisance parameters under the background-only and
-signal-plus-background hypotheses.
- 
-Events samples for the simplified models are generated at leading
-order with \MADGRAPH~\cite{madgraph}. Inclusive, process-dependent,
-next-to-leading order calculations with next-to-leading logarithmic
-corrections~\cite{susy-nlo-nll} (NLO+NLL) of SUSY production cross
-sections are obtained with the program
-\PROSPINO~\cite{Beenakker:1996ch} and CTEQ6M~\cite{Pumplin:2002vw}
-parton distribution functions. The simulated signal events include
-multiple interactions per LHC bunch crossing (pileup) with the
-distribution of reconstructed vertices that match the one observed in
-data.
+Upper limits on the production cross section of the two simplified 
+SUSY models described in chapter~\ref{sec:signal} are discussed in this
+chapter. 
 
-%The production and decay modes of the simplified models under
-%consideration are summarised in Table~\ref{tab:sms}. 
-%Also listed are the \njet and \nb bins that are considered for each
-%interpretation.
-%%The models \texttt{T1} and \texttt{T2} are used to characterise the
-%%pair production of gluinos and first- or second-generation squarks,
-%%respectively, depending on their mass as well as on the LSP mass. The
-%%simplified models \texttt{T2tt}, \texttt{T2bb}, \texttt{T1tttt}, and
-%%\texttt{T1bbbb} describe various production and decay mechanisms in
-%%the context of third-generation squarks. 
-%
-%%Appendix~\ref{app:gains} shows the expected limits in the model
-%%\texttt{T1} when considering an inclusive jet multiplicity bin, $\njet
-%%\geq 2$, just the exclusive jet multiplicity bin, \njethigh, and the
-%%combination of the two exclusive jet multiplicity bins, \njetlow and
-%%\njethigh, in the Figs.~\ref{fig:gains-incl}, \ref{fig:gains-high},
-%%and \ref{fig:gains-both}. Significant gains of are made when
-%%considering the higher or both exclusive \njet bins, especially in the
-%%reach to higher LSP masses.
-%
+\subsection{Upper Limits}
+
+As described in section~\ref{sec:cls}, for each mass pair, the 
+value of the cross section which gives \cls = 0.05 is defined as the 
+upper limit. Figure~\ref{fig:upperLimits} shows the expected and observed
+upper limits for the SMS models where a stop particle either
+decays to a top quark and a neutralino (\texttt{T2tt}) or a charm quark and 
+and a neutralino (\texttt{T2cc}). The production and decay modes of the 
+simplified models under consideration are summarized in Table~\ref{tab:sms}. 
+Also listed are the \njet and \nb bins that are considered for each
+interpretation.
+
+
+%Appendix~\ref{app:gains} shows the expected limits in the model
+%\texttt{T1} when considering an inclusive jet multiplicity bin, $\njet
+%\geq 2$, just the exclusive jet multiplicity bin, \njethigh, and the
+%combination of the two exclusive jet multiplicity bins, \njetlow and
+%\njethigh, in the Figs.~\ref{fig:gains-incl}, \ref{fig:gains-high},
+%and \ref{fig:gains-both}. Significant gains of are made when
+%considering the higher or both exclusive \njet bins, especially in the
+%reach to higher LSP masses.
+
 %Experimental uncertainties on the SM background predictions, the
 %integrated luminosity measurement, and the total acceptance times
 %efficiency of the selection for the considered signal model are
 %included in the calculation of the limit.
-%
-%%Experimental uncertainties on the SM background predictions
-%%($10-30\%$), the luminosity measurement (4.4\%), and the total
-%%acceptance times efficiency of the selection for the considered signal
-%%model (12\%$-$18\%) are included in the calculation of the limit.
-%%Signal efficiency in the kinematic region defined by $0 <
-%%m_{\sGlu(\sQua)} - m_{\textrm{LSP}} < 175\gev$ or $m_{\sGlu(\sQua)} <
-%%300\gev$ is strongly affected by the presence of initial-state
-%%radiation. We do not consider this region in which direct (\ie,
-%%non-ISR induced) production is kinematically forbidden due to the
-%%$\scalht > 275\GeV$ requirement. Given the large associated
-%%uncertainties, no interpretation is provided for this kinematic
-%%region. In the case of model \texttt{T1tttt}, for which pair-produced
-%%gluinos decay to \ttbar pairs and the LSP, the region $0 < m_{\sGlu} -
-%%m_{\textrm{LSP}} < 400\gev$ is not considered.
-%
-%\begin{table}[h!]
-%  \caption{The first two columns specify the model and its
-%    production and decay. The next column specifies the event
-%    categories (in terms of \njet and
-%    \nb) considered for each interpretation. The last 
-%    two columns indicate the search sensitivity for each model,
-%    where $m_{\sq(\sGlu)}^{\textrm{best}}$ and
-%    $m_{\textrm{LSP}}^{\textrm{best}}$ represent the largest mass 
-%    beyond which no limit can be set for squarks/gluinos and the LSP,
-%    respectively. The exclusion range for $m_{\sq(\sGlu)}$ is bounded
-%    from below by the kinematic region considered for each model, as
-%    defined in the text. The quoted estimates are determined 
-%    conservatively from the observed exclusion based on the
-%    theoretical production cross section minus $1\sigma$
-%    uncertainty. 
-%    %For model \texttt{T2tt}, the search is at the threshold of
-%    %sensitivity for the considered ($m_{\sQua},m_{\rm LSP}$) parameter
-%    %space, as discussed in the text. 
-%  }  
-%  \label{tab:sms}
-%  \centering
-%  \footnotesize
-%  \begin{tabular}{ llcccc }
-%    \hline
-%    Model
-%    & Production/decay
-%    & Event categories
-%    & Limit plot
+
+%Experimental uncertainties on the SM background predictions
+%($10-30\%$), the luminosity measurement (4.4\%), and the total
+%acceptance times efficiency of the selection for the considered signal
+%model (12\%$-$18\%) are included in the calculation of the limit.
+%Signal efficiency in the kinematic region defined by $0 <
+%m_{\sGlu(\sQua)} - m_{\textrm{LSP}} < 175\gev$ or $m_{\sGlu(\sQua)} <
+%300\gev$ is strongly affected by the presence of initial-state
+%radiation. We do not consider this region in which direct (\ie,
+%non-ISR induced) production is kinematically forbidden due to the
+%$\scalht > 275\GeV$ requirement. Given the large associated
+%uncertainties, no interpretation is provided for this kinematic
+%region. In the case of model \texttt{T1tttt}, for which pair-produced
+%gluinos decay to \ttbar pairs and the LSP, the region $0 < m_{\sGlu} -
+%m_{\textrm{LSP}} < 400\gev$ is not considered.
+
+\begin{table}[h!]
+  \caption{The first two columns specify the model and its
+    production and decay. The next column specifies the event
+    categories (in terms of \njet and
+    \nb) considered for each interpretation. The last 
+    two columns indicate the search sensitivity for each model,
+    where $m_{\sq(\sGlu)}^{\textrm{best}}$ and
+    $m_{\textrm{LSP}}^{\textrm{best}}$ represent the largest mass 
+    beyond which no limit can be set for squarks/gluinos and the LSP,
+    respectively. The exclusion range for $m_{\sq(\sGlu)}$ is bounded
+    from below by the kinematic region considered for each model, as
+    defined in the text. The quoted estimates are determined 
+    conservatively from the observed exclusion based on the
+    theoretical production cross section minus $1\sigma$
+    uncertainty. 
+    %For model \texttt{T2tt}, the search is at the threshold of
+    %sensitivity for the considered ($m_{\sQua},m_{\rm LSP}$) parameter
+    %space, as discussed in the text. 
+  }  
+  \label{tab:sms}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llcccc }
+    \hline
+    Model
+    & Production/decay
+    & Event categories
+    & Limit plot
 %    & $m_{\sq(\sGlu)}^{\textrm{best}}$~(GeV) 
 %    & $m_{\textrm{LSP}}^{\textrm{best}}$~(GeV) 
-%    \\ [0.5ex]
-%    \hline
-%    \texttt{T2cc}
+    \\ [0.5ex]
+    \hline
+    \texttt{T2cc}
+    &
+    $\textrm{pp}\,\rightarrow\,\sTop\sTop\,\rightarrow\,\textrm{c}\chiz\bar{\textrm{c}}\chiz$
+    & ($\le3$,0), ($\ge4$,0), ($\ge4$,1)
+    & \ref{fig:upperLimits-t2cc}
+%    & 250
+%    & 250
+    \\
+%    \texttt{T1}
 %    &
-%    $\textrm{pp}\,\rightarrow\,\sTop\sTop\,\rightarrow\,\textrm{c}\chiz\bar{\textrm{c}}\chiz$
-%    & ($\le3$,0), ($\ge4$,0), ($\ge4$,1)
-%    & \ref{fig:limits-t2cc-obs}
-%    & -
-%    & n/a
+%    $\textrm{pp}\,\rightarrow\,\sGlu\sGlu\,\rightarrow\,\textrm{q}\bar{\textrm{q}}\chiz\textrm{q}\bar{\textrm{q}}\chiz$
+%    & $\geq4$
+%    & 0
+%    & \ref{fig:t1}
+%    & 950
+%    & 450
 %    \\
-%%    \texttt{T1}
-%%    &
-%%    $\textrm{pp}\,\rightarrow\,\sGlu\sGlu\,\rightarrow\,\textrm{q}\bar{\textrm{q}}\chiz\textrm{q}\bar{\textrm{q}}\chiz$
-%%    & $\geq4$
-%%    & 0
-%%    & \ref{fig:t1}
-%%    & 950
-%%    & 450
-%%    \\
-%%    \texttt{T2}
-%%    & 
-%%    $\textrm{pp}\,\rightarrow\,\sQua\sQua\,\rightarrow\,\textrm{q}\chiz\bar{\textrm{q}}\chiz$
-%%    & 2--3
-%%    & 0
-%%    & \ref{fig:t2}
-%%    & 775
-%%    & 325
-%%    \\
-%%    \texttt{T2tt} 
-%%    & 
-%%    $\textrm{pp}\,\rightarrow\,\sTop\sTop\,\rightarrow\,\textrm{t}\chiz\bar{\textrm{t}}\chiz$
-%%    & $\geq4$
-%%    & 1,2
-%%    & \ref{fig:t2tt-1d}
-%%    & $-$ 
-%%    & $-$
-%%    \\ 
-%%    \texttt{T2bb}
-%%    & 
-%%    $\textrm{pp}\,\rightarrow\,\sBot\sBot\,\rightarrow\,\textrm{b}\chiz\bar{\textrm{b}}\chiz$
-%%    & 2--3
-%%    & 1,2
-%%    & \ref{fig:t2bb}
-%%    & 600
-%%    & 200
-%%    \\
-%%    \texttt{T1tttt} 
-%%    &
-%%    $\textrm{pp}\,\rightarrow\,\sGlu\sGlu\,\rightarrow\,\textrm{t}\bar{\textrm{t}}\chiz\textrm{t}\bar{\textrm{t}}\chiz$ 
-%%    & $\geq4$
-%%    & 2,3,$\geq4$
-%%    & \ref{fig:t1tttt}
-%%    & 950
-%%    & 325
-%%    \\
-%%    \texttt{T1bbbb} 
-%%    & 
-%%    $\textrm{pp}\,\rightarrow\,\sGlu\sGlu\,\rightarrow\,\textrm{b}\bar{\textrm{b}}\chiz\textrm{b}\bar{\textrm{b}}\chiz$
-%%    & $\geq4$
-%%    & 2,3,$\geq4$
-%%    & \ref{fig:t1bbbb}
-%%    & 1125
-%%    & 650
-%%    \\
-%    \hline
-%  \end{tabular}
-%\end{table}
-%
+%    \texttt{T2}
+%    & 
+%    $\textrm{pp}\,\rightarrow\,\sQua\sQua\,\rightarrow\,\textrm{q}\chiz\bar{\textrm{q}}\chiz$
+%    & 2--3
+%    & 0
+%    & \ref{fig:t2}
+%    & 775
+%    & 325
+%    \\
+    \texttt{T2tt} 
+    & 
+    $\textrm{pp}\,\rightarrow\,\sTop\sTop\,\rightarrow\,\textrm{t}\chiz\bar{\textrm{t}}\chiz$
+    & ($\geq4$,1),($\geq4$,2)
+    & \ref{fig:upperLimits-t2tt}
+%    & 400 
+%    & 25
+    \\ 
+%    \texttt{T2bb}
+%    & 
+%    $\textrm{pp}\,\rightarrow\,\sBot\sBot\,\rightarrow\,\textrm{b}\chiz\bar{\textrm{b}}\chiz$
+%    & 2--3
+%    & 1,2
+%    & \ref{fig:t2bb}
+%    & 600
+%    & 200
+%    \\
+%    \texttt{T1tttt} 
+%    &
+%    $\textrm{pp}\,\rightarrow\,\sGlu\sGlu\,\rightarrow\,\textrm{t}\bar{\textrm{t}}\chiz\textrm{t}\bar{\textrm{t}}\chiz$ 
+%    & $\geq4$
+%    & 2,3,$\geq4$
+%    & \ref{fig:t1tttt}
+%    & 950
+%    & 325
+%    \\
+%    \texttt{T1bbbb} 
+%    & 
+%    $\textrm{pp}\,\rightarrow\,\sGlu\sGlu\,\rightarrow\,\textrm{b}\bar{\textrm{b}}\chiz\textrm{b}\bar{\textrm{b}}\chiz$
+%    & $\geq4$
+%    & 2,3,$\geq4$
+%    & \ref{fig:t1bbbb}
+%    & 1125
+%    & 650
+%    \\
+    \hline
+  \end{tabular}
+\end{table}
+
 %\fixme{TEXT REFLECTS USUAL PRESENTATION OF LIMIT PLOTS - ALL RELEVANT
 %  INFORMATION IN SHOWN IN REFERENCED FIGURES FOR T2CC - TO BE UPDATED.}
 %Figures~\ref{fig:limits-t2cc-exp} and \ref{fig:limits-t2cc-obs} show
@@ -238,15 +220,19 @@ data.
 %
 \begin{figure}[h!]
   \begin{center}
-      \includegraphics[width=0.70\textwidth,clip=true]{figures/limits/merged/T2cc/v2/CLs_frequentist_T2cc_2012pf_0b_le3j_0b_ge4j_1b_ge4j_xsLimit}\\
-      \includegraphics[width=0.70\textwidth,clip=true]{figures/limits/merged/T2tt/v6/CLs_frequentist_T2tt_2012pf_1b_ge4j_2b_ge4j_xsLimit.pdf}
+    \subfigure[\njethigh, $\nb = 1$, simultaneous fit,\label{fig:upperLimits-t2cc}]{
+      \includegraphics[width=0.70\textwidth,clip=true]{figures/limits/merged/T2cc/v2/CLs_frequentist_T2cc_2012pf_0b_le3j_0b_ge4j_1b_ge4j_xsLimit}
+      }\\
+    \subfigure[\njethigh, $\nb = 1$, simultaneous fit,\label{fig:upperLimits-t2tt}]{
+      \includegraphics[width=0.70\textwidth,clip=true,]{figures/limits/merged/T2tt/v6/CLs_frequentist_T2tt_2012pf_1b_ge4j_2b_ge4j_xsLimit}
+      }
 %    \subfigure[Observed, relative]{
 %      \includegraphics[width=0.45\textwidth,page=4,trim=40 50 20 70,clip=true]{figures/limits/v0/obs/CLs_frequentist_T2cc_2012dev_0b_le3j_0b_ge4j_1b_ge4j_xsLimit_relative}
 %    } \quad 
 %    \subfigure[Observed, excluded points]{
 %      \includegraphics[width=0.45\textwidth,page=4,trim=40 50 20 70,clip=true]{figures/limits/v0/obs/CLs_frequentist_T2cc_2012dev_0b_le3j_0b_ge4j_1b_ge4j_xsLimit_simpleExcl}
 %    } \\
-    \caption{\label{fig:upperLimit-t2tt-obs-400} Expected 
+    \caption{\label{fig:upperLimits} Expected 
     and observed upper limits on the production cross section 
     for the for the models \texttt{T2cc} (top) and \texttt{T2tt} (bottom). }
   \end{center}
