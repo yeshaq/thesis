@@ -8,7 +8,7 @@ constructed in the following section. The method to set a limit on the
 cross-section of signal models is described in section~\ref{sec:cls}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Likelihood model\label{likelihood}}
+\subsection{Likelihood model\label{sec:likelihood}}
 
 \subsubsection{Hadronic sample}
 \label{sec:hadronicLikelihood}
@@ -299,61 +299,61 @@ L = L_{sig}\times \prod_k L_{hadronic}^k
 \times L_{\mu}^k \times L_{ph}^k \times L_{\rm EWK\, syst.}^k \quad .
 \end{equation}
 
-\subsection{Limit setting\label{sec:cls}}
-
-The following has been formulated in~\cite{LairdThesis} and is summarized 
-here for completeness. 
-Consider the likelihood ratio~\cite{Cowan:2010js}:
-
-\begin{equation}
-\label{eq:PLR}
-\lambda(\mu) = \frac{ L(\mu,
-\hat{\hat{\vec{\theta}}}) } {L(\hat{\mu}, \hat{\vec{\theta}}) } \;.
-\end{equation}
-
-Where $\hat{\hat{\vec{\theta}}}$ in the numerator denotes the
-value of $\vec{\theta}$, the set of nuisance parameters in the likelihood,
-that maximizes $L$ for the specified $\mu$.
-The denominator is the maximized likelihood function, i.e., $\hat{\mu}$
-and $\hat{\vec{\theta}}$ are their ML estimators. In the context of this
-analysis $\mu \equiv f$ where $f$ is the signal strength as defined 
-in section~\ref{sec:signalContrib}.  One can define the profile
-likelihood ratio test statistic as~\cite{Cowan:2010js}:
-
-\begin{equation}
-\label{eq:qmu}
-q_{\mu} =
-\left\{ \! \! \begin{array}{ll}
-               - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
-               0 & \hat{\mu} > \mu \;,
-              \end{array}
-       \right.
-\end{equation}
-
-To test a specific signal model, one approach would be to perform many 
-pseudo-experiments under the two separate hypotheses: background-only 
-(i.e. $\mu=0$) and background with signal (i.e. $\mu=1$). $CL_{b}$ and 
-$CL_{s+b}$~\cite{read,Junk} are defined as 1 - the quantile of $q_{\mu(obs)}$ in each of 
-these distributions, where $q_{\mu(obs)}$ is the test statistic evaluated 
-with the observed data. Figure~\ref{fig:hybrid_plot} illustrates two example distributions of
-the test statistic under each hypothesis.  $CL_{s}$ is then defined as $CL_{s} \equiv CL_{s+b}/CL_{b}$, 
-and a value $CL_{s} < 0.05$ excludes the signal hypothesis at 95\% confidence level. 
-
-Another approach is to instead calculate the upper limit on the signal 
-cross section by determining $f$ at $CL_{s} = 0.05$.  This approach samples 
-CLs at varying signal strengths and the upper limit is 
-determined through interpolation. If the upper limit on the cross section 
-is lower than the nominal cross section, the signal model is excluded.
-
-\begin{figure}[h!t]
-  \begin{center}
-      \includegraphics[width=0.45\textwidth,]{figures/hybrid_plot}
-      \caption{\label{fig:hybrid_plot} The distributions of the test statistic $q_{\mu}$
-        in the background-only (red, on the right) and signal+background (blue, on the left) hypotheses. 
-        The black line represents the value of the $q_{\mu}$ on the tested data. The shaded areas represent 
-        $1-CL_{b}$ (red) and $CL_{s+b}$ (blue).  From~\cite{Moneta:1289965}}.
-    \label{fig:hybrid_plot}
-  \end{center}
-\end{figure}
+%\subsection{Limit setting\label{sec:cls}}
+%
+%The following has been formulated in~\cite{LairdThesis} and is summarized 
+%here for completeness. 
+%Consider the likelihood ratio~\cite{Cowan:2010js}:
+%
+%\begin{equation}
+%\label{eq:PLR}
+%\lambda(\mu) = \frac{ L(\mu,
+%\hat{\hat{\vec{\theta}}}) } {L(\hat{\mu}, \hat{\vec{\theta}}) } \;.
+%\end{equation}
+%
+%Where $\hat{\hat{\vec{\theta}}}$ in the numerator denotes the
+%value of $\vec{\theta}$, the set of nuisance parameters in the likelihood,
+%that maximizes $L$ for the specified $\mu$.
+%The denominator is the maximized likelihood function, i.e., $\hat{\mu}$
+%and $\hat{\vec{\theta}}$ are their ML estimators. In the context of this
+%analysis $\mu \equiv f$ where $f$ is the signal strength as defined 
+%in section~\ref{sec:signalContrib}.  One can define the profile
+%likelihood ratio test statistic as~\cite{Cowan:2010js}:
+%
+%\begin{equation}
+%\label{eq:qmu}
+%q_{\mu} =
+%\left\{ \! \! \begin{array}{ll}
+%               - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
+%               0 & \hat{\mu} > \mu \;,
+%              \end{array}
+%       \right.
+%\end{equation}
+%
+%To test a specific signal model, one approach would be to perform many 
+%pseudo-experiments under the two separate hypotheses: background-only 
+%(i.e. $\mu=0$) and background with signal (i.e. $\mu=1$). $CL_{b}$ and 
+%$CL_{s+b}$~\cite{read,Junk} are defined as 1 - the quantile of $q_{\mu(obs)}$ in each of 
+%these distributions, where $q_{\mu(obs)}$ is the test statistic evaluated 
+%with the observed data. Figure~\ref{fig:hybrid_plot} illustrates two example distributions of
+%the test statistic under each hypothesis.  $CL_{s}$ is then defined as $CL_{s} \equiv CL_{s+b}/CL_{b}$, 
+%and a value $CL_{s} < 0.05$ excludes the signal hypothesis at 95\% confidence level. 
+%
+%Another approach is to instead calculate the upper limit on the signal 
+%cross section by determining $f$ at $CL_{s} = 0.05$.  This approach samples 
+%CLs at varying signal strengths and the upper limit is 
+%determined through interpolation. If the upper limit on the cross section 
+%is lower than the nominal cross section, the signal model is excluded.
+%
+%\begin{figure}[h!t]
+%  \begin{center}
+%      \includegraphics[width=0.45\textwidth,]{figures/hybrid_plot}
+%      \caption{\label{fig:hybrid_plot} The distributions of the test statistic $q_{\mu}$
+%        in the background-only (red, on the right) and signal+background (blue, on the left) hypotheses. 
+%        The black line represents the value of the $q_{\mu}$ on the tested data. The shaded areas represent 
+%        $1-CL_{b}$ (red) and $CL_{s+b}$ (blue).  From~\cite{Moneta:1289965}}.
+%    \label{fig:hybrid_plot}
+%  \end{center}
+%\end{figure}
 
 

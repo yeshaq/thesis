@@ -5,47 +5,82 @@ Upper limits on the production cross section of the two simplified
 SUSY models described in chapter~\ref{sec:signal} are discussed in this
 chapter. 
 
-\subsection{Upper Limits}
 
-As described in section~\ref{sec:cls}, for each mass pair, the 
-value of the cross section which gives \cls = 0.05 is defined as the 
-upper limit. Figure~\ref{fig:upperLimits} shows the expected and observed
-upper limits for the SMS models where a stop particle either
-decays to a top quark and a neutralino (\texttt{T2tt}) or a charm quark and 
-and a neutralino (\texttt{T2cc}). The production and decay modes of the 
-simplified models under consideration are summarized in Table~\ref{tab:sms}. 
-Also listed are the \njet and \nb bins that are considered for each
-interpretation.
+\subsection{Limit setting procedure\label{sec:cls}}
+
+The following has been formulated in~\cite{LairdThesis} and is summarized 
+here for completeness. 
+Consider the likelihood ratio~\cite{Cowan:2010js}:
+
+\begin{equation}
+\label{eq:PLR}
+\lambda(\mu) = \frac{ L(\mu,
+\hat{\hat{\vec{\theta}}}) } {L(\hat{\mu}, \hat{\vec{\theta}}) } \;.
+\end{equation}
+
+Where $\hat{\hat{\vec{\theta}}}$ in the numerator denotes the
+value of $\vec{\theta}$, the set of nuisance parameters in the likelihood,
+that maximizes $L$ for the specified $\mu$.
+The denominator is the maximized likelihood function, i.e., $\hat{\mu}$
+and $\hat{\vec{\theta}}$ are their ML estimators. In the context of this
+analysis $\mu \equiv f$ where $f$ is the signal strength as defined 
+in section~\ref{sec:signalContrib}.  One can define the profile
+likelihood ratio test statistic as~\cite{Cowan:2010js}:
+
+\begin{equation}
+\label{eq:qmu}
+q_{\mu} =
+\left\{ \! \! \begin{array}{ll}
+               - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
+               0 & \hat{\mu} > \mu \;,
+              \end{array}
+       \right.
+\end{equation}
+
+To test a specific signal model, one approach would be to perform many 
+pseudo-experiments under the two separate hypotheses: background-only 
+(i.e. $\mu=0$) and background with signal (i.e. $\mu=1$). $CL_{b}$ and 
+$CL_{s+b}$~\cite{read,Junk} are defined as 1 - the quantile of $q_{\mu(obs)}$ in each of 
+these distributions, where $q_{\mu(obs)}$ is the test statistic evaluated 
+with the observed data. Figure~\ref{fig:hybrid_plot} illustrates two example distributions of
+the test statistic under each hypothesis.  $CL_{s}$ is then defined as $CL_{s} \equiv CL_{s+b}/CL_{b}$, 
+and a value $CL_{s} < 0.05$ excludes the signal hypothesis at 95\% confidence level. 
+
+Another approach is to instead calculate the upper limit on the signal 
+cross section by determining $f$ at $CL_{s} = 0.05$.  This approach samples 
+CLs at varying signal strengths and the upper limit is 
+determined through interpolation. If the upper limit on the cross section 
+is lower than the nominal cross section, the signal model is excluded.
+
+\begin{figure}[h!t]
+  \begin{center}
+      \includegraphics[width=0.45\textwidth,]{figures/hybrid_plot}
+      \caption{\label{fig:hybrid_plot} The distributions of the test statistic $q_{\mu}$
+        in the background-only (red, on the right) and signal+background (blue, on the left) hypotheses. 
+        The black line represents the value of the $q_{\mu}$ on the tested data. The shaded areas represent 
+        $1-CL_{b}$ (red) and $CL_{s+b}$ (blue).  From~\cite{Moneta:1289965}}.
+    \label{fig:hybrid_plot}
+  \end{center}
+\end{figure}
 
 
-%Appendix~\ref{app:gains} shows the expected limits in the model
-%\texttt{T1} when considering an inclusive jet multiplicity bin, $\njet
-%\geq 2$, just the exclusive jet multiplicity bin, \njethigh, and the
-%combination of the two exclusive jet multiplicity bins, \njetlow and
-%\njethigh, in the Figs.~\ref{fig:gains-incl}, \ref{fig:gains-high},
-%and \ref{fig:gains-both}. Significant gains of are made when
-%considering the higher or both exclusive \njet bins, especially in the
-%reach to higher LSP masses.
+\subsection{Upper limits on SMS models}
 
-%Experimental uncertainties on the SM background predictions, the
-%integrated luminosity measurement, and the total acceptance times
-%efficiency of the selection for the considered signal model are
-%included in the calculation of the limit.
+For each mass pair in a given model, the upper limit is calculated as described in 
+section~\ref{sec:cls} using the likelihood constructed in section~\ref{sec:likelihood}
+by considering the relevant categories listed in table~\ref{tab:simplified-models}.
 
-%Experimental uncertainties on the SM background predictions
-%($10-30\%$), the luminosity measurement (4.4\%), and the total
-%acceptance times efficiency of the selection for the considered signal
-%model (12\%$-$18\%) are included in the calculation of the limit.
-%Signal efficiency in the kinematic region defined by $0 <
-%m_{\sGlu(\sQua)} - m_{\textrm{LSP}} < 175\gev$ or $m_{\sGlu(\sQua)} <
-%300\gev$ is strongly affected by the presence of initial-state
-%radiation. We do not consider this region in which direct (\ie,
-%non-ISR induced) production is kinematically forbidden due to the
-%$\scalht > 275\GeV$ requirement. Given the large associated
-%uncertainties, no interpretation is provided for this kinematic
-%region. In the case of model \texttt{T1tttt}, for which pair-produced
-%gluinos decay to \ttbar pairs and the LSP, the region $0 < m_{\sGlu} -
-%m_{\textrm{LSP}} < 400\gev$ is not considered.
+\subsubsection{Upper limits on T2cc}
+Figure~\ref{fig:upperLimits-t2cc} shows the observed upper 
+limit for each sparticle mass pair for the SMS model where a stop particle 
+decays to a charm quark and a neutralino (\texttt{T2cc}). 
+The black curve represents the 
+
+provided The thick black curve represents the 
+observed upper limit 
+observed limit The expected upper limit
+
+
 
 \begin{table}[h!]
   \caption{The first two columns specify the model and its
@@ -86,25 +121,7 @@ interpretation.
     & \ref{fig:upperLimits-t2cc}
 %    & 250
 %    & 250
-    \\
-%    \texttt{T1}
-%    &
-%    $\textrm{pp}\,\rightarrow\,\sGlu\sGlu\,\rightarrow\,\textrm{q}\bar{\textrm{q}}\chiz\textrm{q}\bar{\textrm{q}}\chiz$
-%    & $\geq4$
-%    & 0
-%    & \ref{fig:t1}
-%    & 950
-%    & 450
-%    \\
-%    \texttt{T2}
-%    & 
-%    $\textrm{pp}\,\rightarrow\,\sQua\sQua\,\rightarrow\,\textrm{q}\chiz\bar{\textrm{q}}\chiz$
-%    & 2--3
-%    & 0
-%    & \ref{fig:t2}
-%    & 775
-%    & 325
-%    \\
+     \\
     \texttt{T2tt} 
     & 
     $\textrm{pp}\,\rightarrow\,\sTop\sTop\,\rightarrow\,\textrm{t}\chiz\bar{\textrm{t}}\chiz$
@@ -113,33 +130,6 @@ interpretation.
 %    & 400 
 %    & 25
     \\ 
-%    \texttt{T2bb}
-%    & 
-%    $\textrm{pp}\,\rightarrow\,\sBot\sBot\,\rightarrow\,\textrm{b}\chiz\bar{\textrm{b}}\chiz$
-%    & 2--3
-%    & 1,2
-%    & \ref{fig:t2bb}
-%    & 600
-%    & 200
-%    \\
-%    \texttt{T1tttt} 
-%    &
-%    $\textrm{pp}\,\rightarrow\,\sGlu\sGlu\,\rightarrow\,\textrm{t}\bar{\textrm{t}}\chiz\textrm{t}\bar{\textrm{t}}\chiz$ 
-%    & $\geq4$
-%    & 2,3,$\geq4$
-%    & \ref{fig:t1tttt}
-%    & 950
-%    & 325
-%    \\
-%    \texttt{T1bbbb} 
-%    & 
-%    $\textrm{pp}\,\rightarrow\,\sGlu\sGlu\,\rightarrow\,\textrm{b}\bar{\textrm{b}}\chiz\textrm{b}\bar{\textrm{b}}\chiz$
-%    & $\geq4$
-%    & 2,3,$\geq4$
-%    & \ref{fig:t1bbbb}
-%    & 1125
-%    & 650
-%    \\
     \hline
   \end{tabular}
 \end{table}
@@ -220,10 +210,10 @@ interpretation.
 %
 \begin{figure}[h!]
   \begin{center}
-    \subfigure[\njethigh, $\nb = 1$, simultaneous fit,\label{fig:upperLimits-t2cc}]{
+    \subfigure[\label{fig:upperLimits-t2cc}]{
       \includegraphics[width=0.70\textwidth,clip=true]{figures/limits/merged/T2cc/v2/CLs_frequentist_T2cc_2012pf_0b_le3j_0b_ge4j_1b_ge4j_xsLimit}
       }\\
-    \subfigure[\njethigh, $\nb = 1$, simultaneous fit,\label{fig:upperLimits-t2tt}]{
+    \subfigure[\label{fig:upperLimits-t2tt}]{
       \includegraphics[width=0.70\textwidth,clip=true,]{figures/limits/merged/T2tt/v6/CLs_frequentist_T2tt_2012pf_1b_ge4j_2b_ge4j_xsLimit}
       }
 %    \subfigure[Observed, relative]{
