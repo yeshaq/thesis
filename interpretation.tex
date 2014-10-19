@@ -78,8 +78,8 @@ The mass-pair bins left of the thick black curve have a calculated cross
 section upper limit below the theoritical production cross section, 
 i.e. $\frac{\sigma_{\texttt{obs. upper limit}}}{\sigma_{\texttt{theory}}} < 1$, and
 are therfore excluded. The thinner black lines represent exclusion regions obtained by
-comparing the calculated upper limit with the theoritical cross section shifted up and 
-down by its theoritical uncertainty i.e. 
+comparing the calculated upper limit with the theoritical cross section shifted up down 
+and by its theoritical uncertainty i.e. 
 $\frac{\sigma_{\texttt{obs. upper limit}}}{\sigma_{\texttt{theory} \pm \texttt{uncertainty}}} < 1$.
 The dashed purple lines indicate the median (thick line) $\pm 1 \sigma$ 
 (thin lines) expected exclusion regions. The $\pm 1 \sigma$ expected exclusion 
@@ -97,29 +97,56 @@ The definitions of the excluded regions remain the same as \texttt{t2cc}.
 The observed upper limit disagrees with the expected by more than $2 \sigma$.
 This discrepency is further studied in the following sections. 
 
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[\label{fig:upperLimits-t2cc}]{
+      \includegraphics[width=0.70\textwidth,clip=true]{figures/limits/merged/T2cc/v2/CLs_frequentist_T2cc_2012pf_0b_le3j_0b_ge4j_1b_ge4j_xsLimit}
+      }\\
+    \subfigure[\label{fig:upperLimits-t2tt}]{
+      \includegraphics[width=0.70\textwidth,clip=true,]{figures/limits/merged/T2tt/v6/CLs_frequentist_T2tt_2012pf_1b_ge4j_2b_ge4j_xsLimit}
+      }
+%    \subfigure[Observed, relative]{
+%      \includegraphics[width=0.45\textwidth,page=4,trim=40 50 20 70,clip=true]{figures/limits/v0/obs/CLs_frequentist_T2cc_2012dev_0b_le3j_0b_ge4j_1b_ge4j_xsLimit_relative}
+%    } \quad 
+%    \subfigure[Observed, excluded points]{
+%      \includegraphics[width=0.45\textwidth,page=4,trim=40 50 20 70,clip=true]{figures/limits/v0/obs/CLs_frequentist_T2cc_2012dev_0b_le3j_0b_ge4j_1b_ge4j_xsLimit_simpleExcl}
+%    } \\
+    \caption{\label{fig:upperLimits} Expected 
+    and observed upper limits on the production cross section 
+    for the for the models \texttt{T2cc} (top) and \texttt{T2tt} (bottom). }
+  \end{center}
+\end{figure}
+
+\FloatBarrier
+
 \subsubsection{Discrepency\label{crap}}
 As a first step, it is instructive to identify the \scalht bins which
 show the highest excesses when considering a SM-only hypotheses. To this
-intent, figure~\ref{fig:sigVsCat} in chapter~\ref{sec:results} is replotted 
-to isolate the categories of interest in \texttt{T2tt}, figure~\ref{fig:sigVsCat2}.
+intent, figure~\ref{fig:sigVsCat} of chapter~\ref{sec:results} is replotted 
+in figure~\ref{fig:sigVsCat2} to isolate the categories of interest in \texttt{T2tt}.
 \begin{figure}[h!]
   \begin{center}
       \includegraphics[width=0.45\textwidth, trim=0 0 0 30, clip=true]{figures/fit/v22/significances_catVsHt_2}
-    \label{fig:sigVsCat2}
-    \caption{Pulls in categories used in T2cc interpretation.}
+    \caption{Pulls in categories used in T2cc interpretation.\label{fig:sigVsCat2}}
   \end{center}
 \end{figure}
 
 In the \njethigh and $\nb = 2$ category, \scalht bin $575-675$ and $675-775\GeV$ 
-show the highest significances with $\sim\!\!2.5\sigma$ and $\sim\!\!1.5\sigma$ respectively.  
-In the \njethigh and $\nb = 1$ category, the lowest two \scalht bins in show the 
-hightest significances with $\sim\!\!1.5\sigma$. The descripency is further investigated 
-by a closer study of two bins in $(m_{\st},m_{\text{LSP}})$.  The first one, 
-$m_{\sq} = 400\GeV$ and $m_{\text{LSP}} = 0\GeV$ is excluded by the observed data. 
+show the highest pulls: $\sim\!\!2.5\sigma$ and $\sim\!\!1.5\sigma$ respectively.  
+In the \njethigh and $\nb = 1$ category, the lowest two \scalht bins show the 
+highest pulls with $\sim\!\!1.5\sigma$. The descripency is further investigated by a 
+closer study of two bins in  $(m_{\st},m_{\text{LSP}})$.  The first one, $m_{\st} = 400\GeV$ and 
+$m_{\text{LSP}} = 0\GeV$ is excluded by the observed data. It is useful to gauge 
+the signal signifcance, defined here as the signal yield divided by 
+$\sqrt{b+(.1b)^2}$ where $b$ is the SM expectation as determined by a simultaneous 
+fit to all under under the SM background hypothesis. Figure~\ref{fig:t2tt-sig-400}
+plots the signal signficance in bins of \scalht and shows that most of the signal 
+significance is expected in the lowest \scalht bins in both categories. 
+
 Figure~\ref{fig:t2tt-best-fit-400} show the \scalht-binned observed 
 data yields and expectations for the hadronic sample, as determined 
 by a simultaneous fit to all data samples under a signal+background 
-hypothesis. The signal under consideration is $m_{\sq} = 400\GeV$ and 
+hypothesis. The signal under consideration is $m_{\st} = 400\GeV$ and 
 $m_{\text{LSP}} = 0\GeV$. The observed event yields in data (black dots), 
 the SM expectations (dark blue) and the sum of the SM backgrounds and signal 
 expectation (pink) are shown. Two event categories are considered
@@ -134,17 +161,17 @@ categories.
 %    categories (in terms of \njet and
 %    \nb) considered for each interpretation. The last 
 %    two columns indicate the search sensitivity for each model,
-%    where $m_{\sq(\sGlu)}^{\textrm{best}}$ and
+%    where $m_{\st(\sGlu)}^{\textrm{best}}$ and
 %    $m_{\textrm{LSP}}^{\textrm{best}}$ represent the largest mass 
 %    beyond which no limit can be set for squarks/gluinos and the LSP,
-%    respectively. The exclusion range for $m_{\sq(\sGlu)}$ is bounded
+%    respectively. The exclusion range for $m_{\st(\sGlu)}$ is bounded
 %    from below by the kinematic region considered for each model, as
 %    defined in the text. The quoted estimates are determined 
 %    conservatively from the observed exclusion based on the
 %    theoretical production cross section minus $1\sigma$
 %    uncertainty. 
 %    %For model \texttt{T2tt}, the search is at the threshold of
-%    %sensitivity for the considered ($m_{\sQua},m_{\rm LSP}$) parameter
+%    %sensitivity for the considered ($m_{\stua},m_{\rm LSP}$) parameter
 %    %space, as discussed in the text. 
 %  }  
 %  \label{tab:sms}
@@ -156,7 +183,7 @@ categories.
 %    & Production/decay
 %    & Event categories
 %    & Limit plot
-%%    & $m_{\sq(\sGlu)}^{\textrm{best}}$~(GeV) 
+%%    & $m_{\st(\sGlu)}^{\textrm{best}}$~(GeV) 
 %%    & $m_{\textrm{LSP}}^{\textrm{best}}$~(GeV) 
 %    \\ [0.5ex]
 %    \hline
@@ -184,7 +211,7 @@ categories.
 %  INFORMATION IN SHOWN IN REFERENCED FIGURES FOR T2CC - TO BE UPDATED.}
 %Figures~\ref{fig:limits-t2cc-exp} and \ref{fig:limits-t2cc-obs} show
 %the upper limit on the cross section at 95\% CL as a function of
-%$m_{\sq}$ or $m_{\gl}$ and $m_{\rm LSP}$ for various simplified
+%$m_{\st}$ or $m_{\gl}$ and $m_{\rm LSP}$ for various simplified
 %models. The point-to-point fluctuations are due to the finite number
 %of pseudo-experiments used to determine the observed upper limit. The
 %solid thick black line indicates the observed exclusion region
@@ -213,7 +240,7 @@ categories.
 %hypothesis. The observed event yields in data (black dots), the SM
 %expectations (dark blue) and the sum of the SM backgrounds and signal
 %expectation (pink) are shown. The signal expectations are for the best
-%fit model \texttt{T2cc} with $m_{\sq} = 250\GeV$ and $m_{\text{LSP}} =
+%fit model \texttt{T2cc} with $m_{\st} = 250\GeV$ and $m_{\text{LSP}} =
 %230\GeV$. Three event categories are considered by the fit: (Top)
 %\njetlow and $\nb = 0$, (Middle) \njethigh and $\nb = 0$, (Bottom)
 %\njethigh and $\nb = 1$. The fit is performed (Left) for each
@@ -254,25 +281,6 @@ categories.
 %  \end{center}
 %\end{figure}
 %
-\begin{figure}[h!]
-  \begin{center}
-    \subfigure[\label{fig:upperLimits-t2cc}]{
-      \includegraphics[width=0.70\textwidth,clip=true]{figures/limits/merged/T2cc/v2/CLs_frequentist_T2cc_2012pf_0b_le3j_0b_ge4j_1b_ge4j_xsLimit}
-      }\\
-    \subfigure[\label{fig:upperLimits-t2tt}]{
-      \includegraphics[width=0.70\textwidth,clip=true,]{figures/limits/merged/T2tt/v6/CLs_frequentist_T2tt_2012pf_1b_ge4j_2b_ge4j_xsLimit}
-      }
-%    \subfigure[Observed, relative]{
-%      \includegraphics[width=0.45\textwidth,page=4,trim=40 50 20 70,clip=true]{figures/limits/v0/obs/CLs_frequentist_T2cc_2012dev_0b_le3j_0b_ge4j_1b_ge4j_xsLimit_relative}
-%    } \quad 
-%    \subfigure[Observed, excluded points]{
-%      \includegraphics[width=0.45\textwidth,page=4,trim=40 50 20 70,clip=true]{figures/limits/v0/obs/CLs_frequentist_T2cc_2012dev_0b_le3j_0b_ge4j_1b_ge4j_xsLimit_simpleExcl}
-%    } \\
-    \caption{\label{fig:upperLimits} Expected 
-    and observed upper limits on the production cross section 
-    for the for the models \texttt{T2cc} (top) and \texttt{T2tt} (bottom). }
-  \end{center}
-\end{figure}
 
 \begin{figure*}[t!]
   \begin{center}
@@ -389,7 +397,7 @@ categories.
 \end{figure*}
 
 %%Figure~\ref{fig:limits-sms} shows the upper limit on the cross section
-%%at 95\% CL as a function of $m_{\sq}$ or $m_{\gl}$ and $m_{\rm LSP}$
+%%at 95\% CL as a function of $m_{\st}$ or $m_{\gl}$ and $m_{\rm LSP}$
 %%for various simplified models. The point-to-point fluctuations are due
 %%to the finite number of pseudo-experiments used to determine the
 %%observed upper limit. The solid thick black line indicates the
@@ -437,7 +445,7 @@ categories.
 %%      \includegraphics[width=0.45\textwidth]{figures/limits/v4/t1bbbb}
 %%    } \\
 %%    \caption{\label{fig:limits-sms} Upper limit on cross section at
-%%      95\% CL as a function of $m_{\sq}$ or $m_{\gl}$ and $m_{\rm
+%%      95\% CL as a function of $m_{\st}$ or $m_{\gl}$ and $m_{\rm
 %%        LSP}$ for various simplified models. The solid thick black
 %%      line indicates the observed exclusion region assuming NLO+NLL
 %%      SUSY production cross section. The thin black lines represent
