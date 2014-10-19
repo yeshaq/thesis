@@ -50,7 +50,7 @@ Another approach is to instead calculate the upper limit on the signal
 cross section by determining $f$ at $CL_{s} = 0.05$.  This approach samples 
 CLs at varying signal strengths and the upper limit is 
 determined through interpolation. If the upper limit on the cross section 
-is lower than the nominal cross section, the signal model is excluded.
+is lower than the theoritical cross section, the signal model is excluded.
 
 \begin{figure}[h!t]
   \begin{center}
@@ -66,73 +66,104 @@ is lower than the nominal cross section, the signal model is excluded.
 
 \subsection{Upper limits on SMS models}
 
-For each mass pair in a given model, the upper limit is calculated as described in 
+For each mass-pair in a given model, the upper limit is calculated as described in 
 section~\ref{sec:cls} using the likelihood constructed in section~\ref{sec:likelihood}
 by considering the relevant categories listed in table~\ref{tab:simplified-models}.
 
 \subsubsection{Upper limits on T2cc}
-Figure~\ref{fig:upperLimits-t2cc} shows the observed upper 
-limit for each sparticle mass pair for the SMS model where a stop particle 
-decays to a charm quark and a neutralino (\texttt{T2cc}). 
-The black curve represents the 
+The color scale in figure~\ref{fig:upperLimits-t2cc} shows the observed upper 
+limit at 95\% confidence level for each sparticle mass-pair bin in the SMS 
+model where a stop particle decays to a charm quark and a neutralino (\texttt{T2cc}). 
+The mass-pair bins left of the thick black curve have a calculated cross 
+section upper limit below the theoritical production cross section, 
+i.e. $\frac{\sigma_{\texttt{obs. upper limit}}}{\sigma_{\texttt{theory}}} < 1$, and
+are therfore excluded. The thinner black lines represent exclusion regions obtained by
+comparing the calculated upper limit with the theoritical cross section shifted up and 
+down by its theoritical uncertainty i.e. 
+$\frac{\sigma_{\texttt{obs. upper limit}}}{\sigma_{\texttt{theory} \pm \texttt{uncertainty}}} < 1$.
+The dashed purple lines indicate the median (thick line) $\pm 1 \sigma$ 
+(thin lines) expected exclusion regions. The $\pm 1 \sigma$ expected exclusion 
+regions are not obtained by varying the theoritical cross section but rather 
+by comparing the calculated expected upper limit $\pm 1 \sigma$ uncertainy
+with the nominal cross section. The observed upper limit curve lies within
+$+1 \sigma$ expected curve.  
 
-provided The thick black curve represents the 
-observed upper limit 
-observed limit The expected upper limit
+\subsubsection{Upper limits on T2tt}
+
+The color scale in figure~\ref{fig:upperLimits-t2tt} shows the observed upper 
+limit at 95\% confidence level for each sparticle mass-pair bin in the SMS 
+model where a stop particle decays to a top quark and a neutralino (\texttt{T2tt}). 
+The definitions of the excluded regions remain the same as \texttt{t2cc}.
+The observed upper limit disagrees with the expected by more than $2 \sigma$.
+This discrepency is further studied in the following sections. 
+
+\subsubsection{Discrepency\label{crap}}
+The descripency is investigated by a closer study of two bins 
+in $(m_{\st},m_{\text{LSP}})$.  
+Figures~\ref{fig:t2tt-best-fit-400} and~\ref{fig:t2tt-best-fit-575} 
+show the \scalht-binned observed data yields and expectations for the 
+hadronic sample, as determined by a simultaneous fit to all data 
+samples under a signal+background hypothesis. The observed event 
+yields in data (black dots), the SM expectations (dark blue) and the sum of 
+the SM backgrounds and signal expectation (pink) are shown. 
+Two event categories are considered by the fit: (Left) \njethigh and 
+$\nb = 1$, (Right) \njethigh and $\nb = 2$. The fit is performed 
+simultaneously across both event categories. The signal expectations are 
+for the best fit mass-pair bins $m_{\sq} = 400\GeV$ and $m_{\text{LSP}} =
+0\GeV$ (Top) and $m_{\sq} = 575\GeV$ and $m_{\text{LSP}} = 0$.
 
 
-
-\begin{table}[h!]
-  \caption{The first two columns specify the model and its
-    production and decay. The next column specifies the event
-    categories (in terms of \njet and
-    \nb) considered for each interpretation. The last 
-    two columns indicate the search sensitivity for each model,
-    where $m_{\sq(\sGlu)}^{\textrm{best}}$ and
-    $m_{\textrm{LSP}}^{\textrm{best}}$ represent the largest mass 
-    beyond which no limit can be set for squarks/gluinos and the LSP,
-    respectively. The exclusion range for $m_{\sq(\sGlu)}$ is bounded
-    from below by the kinematic region considered for each model, as
-    defined in the text. The quoted estimates are determined 
-    conservatively from the observed exclusion based on the
-    theoretical production cross section minus $1\sigma$
-    uncertainty. 
-    %For model \texttt{T2tt}, the search is at the threshold of
-    %sensitivity for the considered ($m_{\sQua},m_{\rm LSP}$) parameter
-    %space, as discussed in the text. 
-  }  
-  \label{tab:sms}
-  \centering
-  \footnotesize
-  \begin{tabular}{ llcccc }
-    \hline
-    Model
-    & Production/decay
-    & Event categories
-    & Limit plot
-%    & $m_{\sq(\sGlu)}^{\textrm{best}}$~(GeV) 
-%    & $m_{\textrm{LSP}}^{\textrm{best}}$~(GeV) 
-    \\ [0.5ex]
-    \hline
-    \texttt{T2cc}
-    &
-    $\textrm{pp}\,\rightarrow\,\sTop\sTop\,\rightarrow\,\textrm{c}\chiz\bar{\textrm{c}}\chiz$
-    & ($\le3$,0), ($\ge4$,0), ($\ge4$,1)
-    & \ref{fig:upperLimits-t2cc}
-%    & 250
-%    & 250
-     \\
-    \texttt{T2tt} 
-    & 
-    $\textrm{pp}\,\rightarrow\,\sTop\sTop\,\rightarrow\,\textrm{t}\chiz\bar{\textrm{t}}\chiz$
-    & ($\geq4$,1),($\geq4$,2)
-    & \ref{fig:upperLimits-t2tt}
-%    & 400 
-%    & 25
-    \\ 
-    \hline
-  \end{tabular}
-\end{table}
+%\begin{table}[h!]
+%  \caption{The first two columns specify the model and its
+%    production and decay. The next column specifies the event
+%    categories (in terms of \njet and
+%    \nb) considered for each interpretation. The last 
+%    two columns indicate the search sensitivity for each model,
+%    where $m_{\sq(\sGlu)}^{\textrm{best}}$ and
+%    $m_{\textrm{LSP}}^{\textrm{best}}$ represent the largest mass 
+%    beyond which no limit can be set for squarks/gluinos and the LSP,
+%    respectively. The exclusion range for $m_{\sq(\sGlu)}$ is bounded
+%    from below by the kinematic region considered for each model, as
+%    defined in the text. The quoted estimates are determined 
+%    conservatively from the observed exclusion based on the
+%    theoretical production cross section minus $1\sigma$
+%    uncertainty. 
+%    %For model \texttt{T2tt}, the search is at the threshold of
+%    %sensitivity for the considered ($m_{\sQua},m_{\rm LSP}$) parameter
+%    %space, as discussed in the text. 
+%  }  
+%  \label{tab:sms}
+%  \centering
+%  \footnotesize
+%  \begin{tabular}{ llcccc }
+%    \hline
+%    Model
+%    & Production/decay
+%    & Event categories
+%    & Limit plot
+%%    & $m_{\sq(\sGlu)}^{\textrm{best}}$~(GeV) 
+%%    & $m_{\textrm{LSP}}^{\textrm{best}}$~(GeV) 
+%    \\ [0.5ex]
+%    \hline
+%    \texttt{T2cc}
+%    &
+%    $\textrm{pp}\,\rightarrow\,\sTop\sTop\,\rightarrow\,\textrm{c}\chiz\bar{\textrm{c}}\chiz$
+%    & ($\le3$,0), ($\ge4$,0), ($\ge4$,1)
+%    & \ref{fig:upperLimits-t2cc}
+%%    & 250
+%%    & 250
+%     \\
+%    \texttt{T2tt} 
+%    & 
+%    $\textrm{pp}\,\rightarrow\,\sTop\sTop\,\rightarrow\,\textrm{t}\chiz\bar{\textrm{t}}\chiz$
+%    & ($\geq4$,1),($\geq4$,2)
+%    & \ref{fig:upperLimits-t2tt}
+%%    & 400 
+%%    & 25
+%    \\ 
+%    \hline
+%  \end{tabular}
+%\end{table}
 
 %\fixme{TEXT REFLECTS USUAL PRESENTATION OF LIMIT PLOTS - ALL RELEVANT
 %  INFORMATION IN SHOWN IN REFERENCED FIGURES FOR T2CC - TO BE UPDATED.}
@@ -236,7 +267,7 @@ observed limit The expected upper limit
     \subfigure[\njethigh, $\nb = 2$, simultaneous fit]{
       \includegraphics[width=0.45\textwidth]{figures/fit/v22/wSignal/400_0/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_sel2b_ge4j}
     } \\
-    \caption{\label{fig:t2cc-best-fit}The comparison of
+    \caption{\label{fig:t2tt-best-fit-400}The comparison of
       the \scalht-binned observed data yields and expectations for the
       hadronic sample, as determined by a simultaneous fit to all data
       samples under the signal plus SM background hypothesis. The
@@ -254,7 +285,7 @@ observed limit The expected upper limit
     \subfigure[profile likelihood ratio, simultaneous fit]{
       \includegraphics[width=0.45\textwidth]{figures/fit/v22/wSignal/400_0/intervalPlot_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_95}
     } \\
-    \caption{\label{fig:t2cc-best-fit}The profile likelihood ratio 
+    \caption{\label{fig:t2cc-int-400}The profile likelihood ratio 
       (defined in sec.~\ref{sec:cls}) as a function of the signal strength.
       The likelihood considers all data samples under the signal plus SM 
       background hypothesis for the signal model \texttt{T2tt} with 
@@ -273,7 +304,7 @@ observed limit The expected upper limit
     \subfigure[\njethigh, $\nb = 2$, simultaneous fit]{
       \includegraphics[width=0.45\textwidth,page=9]{figures/fit/v22/stackedSig/400_0/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1p_2b_ge4j-1_sel2b_ge4j_smOnly.pdf}
     } \\
-    \caption{\label{fig:t2cc-best-fit} The \scalht-binned 
+    \caption{\label{fig:t2tt-sig-400} The \scalht-binned 
       signal significance defined as the signal yield 
       divided by the $\sqrt{b+(.1b)^2}$ where $b$ is the
       SM expectation obtained by a fit to all 
@@ -293,7 +324,7 @@ observed limit The expected upper limit
     \subfigure[\njethigh, $\nb = 2$, simultaneous fit]{
       \includegraphics[width=0.45\textwidth]{figures/fit/v22/wSignal/575_0/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_sel2b_ge4j}
     } \\
-    \caption{\label{fig:t2cc-best-fit}The comparison of
+    \caption{\label{fig:t2tt-best-fit-575}The comparison of
       the \scalht-binned observed data yields and expectations for the
       hadronic sample, as determined by a simultaneous fit to all data
       samples under the signal plus SM background hypothesis. The
@@ -311,7 +342,7 @@ observed limit The expected upper limit
     \subfigure[profile likelihood ratio, simultaneous fit]{
       \includegraphics[width=0.45\textwidth]{figures/fit/v22/wSignal/575_0/intervalPlot_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_95}
     } \\
-    \caption{\label{fig:t2cc-best-fit}The profile likelihood ratio 
+    \caption{\label{fig:t2tt-int-575}The profile likelihood ratio 
       (defined in sec.~\ref{sec:cls}) as a function of the signal strength.
       The likelihood considers all data samples under the signal plus SM 
       background hypothesis for the signal model \texttt{T2tt} with 
@@ -330,7 +361,7 @@ observed limit The expected upper limit
     \subfigure[\njethigh, $\nb = 2$, simultaneous fit]{
       \includegraphics[width=0.45\textwidth,page=9]{figures/fit/v22/stackedSig/575_0/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1p_2b_ge4j-1_sel2b_ge4j_smOnly.pdf}
     } \\
-    \caption{\label{fig:t2cc-best-fit} The \scalht-binned 
+    \caption{\label{fig:t2cc-sig-575} The \scalht-binned 
       signal significance defined as the signal yield 
       divided by the $\sqrt{b+(.1b)^2}$ where $b$ is the
       SM expectation obtained by a fit to all 
