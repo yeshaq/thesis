@@ -4,13 +4,13 @@
 
 Only events passing one or more HLT triggers based on online quantities 
 are recorded to be analyzed. In any analysis, it is generally not expected 
-that all recorded events reconstructed offline, pass the online 
+that all recorded events reconstructed offline pass the online 
 trigger as detector conditions, energy corrections, and object-based quantities
-differ offline. In this analysis, cross-triggers at the HLT
+differ offline. In this analysis, triggers at the HLT
 based on quantities \scalht and \alphat (labeled as \verb!HTxxx_AlphaT0pyy!) 
 are used with various thresholds to record candidate events for the hadronic search
-region. In order to keep the cross-trigger's computational time low, the online quantities
-are constructed using calorimeter based jets (calo jets), and the use of
+region. In order to keep the computational time low, the online quantities
+are constructed using calorimeter based jets (calo jets). Additionally, the use of
 particle-flow jets in this analysis is expected to introduce inefficiencies.
 Each \scalht bin is seeded by a single trigger chosen based on the
 efficiency of the trigger in that \scalht bin. The \alphat thresholds of the
@@ -22,17 +22,17 @@ acceptable trigger rates.
 The \verb!HTxxx_AlphaT0pyy! trigger efficiencies are measured with a
 reference (\ie, unbiased) event sample recorded by an unprescaled,
 loosely-isolated, eta-restricted single muon trigger,$\,$      $\verb!HLT_IsoMu24_eta2p1!$,
-within the \verb!SingleMu! dataset. A sample of events containing at 
-least one isolated muon with $\pt > 25\gev$ and $|\eta| < 2.1$ is used 
+within the \verb!SingleMu! dataset. This sample contains events with  at 
+least one isolated muon with $\pt > 25\gev$ and $|\eta| < 2.1$
 (similar to the \mj control sample defined in 
-section~\ref{sec:def-control-samples}). A cut of $\Delta
+Section~\ref{sec:def-control-samples}). Muons are required to be isolated: a cut of $\Delta
 {\rm R} > 0.5$ is placed between all muons and jets in each event, and
-only jets are considered in the calculation of \scalht, \mht, and
+only jets are considered in the calculation of \scalht, and
 \alphat, \ie the muon is ignored.
 
 \begin{table}[!h]
   \caption{List of signal triggers and their efficiencies (\%), as
-    measured in data. The trigger efficiency is $\sim$100\% for all
+    measured in the SingleMu data. The trigger efficiency is $\sim$100\% for all
     bins above $\scalht > 675\gev$.}  
   \label{tab:htalphat-triggers}
   \centering
@@ -62,9 +62,10 @@ bins. The trigger efficiencies are measured for both \njet
 multiplicity bins. %The efficiencies are generally observed to be high,
 %$\sim$100\%, except for the low \scalht region $200 < \scalht <
 %325\gev$. The inefficiencies at low \scalht are mainly due to the L1
-seeds for which thresholds were raised to a relatively high level in
-order to maintain trigger rates in the high-pileup conditions towards
-the end of Run 1. The efficiencies are slightly lower in the higher
+%seeds for which thresholds were raised to a relatively high level in
+%order to maintain trigger rates in the high-pileup conditions towards
+%the end of Run 1. 
+The efficiencies are slightly lower in the higher
 jet multiplicity category due to a larger number of jets summing to
 the same \scalht, resulting in softer jets. 
 Figure~\ref{fig:eff-alphat-le3j} shows the efficiency curves 
