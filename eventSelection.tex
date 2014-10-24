@@ -1,45 +1,44 @@
 \clearpage
 \section{Event Selection\label{sec:eventSelection}}
 
-As discussed in section~\ref{sec:SUSY}, all-hadronic SUSY signatures consist of events with
-no isolated and detectable objects apart from energetic jets. One can quantify the
+As discussed in Section~\ref{sec:SUSY}, all-hadronic SUSY signatures consist of events with
+no isolated objects apart from energetic jets. One can quantify the
 total visible energy in these type of events with the quantity, \scalht, defined as 
 the scalar sum of the transverse energy of the jets in the event. The challenges due to large
 backgrounds in a search for an excess in all-hadronic events becomes evident 
 when comparing observed data events overlaid with simulated events from 
-SM processes as a function of \scalht, figure~\ref{fig:HT-distribution}.
+SM processes as a function of \scalht, as shown in Figure~\ref{fig:HT-distribution}.
 
 \begin{figure}[h!t]
   \begin{center}
       \includegraphics[width=0.45\textwidth,]{figures/data-mc/AllcombinedHT_all.pdf}
       \caption{\label{fig:ht} $\scalht$ distribution after basic preselection,
            for 35~pb$^{-1}$ of data collected at {7}~\tev as well as for all 
-           standard model backgrounds and two SUSY signal samples, from~\cite{RA1Paper}. 
+           SM backgrounds and two SUSY signal samples, from Ref.~\cite{RA1Paper}. 
            This figure is for illustrative purposes only, as these specific SUSY 
-           models are not under study in this analysis}
+           models are not under study in this analysis.}
     \label{fig:HT-distribution}
   \end{center}
 \end{figure}
 
-The dominant background are azimuthally-balanced (i.e. back-to-back in the azimuthal angle 
+The dominant background consist of azimuthally-balanced (i.e, back-to-back in the azimuthal angle 
 $\phi$) multijet events, stemming from QCD processes. This search reduces this background 
 to negligible levels in the hadronic search region by employing the \alphat variable further 
-discussed in section~\ref{sec:alphat}. Furthermore, by construction, \alphat also reduces 
-backgrounds from mis-measured back-to-back jets. In the absence of the multijet QCD events,
-the remaining significant backgrounds are SM process with genuine \met. The expected 
-yield of these backgrounds are measured using two control samples. The following sections
-describe the identification of objects used in the hadronic and control samples, while the 
-detailed description of the background and control samples are left for 
-chapter~\ref{sec:backgrounds}.
+discussed in Section~\ref{sec:alphat}. Furthermore, by construction, \alphat also reduces 
+backgrounds from mis-measured back-to-back jets. The remaining significant backgrounds are 
+SM process with genuine \met. The expected yield of these backgrounds are measured using two 
+control samples. The following sections describe the identification of objects used in the 
+hadronic and control samples, while the detailed description of the background and control 
+samples are left for Section~\ref{sec:backgrounds}.
 
 \subsection{Data}
-The data analyzed was recorded by CMS in 2012 between April 5th and Dec. 5th and
-totals 19.47$\pm$ 0.5 \fbinv. The collected data is certified on a run-by-run 
-basis, where initial automatic certification requires the LHC beams to be declared
-stable and all CMS subdetectors ON. Further monitoring of the data was done in real-time
-by experts of each subdetector trough analysis of histograms updated and filled
-each luminosity section. Final certification was done offline, and luminosity sections passing
-all criteria were listed in a Golden JSON file to be used by all analyses. 
+The data analyzed was recorded by CMS in 2012 between April 5th and December 5th and
+amounts to 19.47$\pm$ 0.5 \fbinv at the center of mass energy of $\sqrt{s} = 8~\TeV$. 
+The collected data is certified on a run-by-run basis, where initial automatic certification 
+requires the LHC beams to be declared stable and all CMS subdetectors ON. Further monitoring 
+of the data was done in real-time by experts of each subdetector trough analysis of 
+histograms updated and filled each luminosity section. Final certification was done offline, 
+and only luminosity sections passing all criteria for good quality are used in this analysis.
 
 \subsection{Event quality\label{sec:met-filters}}
 
@@ -51,82 +50,82 @@ filters reject events containing known problems, such as: muons with inconsisten
 muons created by beam-gas interactions, spurious noise spikes in the calorimeter, tracking
 failures, and calibration laser events overlapping with physics collisions. 
 
-\include{reconstruction}
+\input{reconstruction}
 
-\include{trigger}
+\input{trigger}
 
 \subsection{Object vetoes\label{sec:vetoes}}
 
 The background in this search can be separated into two types: 
 reducible and irreducible. The latter refers to backgrounds that 
 have the same final state as the signal and therefore any cut imposed 
-to reduce the background would also reduce the signal. The process 
+to reduce the background processes would also reduce the signal. The process 
 \znunu + jets is the only irreducible background in this search. 
 All other backgrounds are reducible, meaning that if no information 
 in the event is lost and all cuts were fully efficient, the background 
 could be eliminated without loss of signal. To suppress \wj and \ttbar
-events this analysis uses object vetoes to reject events where a W boson 
+events, this analysis uses vetoes object to reject events where a W boson 
 decays to a neutrino and a lepton. Events containing 
-an isolated electron~\cite{PAS-EGM-10-004} with $\pt > 20\GeV$ 
-and $|\eta| < 2.5$ or an isolated muon~\cite{PAS-MUO-10-002}
+an isolated electron (Sec.~\ref{sec:recElectron}) with $\pt > 20\GeV$ 
+and $|\eta| < 2.5$ or an isolated muon (Sec.~\ref{sec:recMuon})
 with $\pt > 10\GeV$ and $|\eta| < 2.5$ are vetoed. In order to keep this 
 search all-hadronic and not overlap with other analyses in 
 CMS~\cite{CMS-PAS-SUS-14-008,photon7TeV}, events with isolated 
-photons~\cite{PAS-EGM-10-006} with $\pt > 25\GeV$ 
+photons (Sec.~\ref{sec:recPhot}) with $\pt > 25\GeV$ 
 and $|\eta| < 2.5$ are also rejected. Events with a single isolated 
-track~\ref{sec:recSIT} and no object associated with it can indicate that
+track (Sec.~\ref{sec:recSIT}) and no object associated with it can indicate that
 a lepton was ``lost'' (i.e. either fallen out of acceptance or poorly 
-reconstructed), hence such events are vetoed. Detector and selection 
+reconstructed), hence such events are also vetoed. Detector and selection 
 inefficiencies restrict the complete elimination of reducible backgrounds, 
 as such, the method to estimate expected SM yields in the hadronic search
-region is described in section~\ref{sec:backgrounds}.
+region is described in Section~\ref{sec:backgrounds}.
 
 \subsection{Hadronic pre-selection}
 
 Events are categorized into two jet multiplicities: $\njetlow$ and 
-$\njethigh$.  Each event in these categories is further binned by the number
+$\njethigh$.  Each event in these categories is further  by the number
 of jets identified as originating from b quarks ($\nb$). Events having 
 three or more b-tagged jets are not considered in the analysis.      
 Significant hadronic activity in the events is ensured by requiring
-$\scalht > 375\GeV$. As described in section~\ref{sec:signal_triggers}, events are further
-binned in 100~\gev bins starting from $\scalht = 375\GeV$ and ending with 
+$\scalht > 375\GeV$. As described in Section~\ref{sec:signal_triggers}, events are further
+categorized in 100~\gev bins in \scalht starting from $\scalht = 375\GeV$ and ending with 
 an open-ended bin $\scalht > 1075~\gev$. The two highest-$\pt$ jets are 
-subject to a higher threshold, $\pt>100\gev$ and the highest-$\Et$ jet 
-is subjected to a tighter $\eta$ acceptance requirement ($|\eta| < 2.5$). 
+subject to a higher threshold, $\pt>100\gev$, and the highest-$\Et$ jet 
+is subjected to a tighter $\eta$ acceptance requirement, $|\eta| < 2.5$. 
 The variables \scalht and \mht are computed from the number of jets, 
 \njet, that satisfy the \pt requirements listed in Table~\ref{tab:jet-pt-thresholds}. 
 
 \begin{table}[h!]
-  \caption{Jet \Et thresholds per \scalht bin.\label{tab:jet-pt-thresholds}}
+  \caption{Jet \pt thresholds per \scalht bin.\label{tab:jet-pt-thresholds}}
   \centering
   \footnotesize
   \begin{tabular}{ lcccc }
     \hline
     \hline
-    \scalht bin    & $>$375  \\
+    \scalht bin    & $>$375~\gev \\
     \hline
-    Lead jet       & 100.0  \\
-    Second jet     & 100.0  \\
-    All other jets &  50.0  \\
+    Lead jet       & 100~\gev  \\
+    Second jet     & 100~\gev  \\
+    All other jets &  50~\gev  \\
     \hline
     \hline
   \end{tabular}
 \end{table}
 
-\include{alphat}
+\input{alphat}
 
 \subsection{Final selections\label{sec:finalSelections}}
 
-After applying the \alphat selection described in section~\ref{sec:alphat}, 
+After applying the \alphat selection described in Section~\ref{sec:alphat}, 
 the remaining events are expected to have little contamination 
-from balanced multijet QCD events. Furthermore, QCD events with mismeasured jets are
+from balanced multijet QCD events, i.e. at the sub-percent level. Furthermore, QCD events with mismeasured jets are
 largely rejected since they fall below the \alphat threshold.  However, 
 two types of rare backgrounds from multijet events can lead to values of \alphat 
-greater than 0.55. The first is rare circumstance in which several jets with similar 
+greater than 0.55. The first is a rare circumstance in which several jets with similar 
 values of the azimuthal angle ($\phi$) fail to pass the jet \pt threshold. 
 Such jets would not be considered in the calculation of \scalht and as a result, 
-they would bias the \mht calculation. The events are rejected by comparing the 
-\mht  with the missing transverse energy, $\pfmet$ as defined in~\ref{sec:recMET}, and events 
+they would bias the \mht calculation low. The events are rejected by comparing the 
+\mht  with the missing transverse energy, $\pfmet$ as defined in~\ref{sec:recMET}, such that events 
 with $R_{\rm miss}=\mht/\pfmet > 1.25$ are rejected.
 The second type of rare background is the severe mismeasurment of jets 
 that are absorbed by inefficient crystals in the ECAL. These crystals, 
@@ -136,7 +135,7 @@ As a filter, the quantity:
 
 \begin{equation}
   \label{eq:dphistart}
-  \bdphi\, \equiv \,\Delta\phi \left(\vecp_{\rm j}, -\sum_{i\neq j} \vecp_{{\rm i}}\right)\, .
+  \bdphi\, \equiv \,\Delta\phi \left(\vecp_{\rm j}, -\sum_{i\neq j} \vecp_{{\rm i}}\right)\,,
 \end{equation}
 
 ie. the azimuthal distance between a jet and the \mht calculated when not considering the jet,
