@@ -13,7 +13,9 @@
 \documentclass[11pt,letter,twoside,psfig,epsfig,]{article}
 %\documentclass[11pt,a4paper,twoside,psfig,epsfig,titlepage]{report}
 %\documentclass[11pt,a4paper,,psfig,epsfig, titlepage]{report}
-
+%\newcommand{\squeezeup}{\vspace{-2.5mm}}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
 \usepackage{a4wide}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -23,6 +25,8 @@
 \usepackage[normal,small]{caption2}
 \usepackage{afterpage}
 \usepackage{float}
+\setlength{\textfloatsep}{5pt}
+
 \usepackage{subfigure}
 \usepackage{fancyheadings}
 %\usepackage{doublespace}
@@ -49,8 +53,17 @@
 \input{mydefs}
 \usepackage{natbib}
 \usepackage[hidelinks,bookmarksnumbered,bookmarksopen,bookmarksopenlevel=1,colorlinks=false,pdfborder=0,plainpages=false,pdfpagelabels]{hyperref}
+%\usepackage[T1]{fontenc}
+
 %\unitlength=1mm
 %\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{titlesec}
+
+\titleformat*{\section}{\Huge\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
 
 
 \setlength{\captionmargin}{1.2cm}
@@ -97,25 +110,25 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{{\boldmath Search for New Physics in All-hadronic Events with AlphaT in 8 TeV Data at CERN}}
-
-\author{
-  by\\
-  Yossof Eshaq\vspace{4mm}\\
-  %\scalebox{0.3}{\includegraphics{belle.eps}} \vspace{5.0mm} \\
-  {Submitted in Partial Fulfillment of the }\\
-  {Requirements for the Degree}\\
-  {Doctor of Philosophy}\\[1cm]
-  Supervised by Professor Aran Garcia-Bellido\\[4mm]
-  Department of Physics \& Astronomy\\
-  Arts, Sciences and Engineering \\
-  School of Arts and Sciences\\[1cm]
-  University of Rochester\\
-  Rochester, New York\\
-  2014
-}
-\date{}
-\maketitle
+%\title{{\boldmath Search for New Physics in All-hadronic Events with AlphaT in 8 TeV Data at CERN}}
+%
+%\author{
+%  by\\
+%  Yossof Eshaq\vspace{4mm}\\
+%  %\scalebox{0.3}{\includegraphics{belle.eps}} \vspace{5.0mm} \\
+%  {Submitted in Partial Fulfillment of the }\\
+%  {Requirements for the Degree}\\
+%  {Doctor of Philosophy}\\[1cm]
+%  Supervised by Professor Aran Garcia-Bellido\\[4mm]
+%  Department of Physics \& Astronomy\\
+%  Arts, Sciences and Engineering \\
+%  School of Arts and Sciences\\[1cm]
+%  University of Rochester\\
+%  Rochester, New York\\
+%  2014
+%}
+%\date{}
+%\maketitle
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,22 +136,22 @@
 
 \pagenumbering{roman}
 
-\addcontentsline{toc}{section}{Abstract} 
-
-\abstract{ An inclusive search for supersymmetric processes that
-produce final states with jets and missing transverse energy is
-performed in pp collisions at a centre-of-mass energy of $\sqrt{s} =
-8\TeV$. The data sample corresponds to an integrated luminosity of
-18.5\fbinv collected by the CMS experiment at the LHC. In this search,
-a dimensionless kinematic variable, \alphat, is used to discriminate
-between events with genuine and misreconstructed missing transverse
-energy. The search is based on an examination of the number of
-reconstructed jets per event, the scalar sum of transverse energies of
-these jets, and the number of these jets identified as originating
-from bottom quarks. The results are interpreted with various
-simplified models, with a special emphasis on models with a compressed
-mass spectrum.}
-
+%\addcontentsline{toc}{section}{Abstract} 
+%
+%\abstract{ An inclusive search for supersymmetric processes that
+%produce final states with jets and missing transverse energy is
+%performed in pp collisions at a centre-of-mass energy of $\sqrt{s} =
+%8\TeV$. The data sample corresponds to an integrated luminosity of
+%18.5\fbinv collected by the CMS experiment at the LHC. In this search,
+%a dimensionless kinematic variable, \alphat, is used to discriminate
+%between events with genuine and misreconstructed missing transverse
+%energy. The search is based on an examination of the number of
+%reconstructed jets per event, the scalar sum of transverse energies of
+%these jets, and the number of these jets identified as originating
+%from bottom quarks. The results are interpreted with various
+%simplified models, with a special emphasis on models with a compressed
+%mass spectrum.}
+%
 
 %%%% ACKNOWLEDGEMENTS -----------------------------------------------------------
 %\clearemptydoublepage
@@ -152,24 +165,24 @@ mass spectrum.}
 \clearemptydoublepage
 \addcontentsline{toc}{section}{Contents}
 \tableofcontents
-
+%
 %\clearemptydoublepage
 %\addcontentsline{toc}{section}{List of Figures}
 %\listoffigures
-%
+%%
 %\clearemptydoublepage
 %\addcontentsline{toc}{section}{List of Tables}
 %\listoftables
-%
-%\clearemptydoublepage
+%%
+%%\clearemptydoublepage
 
 
 %%% CHAPTERS-------------------------------------------------------------
 \pagenumbering{arabic}
 
 %\input introduction
-%\input theory
-%\input lhcAndCms
+\input theory
+\input lhcAndCms
 \input samples
 %%\input reconstruction
 \input eventSelection
@@ -182,17 +195,19 @@ mass spectrum.}
 \input results
 \input signal
 \input interpretation
-%\input conclusions
+\input conclusions
 
 \appendix
 
+\input{app_background}
 \input{results_parameters}
 \input{results_tables}
 \input{app_signal}
+\input{example}
 
 \clearpage
 \bibliography{alphaT}
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 
 
 \end{document}   
