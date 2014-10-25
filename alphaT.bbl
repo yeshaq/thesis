@@ -1,9 +1,91 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{cms-met}
+\bibitem{bettini2014introduction}
+A.~Bettini.
+\newblock {\em Introduction to Elementary Particle Physics}.
+\newblock Cambridge University Press, 2014.
+
+\bibitem{griffiths2008introduction}
+D.~Griffiths.
+\newblock {\em Introduction to Elementary Particles}.
+\newblock Physics textbook. Wiley, 2008.
+
+\bibitem{perkins2000introduction}
+D.H. Perkins.
+\newblock {\em Introduction to High Energy Physics}.
+\newblock Cambridge University Press, 2000.
+
+\bibitem{Martin:1997ns}
+Stephen~P. Martin.
+\newblock {A Supersymmetry primer}.
+\newblock {\em Adv.Ser.Direct.High Energy Phys.}, 21:1--153, 2010.
+
+\bibitem{wess1992supersymmetry}
+J.~Wess and J.~Bagger.
+\newblock {\em Supersymmetry and Supergravity}.
+\newblock Princeton series in physics. Princeton University Press, 1992.
+
+\bibitem{Ellis:1991qj}
+R.~Keith Ellis, W.~James Stirling, and B.R. Webber.
+\newblock {QCD and collider physics}.
+\newblock {\em Camb.Monogr.Part.Phys.Nucl.Phys.Cosmol.}, 8:1--435, 1996.
+
+\bibitem{Alves:2011wf}
+Daniele Alves et~al.
+\newblock {Simplified Models for LHC New Physics Searches}.
+\newblock {\em J.Phys.}, G39:105005, 2012.
+
+\bibitem{stirling-xs}
+{W.J. Stirling}.
+\newblock {private communication}.
+\newblock \url{http://www.hep.ph.ic.ac.uk/~wstirlin/plots/plots.html}.
+
+\bibitem{Beenakker:1996ed}
+W.~Beenakker, R.~Hopker, and M.~Spira.
+\newblock {PROSPINO: A Program for the production of supersymmetric particles
+  in next-to-leading order QCD}.
+\newblock 1996.
+
+\bibitem{1748-0221-3-08-S08004}
 S.~Chatrchyan et~al.
-\newblock Missing transverse energy performance of the cms detector.
-\newblock {\em JINST}, 6:P09001, 2011.
+\newblock The cms experiment at the cern lhc.
+\newblock {\em Journal of Instrumentation}, 3(08):S08004, 2008.
+
+\bibitem{2012JInst...7P0002T}
+{The CMS Collaboration}.
+\newblock {Performance of CMS muon reconstruction in pp collision events at
+  $\sqrt{s}=7~$TeV}.
+\newblock {\em Journal of Instrumentation}, 7:2P, October 2012.
+
+\bibitem{CMS-PAS-SMP-12-008}
+{Absolute Calibration of the Luminosity Measurement at CMS: Winter 2012
+  Update}.
+\newblock Technical Report CMS-PAS-SMP-12-008, CERN, Geneva, 2012.
+
+\bibitem{Bayatian:922757}
+G~L Bayatian et~al.
+\newblock {\em {CMS Physics: Technical Design Report Volume 1: Detector
+  Performance and Software}}.
+\newblock Technical Design Report CMS. CERN, Geneva, 2006.
+\newblock There is an error on cover due to a technical problem for some items.
+
+\bibitem{Bayatian:942733}
+G~L Bayatian et~al.
+\newblock {CMS Physics: Technical Design Report Volume 2: Physics Performance}.
+\newblock {\em J. Phys. G}, 34(CERN-LHCC-2006-021. CMS-TDR-8-2):995--1579. 669
+  p, 2007.
+\newblock revised version submitted on 2006-09-22 17:44:47.
+
+\bibitem{PAS-MUO-10-002}
+{CMS Collaboration}.
+\newblock Performance of muon identification in pp collisions at $\sqrt{s}$ = 7
+  tev.
+\newblock CMS Physics Analysis Summary MUO-10-002, CMS, 2010.
+
+\bibitem{antikt}
+M.~Cacciari, G.~P. Salam, and G.~Soyez.
+\newblock The anti-$k_{\rm t}$ jet clustering algorithm.
+\newblock {\em JHEP}, 04:063, 2008.
 
 \bibitem{Chatrchyan:2011ds}
 Serguei Chatrchyan et~al.
@@ -11,15 +93,263 @@ Serguei Chatrchyan et~al.
   Resolution in CMS}.
 \newblock {\em JINST}, 6:P11002, 2011.
 
+\bibitem{1748-0221-6-09-P09001}
+The~CMS collaboration.
+\newblock Missing transverse energy performance of the cms detector.
+\newblock {\em Journal of Instrumentation}, 6(09):P09001, 2011.
+
+\bibitem{pu-reweight}
+{CMS Collaboration}.
+\newblock {Matching simulated pileup distribution to data conditions}.
+\newblock
+  \url{https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideFastSimPileUp#Access_to_the_true_pile_up_distr}.
+
+\bibitem{twiki-xs}
+{CMS Collaboration}.
+\newblock {Standard Model cross sections at 8 TeV}.
+\newblock
+  \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat8TeV}.
+
+\bibitem{prep}
+{CMS Collaboration}.
+\newblock {LO cross sections from the PREP tool}.
+\newblock \url{http://cms.cern.ch/iCMS/prep/requestmanagement}.
+
+\bibitem{RobXS}
+{R. Bainbridge, S. A. Koay}.
+\newblock {DY+jets at 8TeV: comparison of HT and Njet binned samples}.
+\newblock \url{https://indico.cern.ch/event/271369/}.
+
 \bibitem{RA1Paper}
 V.~Khachatryan et~al.
 \newblock {Search for Supersymmetry in pp Collisions at 7 TeV in Events with
   Jets and Missing Transverse Energy}.
 \newblock {\em Phys. Lett. B}, 698:196, 2011.
 
+\bibitem{ref:MET-filters}
+{CMS Collaboration}.
+\newblock {MET Optional Filters}.
+\newblock
+  \url{https://twiki.cern.ch/twiki/bin/view/CMS/MissingETOptionalFilters}.
+
+\bibitem{PAS-PFT-09-001}
+{CMS Collaboration}.
+\newblock Particle–flow event reconstruction in cms and performance for jets,
+  taus, and $\met$.
+\newblock CMS Physics Analysis Summary PFT-09-001, CMS, 2009.
+
+\bibitem{Cacciari2008119}
+Matteo Cacciari and Gavin~P. Salam.
+\newblock Pileup subtraction using jet areas.
+\newblock {\em Physics Letters B}, 659:119 -- 126, 2008.
+
+\bibitem{1126-6708-2008-04-005}
+Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
+\newblock The catchment area of jets.
+\newblock {\em Journal of High Energy Physics}, 2008(04):005, 2008.
+
+\bibitem{ref:jet-id}
+{CMS Collaboration}.
+\newblock {Jet ID}.
+\newblock \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/JetID}.
+
+\bibitem{CMS-PAS-BTV-12-001}
+S.~Chatrchyan et~al.
+\newblock Identification of b-quark jets with the cms experiment.
+\newblock {\em JINST}, 8:P04013, 2013.
+
+\bibitem{ref:muon-id}
+{CMS Collaboration}.
+\newblock {Baseline Muon ID}.
+\newblock \url{https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideMuonId}.
+
+\bibitem{ref:photon-id-egamma}
+{CMS Collaboration}.
+\newblock {Egamma cut-based photon ID}.
+\newblock \url{https://twiki.cern.ch/twiki/bin/view/CMS/CutBasedPhotonID2012}.
+
+\bibitem{ref:electron-id}
+{CMS Collaboration}.
+\newblock {Egamma cut-based electron ID}.
+\newblock
+  \url{https://twiki.cern.ch/twiki/bin/view/CMS/EgammaCutBasedIdentification}.
+
+\bibitem{ref:electron-isolation}
+{CMS Collaboration}.
+\newblock {Egamma Particle Flow Based Isolation}.
+\newblock
+  \url{https://twiki.cern.ch/twiki/bin/view/CMS/EgammaPFBasedIsolation}.
+
+\bibitem{ref:MET-corrections}
+{CMS Collaboration}.
+\newblock {MET Corrections}.
+\newblock \url{https://twiki.cern.ch/twiki/bin/view/CMS/MissingET}.
+
+\bibitem{singleleptonstop}
+\url{http://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS
+  AN-2013/089}.
+\newblock Search for Direct Top Squark Pair Production in the Single Lepton
+  Channel with Transverse Mass at 8 TeV, CMS AN-2013/089.
+
+\bibitem{RA1Paper2012}
+S.~Chatrchyan et~al.
+\newblock Search for supersymmetry in hadronic final states with missing
+  transverse energy using the variables \alphat and b-quark multiplicity in pp
+  collisions at $\sqrt{s} = 8\tev$.
+\newblock {\em EPJC}, 01:077, 2013.
+
+\bibitem{PAS-EGM-10-004}
+{CMS Collaboration}.
+\newblock Electron reconstruction and identification at $\sqrt{s}$ = 7 tev.
+\newblock CMS Physics Analysis Summary EGM-10-004, CMS, 2010.
+
+\bibitem{CMS-PAS-SUS-14-008}
+{Search for supersymmetry in two-photons+jet events with razor variables in pp
+  collisions at sqrt(s) = 8 TeV}.
+\newblock Technical Report CMS-PAS-SUS-14-008, CERN, Geneva, 2014.
+
+\bibitem{photon7TeV}
+V.~Khachatryan et~al.
+\newblock {Search for new physics in events with photons, jets, and missing
+  transverse energy in pp collisions at sqrt(s) = 7 TeV}.
+\newblock {\em JHEP}, 03:111, 2013.
+
+\bibitem{PAS-EGM-10-006}
+{CMS Collaboration}.
+\newblock Isolated photon reconstruction and identification at $\sqrt{s}$ = 7
+  tev.
+\newblock CMS Physics Analysis Summary EGM-10-006, CMS, 2010.
+
 \bibitem{Randall:2008rw}
 L.~Randall and D.~Tucker-Smith.
 \newblock Dijet searches for supersymmetry at the large hadron collider.
 \newblock {\em Phys. Rev. Lett.}, 101:221803, 2008.
+
+\bibitem{cms-pas-sus-09001}
+{CMS Collaboration}.
+\newblock Search strategy for exclusive multi-jet events from supersymmetry at
+  cms.
+\newblock CMS Physics Analysis Summary SUS-09-001, CMS, 2009.
+
+\bibitem{PAS-SUS-08-002}
+{CMS Collaboration}.
+\newblock Data-driven estimation of the invisible {Z} background to the {SUSY
+  MET} plus jets search.
+\newblock CMS Physics Analysis Summary SUS-08-002, CMS, 2008.
+
+\bibitem{Bern:2011pa}
+Z.~Bern, G.~Diana, L.J. Dixon, F.~Febres~Cordero, S.~Hoche, et~al.
+\newblock {Driving Missing Data at Next-to-Leading Order}.
+\newblock {\em Phys.Rev.}, D84:114002, 2011.
+
+\bibitem{RA1Paper2011}
+S.~Chatrchyan et~al.
+\newblock Search for supersymmetry at the lhc in events with jets and missing
+  transverse energy.
+\newblock {\em Phys. Rev. Lett.}, 107:221804, 2011.
+
+\bibitem{ref:muon-eff}
+{CMS Collaboration}.
+\newblock {Muon Trigger Efficiencies}.
+\newblock \url{https://twiki.cern.ch/twiki/bin/view/CMS/MuonReferenceEffs}.
+
+\bibitem{cousins-log-normal}
+Robert Cousins.
+\newblock {Probability Density Functions for Positive Nuisance Parameters}.
+\newblock
+  \url{http://www.physics.ucla.edu/~cousins/stats/cousins_lognormal_prior.pdf}.
+
+\bibitem{roofit}
+Wouter Verkerke and David Kirkby.
+\newblock {RooFit}.
+\newblock \url{http://root.cern.ch/drupal/content/roofit}.
+
+\bibitem{James:1975dr}
+F.~James and M.~Roos.
+\newblock {Minuit: A System for Function Minimization and Analysis of the
+  Parameter Errors and Correlations}.
+\newblock {\em Comput.Phys.Commun.}, 10:343--367, 1975.
+
+\bibitem{Cowan:358560}
+Glen~D Cowan.
+\newblock {\em Statistical data analysis}.
+\newblock Oxford Univ. Press, Oxford, 1998.
+
+\bibitem{Alwall:2008ag}
+Johan Alwall, Philip Schuster, and Natalia Toro.
+\newblock {Simplified Models for a First Characterization of New Physics at the
+  LHC}.
+\newblock {\em Phys. Rev.}, D79:075020, 2009.
+
+\bibitem{Alwall:2008va}
+Johan Alwall, My-Phuong Le, Mariangela Lisanti, and Jay~G. Wacker.
+\newblock {Model-Independent Jets plus Missing Energy Searches}.
+\newblock {\em Phys.Rev.}, D79:015005, 2009.
+
+\bibitem{sms}
+D.~Alves, N.~Arkani-Hamed, S.~Arora, et~al.
+\newblock Simplified models for lhc new physics searches.
+\newblock 2011.
+\newblock Official summary of results from the 'Topologies for Early LHC
+  Searches' workshop, SLAC, September 2010.
+
+\bibitem{madgraph}
+Johan Alwall et~al.
+\newblock {MadGraph/MadEvent v4: The New Web Generation}.
+\newblock {\em JHEP}, 09:028, 2007.
+
+\bibitem{pdf4lhc}
+M.~Botje, J.~Butterworth, A.~Cooper-Sarkar, et~al.
+\newblock The pdf4lhc working group interim recommendations.
+\newblock 2011.
+
+\bibitem{susy-isrrw}
+D.~Olivito, F.~Wurthwein, et~al.
+\newblock Hadronic recoil studies of heavy boosted systems, an -2013/059.
+
+\bibitem{btagpogtwiki}
+\mbox{https://twiki.cern.ch/twiki/bin/viewauth/CMS/BtagPOG}.
+
+\bibitem{LairdThesis}
+Edward~M. Laird.
+\newblock {\em {A Search for Squarks and Gluinos with the CMS Detector}}.
+\newblock PhD thesis, Princeton University, 2011.
+
+\bibitem{Cowan:2010js}
+G.~Cowan et~al.
+\newblock {Asymptotic formulae for likelihood-based tests of new physics}.
+\newblock {\em Eur. Phys. J. C}, 71:1554, 2011.
+
+\bibitem{read}
+A.~L. Read.
+\newblock Presentation of search results: the cl s technique.
+\newblock {\em J. Phys. G}, 28:2693, 2002.
+
+\bibitem{Junk}
+T~Junk.
+\newblock Confidence level computation for combining searches with small
+  statistics.
+\newblock {\em Nucl. Instr. and Meth. A}, 434:435, 1999.
+
+\bibitem{Moneta:1289965}
+Lorenzo Moneta, Kevin Belasco, Kyle Cranmer, Alfio Lazzaro, Danilo Piparo,
+  Gregory Schott, Wouter Verkerke, Matthias Wolf, Kevin Belasco, Kyle Cranmer,
+  Alfio Lazzaro, Danilo Piparo, Gregory Schott, Wouter Verkerke, and Matthias
+  Wolf.
+\newblock {The RooStats Project}.
+\newblock {\em PoS}, ACAT2010(arXiv:1009.1003):057, Sep 2010.
+\newblock Comments: 11 pages, 3 figures, ACAT2010 Conference Proceedings.
+
+\bibitem{Aad:2008zzm}
+G.~Aad et~al.
+\newblock {The ATLAS Experiment at the CERN Large Hadron Collider}.
+\newblock {\em JINST}, 3:S08003, 2008.
+
+\bibitem{Aad:2014nra}
+Georges Aad et~al.
+\newblock {Search for pair-produced third-generation squarks decaying via charm
+  quarks or in compressed supersymmetric scenarios in $pp$ collisions at
+  $\sqrt{s}=8~$TeV with the ATLAS detector}.
+\newblock {\em Phys.Rev.}, D90:052008, 2014.
 
 \end{thebibliography}

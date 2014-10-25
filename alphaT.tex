@@ -59,7 +59,7 @@
 %\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \usepackage{titlesec}
 
-\titleformat*{\section}{\Huge\bfseries}
+\titleformat*{\section}{\Large\bfseries}
 \titleformat*{\subsection}{\Large\bfseries}
 \titleformat*{\subsubsection}{\large\bfseries}
 \titleformat*{\paragraph}{\large\bfseries}
@@ -89,15 +89,11 @@
 \addtolength{\extrarowheight}{1pt}
 
 % remember chapter title
-%\renewcommand{\chaptermark}[1]%
-%{\markboth{#1}{}}
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 % section number and title
-\renewcommand{\sectionmark}[1]%
-{\markright{\thesection\ #1}}
-\lhead[\fancyplain{}{\bfseries\thepage}]%
-{\fancyplain{}{\bfseries\rightmark}}
-\rhead[\fancyplain{}{\bfseries\leftmark}]%
-{\fancyplain{}{\bfseries\thepage}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
 \cfoot{}
 
 \setlength{\unitlength}{2mm}
@@ -110,25 +106,25 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\title{{\boldmath Search for New Physics in All-hadronic Events with AlphaT in 8 TeV Data at CERN}}
-%
-%\author{
-%  by\\
-%  Yossof Eshaq\vspace{4mm}\\
-%  %\scalebox{0.3}{\includegraphics{belle.eps}} \vspace{5.0mm} \\
-%  {Submitted in Partial Fulfillment of the }\\
-%  {Requirements for the Degree}\\
-%  {Doctor of Philosophy}\\[1cm]
-%  Supervised by Professor Aran Garcia-Bellido\\[4mm]
-%  Department of Physics \& Astronomy\\
-%  Arts, Sciences and Engineering \\
-%  School of Arts and Sciences\\[1cm]
-%  University of Rochester\\
-%  Rochester, New York\\
-%  2014
-%}
-%\date{}
-%\maketitle
+\title{{\boldmath Search for New Physics in All-hadronic Events with AlphaT in 8 TeV Data at CERN}}
+
+\author{
+  by\\
+  Yossof Eshaq\vspace{4mm}\\
+  %\scalebox{0.3}{\includegraphics{belle.eps}} \vspace{5.0mm} \\
+  {Submitted in Partial Fulfillment of the }\\
+  {Requirements for the Degree}\\
+  {Doctor of Philosophy}\\[1cm]
+  Supervised by Professor Aran Garcia-Bellido\\[4mm]
+  Department of Physics \& Astronomy\\
+  Arts, Sciences and Engineering \\
+  School of Arts and Sciences\\[1cm]
+  University of Rochester\\
+  Rochester, New York\\
+  2014
+}
+\date{}
+\maketitle
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -136,22 +132,20 @@
 
 \pagenumbering{roman}
 
-%\addcontentsline{toc}{section}{Abstract} 
-%
-%\abstract{ An inclusive search for supersymmetric processes that
-%produce final states with jets and missing transverse energy is
-%performed in pp collisions at a centre-of-mass energy of $\sqrt{s} =
-%8\TeV$. The data sample corresponds to an integrated luminosity of
-%18.5\fbinv collected by the CMS experiment at the LHC. In this search,
-%a dimensionless kinematic variable, \alphat, is used to discriminate
-%between events with genuine and misreconstructed missing transverse
-%energy. The search is based on an examination of the number of
-%reconstructed jets per event, the scalar sum of transverse energies of
-%these jets, and the number of these jets identified as originating
-%from bottom quarks. The results are interpreted with various
-%simplified models, with a special emphasis on models with a compressed
-%mass spectrum.}
-%
+\addcontentsline{toc}{section}{Abstract} 
+
+\abstract{ An inclusive search for supersymmetric processes that
+produce final states with jets and missing transverse energy is
+performed in pp collisions at a centre-of-mass energy of $\sqrt{s} =
+8\TeV$. The data sample corresponds to an integrated luminosity of
+19.5\fbinv collected by the CMS experiment at the LHC. In this search,
+a dimensionless kinematic variable, \alphat, is used to discriminate
+between events with genuine and misreconstructed missing transverse
+energy. The search is based on an examination of the number of
+reconstructed jets per event, the scalar sum of transverse energies of
+these jets, and the number of these jets identified as originating
+from bottom quarks. The results are interpreted in two
+simplified models with direct stop production.}
 
 %%%% ACKNOWLEDGEMENTS -----------------------------------------------------------
 %\clearemptydoublepage
@@ -165,22 +159,22 @@
 \clearemptydoublepage
 \addcontentsline{toc}{section}{Contents}
 \tableofcontents
+
+\clearemptydoublepage
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
 %
-%\clearemptydoublepage
-%\addcontentsline{toc}{section}{List of Figures}
-%\listoffigures
-%%
-%\clearemptydoublepage
-%\addcontentsline{toc}{section}{List of Tables}
-%\listoftables
-%%
-%%\clearemptydoublepage
+\clearemptydoublepage
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables
+%
+\clearemptydoublepage
 
 
 %%% CHAPTERS-------------------------------------------------------------
 \pagenumbering{arabic}
 
-%\input introduction
+\input introduction
 \input theory
 \input lhcAndCms
 \input samples
@@ -195,15 +189,16 @@
 \input results
 \input signal
 \input interpretation
-\input conclusions
+%\input conclusions
 
 \appendix
 
+\input{app_example}
 \input{app_background}
 \input{results_parameters}
 \input{results_tables}
 \input{app_signal}
-\input{example}
+
 
 \clearpage
 \bibliography{alphaT}

@@ -1,15 +1,14 @@
-\clearpage
 \subsection{Definition of \texorpdfstring{\alphat}{AlphaT}\label{sec:alphat}}
 
 Multijet events stemming from QCD contribute overwhelmingly to
-all-hadronic events recorded by the detector. Generally, these QCD events
+all-hadronic events recorded by the detector. Generally, these multijet events
 have no significant imbalance in transverse energy and can 
 be reduced with a requirement for high-\met. Yet, this approach is difficult, 
 as the calculation of \met is sensitive to detector effects and conditions, 
 and additionally, in the high-\met phase space systematic uncertainties become difficult
 to control. The variable, \alphat, introduced in 2008 by Randall and 
 Tucker-Smith~\cite{Randall:2008rw} effectively suppresses multijet 
-events with no significant met without relying on the measurement
+events with no significant \met without relying on the measurement
 of \met. By construction it also introduces robustness against mismeasurements 
 of transverse energies in multijet systems.  In the simplest case of a two-jet system,
 \alphat is defined as
@@ -32,12 +31,12 @@ defined as
 where the three terms, $\Et^{{\rm j}_i}$, $p_x^{{\rm j}_i}$, and $p_y^{{\rm j}_i}$ are,
 respectively, the transverse energy and $x$ or $y$ components of the
 transverse momentum of jet ${\rm j}_i$. By definition, the sum over the first term is
-\scalht and the sums over the other two terms define \mht.  In well 
-measured QCD dijet events, transverse momentum conservation requires 
+\scalht and the sums over the other two terms define \mht. In well 
+measured dijet events, transverse momentum conservation requires 
 the $\pt$ of the two jets to be of equal magnitude and back-to-back 
 in the plane transverse to the beam. The value of \alphat for these 
 type of events can be best seen after transforming 
-equation~\ref{eq:mt} into CMS coordinates:
+Equation~\ref{eq:mt} into CMS coordinates:
 
 \begin{equation}
   \label{eq:mt-polar}
@@ -55,7 +54,7 @@ in the transverse plane but rather the dijet system balances genuine
 system of jets, the values of \alphat can exceed 0.5.
 Figure~\ref{fig:alphat_dist} shows the \alphat 
 distribution in two jet multiplicity bins for events passing 
-an HT trigger and basic pre-selection requirements. Multijet 
+an \scalht trigger and basic pre-selection requirements. Multijet 
 events from QCD drop to negligible levels above $\alphat>$ 0.55
 while events with genuine \met continue to populate bins in excess
 of  $\alphat>$ 0.55.
@@ -63,14 +62,14 @@ of  $\alphat>$ 0.55.
 \begin{figure}[h!t]
   \begin{center}
     \subfigure[\label{fig:alphat_le3j}$\njetlow$]{
-      \includegraphics[width=0.45\textwidth,]{figures/data-mc/AlphaT_le3j.png}
+      \includegraphics[width=0.48\textwidth,]{figures/data-mc/AlphaT_le3j.png}
     } 
     \subfigure[\label{fig:alphat_ge4j}$\njethigh$]{
-      \includegraphics[width=0.45\textwidth,]{figures/data-mc/AlphaT_ge4j.png}
+      \includegraphics[width=0.48\textwidth,]{figures/data-mc/AlphaT_ge4j.png}
     } \\
-      \caption{\label{fig:alphat-2011} $\alphat$ distribution for 11.7~fb$^{-1}$ 
-            of data collected at {8}~\tev as well as for all standard model 
-            backgrounds and one example SUSY signal sample, from~\cite{RA1Paper2012}.
+      \caption{\label{fig:alphat-2011} The $\alphat$ distribution for 11.7~fb$^{-1}$ 
+            of data collected at {8}~\tev as well as for all SM
+            backgrounds and one example SUSY signal sample, from Ref.~\cite{RA1Paper2012}.
             This figure is for illustrative purposes only, as this analysis relies
             on data control samples to estimate contribution from SM process 
             with genuine \met.}
@@ -85,10 +84,10 @@ jets' transverse energy, while the total transverse energy of the system, \scalh
 is defined as the scalar sum of the transverse energy of the pseudo-jets: 
 $\scalht = \Et^{{\rm pj}_1}+\Et^{{\rm pj}_2}$.
 All combinations of the n-jet system are tested, and the configuration which
-balances the constructed pseudo-jets' \Et is chosen, i.e. the combinations which
-minimizes $\dht = \Et^{{\rm pj}_1}-\Et^{{\rm pj}_2}$. As balanced QCD events
+balances the constructed pseudo-jets' \Et is chosen, i.e. the combination which
+minimizes $\dht = \Et^{{\rm pj}_1}-\Et^{{\rm pj}_2}$. As balanced multijet events
 are expected to have small \dht, this simple clustering criterion provides the best
-separation between QCD events and events with genuine \met. 
+separation between multijet events and events with genuine \met. 
 Equation~(\ref{eq:alphat}) can therefore be generalized as:
 
 \begin{equation}
@@ -122,9 +121,9 @@ energy. For an event with $\scalht=$~375~\gev, this amounts to nearly 160 GeV in
     \includegraphics[width=0.4\textwidth,page=20]{figures/data-mc/v21/had/hadronicLook_375_pfJet_ge2j.pdf}
   } 
   \caption{Data--MC comparison of the \alphat distribution after 
-           following the application of the hadronic pre-selection 
-           criteria for events satisfying $\njet > 2$ and $nb > 0$ 
-           in histograms with (a) coarse and (b) fine binning). }
+           the application of the hadronic pre-selection 
+           criteria for events satisfying $\njet > 2$ and $\nb > 0$ 
+           in histograms with (a) coarse and (b) fine binning.}
   \label{fig:figures_AlphaT_all}
 \end{figure}
 
