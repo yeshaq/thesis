@@ -3,17 +3,17 @@
 
 After applying the full hadronic selection, the remaining 
 backgrounds are SM processes with genuine \met in the final state. 
-In the category of zero b-tagged jets, the two primary background are:
+In the category of zero b-tagged jets, the two primary background sources are:
 \begin{itemize}
 \item \zj; where the Z boson decays into a pair of neutrinos, 
 \item \wj; where the W boson either undergoes a leptonic decay 
-and the lepton is lost or it undergoes the weak decay $\wtaunu$ where the $\tau$ decays into quarks and 
+and the lepton is lost or it undergoes the weak decay $\wtaunu$ where the $\tau$ decays into quarks
 \end{itemize}
 %
 %a ``lost'' lepton is defined as any lepton that isn't reconstructed or 
 %fails the isolation or acceptance requirements. 
-Other SM backgrounds, such as the diboson production, single-top and 
-Drell-Yan are also expected, but at lower yields.
+Other SM backgrounds, such as the diboson production ($WW,\,ZZ,\,WZ$), single-top, and 
+Drell-Yan ($Z/\gamma^{*} \ra l\bar{l}$) are also expected, but at lower yields.
 
 For events with one or more b-tagged jets, the decay of \ttbar, where each
 top decays into a b-quark and a W boson which in turn decays into 
@@ -23,29 +23,29 @@ and \ttbar production dominates the background.
 
 This analysis uses a ``data-driven'' method to estimate backgrounds
 in the hadronic search region. Data control samples are used to predict
-background SM yields instead of direct measurement in MC simulations. 
-This approach has two benefits. Firstly, the beam and detector conditions 
-for the hadronic and control data samples are very similar and reliance on
-MC simulation getting detector conditions correct is minimized. Secondly, 
-the information used from MC simulation is largely in the form of 
-ratios (section~\ref{sec:background-method}), which has the benefit of canceling 
-potential systematic effects from simulation.
+the SM background yields instead of estimating them from MC simulations. 
+This approach has two benefits. First, the beam and detector conditions 
+for the hadronic and control data samples are very similar, therefore there 
+is no need to rely on MC simulation getting the detector conditions correct,
+which is difficult. Second, the information used from MC simulation is largely in the form of 
+ratios (Section~\ref{sec:background-method}), which has the benefit of canceling 
+potential systematic effects or biases from the simulation.
 
-Two control samples are used to estimate the background. To estimate the
-\znunu + jets background, $\gamma$ + jets events, which have the same
-kinematic properties as \znunu + jets when the photon is ignored but 
-different acceptance~\cite{PAS-SUS-08-002,Bern:2011pa}, are used. A \mj control
-sample is used to estimated all remaining background including the 
+Two different control samples are used to estimate the backgrounds. To estimate the
+\znunu + jets background, $\gamma$ + jets events are utilzed. They have the same
+kinematic properties as \znunu + jets when the photon is ignored, but 
+different acceptance~\cite{PAS-SUS-08-002,Bern:2011pa}. A \mj control
+sample is used to estimate all remaining backgrounds including the 
 dominant \wj and \ttbar process.
-
-The final results are obtained through a maximum likelihood fit described
-in chapter~\ref{sec:statistics}. The following sections describe 
-the estimation method and control selections used in the final fit.
+%The final results are obtained through a maximum likelihood fit described
+%in chapter~\ref{sec:statistics}. 
+The following sections describe the estimation method and control samples used 
+for the estimation.
 
 \subsection{Overview of the method\label{sec:background-method}}
 
-For a given bin in \scalht, \njet, \nb, the method predicts the number 
-of expected background processes in the hadronic search region ($\npre^{\rm  had}$) 
+For a given bin in \scalht, \njet, \nb, the method predict the number 
+of events expected from background processes in the hadronic search region ($\npre^{\rm  had}$) 
 by translating from the observed data yield in a control region 
 ($\nobs^{\rm  control}$) through the use of a {\it translation factor} 
 (TF) constructed from the ratio of MC hadronic and control yields ie:
@@ -53,14 +53,15 @@ by translating from the observed data yield in a control region
   \label{equ:pred-method}
   \npre^{\rm had} = \underbrace{\frac{N_{\rm MC}^{\rm
       had}}{N_{\rm MC}^{\rm
-      control}}}_\text{translation factor}\! \times \; \nobs^{\rm
-    control}   
+      control}}}_\text{translation factor}\! \times \; \nobs^{\rm    control},   
 \end{equation}
-In the ﬁnal ﬁt, the expected yield is used rather than the observed yield
-$\nobs^{\rm  control}$, nonetheless the observed yield is used here for 
-illustration. The sum of expected yields from all MC samples, obtained for the
-relevant control sample selection, enter the denominator of each
-transfer factor:
+%In the final fit, the expected yield is used rather than the observed yield
+%$\nobs^{\rm  control}$, nonetheless the observed yield is used here for 
+%illustration.
+where $N_{\rm MC}^{\rm had}$ is the number of expected events of the background
+source(s) in the hadronic selection that are present in the control region under study.
+$N_{\rm MC}^{\rm control}$ is the sum of expected yields from all MC samples, 
+obtained for the relevant control sample selection:
 \begin{equation}
   \label{equ:ratio-denom}
   N_{\rm MC}^{\rm control} = N_{\rm W} + N_{\ttbar} + N_{\znunu} +
@@ -69,17 +70,17 @@ N_{\rm DY} + N_{\gamma} + N_{\rm top} + N_{\rm di-boson}
 Depending on the b-tag category, one or both control samples are used 
 to predict the backgrounds in the hadronic search region. For the b-jet 
 multiplicity bins $n_b = 0$ and $n_b = 1$, the \mj and \gj control samples 
-are used to predict to total background. The \gj control
+are used to predict the total background. The \gj control
 sample is used to predict the \znunu + jets background and the expected yield
 obtained from the \znunu sample enters the numerator of each translation
 factor:
 
 \begin{equation}
   \label{equ:ratio-numer-gj}
-  N_{\rm MC}^{\rm had}(\scalht,\njet,\nb \leq 1) = N_{\znunu}
+  N_{\rm MC}^{\rm had}(\scalht,\njet,\nb \leq 1) = N_{\znunu}.
 \end{equation}
-
-for the same b-tag categories, The \mj control sample is used to predict 
+%
+For the same b-tag categories, the \mj control sample is used to predict 
 the remaining SM background processes, namely the W + jets, \ttbar + jets,
 Drell-Yan, di-boson and single top backgrounds, and the total expected yield
 from these processes enter the numerator of each translation factor:
@@ -90,14 +91,14 @@ from these processes enter the numerator of each translation factor:
   N_{\ttbar} + N_{\rm DY} + N_{\rm top} + N_{\rm di-boson}
 \end{equation}
 
-Only the \mj control sample is used to predict the background.
-for the b-tag multiplicity bin $n_b = 2$,  The \gj control sample is not 
-used as the yields in this data control sample is expected to be low
-due to the requirement of at least two b jets per event. The method of
+Only the \mj control sample is used to predict the background in the 
+the b-tag multiplicity bin $n_b = 2$. The \gj control sample is not 
+used as the yield in this data control sample is expected to be low
+due to the requirement of at least two b-jets per event. The method of
 using a W + jets sample to predict the \znunu\ + jets background has
 been used previously~\cite{RA1Paper, RA1Paper2011, RA1Paper2012}.  
-Therefore the total predicted expected yield from all processes are used 
-enter the numerator of each transfer factor:
+Therefore the total predicted expected yield from all processes 
+enter the numerator of each translation factor:
 
 \begin{equation}
   \label{equ:ratio-numer-mj-tot}
@@ -107,7 +108,7 @@ enter the numerator of each transfer factor:
 
 The control samples used to predict the SM backgrounds for each 
 event category are summarized in Table~\ref{tab:fit-plots}.
-The control sample selections are described in the subsequent 
+The control sample selections are described in the following
 sections. 
 
 \begin{table}[ht!]
@@ -148,8 +149,8 @@ sections.
 %The control sample definitions and binning scheme are chosen so that
 %the reliance on simulation to extrapolate correctly from a control
 %region to the signal region is minimised. Many systematic effects are
-%expected to cancel largely in the transfer factor. However, a
-%systematic uncertainty is assigned to each transfer factor to account
+%expected to cancel largely in the translation factor. However, a
+%systematic uncertainty is assigned to each translation factor to account
 %for theoretical uncertainties and effects such as the mismodelling of
 %kinematics (\eg acceptances) and instrumental effects (\eg
 %reconstruction efficiencies), as described in
@@ -160,7 +161,7 @@ sections.
 %%samples. The definition of the samples are geared towards efficiency
 %%rather than purity (even so, the purities are at the level $>$90\%)
 %%and any contamination from "backgrounds" (\eg \ttbar in the case of
-%%the \mmj sample) are simply incorporated into the transfer
+%%the \mmj sample) are simply incorporated into the translation
 %%factors. Alternatively, a zero b-jet requirement can be applied to the
 %%\mmj sample to obtain a higher purity of Z$\rightarrow\mu\mu$ + jets
 %%events (\ie, with reduced contamination from \ttbar), which can then
@@ -169,27 +170,27 @@ sections.
 %
 \subsection{Definition of the control samples\label{sec:def-control-samples}}
 
-\include{controlTriggers}
+\input{controlTriggers}
 
-\subsubsection{The \texorpdfstring{\mj}{muon plus jets} control sample}
+\subsubsection{The \texorpdfstring{\mj}{muon plus jets} control sample\label{sec:muonSelection}}
 
 \wj and \ttbar processes are found in the hadronic search region 
 when the decay lepton is missed by the lepton veto, either 
 because it was not reconstructed properly, fell out of acceptance 
 or alternatively, decayed hadronically in the case of a tau lepton 
 from a high-p$_{T}$ W boson. Instead of directly relying on MC 
-simulation to estimate these background, a \mj control sample is 
+simulation to estimate these backgrounds, a \mj control sample is 
 used where the selection criteria is chosen to identify W bosons 
-decaying to a muon and a neutrino. Then by removing the muon from 
+decaying to a muon and a neutrino. Then, by removing the muon from 
 the event, one effectively selects a sample of W boson decaying to 
 a neutrino and a lost lepton. In order to select events containing 
 W bosons, exactly one tight isolated muon~\ref{sec:reconstruction} 
-within an acceptance of \PT $>$ 30 \gev and $|\eta| <$ 2.1 is required, 
+with of \PT $>$ 30 \gev and $|\eta| <$ 2.1 is required, 
 and the transverse mass of the W candidate, 
 $M_{T} = \sqrt{2\pt^{\mu}\met(1-cos(\Delta\phi(\vec{p}^{\rm  \mu},\met))}$ 
 must be between 30 and 125~\gev.  Events are vetoed if a muon is found inside
 a jet, i.e. $\Delta R(\mu,\textrm{jet}) < 0.5$. The single isolated track 
-veto, described in sections~\ref{sec:recSIT} and~\ref{sec:vetoes}, is applied. 
+veto, described in Sections~\ref{sec:recSIT} and~\ref{sec:vetoes}, is applied. 
 The veto considers all single isolated tracks in the event except 
 that associated with the identified, isolated muon. The cleaning cut 
 $\mht/\pfmet$ described in ~\ref{sec:finalSelections} is also applied, 
@@ -204,8 +205,8 @@ cuts which ensure the selection of electroweak processes while keeping
 contamination from multijet QCD events negligible. Because the control 
 sample is used to extrapolate yields in a hadronic search region, 
 which includes the \alphat requirement, a closure test as been devised 
-and explained in~\ref{sec:closture-tests} to demonstrate that no 
-significant biases is seen from the exclusion of the \alphat cut.
+and explained in Section~\ref{sec:closure-tests-desc} to demonstrate that no 
+significant biases are seen from the exclusion of the \alphat cut.
 
 \subsubsection{The \texorpdfstring{\gj}{photon plus jets} control sample}
 
@@ -213,10 +214,10 @@ The \znunu + jets background is estimated using \gj events which
 have a higher cross-section but similar kinematic properties as 
 \znunu + jets when the photon is ignored~\cite{PAS-SUS-08-002,Bern:2011pa}. 
 The \gj sample is obtained by requiring exactly one tightly 
-identified and isolated photon (as defined in section~\ref{sec:reconstruction})
+identified and isolated photon (as defined in Section~\ref{sec:reconstruction})
 with a transverse momentum of at least 165\gev. The photon is required 
 to be contained within the barrel of the detector, ie $|\eta_{\gamma}| <1.44$, 
-and to not overlap with any reconstructed jets ($\Delta R(\gamma,\textrm{jet}) < 1.0$.)
+and to not overlap with any reconstructed jets $\Delta R(\gamma,\textrm{jet}) < 1.0$.
 As in the muon control sample, the $\metvec$ is modified to exclude the photon 
 when imposing the $\mht/\pfmet<1.25$ selection cut.  All other selections are 
 consistent with the hadronic search region including the $\alphat > 0.55$ cut.
@@ -410,24 +411,24 @@ consistent with the hadronic search region including the $\alphat > 0.55$ cut.
 %%    samples.}\label{fig:jet-bjet}
 %%\end{figure}
 %
-%%\subsection{Transfer factors and ``na\"ive'' predictions\label{sec:est-control-samples}}
+%%\subsection{Translation factors and ``na\"ive'' predictions\label{sec:est-control-samples}}
 %%
 %%Appendix~\ref{app:tf} contains tables summarising the observed and
-%%expected yields from data and simulation, respectively, in the bins of
+%%expected yields from data and simulation, in, respectively the bins of
 %%the three control samples. Also listed are the expectations from
 %%simulation for the various background contributions in the signal
-%%region, along with the corresponding transfer factors. The yields
+%%region, along with the corresponding translation factors. The yields
 %%are binned in \scalht, jet multiplicity and number of b-jets per
-%%event. The errors associated with the transfer factors reflect the
+%%event. The errors associated with the translation factors reflect the
 %%uncertainty due to the finite size of the MC samples used to determine
 %%the factors. Any trigger inefficiency is also factored into the
-%%transfer factors (\ie, the trigger is effectively emulated and
+%%translation factors (\ie, the trigger is effectively emulated and
 %%yields from the MC samples are corrected to account for any
 %%inefficiency). Also, all MC expectations are corrected to account for
 %%any discrepancies between data and MC for the efficiency and mistag
 %%rate of the b-tagging algorithm used, as described further in
 %%Sec.~\ref{sec:btag-eff-correction}. However, no systematic
-%%uncertainties on the transfer factors are quoted in the tables.
+%%uncertainties on the translation factors are quoted in the tables.
 %%
 %%The same tables also list ``na\"ive'' predicted yields obtained from
 %%each control sample for individual SM backgrounds in the signal region
@@ -437,7 +438,7 @@ consistent with the hadronic search region including the $\alphat > 0.55$ cut.
 %%for the total SM background are determined by a fit to the yields in
 %%the signal region and all three control samples, as described in
 %%Sec.~\ref{sec:statistics}. In addition to observed yields, the fit
-%%takes as input the transfer factors with their associated
+%%takes as input the translation factors with their associated
 %%statistical and systematic uncertainties. 
 %%
 %%Illustrative predictions for the total SM background can be made for
@@ -456,12 +457,12 @@ consistent with the hadronic search region including the $\alphat > 0.55$ cut.
 %%expectations for all signal region bins given by the simultaneous fit
 %%to yields in all data samples. Table~\ref{tab:tf-summary} summarises
 %%the contents of the various sections in the Appendix that list tables
-%%containing observed yields, MC expectations, transfer factors, and
+%%containing observed yields, MC expectations, translation factors, and
 %%``na\"ive'' predictions for individual and total SM backgrounds.
 %%
 %%\begin{table}[h!]
 %%  \caption{Each section in Appendix~\ref{app:tf} contains tables that
-%%    list: observed yields, MC expectations, transfer factors, and
+%%    list: observed yields, MC expectations, translation factors, and
 %%    ``na\"ive'' predictions for individual SM backgrounds, for each of
 %%    the \mj, \mmj, and \gj control samples; and total SM predictions
 %%    when combining the individual predictions from the \mj and \mmj
