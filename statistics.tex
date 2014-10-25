@@ -3,9 +3,9 @@
 \section{Statistical framework}
 \label{sec:statistics}
 The observations in the hadronic and control regions described in 
-chapter~\ref{sec:backgrounds} are interpreted through a likelihood model 
+Section~\ref{sec:backgrounds} are interpreted through a likelihood model 
 constructed in the following section. The method to set a limit on the 
-cross-section of signal models is described in section~\ref{sec:cls}. 
+cross-section of signal models is described in Section~\ref{sec:cls}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Likelihood model\label{sec:likelihood}}
@@ -111,15 +111,15 @@ selected sample.
 %the hadronically selected sample.
 
 In each bin $i$ of \HT, there are two measurements: $n_{ph}^i$,
-$n_{\mu}^i$, representing the event counts in the photon and single-muon.  
+$n_{\mu}^i$, representing the event counts in the photon and single-muon data samples.  
 Each of these measurements has a corresponding yield in simulated 
-data: $MC_{ph}^i$, $MC_{\mu}^i$.  The simulation also 
+data: $MC_{\gamma}^i$, $MC_{\mu}^i$.  The simulation also 
 gives expected amounts of $\zInv{}$ and $t\bar{t}+W$ in 
 the hadronically-selected sample: $MC_{\zInv{}}^i$ and 
 $MC_{t\bar{t}+W}^i$.  After defining
 
 \begin{equation}
-r_{ph}^i = \frac{MC_{ph}^i}{MC_{\zInv{}}^i};\, r_{\mu}^i =
+r_{\gamma}^i = \frac{MC_{ph}^i}{MC_{\zInv{}}^i};\, r_{\mu}^i =
 \frac{MC_{\mu}^i}{MC_{t\bar{t}+W}^i}\quad ,
 \end{equation}
 
@@ -127,8 +127,8 @@ these likelihood functions are used:
 
 \begin{equation}
 \label{eq:photonLikelihood}
-L_{ph}= \prod_i \mathrm{Pois}(n_{ph}^i |\, \rho_{phZ}^j \cdot
-r_{ph}^{i} \cdot \zInv{i})
+L_{\gamma}= \prod_i \mathrm{Pois}(n_{ph}^i |\, \rho_{phZ}^i \cdot
+r_{\gamma}^{i} \cdot \zInv{i})
 \end{equation}
 %
 %\begin{equation}
@@ -139,33 +139,33 @@ r_{ph}^{i} \cdot \zInv{i})
 %
 \begin{equation}
 \label{eq:muonLikelihood}
-L_{\mu}=\prod_i \mathrm{Pois}(n_{\mu}^i |\, \rho_{\mu W}^j \cdot
-r_{\mu}^{i} \cdot ttW^{i} + s_{\mu}^i)\quad .
+L_{\mu}=\prod_i \mathrm{Pois}(n_{\mu}^i |\, \rho_{\mu W}^i \cdot
+r_{\mu}^{i} \cdot ttW^{i} + s_{\mu}^i)\quad ,
 \end{equation}
-
+where $\rho$ are corrections factors described below.
 Equation~\ref{eq:photonLikelihood} can be used to estimate the maximum
 likelihood value for $\zInv{i}$ (the expectation for the \znunu\ +
 jets background in the hadronic signal region) given the observations
 $n_{ph}^i$ in the photon control sample and the ratios $r_{ph}^i$. A
 similar construction is used when estimating $ttW^{i}$ from the single 
-muon control sample (Equ.~\ref{eq:muonLikelihood}). The measurements in 
+muon control sample (Eq.~\ref{eq:muonLikelihood}). The measurements in 
 each of the control samples and the hadronic search region, along with 
 the ratios $r_{ph}^{i}$ and $r_{\mu}^{i}$, are all considered
 simultaneously through the relationship $\ewk^i =  \zInv{i} + ttW^{i}$.
 The ratios $r_{ph}^{i}$ and $r_{\mu}^{i}$ are simply 
 the inverse of the translation factor (1/TF) defined in 
-Equ.~\ref{equ:pred-method} (Sec.~\ref{sec:background-method}). More 
+Eq.~\ref{equ:pred-method} (Sec.~\ref{sec:background-method}). More 
 specifically, $MC_{ph}^i$ and $MC_{\mu}^i$ are the yields obtained from MC
 after applying the selection criteria for the photon and single muon samples, 
-as defined by Equ.~\ref{equ:ratio-denom} (Sec.~\ref{sec:background-method}). 
+as defined by Eq.~\ref{equ:ratio-denom} (Sec.~\ref{sec:background-method}). 
 The variables $MC_{t\bar{t}+W}^i$ and $MC_{\zInv{}}^i$ are defined by 
-Equs.~\ref{equ:ratio-numer-gj} and~\ref{equ:ratio-numer-mj} 
+Eqs.~\ref{equ:ratio-numer-gj} and~\ref{equ:ratio-numer-mj} 
 (Sec.~\ref{sec:background-method}), respectively.
 
-The parameters $\rho_{phZ}^j$ and $\rho_{\mu
-  W}^j$ represent ``correction factors'' that accommodate the
+The parameters $\rho_{\gamma Z}^i$ and $\rho_{\mu
+  W}^i$ represent ``correction factors'' or nuisance parameters that accommodate the
 systematic uncertainties associated with the control-sample-based
-background constraints.  The quantities $\sigma_{phZ}^j$
+background constraints.  The quantities $\sigma_{\gamma Z}^j$
 and $\sigma_{\mu W}^j$ represent the relative
 systematic uncertainties for the control sample constraints, taken
 into account with the following terms:
@@ -174,7 +174,7 @@ into account with the following terms:
 \label{eq:ewkSyst}
 L_{\rm EWK\, syst.}=\prod_j \mathrm{Logn}( 1.0 |\,\rho_{\mu W}^j,
 \sigma_{\mu W}^j)\times \mathrm{Logn}( 1.0 |\,\rho_{ph Z}^j,
-\sigma_{phZ}^j) \quad ,
+\sigma_{\gamma Z}^j) \quad ,
 \end{equation}
 
 where Logn is the log-normal
@@ -186,8 +186,7 @@ distribution~\cite{cousins-log-normal}:
 \frac{1}{x\sqrt{2\pi}\ln{k}}\exp{\left(-\frac{\ln^2{\left(\frac{x}{\mu}\right)}}{2\ln^2{k}}\right)};\quad
 k=1+\sigma_{\mathrm rel.}\quad. 
 \end{equation}
-
-One systematic parameter is assigned per \HT bin.
+%One systematic parameter is assigned per \HT bin.
 
 %\begin{table}\centering
 %\caption{The systematic parameters used in \HT bins.  Left: categories
@@ -232,18 +231,18 @@ The photon likelihood is dropped and splitting $\ewk^i$ is no longer
 necessary thus $\zInv{i}$ and $ttW^{i}$ can be dropped. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Contributions from signal}
+\subsubsection{Contributions from signal uncertainty}
 \label{sec:signalContrib}
 
 Let $x$ represent the cross section for a particular signal model, and
 let $l$ represent the recorded luminosity.  Let $\epsilon^{i}_{had}$ 
 be the analysis efficiency as simulated for the model in \HT bin $i$ 
 of the hadronic sample.  Let $\delta$ represent the relative uncertainty on
-the signal yield, assumed to be fully correlated among the bins, and
-let $\rho_{sig}$ represent the ``correction factor'' to the signal
-yield which accommodates this uncertainty.  Let $f$ represent an
-unknown multiplicative factor on the signal cross section, for which
-an allowed interval shall be determined.
+the signal yield (further described in Sec.~\ref{sec:signal}, and let $\rho_{sig}$ 
+represent the ``correction factor'' to the signal yield which accommodates 
+this uncertainty. It is assumed to be fully correlated in \scalht. 
+Let $f$ represent an unknown multiplicative factor on 
+the signal cross section, for which an allowed interval shall be determined.
 
 Then the expected hadronic signal yield $s^i$ from
 Equation~\ref{eq:hadronicLikelihood} is written as $s^i \equiv
@@ -252,14 +251,14 @@ the signal efficiency is included via an additional term in the
 likelihood:
 
 \begin{equation}
-L_{sig}=\mathrm{Logn}(1.0 |\,\rho_{sig}, \delta) \quad .
+L_{sig.\,syst}=\mathrm{Logn}(1.0 |\,\rho_{sig}^i, \delta) \quad .
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Total likelihood}
 \label{sec:totalLikelihood}
 
-The likelihood function for a given selection $k$ is the product of
+The likelihood function for a given category $k$ is the product of
 the terms described in the previous sections:
 
 \begin{equation}
@@ -295,7 +294,7 @@ there is also the parameter $\rho_{sig}$; when multiple categories
 are fit simultaneously, the total likelihood is
 
 \begin{equation}
-L = L_{sig}\times \prod_k L_{hadronic}^k
+L = L_{sig.\,syst}^k \times \prod_k L_{hadronic}^k
 \times L_{\mu}^k \times L_{ph}^k \times L_{\rm EWK\, syst.}^k \quad .
 \end{equation}
 
