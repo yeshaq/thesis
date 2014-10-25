@@ -84,7 +84,7 @@ For the same b-tag categories, the \mj control sample is used to predict
 the remaining SM background processes, namely the W + jets, \ttbar + jets,
 Drell-Yan, di-boson and single top backgrounds, and the total expected yield
 from these processes enter the numerator of each translation factor:
-
+%
 \begin{equation}
   \label{equ:ratio-numer-mj}
   N_{\rm MC}^{\rm had}(\scalht,\njet,\nb \leq 1) = N_{\rm W} +
@@ -99,18 +99,24 @@ using a W + jets sample to predict the \znunu\ + jets background has
 been used previously~\cite{RA1Paper, RA1Paper2011, RA1Paper2012}.  
 Therefore the total predicted expected yield from all processes 
 enter the numerator of each translation factor:
-
+%
 \begin{equation}
   \label{equ:ratio-numer-mj-tot}
   N_{\rm MC}^{\rm had}(\scalht,\njet,\nb = 2) = N_{\rm W} +
   N_{\ttbar} + N_{\rm DY} + N_{\rm top} + N_{\rm di-boson} + N_{\znunu}
 \end{equation}
-
-The control samples used to predict the SM backgrounds for each 
+%
+\indent The control samples used to predict the SM backgrounds for each 
 event category are summarized in Table~\ref{tab:fit-plots}.
+A detailed example of the background estimation procedure is given
+in Appendix~\ref{app:bkg-example}. 
+Tables~\ref{tab:results-PHOTON_0b_le3j}--\ref{tab:results-W_2b_ge4j}
+in Appendix~\ref{app:bk-yields} show the control sample yields, translation
+factors, hadronic MC yields, for each control sample in each category.
+%\input{figures/tables/v22/background/tables_0b_le3j.tex}
 The control sample selections are described in the following
 sections. 
-
+%
 \begin{table}[ht!]
   \caption{Summary of control samples used to predict the SM
     background for each event category. }
@@ -215,7 +221,7 @@ have a higher cross-section but similar kinematic properties as
 \znunu + jets when the photon is ignored~\cite{PAS-SUS-08-002,Bern:2011pa}. 
 The \gj sample is obtained by requiring exactly one tightly 
 identified and isolated photon (as defined in Section~\ref{sec:reconstruction})
-with a transverse momentum of at least 165\gev. The photon is required 
+with a transverse momentum of at least 165~\gev. The photon is required 
 to be contained within the barrel of the detector, ie $|\eta_{\gamma}| <1.44$, 
 and to not overlap with any reconstructed jets $\Delta R(\gamma,\textrm{jet}) < 1.0$.
 As in the muon control sample, the $\metvec$ is modified to exclude the photon 
