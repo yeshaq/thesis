@@ -3,24 +3,25 @@
 
 \subsection{Introduction}
 
-As described in section~\ref{sec:SUSY}, SUSY is a theory of many particles
-and parameters. In order to provide experiments with clear detectable
+As described in Section~\ref{sec:SUSY}, SUSY is a theory that includes many
+parameters. In order to provide experiments with clear detectable
 signatures to search for, simplified models (SMS) have been derived~\cite{Alwall:2008ag,Alwall:2008va,sms}
-which reduce both particles and parameters. In this work, the results are
+which reduce the number of free parameters and focus on interesting region of phase space,
+accessible to current experiments. In this work, the results of the search are
 interpreted in two SMS models:  
 \begin{itemize}
-\item{T2cc: pair produced stop sparticles each decaying into a charm quark 
-and a neutralino}
-\item{T2tt; pair produced stop sparticles each decaying into a top quart and a neutralino.}
+\item{T2cc; pair produced stop sparticles each decaying into a charm quark and a neutralino: $\st \ra c\;\chiOnez$}
+\item{T2tt; pair produced stop sparticles each decaying into a top quark and a neutralino: $\st \ra t\;\chiOnez$}
 \end{itemize}
-The feynman diagrams for both models are shown in figures~\ref{sec:signature}.
+The Feynman diagrams for both models are shown in Figures~\ref{sec:signature}.
 SMS MC samples are generated at leading order with \MADGRAPH~\cite{madgraph} by 
-the CMS SUSY MC group and binned in stop mass (mStop) and neutralino mass (mLSP). 
-The analysis efficiency is studied in the usual \njet, \nb, \scalht, binning
-but due to computational limitations not all categories are used to set 
+the CMS SUSY MC group for the different values of the stop mass ($m_{\st}$) and neutralino mass ($m_{LSP}$). 
+The analysis efficiency is studied in the usual \njet, \nb, \scalht binning.
+But due to computational limitations not all categories are used to set 
 a limit on a given model. The choice of categories for a model is made by
 computing the expected upper limit on the signal cross-section for each
-category separately. The categories are ranked by their expected upper limit. 
+category separately. The categories are ranked by their exclusion reach (described
+in Sec.~\ref{sec:cls}). 
 Depending on the number of mass bins and number of events per bin, two or more categories with the 
 highest rank are chosen. The simplified models, along with the event categories 
 considered for each, is summarized in Table~\ref{tab:simplified-models}.
@@ -69,7 +70,7 @@ the \verb!T2cc! and \verb!T2tt! interpretations for categories of interest.
       \includegraphics[width=0.4\textwidth,page=2]{figures/sms/t2cc/v1/T2cc_eff}
     } 
     \caption{Hadronic selection efficiency times acceptance for \texttt{T2cc}
-      for the relevant event categories defined by \njet and \nb.
+      for the relevant event categories defined by \njet and \nb in the $m_{\st}$--$m_{LSP}$ plane.
       Note the different z-axis scales.}
     \label{fig:sms-eff-t2cc}
   \end{center}
@@ -84,18 +85,18 @@ the \verb!T2cc! and \verb!T2tt! interpretations for categories of interest.
       \includegraphics[width=0.4\textwidth,page=3]{figures/sms/t2tt/v1/T2tt_eff}
     } \\
     \caption{Hadronic selection efficiency times acceptance for the \texttt{T2tt}
-      for the relevant event categories defined by \njet and \nb.
+      for the relevant event categories defined by \njet and \nb in the $m_{\st}$--$m_{LSP}$ plane.
        Note the different z-axis scales.}
     \label{fig:sms-eff-t2tt}
   \end{center}
 \end{figure}
 
-In \verb!T2cc!, the decay quarks become virtually undetectable as 
+In \verb!T2cc!, the decay c-quarks become virtually undetectable as 
 the nearly degenerate parent and daughter masses leave little energy for the decay 
 products. Therefore any analysis interpreting in the \verb!T2cc! model 
 relies on hard-\Pt jets from initial state radiation for acceptance. The 
-efficiency times acceptance is below the percent level where The largest 
-efficiencies for the smallest mass splittings, $\Delta M = \sim10\gev$, 
+efficiency times acceptance is below the percent level. The largest 
+efficiencies for the smallest mass splittings, $\Delta M \equiv m_{\st} - m_{\chiOnez} \sim10\gev$, 
 are obtained with the (2--3,0) category, while for larger mass splittings 
 the (2--3,1), ($\geq 4$,0), and ($\geq 4$,1) categories contribute 
 due to the reduced backgrounds in these categories. In \verb!T2tt! the largest
@@ -109,14 +110,14 @@ with respect to the signal region.
 
 \subsubsection{Introduction} 
 
-To gain statistical power, The systematic uncertainty in the signal 
+Due to the limited statistics of the signal samples, The systematic uncertainty in the signal 
 acceptance times efficiency is determined per mass point per event 
 category (\njet,\nb), but inclusively in \scalht . This section details the methods 
 used to determine the magnitude of the systematic uncertainties to be applied. 
-Four sources of uncertainty are measured: the jet energy scale,
+Four main sources of uncertainty are measured: the jet energy scale,
 the parton distribution functions, initial state radiation and b-tag scale
-factors. Three other uncertainties are quoted: the uncertainty in the luminosity (2.6\%) and
-trigger (5\%) measurements and the ``dead ECAL'' filter (3 \%) used in the candidate signal
+factors. Three other uncertainties also contribute: the uncertainty in the luminosity (2.6\%) and
+trigger (5\%) measurements and the ``dead ECAL'' filter (3\%) used in the candidate signal
 event selection. Each contribution is considered to be independent 
 and all contributions are summed in quadrature to obtain a total 
 systematic uncertainty per mass point per category.
@@ -124,14 +125,17 @@ systematic uncertainty per mass point per category.
 The following sub-sections provide an overview of the various sources of
 uncertainty, before details on specific models are provided. 
 
-\subsubsection{PDF uncertainties\label{sec:pdf-sets}}
+\subsubsection{Uncertainties from parton distribution functions\label{sec:pdf-sets}}
 
+In a proton-proton collision, the energy of the proton is divided between the constituent 
+quarks and gluons. The distributions of what fraction of a proton's momentum a constituent gluon or 
+quark carries are given by parton distribution functions (PDFs).
 The simulated signal events were produced with the \verb!CTEQ6L1! PDF
 set by default.  As recommended by PDF4LHC~\cite{pdf4lhc}, the uncertainty
 in signal efficiency due to knowledge of the PDFs is obtained by comparing 
 the signal efficiency with that obtained with three newer alternative PDF 
 sets: \verb!CT10!, \verb!NNPDF2.1!, and \verb!MSTW2008!. Using the envelope
-formula in the reference, a single efficiency is calculated from the three alternate
+formula in the reference, a single efficiency is calculated from the three alternative
 PDF sets. 
 
 Figures~\ref{fig:sms-pdf-t2cc} and~\ref{fig:sms-pdf-t2tt} 
@@ -140,7 +144,7 @@ efficiency times acceptance for the central value of the envelope calculation
 and the nominal PDF (\verb!CTEQ6L1!) set used to produce the signal 
 samples. The relative difference is taken as a symmetric systematic 
 uncertainty, which varies in absolute terms within the range 0--10\% in 
-in both models depending on the category of interest.
+both models depending on the category of interest.
 
 \subsubsection{Jet energy scale\label{sec:sms-syst-jes}}
 
@@ -149,13 +153,13 @@ Figures~\ref{fig:sms-jes-t2cc} and ~\ref{fig:sms-jes-t2tt}
 signal efficiency times acceptance for the relevant categories for 
 the \verb!T2cc! and \verb!T2tt! interpretations when varying the energy 
 of all jets in an event up or down according to a \pt- and $\eta$-dependent 
-jet energy scale uncertainty, as recommended by the JetMET POG. 
+jet energy scale uncertainty, as recommended by the JetMET POG~\cite{Chatrchyan:2011ds}. 
 In \verb!T2cc!, larger variations are observed for the higher 
-jet multiplicity category, as as the jets are softer for the same 
+jet multiplicity category, as the jets are softer for the same 
 requirement on \scalht. Also, the variations may increase with 
 increasing mass splitting as additional (soft) jets from the decay 
 become hard enough to move within acceptance. The variations in both 
-signal models range between $\sim5\%$ and $\sim15\%$ for the low 
+signal models range between $\sim\!\!5\%$ and $\sim\!\!15\%$ for the low 
 and high jet multiplicity, and are largely independent of parent 
 and daughter sparticle mass. 
 
@@ -163,8 +167,7 @@ and daughter sparticle mass.
 
 Signal samples produced with \MADGRAPH exhibit discrepancies that 
 have been attributed to the mismodelling of initial state radiation.
-These discrepancies are corrected as recommended by the SUSY 
-PAG~\cite{susy-isrrw}. As per prescription, events are reweighed
+As prescribed in Ref.~\cite{susy-isrrw}, events are reweigheted
 according to the vectorial sum of the momenta of the pair-produced
 sparticles. The sparticle-system \Pt dependent weights are summarized in  
 Table~\ref{tab:sms-syst-isr-factors}.   In addition to the central weight, 
@@ -204,29 +207,26 @@ acceptance is largest.
 
 \subsubsection{b-tag scale factor corrections\label{sec:sms-syst-btag}}
 
-The uncertainty on the btag scale factors described in section [REF]
-is calculated by varying the scale factors up and down by their
-uncertainty as described in Ref.~\cite{btagpogtwiki}.
+The uncertainty on the btag scale factors is calculated by varying the 
+scale factors up and down by their uncertainty as described in Ref.~\cite{btagpogtwiki}.
 
 Figure~\ref{fig:sms-btag-t2cc} and~\ref{fig:sms-btag-t2tt} (Appendix ~\ref{app:signal})
 show the relative change in the signal efficiency times acceptance for 
 the relevant categories for the \verb!T2cc! and \verb!T2tt! interpretations
 when varying up and down the scale-factor corrections by their uncertainties. 
 The variations  are anti-correlated for the two \nb categories used by this
-interpretation and are generally small, at the level of 1--5\%, with
-respect to other contributions. 
+interpretation and are generally small, at the level of 1--5\%.
 
 \subsubsection{Total systematic uncertainties\label{sec:total-sms-unc}}
 
 A few mass bins exhibit large uncertainties compared to neighboring 
-mass bins.  This effect attributed to low statistics when calculating the signal
+mass bins. This effect is due to low statistics when calculating the signal
 efficiency times acceptance in that bin. In order to decouple systematic
-and statistical uncertainties, these values have been replaced with appropriate 
+and statistical uncertainties, these large uncertainty values have been replaced with appropriate 
 values (determined by neighboring bins) in the calculation of the
-total uncertainty. Hence, figures ~\ref{fig:sms-total-t2cc} and
-~\ref{fig:sms-total-t2cc}, representing the total
-systematic uncertainty in the \verb!T2cc! and \verb!T2tt! interpretations
-for relevant categories are devoid of such fluctuations.
+total uncertainty. Thus, Figures~\ref{fig:sms-total-t2cc} and~\ref{fig:sms-total-t2tt}, 
+represent the total systematic uncertainty in the \verb!T2cc! and \verb!T2tt! interpretations
+for relevant categories, and are devoid of such fluctuations.
 
 \begin{figure}[h!]
   \begin{center}
@@ -273,27 +273,32 @@ in the \verb!T2cc! mass plane for the relevant categories.
 
 \begin{table}[h!]
   \caption{Representative ranges for each contribution to the total
-    systematic uncertainty in the signal efficiency times acceptance
+    relative systematic uncertainty in the signal efficiency times acceptance
     for each relevant event category for the \texttt{T2cc}
-    interpretation.
+    interpretation. The luminosity, trigger, and Dead Ecal uncertainties
+    are category indepedent i.e. they affect all categories equally. 
     \label{tab:sms-syst-t2cc}
   }   
   \centering
-  \begin{tabular}{ lcccccccc }
+  \begin{tabular}{ lcccccc }
     \hline
     \hline
-    Category   & \multicolumn{2}{c}{(2--3,0)} & \multicolumn{2}{c}{($\geq 4$,0)} & \multicolumn{2}{c}{($\geq 4$,1)} & \multicolumn{2}{c}{($\geq 2$,$\geq 0$)} \\
-    Range      & Min.   & Max.                & Min.   & Max.                    & Min. & Max.                      & Min.  & Max.        \\
-    \hline
-    PDF        & 0.00   & 0.05                & 0.00   & 0.05                    & 0.00 & 0.10                      &         \\
-    JES        & 0.00   & 0.10                & 0.00   & 0.10                    & 0.00 & 0.15 	                    &             \\
-    ISR        & 0.15   & 0.25                & 0.10   & 0.15                    & 0.15 & 0.30 	                    &             \\
-    b-tag SF   & 0.00   & 0.08                & 0.00   & 0.10                    & 0.00 & 0.15 	                    &             \\
-    Luminosity &        &                     &        &                         &      &      	                    & 0.026 & 0.026        \\
-    Trigger    &        &                     &        &                         &      &                           & 0.05 & 0.05        \\
-    Dead Ecal  &        &                     &        &                         &      &      	                    & 0.03 & 0.03        \\
-    \hline
-    Total syst & 0.18   & 0.25                & 0.19   & 0.30                    & 0.20 & 0.38                      &      &             \\
+    Category   & \multicolumn{2}{c}{(2--3,0)} & \multicolumn{2}{c}{($\geq 4$,0)} & \multicolumn{2}{c}{($\geq 4$,1)}\\% & \multicolumn{2}{c}{($\geq 2$,$\geq 0$)} \\
+    Range      & Min.   & Max.                & Min.   & Max.                    & Min. & Max.                    \\ % & Min.  & Max.        \\
+    \hline                                                                                                         %
+    PDF        & 0.00   & 0.05                & 0.00   & 0.05                    & 0.00 & 0.10                    \\ % &         \\
+    JES        & 0.00   & 0.10                & 0.00   & 0.10                    & 0.00 & 0.15 	                  \\ % &             \\
+    ISR        & 0.15   & 0.25                & 0.10   & 0.15                    & 0.15 & 0.30 	                  \\ % &             \\
+    b-tag SF   & 0.00   & 0.08                & 0.00   & 0.10                    & 0.00 & 0.15 	                  \\ % &             \\
+    \hline                                                                                                         %
+    Luminosity & \multicolumn{6}{c}{0.026}                                                                      \\ %
+    Trigger & \multicolumn{6}{c}{0.05}                                                                       \\ %
+    Dead Ecal & \multicolumn{6}{c}{0.03}                                                                       \\ %
+    %    Luminosity &         &                     &        &                         &      &      	          \\ %         & 0.026 & 0.026        \\
+    %Trigger    &        &                     &        &                         &      &                        \\ %  & 0.05 & 0.05        \\
+    %Dead Ecal  &        &                     &        &                         &      &      	          \\ %         & 0.03 & 0.03        \\
+    \hline                                                                                                         %
+    Total syst & 0.18   & 0.25                & 0.19   & 0.30                    & 0.20 & 0.38                    \\ % &      &             \\
     \hline
     \hline
   \end{tabular}
@@ -304,25 +309,27 @@ in the \verb!T2cc! mass plane for the relevant categories.
   \caption{Representative ranges for each contribution to the total
     systematic uncertainty in the signal efficiency times acceptance
     for each relevant event category for the \texttt{T2tt}
-    interpretation.
+    interpretation. The luminosity, trigger, and Dead Ecal uncertainties
+    are category indepedent i.e. they affect all categories equally. 
     \label{tab:sms-syst-t2cc}
   }   
   \centering
-  \begin{tabular}{ lcccccccc }
+  \begin{tabular}{ lcccccc }
     \hline
     \hline
-    Category   & \multicolumn{2}{c}{($\geq 4$,1)} & \multicolumn{2}{c}{($\geq 4$,2)}  & \multicolumn{2}{c}{($\geq 2$,$\geq 0$)} \\
-    Range      & Min.   & Max.                & Min.   & Max.                     & Min.  & Max.        \\
-    \hline
-    PDF        & 0.00   & 0.10                & 0.00   & 0.10                     &         \\
-    JES        & 0.00   & 0.10                & 0.00   & 0.05                     &             \\
-    ISR        & 0.00   & 0.20                & 0.00   & 0.22                     &             \\
-    b-tag SF   & 0.00   & 0.05                & 0.00   & 0.10                     &             \\
-    Luminosity &        &                     &        &                          & 0.026 & 0.026        \\
-    Trigger    &        &                     &        &                          & 0.05 & 0.05        \\
-    Dead Ecal  &        &                     &        &                          & 0.03 & 0.03        \\
-    \hline
-    Total syst & 0.05   & 0.25                & 0.05   & 0.30                     &      &             \\
+    Category   & \multicolumn{2}{c}{($\geq 4$,1)} & \multicolumn{2}{c}{($\geq 4$,2)}\\%  & \multicolumn{2}{c}{($\geq 2$,$\geq 0$)} \\
+    Range      & Min.   & Max.                & Min.   & Max.                     \\%& Min.  & Max.        \\
+    \hline                                                                        %
+    PDF        & 0.00   & 0.10                & 0.00   & 0.10                     \\%&         \\
+    JES        & 0.00   & 0.10                & 0.00   & 0.05                     \\%&             \\
+    ISR        & 0.00   & 0.20                & 0.00   & 0.22                     \\%&             \\
+    b-tag SF   & 0.00   & 0.05                & 0.00   & 0.10                     \\%&             \\
+    \hline                                                                        %
+    Luminosity & \multicolumn{4}{c}{0.026}                                                                      \\ %
+    Trigger & \multicolumn{4}{c}{0.05}                                                                       \\ %
+    Dead Ecal & \multicolumn{4}{c}{0.03}                                                                       \\ %
+    \hline                                                                                                         %    
+    Total syst & 0.05   & 0.25                & 0.05   & 0.30                     \\%&      &             \\
     \hline
     \hline
   \end{tabular}
