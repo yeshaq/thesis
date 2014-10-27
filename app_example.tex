@@ -1,0 +1,52 @@
+\clearpage
+\section{Detailed example of the background estimation\label{app:bkg-example}}
+Consider the following bin: $\njet \ge 4$, $\nb = 1$, $ 375 \leq \scalht \leq 475$.
+The hadronic selection is run on the HTMHT dataset (the yield is denoted by $N_{\rm obs}^{\rm had}$).
+The hadronic selection is also run on all SM MC datasets used in the analysis ( the yield is denoted by
+$N_{\rm MC}^{\rm had} = N_{\rm W}^{\rm had} + N_{\ttbar}^{\rm had} + N_{\znunu}^{\rm had} +
+N_{\rm DY}^{\rm had} + N_{\gamma}^{\rm had} + N_{\rm top}^{\rm had} + N_{\rm di-boson}^{\rm had}$). 
+It will be useful to split the total background into two components $N_{\rm MC}^{\rm had} = N_{\znunu}^{\rm had} + N_{ttW}^{\rm had}$
+where $N_{ttW}^{\rm had}$ is the yield of all background exept \znunu.  
+
+Because $\nb < 2$, the photon control sample is used to predict the \znunu background. 
+The yields for the photon control sample are obtained by running the photon selection on 
+the ``SinglePhoton'' dataset (the yield is symbolized by ${\nobs^{\gamma\;control}}$) and 
+running the same photon selection on all SM MC datasets used in the analysis (
+the yield is symbolized by $N_{\rm MC}^{\rm \gamma\; control} = N_{\rm W}^{\rm \gamma\; control} + N_{\ttbar}^{\rm \gamma\; control} + N_{\znunu}^{\rm \gamma\; control} +
+N_{\rm DY}^{\rm \gamma\; control} + N_{\gamma}^{\rm \gamma\; control} + N_{\rm top}^{\rm \gamma\; control} + N_{\rm di-boson}^{\rm \gamma\; control}$). 
+The background prediction is made by using the translation factor:
+
+\begin{equation}
+  \label{equ:ratio-denom}
+  TF^{\gamma} = \frac{N_{\znunu}^{\rm had}}{N_{\rm MC}^{\rm \gamma\; control}}
+\end{equation}
+%
+and the predicted \znunu background is:
+
+\begin{equation}
+  \label{equ:pre-znunud}
+  N_{\rm pre, \znunu}^{\rm had} = TF^{\gamma} \times {\nobs^{\gamma\;control}}
+\end{equation}
+
+The rest of the background is predicted by the muon control sample. Analoguously to the above, we run a 
+muon selection on the ``SingleMuon'' dataset (${\nobs^\mu}$) and on the full suite of SM MC ($N_{\rm MC}^{\rm \mu\; control}$)
+The translation factor is%
+\begin{equation}
+  \label{equ:ratio-denom2}
+  TF^{\mu} = \frac{N_{ttW}^{\rm had}}{N_{\rm MC}^{\rm \mu\; control}}
+\end{equation}
+%
+and the predicted ttW background is:
+
+\begin{equation}
+  \label{equ:pre-ttw}
+  N_{\rm pre, ttW}^{\rm had} = TF^{\mu} \times {\nobs^{\mu\;control}}
+\end{equation}
+
+the total background prediction is then:
+
+\begin{equation}
+  \label{equ:pre-ttw}
+  N_{\rm pre}^{\rm had} =  N_{\rm pre, \znunu}^{\rm had} + N_{\rm pre, ttW}^{\rm had}
+\end{equation}
+\clearpage
