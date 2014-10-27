@@ -1,24 +1,58 @@
 \clearpage
 \section{Results\label{sec:results}}
 
-The likelihood described in \ref{sec:likelihood} is used to
-relate yields, uncertainties. It is constructed using ROOTFIT
-~\cite{roofit} and maximized using MINUIT~\cite{James:1975dr}.
+The likelihood described in Sec.~\ref{sec:likelihood} is used to
+relate yields, uncertainties. It is constructed using Roofit
+~\cite{roofit} and maximized using MINUIT~\cite{James:1975dr}, as
+implemented in the package ra1stats~\cite{ra1stats}.
 
-\subsection{Standard Model\label{sec:smInterp}}
+\subsection{Standard Model: background-only\label{sec:smInterp}}
 
-To test compatibility with a Standard Model only hypothesis,
+To test the compatibility of the data with the Standard Model only hypothesis,
 the signal term is removed from the likelihood model. The parameter values 
 maximizing the likelihood function are listed in 
 Tables~\ref{tab:mlParameterValues0b_le3j}--\ref{tab:mlParameterValues2b_ge4j}
 found in Appendix~\ref{app:ml-params}. The resulting SM yields
-along with the observed data yields are summarized in Tables~\ref{app:ml-yields}. 
-The uncertainty on the yields are obtained by constructing a probability density
+along with the observed data yields are summarized in Tables~\ref{tab:ensemble-summary-posteriori}.
+The uncertainty on the yields is obtained by constructing a probability density
 function (p.d.f) from the maximized likelihood, then generating an
 ensemble of pseudo-experiments from this p.d.f. and maximizing the same 
 likelihood form for each pseudo-experiment, resulting in an ensemble of yields.
 The $68\%$ quantile of each ensemble defines the quoted uncertainty on the 
 corresponding yield.
+
+\begin{center}
+\begin{table}[h!]
+  \caption{Summary of hadronic yields from fit.}
+  \label{tab:ensemble-summary-posteriori}
+  \centering
+  \scriptsize
+\begin{tabular}{ lllllllll }
+
+\hline
+& 375--475                       & 475--575                       & 575--675                       & 675--775                       & 775--875                       & 875--975                       & 975--1075                      & 1075--$\infty$                 \\ [1.000000ex]
+\hline
+0b, \njetlow, SM \T   & $2744^{+48}_{-43}$             & $771^{+21}_{-23}$              & $254^{+13}_{-13}$              & $76.5^{+6.1}_{-4.8}$           & $33.7^{+3.7}_{-3.8}$           & $11.8^{+1.9}_{-2.1}$           & $6.3^{+1.4}_{-1.3}$            & $3.2^{+1.0}_{-0.9}$            \\ 
+0b, \njetlow, Data \T & $2728$                         & $766$                          & $257$                          & $77$                           & $32$                           & $9$                            & $9$                            & $4$                            \\ 
+\hline
+1b, \njetlow, SM \T   & $426^{+15}_{-17}$              & $114^{+6}_{-6}$                & $35.5^{+3.3}_{-2.8}$           & $10.1^{+1.4}_{-1.5}$           & $3.7^{+0.9}_{-0.8}$            & $1.6^{+0.7}_{-0.6}$            & $0.5^{+0.3}_{-0.4}$            & $0.1^{+0.1}_{-0.0}$            \\ 
+1b, \njetlow, Data \T & $444$                          & $118$                          & $36$                           & $15$                           & $3$                            & $2$                            & $1$                            & $0$                            \\ 
+\hline
+2b, \njetlow, SM \T   & $65.0^{+4.3}_{-4.3}$           & $18.4^{+1.7}_{-1.6}$           & $4.2^{+0.6}_{-0.5}$            & $1.1^{+0.3}_{-0.2}$            & $0.2^{+0.1}_{-0.1}$            & $0.0^{+0.0}_{-0.0}$            & $0.0^{+0.0}_{-0.0}$            & $0.0^{+0.0}_{-0.0}$            \\ 
+2b, \njetlow, Data \T & $78$                           & $18$                           & $8$                            & $3$                            & $0$                            & $0$                            & $0$                            & $0$                            \\ 
+\hline
+0b, \njethigh, SM \T   & $456^{+15}_{-14}$              & $291^{+12}_{-12}$              & $148^{+8}_{-7}$                & $66.0^{+5.6}_{-5.2}$           & $27.1^{+2.9}_{-3.4}$           & $14.0^{+1.9}_{-2.1}$           & $6.5^{+1.5}_{-1.2}$            & $3.2^{+1.0}_{-0.9}$            \\ 
+0b, \njethigh, Data \T & $480$                          & $299$                          & $158$                          & $66$                           & $28$                           & $15$                           & $6$                            & $2$                            \\ 
+\hline
+1b, \njethigh, SM \T   & $190^{+10}_{-8}$               & $120^{+6}_{-5}$                & $45.6^{+3.1}_{-3.8}$           & $17.1^{+2.6}_{-1.9}$           & $6.8^{+1.5}_{-1.3}$            & $5.4^{+1.3}_{-1.6}$            & $2.4^{+0.9}_{-0.9}$            & $1.2^{+0.7}_{-0.8}$            \\ 
+1b, \njethigh, Data \T & $206$                          & $135$                          & $45$                           & $14$                           & $8$                            & $6$                            & $2$                            & $0$                            \\ 
+\hline
+2b, \njethigh, SM \T   & $73.6^{+4.2}_{-4.2}$           & $45.7^{+2.8}_{-2.9}$           & $20.4^{+1.8}_{-1.8}$           & $7.7^{+1.2}_{-1.0}$            & $1.9^{+0.3}_{-0.3}$            & $0.9^{+0.2}_{-0.2}$            & $0.4^{+0.1}_{-0.1}$            & $0.4^{+0.1}_{-0.2}$            \\ 
+2b, \njethigh, Data \T & $79$                           & $52$                           & $31$                           & $12$                           & $1$                            & $2$                            & $0$                            & $1$                            \\ 
+\hline
+  \end{tabular}
+\end{table}
+\end{center}
 
 Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4j2b} show
 the \scalht-binned observed data yields (black filled circles) and the
@@ -26,23 +60,23 @@ SM expectations and uncertainties (dark blue solid line with light
 blue bands) as determined by the fit for the hadronic signal region
 and the \mj or both (\mj,\gj) control samples, depending on the event
 category. The uncertainties in the SM expectations obtained from the 
-ensemble of pseudo-experiments reflect the statistical uncertainties in
+ensemble of pseudo-experiments (shown in shaded bands) reflect the statistical uncertainties in
 the considered data samples and the systematic uncertainties
-in the transfer factors as discussed in section~\ref{sec:bkgd-syst}.
+in the transfer factors as discussed in Section~\ref{sec:bkgd-syst}.
 Figures~\ref{fig:best-fit-le3j0b}--\ref{fig:best-fit-ge4j2b} are summarized
 in tabular format in Tables~\ref{tab:ensemble-0b le3j}--\ref{tab:ensemble-2b ge4j} 
-in appendix~\ref{app:ml-yields} along with observed data yields and the fit 
+in Appendix~\ref{app:ml-yields} along with observed data yields and the fit 
 result for all event categories and both signal region and control sample bins.
 
 For each \nb, \njet category, the goodness-of-fit of the SM-only hypothesis 
 is determined by considering simultaneously all \scalht bins entering
-the likelihood. The goodness-of-fit described in ~\cite{Cowan:358560} is obtained
+the likelihood. The goodness-of-fit described in Ref.~\cite{Cowan:358560} is obtained
 by comparing the nominal maximized likelihood value \lk{data}{max} to 
-the corresponding ensemble of values, \lk{}{max}. The quantile which \lk{data}{max}
+the corresponding ensemble of values, \lk{}{max}. The quantile in which \lk{data}{max}
 falls in the distributions is interpreted as a p-value.  A p-value derived from
 a chi-square is also plotted for comparison. 
 
-The p-values obtained, shown in Figure~\ref{fig:fluct} (Left), are found 
+The p-values obtained, shown in Figure~\ref{fig:fluct} (a), are found 
 to be uniformly distributed in the range 0.0--1.0, with the lowest p-value
 determined to be 0.06.
 
@@ -51,19 +85,22 @@ also evaluated for each of the 48 hadronic search bins. A profile
 likelihood ratio is used to determine a p-value and the pull per
 signal region bin. Figure~\ref{fig:sigVsCat} shows the pull as a function
 of the signal region bin (Right). In general the SM-only hypotheses
-agrees well with data, though there are mild excesses (i.e. > 1.5$\sigma$)
+agrees well with data, though there are mild excesses (i.e. $> 1.5\sigma$)
 in the $\nb = 1$ and $\nb = 2$ bins where the most pronounced excess is in
-the $\njethigh, \nb = 2, 575 < scalht < 675$ bin, with 2.4$\sigma$. In summary,
-an excess greater that 2$\sigma$ in one of 48 search bins is consistent with 
+the $\njethigh, \nb = 2, 575 < \scalht < 675~\GeV$ bin, with 2.4$\sigma$. This
+bin as been carefully studied to try to determine the source of the excess
+in the data.  There is no obvious discrepancy in any specific kinematic region
+(jet $\pt$, $\scalht$, $\met$, ... ), or from one source of background in particular.
+In summary, an excess greater that 2$\sigma$ in one of 48 search bins is consistent with 
 an, albeit rare, statistical fluctuation.
 
 \begin{figure}[h!]
   \begin{center}
     \subfigure[p-values per event category.]{
-      \includegraphics[width=0.45\textwidth, trim=0 190 290 20, clip=true]{figures/fit/v22/pValues} % lbrt
-    } 
+      \includegraphics[width=0.75\textwidth, trim=0 190 290 20, clip=true]{figures/fit/v22/pValues} % lbrt
+    } \\
     \subfigure[Pull versus signal region bin.\label{fig:sigVsCat}]{
-      \includegraphics[width=0.45\textwidth, trim=0 0 0 30, clip=true]{figures/fit/v22/significances_catVsHt}
+      \includegraphics[width=0.75\textwidth, trim=0 0 0 30, clip=true]{figures/fit/v22/significances_catVsHt}
     } \\
 %    \subfigure[Pull per signal region bin.]{
 %      \includegraphics[width=0.45\textwidth, trim=0 0 0 0, clip=true]{figures/fit/v1/pull_per_bin_gaus}
@@ -91,40 +128,6 @@ an, albeit rare, statistical fluctuation.
 %the SM expectations are smaller for the ``a posteriori'' fit due to
 %the additional information from hadronic signal region counts.
 %
-%\begin{landscape}
-\begin{center}
-\begin{table}[h!]
-  \caption{Summary of hadronic yields from fit.}
-  \label{tab:ensemble-summary-posteriori}
-  \centering
-  \scriptsize
-\begin{tabular}{ lllllllll }
-
-\hline
-& 375--475                       & 475--575                       & 575--675                       & 675--775                       & 775--875                       & 875--975                       & 975--1075                      & 1075--$\infty$                 \\ [1.000000ex]
-\hline
-0b le3j SM \T   & $2744^{+48}_{-43}$             & $771^{+21}_{-23}$              & $254^{+13}_{-13}$              & $76.5^{+6.1}_{-4.8}$           & $33.7^{+3.7}_{-3.8}$           & $11.8^{+1.9}_{-2.1}$           & $6.3^{+1.4}_{-1.3}$            & $3.2^{+1.0}_{-0.9}$            \\ 
-0b le3j Data \T & $2728$                         & $766$                          & $257$                          & $77$                           & $32$                           & $9$                            & $9$                            & $4$                            \\ 
-\hline
-1b le3j SM \T   & $426^{+15}_{-17}$              & $114^{+6}_{-6}$                & $35.5^{+3.3}_{-2.8}$           & $10.1^{+1.4}_{-1.5}$           & $3.7^{+0.9}_{-0.8}$            & $1.6^{+0.7}_{-0.6}$            & $0.5^{+0.3}_{-0.4}$            & $0.1^{+0.1}_{-0.0}$            \\ 
-1b le3j Data \T & $444$                          & $118$                          & $36$                           & $15$                           & $3$                            & $2$                            & $1$                            & $0$                            \\ 
-\hline
-2b le3j SM \T   & $65.0^{+4.3}_{-4.3}$           & $18.4^{+1.7}_{-1.6}$           & $4.2^{+0.6}_{-0.5}$            & $1.1^{+0.3}_{-0.2}$            & $0.2^{+0.1}_{-0.1}$            & $0.0^{+0.0}_{-0.0}$            & $0.0^{+0.0}_{-0.0}$            & $0.0^{+0.0}_{-0.0}$            \\ 
-2b le3j Data \T & $78$                           & $18$                           & $8$                            & $3$                            & $0$                            & $0$                            & $0$                            & $0$                            \\ 
-\hline
-0b ge4j SM \T   & $456^{+15}_{-14}$              & $291^{+12}_{-12}$              & $148^{+8}_{-7}$                & $66.0^{+5.6}_{-5.2}$           & $27.1^{+2.9}_{-3.4}$           & $14.0^{+1.9}_{-2.1}$           & $6.5^{+1.5}_{-1.2}$            & $3.2^{+1.0}_{-0.9}$            \\ 
-0b ge4j Data \T & $480$                          & $299$                          & $158$                          & $66$                           & $28$                           & $15$                           & $6$                            & $2$                            \\ 
-\hline
-1b ge4j SM \T   & $190^{+10}_{-8}$               & $120^{+6}_{-5}$                & $45.6^{+3.1}_{-3.8}$           & $17.1^{+2.6}_{-1.9}$           & $6.8^{+1.5}_{-1.3}$            & $5.4^{+1.3}_{-1.6}$            & $2.4^{+0.9}_{-0.9}$            & $1.2^{+0.7}_{-0.8}$            \\ 
-1b ge4j Data \T & $206$                          & $135$                          & $45$                           & $14$                           & $8$                            & $6$                            & $2$                            & $0$                            \\ 
-\hline
-2b ge4j SM \T   & $73.6^{+4.2}_{-4.2}$           & $45.7^{+2.8}_{-2.9}$           & $20.4^{+1.8}_{-1.8}$           & $7.7^{+1.2}_{-1.0}$            & $1.9^{+0.3}_{-0.3}$            & $0.9^{+0.2}_{-0.2}$            & $0.4^{+0.1}_{-0.1}$            & $0.4^{+0.1}_{-0.2}$            \\ 
-2b ge4j Data \T & $79$                           & $52$                           & $31$                           & $12$                           & $1$                            & $2$                            & $0$                            & $1$                            \\ 
-\hline
-  \end{tabular}
-\end{table}
-\end{center}
-%\end{landscape}
 
 %\begin{landscape}
 %\begin{center}
@@ -162,5 +165,6 @@ an, albeit rare, statistical fluctuation.
 %\end{center}
 %\end{landscape}
 %
-\input{results_plots_a_posteriori}
+\include{results_plots_a_posteriori}
+\include{interpretation}
 %\input{results_plots_a_priori}
