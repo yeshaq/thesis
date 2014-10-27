@@ -1,77 +1,13 @@
-\clearpage
-\section{Limits on SMS production cross sections\label{sec:interpretation}}
-
-Upper limits on the production cross section of the two simplified 
-SUSY models described in chapter~\ref{sec:signal} are discussed in this
-chapter. 
-
-
-\subsection{Limit setting procedure\label{sec:cls}}
-
-The following has been formulated in~\cite{LairdThesis} and is summarized 
-here for completeness. 
-Consider the likelihood ratio~\cite{Cowan:2010js}:
-
-\begin{equation}
-\label{eq:PLR}
-\lambda(\mu) = \frac{ L(\mu,
-\hat{\hat{\vec{\theta}}}) } {L(\hat{\mu}, \hat{\vec{\theta}}) } \;.
-\end{equation}
-
-Where $\hat{\hat{\vec{\theta}}}$ in the numerator denotes the
-value of $\vec{\theta}$, the set of nuisance parameters in the likelihood,
-that maximizes $L$ for the specified $\mu$.
-The denominator is the maximized likelihood function, i.e., $\hat{\mu}$
-and $\hat{\vec{\theta}}$ are their ML estimators. In the context of this
-analysis $\mu \equiv f$ where $f$ is the signal strength as defined 
-in section~\ref{sec:signalContrib}.  One can define the profile
-likelihood ratio test statistic as~\cite{Cowan:2010js}:
-
-\begin{equation}
-\label{eq:qmu}
-q_{\mu} =
-\left\{ \! \! \begin{array}{ll}
-               - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
-               0 & \hat{\mu} > \mu \;,
-              \end{array}
-       \right.
-\end{equation}
-
-To test a specific signal model, one approach would be to perform many 
-pseudo-experiments under the two separate hypotheses: background-only 
-(i.e. $\mu=0$) and background with signal (i.e. $\mu=1$). $CL_{b}$ and 
-$CL_{s+b}$~\cite{read,Junk} are defined as 1 - the quantile of $q_{\mu(obs)}$ in each of 
-these distributions, where $q_{\mu(obs)}$ is the test statistic evaluated 
-with the observed data. Figure~\ref{fig:hybrid_plot} illustrates two example distributions of
-the test statistic under each hypothesis.  $CL_{s}$ is then defined as $CL_{s} \equiv CL_{s+b}/CL_{b}$, 
-and a value $CL_{s} < 0.05$ excludes the signal hypothesis at 95\% confidence level. 
-
-Another approach is to instead calculate the upper limit on the signal 
-cross section by determining $f$ at $CL_{s} = 0.05$.  This approach samples 
-CLs at varying signal strengths and the upper limit is 
-determined through interpolation. If the upper limit on the cross section 
-is lower than the theoretical cross section, the signal model is excluded.
-
-\begin{figure}[h!t]
-  \begin{center}
-      \includegraphics[width=0.45\textwidth,]{figures/hybrid_plot}
-      \caption{\label{fig:hybrid_plot} The distributions of the test statistic $q_{\mu}$
-        in the background-only (red, on the right) and signal+background (blue, on the left) hypotheses. 
-        The black line represents the value of the $q_{\mu}$ on the tested data. The shaded areas represent 
-        $1-CL_{b}$ (red) and $CL_{s+b}$ (blue).  From~\cite{Moneta:1289965}}.
-    \label{fig:hybrid_plot}
-  \end{center}
-\end{figure}
-
-
 \subsection{Upper limits on SMS models}
+%
+For each mass-pair ($m_{\st},m_{LSP}$) in a given model described in Section~\ref{sec:signal}, 
+the upper limit is calculated as described in Section~\ref{sec:cls} using the likelihood 
+constructed in Section~\ref{sec:likelihood} by considering the relevant categories 
+listed in Table~\ref{tab:simplified-models}.
 
-For each mass-pair in a given model, the upper limit is calculated as described in 
-section~\ref{sec:cls} using the likelihood constructed in section~\ref{sec:likelihood}
-by considering the relevant categories listed in table~\ref{tab:simplified-models}.
 
 \subsubsection{Upper limits on T2cc}
-The color scale in figure~\ref{fig:upperLimits-t2cc} shows the observed upper 
+The color scale in Figure~\ref{fig:upperLimits-t2cc} shows the observed upper 
 limit at 95\% confidence level for each sparticle mass-pair bin in the SMS 
 model where a stop particle decays to a charm quark and a neutralino (\texttt{T2cc}). 
 The mass-pair bins left of the thick black curve have a calculated cross 
@@ -86,7 +22,7 @@ The dashed purple lines indicate the median (thick line) $\pm 1 \sigma$
 regions are not obtained by varying the theoretical cross section but rather 
 by comparing the calculated expected upper limit $\pm 1 \sigma$ uncertainty
 with the nominal cross section. The observed upper limit curve lies within
-$+1 \sigma$ expected curve. For comparison, figure~\ref{fig:atlas} shows similar
+$+1 \sigma$ expected curve. For comparison, Figure~\ref{fig:atlas} shows similar
 exclusion limits obtained by the ATLAS collaboration~\cite{Aad:2008zzm} for the same 
 model. 
 
@@ -98,34 +34,34 @@ model.
   \subfigure[\label{fig:atlas}]{     
     \includegraphics[width=0.45\textwidth,clip=true]{figures/limits/merged/T2cc/v2/atlas}
     }   
-    \caption{(a) shows the expected and observed upper limits on the production cross section 
-    for the for the model \texttt{T2cc} obtained in this analysis. See text for detail on each curve.
-    (b) shows exclusion region in the same model obtained by the ATLAS collaboration, from~\cite{Aad:2014nra}}
+    \caption{(a) The expected and observed upper limits at 95\% C.L. on the production cross section 
+    for the for the model \texttt{T2cc} obtained in this analysis. See text for details on each curve.
+    (b) Exclusion region in the same model obtained by the ATLAS collaboration, from Ref.~\cite{Aad:2014nra}
+    Mass pairs left (and below) of the observed limit are excluded at the 95\% C.L.}
   \end{center}
 \end{figure}
 
 \subsubsection{Upper limits on T2tt}
 
-The color scale in figure~\ref{fig:upperLimits-t2tt} shows the observed upper 
+The color scale in Figure~\ref{fig:upperLimits-t2tt} shows the observed upper 
 limit at 95\% confidence level for each sparticle mass-pair bin in the SMS 
 model where a stop particle decays to a top quark and a neutralino (\texttt{T2tt}). 
-The definitions of the excluded regions remain the same as \texttt{t2cc}.
+The definitions of the excluded regions remain the same as \texttt{T2cc}.
 The observed upper limit disagrees with the expected by more than $2\sigma$.
 
 \begin{figure}[h!]
   \begin{center}
       \includegraphics[width=0.70\textwidth,clip=true,]{figures/limits/merged/T2tt/v6/CLs_frequentist_T2tt_2012pf_1b_ge4j_2b_ge4j_xsLimit}
-    \label{fig:upperLimits-t2tt}
-    \caption{Expected and observed upper limits on the production cross section 
-    for the for the models \texttt{T2tt} (bottom). }
+    \caption{\label{fig:upperLimits-t2tt}Expected and observed upper limits on the production cross section 
+    for the models \texttt{T2tt}. Mass pairs left (and below) of the observed limit are excluded at the 95\% C.L.}
   \end{center}
 \end{figure}
 
 \FloatBarrier
 
 It is instructive to re-examine the \scalht bins which show the highest excesses 
-when considering a SM-only hypotheses. To this intent, figure~\ref{fig:sigVsCat} of 
-chapter~\ref{sec:results} is re-plotted in figure~\ref{fig:sigVsCat2} to 
+when considering a SM-only hypotheses. To this intent, Figure~\ref{fig:sigVsCat} of 
+Section~\ref{sec:results} is re-plotted in Figure~\ref{fig:sigVsCat2} to 
 isolate the categories used in interpreting \texttt{T2tt}. In the \njethigh 
 and $\nb = 2$ category, \scalht bins $575-675$ and $675-775\GeV$ show excesses of 
 $\sim\!\!2.5\sigma$ and $\sim\!\!1.5\sigma$ respectively. In the \njethigh and 
@@ -136,7 +72,7 @@ a more pronounced excess in \scalht = $575~\GeV-675~\GeV$ in \njethigh
 and $\nb = 2$ category. 
 \begin{figure}[h!]
   \begin{center}
-      \includegraphics[width=0.45\textwidth, trim=0 0 0 30, clip=true]{figures/fit/v22/significances_catVsHt_2}
+      \includegraphics[width=0.75\textwidth, trim=0 0 0 30, clip=true]{figures/fit/v22/significances_catVsHt_2}
     \caption{Pulls in categories used in T2cc interpretation.\label{fig:sigVsCat2}}
   \end{center}
 \end{figure}
@@ -146,8 +82,8 @@ limit is better understood with a closer study of the mass-pair
 bin ($m_{\st} = 400\GeV$, $m_{\text{LSP}} = 0\GeV$), which is 
 expected to be excluded but it is not by the observed data. 
 It is useful to gauge the signal significance, defined here as the signal 
-yield divided by $\sqrt{b+(.1b)^2}$ where $b$ is the SM expectation 
-as determined by a simultaneous fit to all under under the SM background 
+yield divided by $\sqrt{b+(0.1b)^2}$ where $b$ is the SM expectation (background) 
+as determined by a simultaneous fit to all control data samples under the SM background 
 hypothesis. Figure~\ref{fig:t2tt-sig-400_100} plots the signal significance in bins of 
 \scalht and shows that most of the significance is expected in the 
 lower \scalht bins in both categories. Furthermore, 
@@ -158,10 +94,10 @@ hypothesis. The signal under consideration remains $m_{\st} = 400\GeV$ and
 $m_{\text{LSP}} = 100\GeV$. The fit is performed simultaneously across 
 both event categories. The plots give the indication that while the excesses 
 in the low \scalht bins are mild, they are enough to accommodate a signal-like
-excess. Finally, a profile likelihood ratio scan is performed 
-as a function of signal strength to visualize the signal strength value 
-best fitting the data and the upper limit on that signal strength
-at 95\% confidence level. 
+excess.\\
+\indent Finally, a profile likelihood ratio scan is performed 
+to visualize the best fit and upper limit at 95\% C.L. values 
+on the signal strength. The result is shown in Figure~\ref{fig:t2tt-int-400_100}.
 %A similar disagreement between observed and expected
 %exclusions was observed in the latest published 
 
@@ -420,11 +356,9 @@ at 95\% confidence level.
 \end{figure*}
 \begin{figure*}[h!]
   \begin{center}
-    \subfigure[profile likelihood ratio, simultaneous fit]{
       \includegraphics[width=0.45\textwidth]{figures/fit/v22/wSignal/400_100/intervalPlot_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_95}
-    } \\
     \caption{\label{fig:t2tt-int-400_100}The profile likelihood ratio 
-      (defined in sec.~\ref{sec:cls}) as a function of the signal strength.
+      (defined in Sec.~\ref{sec:cls}) as a function of the signal strength.
       The likelihood considers all data samples under the signal plus SM 
       background hypothesis for the signal model \texttt{T2tt} with 
       $m_{\st} = 400\GeV$ and $m_{\text{LSP}} = 100\GeV$.
@@ -434,26 +368,35 @@ at 95\% confidence level.
   \end{center}
 \end{figure*}
 \FloatBarrier
-\subsection{Summary}
+
+\subsection{Conclusions}
 
 Years of effort from thousands of people around the world
 has brought the LHC and CMS past trough the phases of design, construction,
-and commission, to a successful physics run in 2012. Through a dedicated
-team of engineers and physicists, CMS recorded more than 20$\fbinv$ of data and 
-which in the process allowed the confirmation of the existence of the Higgs boson. 
-The spectacular efficiency of the detector also allowed
+and commission, to a successful physics run in 2012. CMS recorded more than 
+20$\fbinv$ of data and in the process confirmed of the existence of the Higgs boson. 
+One of the main motivations to build the LHC still is to conduct
 searches beyond the Standard Model; this work presents such a search
-in events with jets and missing transverse energy. By using the variable $\alphat$
+in events with jets and missing transverse energy. By using the variable $\alphat$,
 the analysis effectively rejects multijet events stemming from QCD and 
 mismeasured events. The remaining backgrounds are constrained using
-data samples which limit the reliance on Monte Carlo simulations. Though
-a slight excess is seen in some event categories, the observations are found 
-to agree with the expectations of the Standard Model. The results are interpreted
-in two simplified supersymmetric models: (1) a pair-produced stop decays into a b quark 
-jet, W boson, and a neutralino, (2) a pair-produced stop decays into a b quark 
-, W boson and neutralino. In the latter model, exclusion limits 
-comparable to other analyses are set. 
-
+data samples which reduce the reliance on Monte Carlo simulations. Though
+a slight excess of observed events over SM prediction is seen in some event categories, 
+the observations are found to agree with the expectations of the Standard Model. 
+The results are interpreted in two simplified supersymmetric models: (1) a 
+pair-produced stop decays into a bottom quark , W boson and neutralino 
+(\texttt{T2tt}), (2) a pair-produced stop decays into a charm quark 
+jet and a neutralino (\texttt{T2cc}). 
+Exclusion limits are set at $m_{\st}>275\GeV$ for $m_{LSP}\sim\!250\GeV$ 
+in \texttt{T2cc} and $m_{\st}>400\GeV$ for $m_{LSP}\sim\!50\GeV$ in \texttt{T2tt}. 
+The sensitivity achieved in this analysis is similar to that of other 
+generic searches in CMS (\cite{CMS-PAS-SUS-14-008,cms-pas-sus-09001})
+and ATLAS. The observed limits for \texttt{T2cc} are also comparable 
+if not better to other analyses, however the \text{T2tt} exclusion is 
+weaker than expected. The LHC will resume operation in the Spring of 
+2015 at the center-of-mass energy of 13~\TeV, the \alphat 
+analysis as described here will be used to search for signatures of 
+pair-production of $\st$, $\sq$ and $\gl$ at this new energy regime.
 \clearpage
 %\begin{figure*}[t!]
 %  \begin{center}
@@ -629,18 +572,6 @@ comparable to other analyses are set.
 %%for the LSP with a mass greater than 100\GeV.
 %%%The expected reach for the T2tt model is summarised
 %%%in Table~\ref{tab:sms-reach}. 
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
