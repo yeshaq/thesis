@@ -50,11 +50,12 @@ produced per second can be expressed as
 \end{equation}
 %
 The luminosity integrated over the course of the three separate proton-proton collision runs
-is shown in Figure~\ref{fig:int_lumi}. The large increases in delivered luminosity in such
-a short time indicates both the phenomenal success of LHC commissioning and running, and 
-the challenge presented to CMS to accommodate new running conditions nearly continuously, 
-in particular to design and deploy suitable trigger tables, readout thresholds, 
-reconstruction algorithms, and analysis methods.
+is shown in Figure~\ref{fig:int_lumi}. 
+%The large increases in delivered luminosity in such
+%a short time indicates both the phenomenal success of LHC commissioning and running, and 
+%the challenge presented to CMS to accommodate new running conditions nearly continuously, 
+%in particular to design and deploy suitable trigger tables, readout thresholds, 
+%reconstruction algorithms, and analysis methods.
 
 \begin{figure}[h!]
   \begin{center}
@@ -65,6 +66,7 @@ reconstruction algorithms, and analysis methods.
   \end{center}
 \end{figure}
 \subsubsection{High energy proton collisions}
+The 
 The interactions sought and the SM processes that appear as backgrounds are those in 
 which substantial momentum is transferred between the constituent partons of the LHC's 
 colliding protons; the incident protons are destroyed and energetic outgoing elementary 
@@ -140,22 +142,25 @@ the z-axis to form a right-handed coordinate system.
   \end{center}
 \end{figure}
 
-CMS is divided into ``subdetector'' systems, which perform complementary roles.
-The inner-most subdetector of the barrel consists of three layers of silicon pixel sensors 
-that provide three-dimensional positions of the hit from charged tracks between 4 cm and
-10 cm transverse to the beams. They are complemented by two endcap disks, enabling
-charged particles to leave typically three hits for pseudo-rapidity $|\eta| < 2.5$. 
-Surrounding the pixel detector are ten layers of strips of silicon sensors out to 1.1 m, 
-four of which have additional strips at a small stereo angle, allowing another dimension of
-hit position measurement. These are complemented by endcap disks as well. This
-tracking system provides efficient and precise determination of the charges, momenta,
-and impact parameters of charged particles. Surrounding the tracker is an electromagnetic 
-calorimeter (ECAL), consisting of scintillating PbWO4 crystals of area 0.017 $\times$ 0.017 
-in $\Delta\eta \times \Delta\phi$ and length 23 cm, corresponding to about 25 radiation lengths. 
-The crystals are instrumented with avalanche photo-diodes in the barrel $(|\eta| < 1.479)$ 
-and vacuum photo-triodes in the endcap $(1.479 < |\eta| < 3.0)$. A lead-silicon 
-sampling ``pre-shower'' detector is placed before the endcap to aid with the identification 
-of neutral pions.\\
+The closest subdetector to the beam is the tracker. Charged particles are tracked in 
+3 dimensions within a distance of 4.4~cm up to 10~cm from the beam axis with three co-centric layers of hybrid 
+pixel detectors totalling 66 million pixels. Two additional layers shaped in disks are placed at each 
+end the of the barrel giving the pixel detector coverage up to pseudorapidity $|\eta| < 2.5$.
+Leaving the pixel detector, particle continue through 10 barrel layers and 12 endcap disks 
+of the silicon strip tracker extending to 1.1~m from the beam axis. The silicon srip tracker
+consists of 10 million srips covering a total area $200~\texttt{m}^2$.  This tracking system
+provides high transverse-momentum ($\pt$) resolution, efficiency, and primary- and secondary-vertex
+resolutions.\\
+\indent Surrounding the tracker is the electromagnetic calorimeter (ECAL) consisting of over 60 thousand scintilating 
+lead tungstate crystals in the barrel ($|\eta| < 1.48$) and a further 7,500 crystals in each endcap extending
+the coverage up to each measuring $|\eta| < 2.5$. The crystals have a front-face cross section
+of approximately $22 \times 22~\texttt{mm}^2$ (resp. $28.6 \times 28.6~\texttt{mm}^2$) in the barrel (resp. endcap) with a
+length of 23~cm corresponding to $\sim25$ radiation lenghts, i.e. the length which an electron loses
+all but $1/e$ of its energy or $7⁄9$ of the mean free path for pair production by a high-energy photons.  
+Avalanche photo-diodes detect the scintilated light in the barrel $(|\eta| < 1.479)$ vacuum photo-triodes 
+in the endcap $(1.479 < |\eta| < 3.0)$. For extra spatial precision, the ECAL also contains lead-silicon 
+sampling detector that sit in front of the endcaps. These allow CMS to distinguish between single high-energy 
+photons and close pairs of low-energy photons.\\
 \indent The hadron calorimeter (HCAL) consists of alternating layers of brass absorber
 and plastic scintillator, which sample hadronic showers, arranged in identical azimuthal units 
 into two half-barrels and also into two endcaps. The scintillators are segmented projectively 
