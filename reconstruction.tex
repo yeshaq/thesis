@@ -35,13 +35,20 @@ range $60-70\%$ depending on the jet \pt.
 \subsubsection{Muons\label{sec:recMuon}}
 
 Muons are identified according to the Tight working point definition
-($\sim$95\% efficiency) of the muon identification
-algorithm~\cite{ref:muon-id}. The algorithm works to reject cosmic muons or 
-muons from decays in flight for consideration in the analysis. 
-A PF-based ``combined relative'' isolation~\cite{ref:muon-id} is determined 
-within a cone size $\Delta R < 0.4$, and corrections are applied to 
-remove the effects of pileup. Table~\ref{tab:muon-id} summarizes the
-identification and isolation requirements. 
+($\sim$95\% efficiency) of the muon identification algorithm~\cite{ref:muon-id}. 
+For this selection, the candidate muon must be reconstructed as a ``global'' muon, 
+defined in Section~\ref{sec:eventReco}, with the $\chi^2/d.o.f$ of the global-muon 
+track fit less than 10 and at least one muon chamber hit included in the global-muon 
+track fit. In addition, its corresponding tracker track is required to be matched to muon 
+segments in at least two muon stations, use more than 10 inner-tracker hits (including at least one
+pixel hit), and have a transverse impact parameter $|d_{xy}| < 2$~mm with respect to
+the primary vertex. With this selection, the rate of muons from decays in flght is
+significantly reduced, at the price of a few percent loss in efficiency for
+prompt muons such as those from W and Z decays. The Tight Muon selection is used in many 
+physics analyses in CMS. A PF-based ``combined relative'' isolation~\cite{ref:muon-id} is determined 
+within a cone size $\Delta R < 0.4$, and corrections are applied to remove the effects of 
+pileup~\cite{CMS-PAS-PFT-10-003}. Table~\ref{tab:muon-id} summarizes the identification 
+and isolation requirements. 
 
 \begin{table}[h!]
   \caption{Muon identification (Tight working point).\label{tab:muon-id}}
