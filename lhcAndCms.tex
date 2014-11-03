@@ -261,27 +261,16 @@ of the two subdetectors is performed to obtain a muon referred to as a ``global 
 This and other approaches are described in Ref.~\cite{PAS-MUO-10-002}. The quality criteria on the
 reconstruction and identification of muons for this analysis are discussed in Section~\ref{sec:muonReco}. \\
 
-\indent Photons and electrons are reconstructed through their energy deposit in the ECAL. 
-Single electrons or photons impinging at the center of a crystal for instance deposit about 97\% of their 
-incident energy in a cluster of cristals 5 $\times$ 5 in \eta-\phi space~\cite{Bayatian:922757}. But
-due to the 
-The situation is in general more complicated for the average electron. Electrons traversing the 
-tracker material radiate photons and the energy reaches the ECAL spread in $\phi$
-Electrons traversing the silicon layers of the tracker radiate bremsstrahlung photons and the energy reaches
-
-the ECAL with a signiﬁcant spread in the azimuthal direction $\phi$. The ECAL clustering, and in particular the
-
-building of “superclusters” (clusters of clusters), is designed to take into account the $\phi$ spread and collect the
-
-bremsstrahlung energy
-%\indent To reconstruct photons and electrons, hits in the ECAL are ﬁrst clustered in
-%rectangular strips of 5 crystals in $\eta$ by 35 in $\phi$ (in the barrel), or one or more group
-%of 5 by 5 crystals (in the endcaps) about energetic seed hits. Such a cluster contains
-%nearly all of the energy in an electromagnetic shower, and serves already as a basic
-%photon candidate. To reconstruct electrons, a trajectory from the measured cluster
-%position is propagated inward to the pixel layers. If matching hits are found, they are
-%used as a seed to build the electron track with a model that includes energy loss via
-%radiation; the track and cluster are then used in tandem.\\
+\indent Photons and electrons can be reconstructed through their energy deposit in the ECAL. 
+For instance, single photons impinging at the center of a crystal deposit about 97\% of their 
+incident energy in a cluster of crystals 5 $\times$ 5 in \eta-\phi space~\cite{Bayatian:922757}. 
+But the situation is in general more complicated for the average electron, as they bend while passing through
+the tracker under the influence of the mangetic field and radiate photons through bremsstrahlung.
+Clustering algorithm are therefore designed to take into account their spread of hits in $\phi$ and collect 
+the bremsstrahlung energy. The average cluster size from electrons end up being 5 crystals in $\eta$ 
+by 35 in $\phi$ in the barrel, or one or more group of 5 by 5 crystals in the endcaps. The crystals
+with the highest deposited energy are matched with nearby hits in the tracker layer which seed a dedicated
+radiative loss model to build the electron track.
 
 
 %\indent Jets are reconstructed using the anti-kt algorithm~\cite{antikt} with size parameter R = 0.5.
