@@ -212,39 +212,68 @@ the CERN computing center, where a final offline reconstruction is performed. Ev
 a common type of trigger are stored in a dataset and copied to many CMS computing sites around the
 globe for storage and analysis. 
   
-%\subsubsection{Event reconstruction}
-%\begin{figure}[h!]
-%  \begin{center}
-%      \includegraphics[width=.9\textwidth,]{figures/CMS_Slice}
-%      \caption{\label{fig:cmdSlice} }
-%  \end{center}
-%\end{figure}
-%
-%The goal of event reconstruction is to take the raw information recorded by the
-%detector and to compute from it higher-level quantities which correspond roughly to
-%properties of (a) individual particles, e.g. charge, momentum, or energy; (b) groups
-%of particles produced in a shower, e.g. multiplicity or geometric proﬁle; (c) the global
-%event, e.g. total energy recorded, or degree of momentum balance. Many aspects of
-%the reconstruction sequence are described in detail in Ref.~\cite{Bayatian:922757,Bayatian:942733}. 
-%Below is a brief description of those most relevant to this search.\\
+\subsubsection{Event reconstruction\label{sec:eventReco}}
+
+As detector instrumentation vary greatly througout a particle's path, reconstruction
+of an event and its objects relies on various stragies and algorithms. Yet the common goal 
+remains the same throughout: to reconstruct, from raw detector information,
+higher-level objects which represent as best as possible properties of: individual
+particles, groups of particles e.g. jets, or global event variables e.g. total energy
+recorded. The following gives an overview of the reconstruction sequence relevent for this search
+while many detais of the reconstruction technique can be found in Ref.~\cite{Bayatian:922757,Bayatian:942733}. 
+
+\begin{figure}[h!]
+  \begin{center}
+      \includegraphics[width=.9\textwidth,]{figures/CMS_Slice}
+      \caption{\label{fig:cmdSlice} }
+  \end{center}
+\end{figure}
+
 %\indent The raw data read out from CMS are first converted to software representations
 %of the digital samples of the detector signals, which are associated with individual
 %detector elements. In a typical procedure, knowledge of pulse shapes, time-dependent
 %channel-by-channel baseline values and gains, and detector geometry is then used to
 %convert these samples into reconstructed ``hits'', i.e. energy deposits in particular
 %detector locations at particular times.\\
-%\indent The reconstruction of particle tracks in the inner detectors proceeds in several
-%steps: (a) seeds are determined from hits in the pixels layers; (b) approximate tracks
-%are propagated outward, gathering matching hits and becoming more precise; (c) for
-%each track a final fit is performed using all of its hits. Primary vertices are found by
-%grouping tracks based on the z-coordinates of their points of closest approach to the
-%beam-line, and for each cluster of tracks a fit is performed to determine the position
-%of the vertex. \\ 
-%\indent To identify and reconstruct muons, a trajectory is first determined using only the
-%information from muon systems; then, if a matching track in the inner detector is
-%found, a fit to the hits in both detectors is performed to determine the parameters of
-%the muon trajectory. Such a muon is referred to as a “global” muon. This and other
-%approaches are described in Ref.~\cite{PAS-MUO-10-002}. \\
+
+
+\indent The collection of tracks left by charged particles in the tracker during an events are 
+reconstructed using an iterative process. The inital iteration searches for tracks 
+that are easiest to find (e.g., of relatively large $\pt$, and produced near the 
+interaction region). After each iteration, hits associated with tracks are removed, 
+thereby reducing the combinatorial complexity, and simplifying subsequent iterations 
+in a search for more difficult classes of tracks (e.g., low-$\pt$, or greatly displaced
+tracks)\cite{Chatrchyan:2014fea}. Each iteration follows similar steps: (a) a seed 
+track is generated from a few hits to be used as the initial estimate for the track's 
+trajectory parameters and uncertainties; (b) the seed track is extrapolated along the 
+expected flight path of a charged particle, searching for additional hits that can be 
+assigned to the track candidate thereby making it more precise; (c) a final fit is performed 
+using all of track its hits. The reconstructed tracks are then clustered on the basis of 
+their z-coordinates at their point of closest approach the beam-line and fitted to determine 
+the position of the vertex. This clustering allows for the reconstruction of any number 
+of proton-proton interactions in the same LHC bunch crossing.\\
+
+\indent In the standard CMS muon reconstruction, tracks are first reconstructed independently 
+in the inner tracker (tracker track) and in the muon system (standalone-muon track)~\cite{1748-0221-7-10-P10002}. 
+Then, for each standalone-muon track, a matching tracker track is found by comparing 
+parameters of the two tracks propagated onto a common surface. A fit to the combined hits 
+of the two subdetectors is performed to obtain a muon referred to as a ``global muon''.
+This and other approaches are described in Ref.~\cite{PAS-MUO-10-002}. The quality criteria on the
+reconstruction and identification of muons for this analysis are discussed in Section~\ref{sec:muonReco}. \\
+
+\indent Photons and electrons are reconstructed through their energy deposit in the ECAL. 
+Single electrons or photons impinging at the center of a crystal for instance deposit about 97\% of their 
+incident energy in a cluster of cristals 5 $\times$ 5 in \eta-\phi space~\cite{Bayatian:922757}. But
+due to the 
+The situation is in general more complicated for the average electron. Electrons traversing the 
+tracker material radiate photons and the energy reaches the ECAL spread in $\phi$
+Electrons traversing the silicon layers of the tracker radiate bremsstrahlung photons and the energy reaches
+
+the ECAL with a signiﬁcant spread in the azimuthal direction $\phi$. The ECAL clustering, and in particular the
+
+building of “superclusters” (clusters of clusters), is designed to take into account the $\phi$ spread and collect the
+
+bremsstrahlung energy
 %\indent To reconstruct photons and electrons, hits in the ECAL are ﬁrst clustered in
 %rectangular strips of 5 crystals in $\eta$ by 35 in $\phi$ (in the barrel), or one or more group
 %of 5 by 5 crystals (in the endcaps) about energetic seed hits. Such a cluster contains
@@ -253,6 +282,8 @@ globe for storage and analysis.
 %position is propagated inward to the pixel layers. If matching hits are found, they are
 %used as a seed to build the electron track with a model that includes energy loss via
 %radiation; the track and cluster are then used in tandem.\\
+
+
 %\indent Jets are reconstructed using the anti-kt algorithm~\cite{antikt} with size parameter R = 0.5.
 %Input to the algorithm is the set of projective calorimeter towers with total deposited
 %energy greater than approximately 1 GeV, which are treated as massless and with
