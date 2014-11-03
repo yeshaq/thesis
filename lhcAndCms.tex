@@ -243,7 +243,7 @@ that are easiest to find (e.g., of relatively large $\pt$, and produced near the
 interaction region). After each iteration, hits associated with tracks are removed, 
 thereby reducing the combinatorial complexity, and simplifying subsequent iterations 
 in a search for more difficult classes of tracks (e.g., low-$\pt$, or greatly displaced
-tracks)\cite{Chatrchyan:2014fea}. Each iteration follows similar steps: (a) a seed 
+tracks)~\cite{Chatrchyan:2014fea}. Each iteration follows similar steps: (a) a seed 
 track is generated from a few hits to be used as the initial estimate for the track's 
 trajectory parameters and uncertainties; (b) the seed track is extrapolated along the 
 expected flight path of a charged particle, searching for additional hits that can be 
@@ -252,63 +252,61 @@ using all of track its hits. The reconstructed tracks are then clustered on the 
 their z-coordinates at their point of closest approach the beam-line and fitted to determine 
 the position of the vertex. This clustering allows for the reconstruction of any number 
 of proton-proton interactions in the same LHC bunch crossing.\\
-
 \indent In the standard CMS muon reconstruction, tracks are first reconstructed independently 
-in the inner tracker (tracker track) and in the muon system (standalone-muon track)~\cite{1748-0221-7-10-P10002}. 
-Then, for each standalone-muon track, a matching tracker track is found by comparing 
-parameters of the two tracks propagated onto a common surface. A fit to the combined hits 
-of the two subdetectors is performed to obtain a muon referred to as a ``global muon''.
-This and other approaches are described in Ref.~\cite{PAS-MUO-10-002}. The quality criteria on the
-reconstruction and identification of muons for this analysis are discussed in Section~\ref{sec:muonReco}. \\
-
+in the inner tracker (tracker track) and in the muon system (standalone-muon 
+track)~\cite{1748-0221-7-10-P10002}. Then, for each standalone-muon track, a matching tracker 
+track is found by comparing parameters of the two tracks propagated onto a common surface. A 
+fit to the combined hits of the two subdetectors is performed to obtain a muon referred to as 
+a ``global muon''. This and other approaches are described in Ref.~\cite{PAS-MUO-10-002}. The 
+quality criteria on the reconstruction and identification of muons for this analysis are 
+discussed in Section~\ref{sec:muonReco}. \\
 \indent Photons and electrons can be reconstructed through their energy deposit in the ECAL. 
 For instance, single photons impinging at the center of a crystal deposit about 97\% of their 
 incident energy in a cluster of crystals 5 $\times$ 5 in $\eta-\phi$ space~\cite{Bayatian:922757}. 
-But the situation is in general more complicated for the average electron, as they bend while passing through
-the tracker under the influence of the mangetic field and radiate photons through bremsstrahlung.
-Clustering algorithm are therefore designed to take into account their spread of hits in $\phi$ and collect 
-the bremsstrahlung energy. The average cluster size from electrons end up being 5 crystals in $\eta$ 
-by 35 in $\phi$ in the barrel, or one or more group of 5 by 5 crystals in the endcaps. The crystals
-with the highest deposited energy are matched with nearby hits in the tracker layer which seed a dedicated
-radiative loss model to build the electron track.\\
+But the situation is in general more complicated for the average electron, as they bend while 
+passing through the tracker under the influence of the mangetic field and radiate photons through 
+bremsstrahlung. Clustering algorithm are therefore designed to take into account their spread of 
+hits in $\phi$ and collect the bremsstrahlung energy. The average cluster size from electrons end 
+up being 5 crystals in $\eta$ by 35 in $\phi$ in the barrel, or one or more group of 5 by 5 
+crystals in the endcaps. The crystals with the highest deposited energy are matched with nearby 
+hits in the tracker layer which seed a dedicated radiative loss model to build the electron track.\\
 \indent Jets are reconstructed using the anti-kt algorithm~\cite{antikt} set to sequentially clusters 
 particle tracks or energy deposits within a cone of radius R=0.5. The input to the algoritm define
 the jet type; two types of jets are studied in the analysis calorimeter (calo) jets and Particle-Flow 
 (PF) jets the are defined below.\\
-\indent Calorimeter jets are reconstructed using energy deposits in the ECAL and HCAL which are combined 
-into calorimeter towers as inputs. A calorimeter tower consists of one or more HCAL cells and the geometrically 
-corresponding (ECAL) crystals.\\
-\indent The Particle Flow (PF) algorithm aims to reconstruct, identify and calibrate each individual particle 
-in the event by combining the information from all CMS sub-detector systems. PF particles are 
+\indent Calorimeter jets are reconstructed using energy deposits in the ECAL and HCAL which are 
+combined into calorimeter towers as inputs. A calorimeter tower consists of one or more HCAL cells 
+and the geometrically corresponding (ECAL) crystals.\\
+\indent The Particle Flow (PF) algorithm aims to reconstruct, identify and calibrate each individual 
+particle in the event by combining the information from all CMS sub-detector systems. PF particles are 
 reconstructed as a combination of charged particle tracks and clusters in the electromagnetic 
-and hadronic calorimeters, as well as signals in either of the two CMS pre-shower detectors and the 
-muon system. Depending on which of the detector systems contribute to a single particle, it is identified 
-as either an electron (track+ECAL), muon (track+ECAL+HCAL+Muon System), photon (ECAL), charged hadron 
-(track+ECAL+HCAL), or neutral hadron (HCAL). The algorithm employs strategies to handle ambiguities 
-stemming from overlapping detector signals to avoid information double-counting. Based on the particle 
-type, the energy of each particle is calibrated. Charged hadrons are treated under the assumption that 
-they are pions. As a result of the PF reconstruction, the inputs to the jet clustering are almost fully 
-calibrated and the resulting higher level objects (jets) require small a posteriori energy corrections. 
+and hadronic calorimeters, as well as signals in either of the two CMS pre-shower detectors 
+and the muon system. Depending on which of the detector systems contribute to a single particle, 
+it is identified as either an electron (track+ECAL), muon (track+ECAL+HCAL+Muon System), photon (ECAL), 
+charged hadron (track+ECAL+HCAL), or neutral hadron (HCAL). The algorithm employs strategies to handle 
+ambiguities stemming from overlapping detector signals to avoid information double-counting. Based on 
+the particle type, the energy of each particle is calibrated. Charged hadrons are treated under the 
+assumption that they are pions. As a result of the PF reconstruction, the inputs to the jet clustering 
+are almost fully calibrated and the resulting higher level objects (jets) require small a posteriori 
+energy corrections~\cite{Chatrchyan:2011ds}.\\
+\indent The relative simplicity of calo-jet reconstruction allows for fast computational time while 
+the complexity of PF-jets reconstruction provides better angular and $\pt$ resolutions. This search 
+uses calo-jets in the HLT trigger algorithm and PF-jets in the offline analysis; the consequences are 
+discussed in Section~\ref{signal_triggers}. The relative $\pt$ resolution for central jets for both 
+jet types determined using dijet $\pt$-asymmetry, is shown in Figure~\ref{fig:jetRes}. 
 
+\begin{figure}[h!]
+  \begin{center}
+  \subfigure[]{
+      \includegraphics[width=0.45\textwidth,]{figures/ak5calo_relRes}}
+      \subfigure[]{
+      \includegraphics[width=0.45\textwidth,]{figures/ak5pf_relRes}}
+      \caption{\label{fig:jetRes} The relative $\pt$ resolution as a function of jet $\pt$
+              for calo jets (a) and PF jets (b) in the center of the barrel using the dijet
+              $\pt$-asymmetry method~\cite{CMS-PAS-JME-10-014}.}
+  \end{center}
+\end{figure}
 
-%\indent Jets are reconstructed using the anti-kt algorithm~\cite{antikt} with size parameter R = 0.5.
-%Input to the algorithm is the set of projective calorimeter towers with total deposited
-%energy greater than approximately 1 GeV, which are treated as massless and with
-%directions chosen to connect the tower center to the nominal interaction point. The
-%raw jet energies are corrected to achieve a uniform relative response as a function
-%of pseudo-rapidity, in particular to compensate for detector non-uniformities, and a
-%calibrated absolute response as a function of transverse momentum~\cite{Chatrchyan:2011ds}.
-%The relative $\pt$ resolution for central jets, determined using dijet $\pt$-asymmetry, is shown in
-%Figure~\ref{fig:jetRes}. 
-%
-%\begin{figure}[h!]
-%  \begin{center}
-%      \includegraphics[width=0.45\textwidth,]{figures/ak5pf_relRes}
-%      \caption{\label{fig:jetRes} The relative $\pt$ resolution as a function of jet $\pt$
-%              for central jets.}
-%  \end{center}
-%\end{figure}
-%
 %Missing transverse energy (\met) is computed from the same towers of energy deposits 
 %in the calorimeters that are used for jet-finding; it is the negative of the vectorial
 %sum of their components transverse to the beam-axis. Corrections are applied to
