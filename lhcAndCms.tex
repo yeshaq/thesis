@@ -94,46 +94,54 @@ in Figure~\ref{fig:crossSec}.
   \end{center}
 \end{figure}
 
-The various SUSY production cross sections drive the choice of interpretation of the results for 
-this search, and this is further discussed in Section~\ref{sec:signature}. The small SUSY cross
-sections compared with that of known processes highlight the challenge for the search.
+The various SUSY production cross sections drive the choice of interpretation 
+of the results for this search, and this is further discussed in Section~\ref{sec:signature}. 
+The small SUSY cross sections compared with that of known processes highlight 
+the challenge for the search.\\
+\indent Given that the energy of the colliding quarks or gluons is not known on 
+an event-to-event basis, the use of conservation of total energy is not possible. 
+The different momentums of the two colliding partons give a ``boost'' to the center-of-mass 
+of the scattering system along the beam line which varies event-by-event. On the other hand, 
+the component transverse to the beam axis of the momentum of the colliding quark or gluon is 
+known to be zero. Therefore it is convenient to discuss jets (as well as other reconstructed 
+particles) in terms of these quantities: transverse momentum $\pt$, which is invariant under 
+such boosts, or similarly transverse energy $\equiv E \sin\left(\theta\right)$, with 
+$0 \leq \theta \leq \pi$ where $\theta$ is the polar angle from the beam-line; and pseudo-rapidity:
 
-Given that the energy of the colliding quarks or gluons is not known, comparison of the events reconstructed
-energy with the collision energy is not possible. The different momenutms of the two colliding partons give a
-``boost'' to the center-of-mass of the scattering system along the beam line which varies event-by-event. 
-On the other hand, the component transverse to beam axis of the momentum of the colliding quark or gluon is known 
-to be zero. Therefore it is convenient to discuss jets (as well as other reconstructed 
-particles) in terms of these quantities:transverse momentum $\pt$ , which is invariant under such boosts, or similarly transverse
-energy $\equiv E \sin\left(\theta\right)$, with $0 \leq \theta \leq \pi$ where $\theta$
-is the polar angle from the beam-line; and pseudo-rapidity:
 \begin{equation}
-        \eta \equiv −\ln\left( \tan\left(\theta/2\right)\right)
+        \eta \equiv −\ln\left( \tan\left(\theta/2\right)\right),
         \label{pseudo}      
 \end{equation}
-, of which differences are (approximately) invariant.
+
+of which differences remain invariant. Furthermore, it is convenient to describe the distance between
+objects in the detector as:
+
+\begin{equation}
+        R \equiv \sqrt{\left(\Delta\phi\right)^2 + \left(\Delta\eta\right)^2},
+        \label{pseudo}      
+\end{equation}
+
+where the azimuthal angle $\phi$ is the angle sweeping around the beam-line.
 
 \subsection{The Compact Muon Solenoid detector\label{sec:cms}}
 
 \subsubsection{The detector}
-%The Compact Muon Solenoid (CMS) detector is designed to provide efficient 
-%identification and measurement of photons, electrons, muons, taus, and hadronic showers
-%over wide ranges of transverse momentum and direction, and its nearly 4$\pi$ coverage
-%in solid angle provides accurate measurement of global transverse momentum imbalance. 
-%It has sufficient granularity to perform these measurements even when 20+
-%interactions occur simultaneously in a collision of two bunches of protons, and fast
-%enough response to do so when the time between beam crossings is 25 ns. Its components 
-%are resistant to damage from radiation, enabling its use to collect substantial
-%luminosity, and its modularity allows for long-term maintenance and upgrades. When
-%closed, CMS is a cylinder of length 22 m, diameter 15 m, and mass 12,500 tons. It
-%is described in detail elsewhere~\cite{1748-0221-3-08-S08004}.\\
-%\indent The last name of the detector refers to a superconducting solenoid of radius 3 m
-%and length 12.5 m, which carries 18 kA to provide a longitudinal magnetic field of
-%3.8 T. It is operated at 4.5~K. This magnet is surrounded by a central fixed ``ring''
-%and two movable rings on each side, constituting the ``barrel''; it is flanked on each
-%side by an ``endcap''. The tracking system and calorimeters reside in the magnet
-%bore. The layout is shown in the bottom plot of Figure~\ref{fig:cms}. The x-axis is taken to point
-%radially toward the center of the LHC ring, the y-axis to point against gravity, and
-%the z-axis to form a right-handed coordinate system.
+The Compact Muon Solenoid (CMS) is a multi-purpose detector designed to reconstruct
+the visible products of the colliding particles of the LHC. It's first name refers to 
+the its compact design; it packs twice the weight in $1/6^{th}$ the volume of ATLAS, 
+the other multi-purpose detector at CERN. Its second name refers to the detector's design
+to measure muons with great precision; with the ability to resolve a muon's $\pt$ down to 
+1\% in some cases. It's last name refers to to the superconducting solenoid of diameter 
+6~m and length 12.5~m. When ramped up to 18~kA, it prodcues a magnetic field of 3.8~T providing
+a means of measuring kinematic properties of charged particles. The magnet is kept at a 
+superconducting temperature of 4.8 Kelvin. The dectector is segmented into a ``barrel'' 
+section, flanked on each side by an ``endcap''. The fact that the tracking and calorimeter 
+instrumentation is located in the magnet bore lends to the detector's compact design. 
+CMS nearly completely encloses the interaction point of the two beams, and provide an 
+accurate measurment of global transverse momentum imbalance of a collision event. The 
+layout is shown in the bottom plot of Figure~\ref{fig:cms}. The detector is described in 
+full detail in Ref.~\cite{1748-0221-3-08-S08004,Bayatian:922757,Bayatian:942733}, but a brief
+overview is given below. 
 
 \begin{figure}[h!]
   \begin{center}
