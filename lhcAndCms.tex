@@ -263,14 +263,32 @@ reconstruction and identification of muons for this analysis are discussed in Se
 
 \indent Photons and electrons can be reconstructed through their energy deposit in the ECAL. 
 For instance, single photons impinging at the center of a crystal deposit about 97\% of their 
-incident energy in a cluster of crystals 5 $\times$ 5 in \eta-\phi space~\cite{Bayatian:922757}. 
+incident energy in a cluster of crystals 5 $\times$ 5 in $\eta-\phi$ space~\cite{Bayatian:922757}. 
 But the situation is in general more complicated for the average electron, as they bend while passing through
 the tracker under the influence of the mangetic field and radiate photons through bremsstrahlung.
 Clustering algorithm are therefore designed to take into account their spread of hits in $\phi$ and collect 
 the bremsstrahlung energy. The average cluster size from electrons end up being 5 crystals in $\eta$ 
 by 35 in $\phi$ in the barrel, or one or more group of 5 by 5 crystals in the endcaps. The crystals
 with the highest deposited energy are matched with nearby hits in the tracker layer which seed a dedicated
-radiative loss model to build the electron track.
+radiative loss model to build the electron track.\\
+\indent Jets are reconstructed using the anti-kt algorithm~\cite{antikt} set to sequentially clusters 
+particle tracks or energy deposits within a cone of radius R=0.5. The input to the algoritm define
+the jet type; two types of jets are studied in the analysis calorimeter (calo) jets and Particle-Flow 
+(PF) jets the are defined below.\\
+\indent Calorimeter jets are reconstructed using energy deposits in the ECAL and HCAL which are combined 
+into calorimeter towers as inputs. A calorimeter tower consists of one or more HCAL cells and the geometrically 
+corresponding (ECAL) crystals.\\
+\indent The Particle Flow (PF) algorithm aims to reconstruct, identify and calibrate each individual particle 
+in the event by combining the information from all CMS sub-detector systems. PF particles are 
+reconstructed as a combination of charged particle tracks and clusters in the electromagnetic 
+and hadronic calorimeters, as well as signals in either of the two CMS pre-shower detectors and the 
+muon system. Depending on which of the detector systems contribute to a single particle, it is identified 
+as either an electron (track+ECAL), muon (track+ECAL+HCAL+Muon System), photon (ECAL), charged hadron 
+(track+ECAL+HCAL), or neutral hadron (HCAL). The algorithm employs strategies to handle ambiguities 
+stemming from overlapping detector signals to avoid information double-counting. Based on the particle 
+type, the energy of each particle is calibrated. Charged hadrons are treated under the assumption that 
+they are pions. As a result of the PF reconstruction, the inputs to the jet clustering are almost fully 
+calibrated and the resulting higher level objects (jets) require small a posteriori energy corrections. 
 
 
 %\indent Jets are reconstructed using the anti-kt algorithm~\cite{antikt} with size parameter R = 0.5.
