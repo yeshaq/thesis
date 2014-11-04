@@ -4,7 +4,7 @@
 \subsection{The Large Hadron Collider\label{sec:lhc}}
 
 The Large Hadron Collider (LHC) is a particle accelerator and collider
-housed 100 meters undeground in a 27 km long circular tunnel situated 
+housed 100 meters underground in a 27 km long circular tunnel situated 
 beneath the Swiss-French border. The collider consists of two 
 counter-circulating particle beams which are made to collide at four points 
 along the ring. Figure~\ref{fig:lhc} shows the location of the LHC and 
@@ -35,7 +35,7 @@ Protons that are ideally timed and have exactly the desired energy, will feel
 a zero accelerating force from the RF cavity, while protons with slightly different 
 energies that arrive earlier or later are decelerated or accelerated. As a result, 
 the proton beams are divided in discrete ``bunches'' of protons. Each bunch, before collision,
-measures $16~\micron$ transversally and $\sim\!\!30$~cm long. Bunches are separated 7~m apart.
+measures $16~\micron$ transversely and $\sim\!\!30$~cm long. Bunches are separated 7~m apart.
 The LHC has been designed to operate with 2808 bunches per beam, with about $10^{11}$ protons per bunch. 
 The figure of merit for colliders such as the LHC is the luminosity, a quantity 
 influencing the rate of collisions. The instantaneous luminosity depends on the number of protons
@@ -72,7 +72,7 @@ is shown in Figure~\ref{fig:int_lumi}.
 Despite collision bunches each containing $10^{10}$ protons, the number of collisions
 between protons average to only around 20 per bunch crossing. Of these collisions only
 one or two have substantial momentum transfer to produce energetic elementary 
-particles, the rest produce soft jets who's energies are eventually substracted from the event's
+particles, the rest produce soft jets who's energies are eventually subtracted from the event's
 reconstructed objects. In a proton collision, the interaction actually takes place between the 
 constituent quarks and gluons and the distributions of what fraction of a proton's momentum a 
 constituent gluon or quark carries are given by parton distribution functions (PDFs). \\
@@ -100,7 +100,7 @@ The small SUSY cross sections compared with that of known processes highlight
 the challenge for the search.\\
 \indent Given that the energy of the colliding quarks or gluons is not known on 
 an event-to-event basis, the use of conservation of total energy is not possible. 
-The different momentums of the two colliding partons give a ``boost'' to the center-of-mass 
+The different momenta of the two colliding partons give a ``boost'' to the center-of-mass 
 of the scattering system along the beam line which varies event-by-event. On the other hand, 
 the component transverse to the beam axis of the momentum of the colliding quark or gluon is 
 known to be zero. Therefore it is convenient to discuss jets (as well as other reconstructed 
@@ -132,13 +132,13 @@ the its compact design; it packs twice the weight in $1/6^{th}$ the volume of AT
 the other multi-purpose detector at CERN. Its second name refers to the detector's design
 to measure muons with great precision; with the ability to resolve a muon's $\pt$ down to 
 1\% in some cases. It's last name refers to to the superconducting solenoid of diameter 
-6~m and length 12.5~m. When ramped up to 18~kA, it prodcues a magnetic field of 3.8~T providing
+6~m and length 12.5~m. When ramped up to 18~kA, it produces a magnetic field of 3.8~T providing
 a means of measuring kinematic properties of charged particles. The magnet is kept at a 
-superconducting temperature of 4.8 Kelvin. The dectector is segmented into a ``barrel'' 
+superconducting temperature of 4.8 Kelvin. The detector is segmented into a ``barrel'' 
 section, flanked on each side by an ``endcap''. The fact that the tracking and calorimeter 
 instrumentation is located in the magnet bore lends to the detector's compact design. 
 CMS nearly completely encloses the interaction point of the two beams, and provide an 
-accurate measurment of global transverse momentum imbalance of a collision event. The 
+accurate measurement of global transverse momentum imbalance of a collision event. The 
 layout is shown in the bottom plot of Figure~\ref{fig:cms}. The detector is described in 
 full detail in Ref.~\cite{1748-0221-3-08-S08004,Bayatian:922757,Bayatian:942733}, but a brief
 overview is given below. 
@@ -222,13 +222,13 @@ globe for storage and analysis.
   
 \subsubsection{Event reconstruction\label{sec:eventReco}}
 
-As detector instrumentation vary greatly througout a particle's path, reconstruction
-of an event and its objects relies on various stragies and algorithms. Yet the common goal 
+As detector instrumentation vary greatly throughout a particle's path, reconstruction
+of an event and its objects relies on various strategies and algorithms. Yet the common goal 
 remains the same throughout: to reconstruct, from raw detector information,
 higher-level objects which represent as best as possible properties of: individual
 particles, groups of particles e.g. jets, or global event variables e.g. total energy
-recorded. The following gives an overview of the reconstruction sequence relevent for this search
-while many detais of the reconstruction technique can be found in Ref.~\cite{Bayatian:922757,Bayatian:942733}. 
+recorded. The following gives an overview of the reconstruction sequence relevant for this search
+while many details of the reconstruction technique can be found in Ref.~\cite{Bayatian:922757,Bayatian:942733}. 
 
 \begin{figure}[h!]
   \begin{center}
@@ -246,7 +246,7 @@ while many detais of the reconstruction technique can be found in Ref.~\cite{Bay
 
 
 \indent The collection of tracks left by charged particles in the tracker during an events are 
-reconstructed using an iterative process. The inital iteration searches for tracks 
+reconstructed using an iterative process. The initial iteration searches for tracks 
 that are easiest to find (e.g., of relatively large $\pt$, and produced near the 
 interaction region). After each iteration, hits associated with tracks are removed, 
 thereby reducing the combinatorial complexity, and simplifying subsequent iterations 
@@ -272,14 +272,14 @@ discussed in Section~\ref{sec:muonReco}. \\
 For instance, single photons impinging at the center of a crystal deposit about 97\% of their 
 incident energy in a cluster of crystals 5 $\times$ 5 in $\eta-\phi$ space~\cite{Bayatian:922757}. 
 But the situation is in general more complicated for the average electron, as they bend while 
-passing through the tracker under the influence of the mangetic field and radiate photons through 
+passing through the tracker under the influence of the magnetic field and radiate photons through 
 bremsstrahlung. Clustering algorithm are therefore designed to take into account their spread of 
 hits in $\phi$ and collect the bremsstrahlung energy. The average cluster size from electrons end 
 up being 5 crystals in $\eta$ by 35 in $\phi$ in the barrel, or one or more group of 5 by 5 
 crystals in the endcaps. The crystals with the highest deposited energy are matched with nearby 
 hits in the tracker layer which seed a dedicated radiative loss model to build the electron track.\\
 \indent Jets are reconstructed using the anti-kt algorithm~\cite{antikt} set to sequentially clusters 
-particle tracks or energy deposits within a cone of radius R=0.5. The input to the algoritm define
+particle tracks or energy deposits within a cone of radius R=0.5. The input to the algorithm define
 the jet type; two types of jets are studied in the analysis calorimeter (calo) jets and Particle-Flow 
 (PF) jets the are defined below.\\
 \indent Calorimeter jets are reconstructed using energy deposits in the ECAL and HCAL which are 
