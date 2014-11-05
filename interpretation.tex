@@ -369,7 +369,45 @@ on the signal strength. The result is shown in Figure~\ref{fig:t2tt-int-400_100}
 \end{figure*}
 \FloatBarrier
 
+\subsection{Comparison with calorimeter jets}
+
+\begin{figure*}[h!]
+  \begin{center}
+      \includegraphics[width=0.65\textwidth]{figures/T2tt_ExpectedUpperLimit_ratio}
+    \caption{\label{fig:pfVsCalo}
+}
+  \end{center}
+\end{figure*}
+
+PF-jets have become the predominent jet type used in CMS analyses due to their 
+improved reconstruction performence (as discussed in Section~\ref{sec:eventReco}). 
+Until now, searches employing the $\alphat$ variable have continued to use calo-jets 
+under the assumption that the $\alphat$-triggers (which use calo-jets) would 
+introduce too much ineffeciency if any other jet types were used in the offline analysis. 
+As this analysis is the first to employ PF-jets with the $\alphat$ variable to search
+for excess in all-hadronic events with $\met$ signatures, a comparison with a similar 
+calo-jet based analysis is sought. The CMS results using the full 2012 data based on 
+calo-jets with have yet to be published, therefore, the comparison is made with 
+the analysis described above using calo-jets. The metric for comparison is chosen to 
+be the expected upper limit at 95\% C.L. on the cross section of the signal model \text{T2tt} 
+as it, by construction, incorporates the efficiency on the signal yields, the background systematic 
+uncertainties, and trigger efficiencies. For a given model, the expected upper limit is generally 
+considered as the power or sensitivity of a search. Figure~\ref{fig:pfVsCalo} shows the ratio
+of expected upper limit at 95\% C.L. between PF-jets and calo-jets, i.e. 
+$\frac{\sigma_{\texttt{Exp. Upper limit}}^{PF}}{\sigma_{\texttt{Exp. Upper limit}}^{Calo}}$.
+Ratio values $<1$ indicate stronger upper limits set using PF-jets while ratios $>1$ indicate
+stronger upper limits set by the use of calo-jets. Throughout the mass plane, the ratios fluctuate
+around 1, indicating that altough the $\alphat$ triggers introduce inefficienty (at the order of ~10\% 
+in the lowest $\scalht$ bins) when using PF-jets, the jet's reconstruction performance mitigates 
+this effect and comparable expected upper limits are achieved. Since PF-jets are now widely used by analyses
+and supported by various object performance groups in CMS, any future analysis using $\alphat$ may do
+so without concern of loss in sensitivity.  
+
+
+\FloatBarrier
+
 \subsection{Conclusions}
+
 
 Years of effort from thousands of people around the world
 has brought the LHC and CMS past trough the phases of design, construction,
@@ -397,216 +435,3 @@ weaker than expected. The LHC will resume operation in the Spring of
 2015 at the center-of-mass energy of 13~\TeV, the \alphat 
 analysis as described here will be used to search for signatures of 
 pair-production of $\st$, $\sq$ and $\gl$ at this new energy regime.
-\clearpage
-%\begin{figure*}[t!]
-%  \begin{center}
-%     \subfigure[\njethigh, $\nb = 1$, simultaneous fit]{
-%      \includegraphics[width=0.45\textwidth,page=13]{figures/fit/v22/stackedSig/575_0/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1p_2b_ge4j-1_sel1b_ge4j_smOnly.pdf}
-%    } 
-%    \subfigure[\njethigh, $\nb = 2$, simultaneous fit]{
-%      \includegraphics[width=0.45\textwidth,page=9]{figures/fit/v22/stackedSig/575_0/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1p_2b_ge4j-1_sel2b_ge4j_smOnly.pdf}
-%    } \\
-%    \caption{\label{fig:t2cc-sig-575} The \scalht-binned 
-%      signal significance defined as the signal yield 
-%      divided by the $\sqrt{b+(.1b)^2}$ where $b$ is the
-%      SM expectation obtained by a fit to all 
-%      control data samples under the SM-only background 
-%      hypothesis for the two categories (a) \njethigh, $\nb = 1$ and (b) 
-%      \njethigh, $\nb = 2$ simultaneously. 
-%      The signal model is \texttt{T2tt} with 
-%      $m_{\st} = 575\GeV$ and $m_{\text{LSP}} = 0\GeV$.} 
-%  \end{center}
-%\end{figure*}
-%
-%
-%\begin{figure*}[t!]
-%  \begin{center}
-%    \subfigure[\njethigh, $\nb = 1$, simultaneous fit]{
-%      \includegraphics[width=0.45\textwidth]{figures/fit/v22/wSignal/575_0/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_sel1b_ge4j}
-%    } 
-%    \subfigure[\njethigh, $\nb = 2$, simultaneous fit]{
-%      \includegraphics[width=0.45\textwidth]{figures/fit/v22/wSignal/575_0/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_sel2b_ge4j}
-%    } \\
-%    \caption{\label{fig:t2tt-best-fit-575}The comparison of
-%      the \scalht-binned observed data yields and expectations for the
-%      hadronic sample, as determined by a simultaneous fit to all data
-%      samples under the signal plus SM background hypothesis. The
-%      observed event yields in data (black dots), the SM expectations
-%      (dark blue solid line), and the signal expectations (pink solid
-%      line), as determined by the simultaneous fit, for the
-%      signal model \texttt{T2tt} with $m_{\st} = 575\GeV$ and
-%      $m_{\text{LSP}} = 0\GeV$. Two event categories are
-%      considered: (a) \njethigh and $\nb = 1$, (b) \njethigh and
-%      $\nb = 2$.}
-%  \end{center}
-%\end{figure*}
-%\begin{figure*}[t!]
-%  \begin{center}
-%    \subfigure[profile likelihood ratio, simultaneous fit]{
-%      \includegraphics[width=0.45\textwidth]{figures/fit/v22/wSignal/575_0/intervalPlot_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_95}
-%    } \\
-%    \caption{\label{fig:t2tt-int-575}The profile likelihood ratio 
-%      (defined in sec.~\ref{sec:cls}) as a function of the signal strength.
-%      The likelihood considers all data samples under the signal plus SM 
-%      background hypothesis for the signal model \texttt{T2tt} with 
-%      $m_{\st} = 575\GeV$ and $m_{\text{LSP}} = 0\GeV$.
-%      The minimum defines the signal strength estimate which maximizes the
-%      likelihood and the green vertical line on the right of the minimum 
-%      indicates the upper-limit at 95\% confidence level.}
-%  \end{center}
-%\end{figure*}
-%
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%%Figure~\ref{fig:limits-sms} shows the upper limit on the cross section
-%%at 95\% CL as a function of $m_{\st}$ or $m_{\gl}$ and $m_{\rm LSP}$
-%%for various simplified models. The point-to-point fluctuations are due
-%%to the finite number of pseudo-experiments used to determine the
-%%observed upper limit. The solid thick black line indicates the
-%%observed exclusion region assuming NLO+NLL~\cite{Beenakker:1996ch,
-%%  susy-nlo-nll} SUSY cross section for squark pair production in the
-%%limit of very massive gluinos (or vice versa). The thin black lines
-%%represent the observed excluded region when varying the cross section
-%%by its theoretical uncertainty. The dashed purple lines indicate the
-%%median (thick line) $\pm 1 \sigma$ (thin lines) expected exclusion
-%%regions.
-%
-%%The estimates on mass limits are determined conservatively from the
-%%observed exclusion based on the theoretical production cross section
-%%minus $1\sigma$ uncertainty.  The most stringent mass limits on
-%%pair-produced sparticles are obtained at low LSP masses, while the
-%%limits typically weaken for compressed spectra, \ie, points close to
-%%the diagonal. In particular, for all of the considered simplified
-%%models, there is an LSP mass beyond which no limit can be set. This is
-%%illustrated in Figure~\ref{fig:t1}, where the most stringent limit on
-%%the gluino mass of $950\GeV$ is obtained for low LSP masses. This
-%%limit only weakens to $900\GeV$ when the LSP mass reaches
-%%$425\GeV$. However, for LSP masses above $450\GeV$, no mass range can
-%%be excluded for gluinos decaying to first- or second-generation
-%%quarks. Table~\ref{tab:sms} summarises the mass limits obtained from
-%%the considered simplified models.
-%%
-%%\begin{figure}[h!]
-%%  \begin{center}
-%%    \subfigure[\label{fig:t1}$\sGlu\sGlu\,\rightarrow\,\textrm{q}\bar{\textrm{q}}\chiz \textrm{q}\bar{\textrm{q}}\chiz$ (Model \texttt{T1})]{
-%%      \includegraphics[width=0.45\textwidth]{figures/limits/v4/t1}
-%%    } \quad
-%%    \subfigure[\label{fig:t2}$\sQua\sQua\,\rightarrow\,\textrm{q}\chiz \bar{\textrm{q}}\chiz$ (Model \texttt{T2})]{ 
-%%      \includegraphics[width=0.45\textwidth]{figures/limits/v4/t2}
-%%    } \\
-%%%    \subfigure[\label{fig:t2tt}$\sTop\sTop\,\rightarrow\,\textrm{t}\chiz \bar{\textrm{t}}\chiz$ (Model \texttt{T2tt})]{ 
-%%%      \includegraphics[width=0.45\textwidth]{figures/limits/v1/t2tt}
-%%%    } \quad 
-%%    \subfigure[\label{fig:t2bb}$\sBot\sBot\,\rightarrow\,\textrm{b}\chiz \bar{\textrm{b}}\chiz$ (Model \texttt{T2bb})]{ 
-%%      \includegraphics[width=0.45\textwidth]{figures/limits/v4/t2bb}
-%%    } \\
-%%    \subfigure[\label{fig:t1tttt}$\sGlu\sGlu\,\rightarrow\,\textrm{t}\bar{\textrm{t}}\chiz \textrm{t}\bar{\textrm{t}}\chiz$ (Model \texttt{T1tttt})]{
-%%      \includegraphics[width=0.45\textwidth]{figures/limits/v4/t1tttt}
-%%    } \quad 
-%%    \subfigure[\label{fig:t1bbbb}$\sGlu\sGlu\,\rightarrow\,\textrm{b}\bar{\textrm{b}}\chiz \textrm{b}\bar{\textrm{b}}\chiz$ (Model \texttt{T1bbbb})]{
-%%      \includegraphics[width=0.45\textwidth]{figures/limits/v4/t1bbbb}
-%%    } \\
-%%    \caption{\label{fig:limits-sms} Upper limit on cross section at
-%%      95\% CL as a function of $m_{\st}$ or $m_{\gl}$ and $m_{\rm
-%%        LSP}$ for various simplified models. The solid thick black
-%%      line indicates the observed exclusion region assuming NLO+NLL
-%%      SUSY production cross section. The thin black lines represent
-%%      the observed excluded region when varying the cross section by
-%%      its theoretical uncertainty. The dashed purple lines indicate
-%%      the median (thick line) $\pm 1 \sigma$ (thin lines) expected
-%%      exclusion regions. 
-%%      %The mass ranges considered for models \texttt{T2tt} and
-%%      %\texttt{T1tttt} differ from the other models.  
-%%    }
-%%  \end{center}
-%%\end{figure}
-%%
-%%\begin{figure*}[t!]
-%%  \begin{center}
-%%    \includegraphics[width=0.45\textwidth]{figures/limits/v4/T2tt_mlsp0_xmin300_smooth5_prelim.pdf} \,
-%%    \includegraphics[width=0.45\textwidth]{figures/limits/v4/T2tt_mlsp50_xmin300_smooth5_prelim.pdf}  \\
-%%    \includegraphics[width=0.45\textwidth]{figures/limits/v4/T2tt_mlsp100_xmin300_smooth5_prelim.pdf} \,
-%%    \includegraphics[width=0.45\textwidth]{figures/limits/v4/T2tt_mlsp150_xmin350_smooth5_prelim.pdf} \\
-%%    \caption{\label{fig:t2tt-1d} Excluded cross sections versus top
-%%      squark mass $m_{\sTop}$ for the model \texttt{T2tt}, in which
-%%      pair-produced top squarks each decay to a top quark and the LSP
-%%      with a mass $m_{\rm LSP} = 0\gev$ (top left), $m_{\rm LSP} =
-%%      50\gev$ (top right), $m_{\rm LSP} = 100\gev$ (bottom left),
-%%      $m_{\rm LSP} = 150\gev$ (bottom right). The observed upper limit
-%%      (95\% CL) on the production cross section is shown as a function
-%%      of $m_{\sTop}$ (solid line), along with the expected upper limit
-%%      and $\pm1\sigma$ experimental uncertainties (long-dashed line
-%%      with shaded band), and the NLO+NLL top squark pair-production
-%%      cross section and theoretical uncertainties (dotted line with
-%%      shaded band).}
-%%  \end{center}
-%%\end{figure*}
-%%
-%%Figure~\ref{fig:t2tt-1d} shows the observed upper limit at 95\% CL on
-%%the production cross section as a function of the top squark mass
-%%($m_{\sTop}$) for the model \texttt{T2tt} when considering different
-%%LSP masses in the range 0--150\GeV. No exclusion on possible top
-%%squark masses is observed when considering the theoretical production
-%%cross section minus $1\sigma$ uncertainty. However, the expected
-%%exclusion covers the ranges 300--520\GeV, 320--520\GeV, and
-%%420-480\GeV for $m_{\text{LSP}} = 0\GeV$, $m_{\text{LSP}} = 50\GeV$,
-%%and $m_{\text{LSP}} = 100\GeV$ respectively. No exclusion is expected
-%%for the LSP with a mass greater than 100\GeV.
-%%%The expected reach for the T2tt model is summarised
-%%%in Table~\ref{tab:sms-reach}. 
-
-
-
-%In the \njethigh and $\nb = 2$ category, \scalht bins $575-675$ and 
-%$675-775\GeV$ show the highest excesses: $\sim\!\!2.5\sigma$ and 
-%$\sim\!\!1.5\sigma$ respectively. In the \njethigh and $\nb = 1$ 
-%category, the lowest two \scalht bins show the highest excesses 
-%with $\sim\!\!1.5\sigma$. The categories in \texttt{T2tt} can be
-%characterized by mild excesses in the lowest \scalht bins and with
-%a more pronounced excess in \scalht = $575~\GeV-675~\GeV$ in \njethigh 
-%and $\nb = 2$ category.
-%
-%The descripency the observed and expected limit is further investigated 
-%by a closer study of two bins in $(m_{\st},m_{\text{LSP}})$. 
-%The first one, $m_{\st} = 400\GeV$ and $m_{\text{LSP}} = 0\GeV$ 
-%is excluded by the observed data. It is useful to gauge the signal 
-%signifcance, defined here as the signal yield divided by $\sqrt{b+(.1b)^2}$ 
-%where $b$ is the SM expectation as determined by a simultaneous 
-%fit to all under under the SM background hypothesis. 
-%Figure~\ref{fig:t2tt-sig-400} plots the signal significance in bins of 
-%\scalht and shows that most of the significance is expected in the 
-%lowest \scalht bins in both categories. Furthermore, 
-%figure~\ref{fig:t2tt-best-fit-400} shows the \scalht-binned 
-%observed data yields and expectations for the hadronic sample, as determined 
-%by a simultaneous fit to all data samples under a signal+background 
-%hypothesis. The signal under consideration remains $m_{\st} = 400\GeV$ and 
-%$m_{\text{LSP}} = 0\GeV$. The fit is performed simultaneously across 
-%both event categories. Finally, a profile likelihood ratio scan is performed 
-%as a function of signal strength to vizualize the signal strength value 
-%best fitting the data and the upper limit on that signal strength
-%at 95\% confidence level. 
-%To summarize, the excesses are mild enough and the 
-%prodcution cross secton for the signal bin $m_{\st} = 400\GeV$ 
-%and $m_{\text{LSP}} = 0\GeV$, 
-%
-%As the production cross section of pair produced stops decreases with
-%increasing stop mass, the overall signal significance drops. Furthermore
-%the shape of the  
