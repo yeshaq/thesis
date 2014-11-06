@@ -23,8 +23,8 @@ is minimized by vacuuming the beam pipes to pressures below $10^{-10}$~mbar.
   \begin{center}
       \includegraphics[width=0.40\textwidth,]{figures/CERNMap.jpg}
       \includegraphics[width=0.35\textwidth,]{figures/lhc-pho-1997-060.jpg}
-      \caption{\label{fig:lhc} Left: a geographical map of the location of the LHC. Right: 
-      the layout of LHC.}
+      \caption{\label{fig:lhc} Left: a geographical map of the location of the LHC. From Ref.~\cite{Vittorio:842700}. Right: 
+      the layout of LHC. From Ref.~\cite{Jean-Luc:841573}}
   \end{center}
 \end{figure}
 
@@ -62,20 +62,20 @@ is shown in Figure~\ref{fig:int_lumi}.
       \includegraphics[width=0.53\textwidth,]{figures/int_lumi_cumulative_pp_2.png}
       \caption{\label{fig:int_lumi} The luminosity integrated over the course of the three 
       separate proton-proton collision runs as recorded by CMS.  
-      Note: the 2010 curve is multiplied by 100 for legibility.}
+      Note: the 2010 curve is multiplied by 100 for legibility. From Ref.~\cite{cmsLumi}}
   \end{center}
 \end{figure}
 
 \FloatBarrier
 \subsubsection{High energy proton collisions}
-\cite{green2005high}
+
 Despite collision bunches each containing $10^{10}$ protons, the number of collisions
 between protons average to only around 20 per bunch crossing. Of these collisions only
 one or two have substantial momentum transfer to produce energetic elementary 
 particles, the rest produce soft jets who's energies are eventually subtracted from the event's
 reconstructed objects. In a proton collision, the interaction actually takes place between the 
 constituent quarks and gluons and the distributions of what fraction of a proton's momentum a 
-constituent gluon or quark carries are given by parton distribution functions (PDFs). \\
+constituent gluon or quark carries are given by parton distribution functions (PDFs)~\cite{green2005high}. \\
 \indent For a particular production process, e.g. $pp \ra \ttbar$ or $pp \ra \bar{g}\bar{g}$, there are 
 various parton scattering processes, e.g. from initial gg or $q\bar{q}$, which contribute; their cross sections 
 are integrated over momentum fraction according to the PDFs and summed to obtain a total production cross section.
@@ -86,7 +86,7 @@ in Figure~\ref{fig:crossSec}.
   \begin{center}
       \includegraphics[width=0.40\textwidth,trim=0 2cm 0 0]{figures/crosssections2012_v5}
       %      \includegraphics[width=0.40\textwidth,]{figures/PEacs.png}
-      \includegraphics[width=0.5\textwidth, ]{figures/nlonll_lhc8_tpformat.eps}
+      \includegraphics[width=0.5\textwidth, trim = .6cm .1cm .54cm .1cm, clip=true]{figures/nlonll_lhc8_tpformat.eps}
       \caption{\label{fig:crossSec} Left: the cross sections (in nb) of various SM processes vs. center-of-mass
               energy in $pp$ collisions when $\sqrt{s}>1$~\TeV, from Ref.~\cite{stirling-xs}. Right: 
               The cross sections (in pb) of various SUSY processes vs. sparticle for $pp$ collisions
@@ -127,11 +127,11 @@ where the azimuthal angle $\phi$ is the angle sweeping around the beam-line.
 
 \subsubsection{The detector}
 The Compact Muon Solenoid (CMS) is a multi-purpose detector designed to reconstruct
-the visible products of the colliding particles of the LHC. It's first name refers to 
+the visible products of the colliding particles of the LHC. Its first name refers to 
 the its compact design; it packs twice the weight in $1/6^{th}$ the volume of ATLAS, 
 the other multi-purpose detector at CERN. Its second name refers to the detector's design
 to measure muons with great precision; with the ability to resolve a muon's $\pt$ down to 
-1\% in some cases. It's last name refers to to the superconducting solenoid of diameter 
+1\% in some cases. Its last name refers to to the superconducting solenoid of diameter 
 6~m and length 12.5~m. When ramped up to 18~kA, it produces a magnetic field of 3.8~T providing
 a means of measuring kinematic properties of charged particles. The magnet is kept at a 
 superconducting temperature of 4.8 Kelvin. The detector is segmented into a ``barrel'' 
@@ -169,7 +169,7 @@ lead tungstate crystals in the barrel ($|\eta| < 1.48$) and a further 7,500 crys
 the coverage up to each measuring $|\eta| < 2.5$. The crystals have a front-face cross section
 of approximately $22 \times 22~\texttt{mm}^2$ (resp. $28.6 \times 28.6~\texttt{mm}^2$) in the barrel (resp. endcap) with a
 length of 23~cm corresponding to $\sim25$ radiation lengths, i.e. the length which an electron loses
-all but $1/e$ of its energy or $7⁄9$ of the mean free path for pair production by a high-energy photons.  
+all but $1/e$ of its energy or 7/9 of the mean free path for pair production by a high-energy photons.  
 Avalanche photo-diodes detect the scintillated light in the barrel $(|\eta| < 1.479)$ vacuum photo-triodes 
 in the endcap $(1.479 < |\eta| < 3.0)$. For extra spatial precision, the ECAL also contains lead-silicon 
 sampling detector that sit in front of the endcaps. These allow CMS to distinguish between single high-energy 
@@ -233,7 +233,8 @@ while many details of the reconstruction technique can be found in Ref.~\cite{Ba
 \begin{figure}[h!]
   \begin{center}
       \includegraphics[width=.9\textwidth,]{figures/CMS_Slice}
-      \caption{\label{fig:cmdSlice} }
+      \caption{\label{fig:cmsSlice}
+      A diagram of the path and interaction of particles through the detector. From Ref.~\cite{cmsSlice}}
   \end{center}
 \end{figure}
 
@@ -267,7 +268,7 @@ track is found by comparing parameters of the two tracks propagated onto a commo
 fit to the combined hits of the two subdetectors is performed to obtain a muon referred to as 
 a ``global muon''. This and other approaches are described in Ref.~\cite{PAS-MUO-10-002}. The 
 quality criteria on the reconstruction and identification of muons for this analysis are 
-discussed in Section~\ref{sec:muonReco}. \\
+discussed in Section~\ref{sec:recMuon}. \\
 \indent Photons and electrons can be reconstructed through their energy deposit in the ECAL. 
 For instance, single photons impinging at the center of a crystal deposit about 97\% of their 
 incident energy in a cluster of crystals 5 $\times$ 5 in $\eta-\phi$ space~\cite{Bayatian:922757}. 
@@ -300,8 +301,8 @@ energy corrections~\cite{Chatrchyan:2011ds}.\\
 \indent The relative simplicity of calo-jet reconstruction allows for fast computational time while 
 the complexity of PF-jets reconstruction provides better angular and $\pt$ resolutions. This search 
 uses calo-jets in the HLT trigger algorithm and PF-jets in the offline analysis; the consequences are 
-discussed in Section~\ref{signal_triggers}. The relative $\pt$ resolution for central jets for both 
-jet types determined using dijet $\pt$-asymmetry, is shown in Figure~\ref{fig:jetRes}. 
+discussed in Section~\ref{sec:signal_triggers}. The relative $\pt$ resolution for central jets for both 
+jet types determined using dijet $\pt$-asymmetry~\cite{CMS-PAS-JME-10-014}, is shown in Figure~\ref{fig:jetRes}. 
 
 \begin{figure}[h!]
   \begin{center}
@@ -311,7 +312,7 @@ jet types determined using dijet $\pt$-asymmetry, is shown in Figure~\ref{fig:je
       \includegraphics[width=0.45\textwidth,]{figures/ak5pf_relRes}}
       \caption{\label{fig:jetRes} The relative $\pt$ resolution as a function of jet $\pt$
               for calo jets (a) and PF jets (b) in the center of the barrel using the dijet
-              $\pt$-asymmetry method~\cite{CMS-PAS-JME-10-014}.}
+              $\pt$-asymmetry method.}
   \end{center}
 \end{figure}
 

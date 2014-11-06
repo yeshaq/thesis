@@ -167,8 +167,9 @@ The parameters $\rho_{\gamma Z}^i$ and $\rho_{\mu
 systematic uncertainties associated with the control-sample-based
 background constraints.  The quantities $\sigma_{\gamma Z}^j$
 and $\sigma_{\mu W}^j$ represent the relative
-systematic uncertainties for the control sample constraints, taken
-into account with the following terms:
+systematic uncertainties for the control sample constraints listed in 
+Table~\ref{tab:total-syst-values} of Section~\ref{sec:syst-from-closure}, 
+taken into account with the following terms:
 
 \begin{equation}
 \label{eq:ewkSyst}
@@ -186,6 +187,9 @@ distribution~\cite{cousins-log-normal}:
 \frac{1}{x\sqrt{2\pi}\ln{k}}\exp{\left(-\frac{\ln^2{\left(\frac{x}{\mu}\right)}}{2\ln^2{k}}\right)};\quad
 k=1+\sigma_{\mathrm rel.}\quad. 
 \end{equation}
+
+Unlike the Gaussian distribution, the log-normal distribution is bounded below by zero and is thus well suited for modeling 
+quantities that are intrinsically non-negative. 
 %One systematic parameter is assigned per \HT bin.
 
 %\begin{table}\centering
@@ -356,7 +360,7 @@ is lower than the theoretical cross section, the signal model is excluded.
       \caption{\label{fig:hybrid_plot} The distributions of the test statistic $q_{\mu}$
         in the background-only (red, on the right) and signal+background (blue, on the left) hypotheses. 
         The black line represents the value of the $q_{\mu}$ on the observed data. The shaded areas represent 
-        $1-CL_{b}$ (red) and $CL_{s+b}$ (blue).  From~\cite{Moneta:1289965}}.
+        $1-CL_{b}$ (red) and $CL_{s+b}$ (blue). From Ref.~\cite{Moneta:1289965}}.
     \label{fig:hybrid_plot}
   \end{center}
 \end{figure}
