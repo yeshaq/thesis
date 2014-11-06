@@ -76,7 +76,7 @@ particles, the rest produce soft jets who's energies are eventually subtracted f
 reconstructed objects. In a proton collision, the interaction actually takes place between the 
 constituent quarks and gluons and the distributions of what fraction of a proton's momentum a 
 constituent gluon or quark carries are given by parton distribution functions (PDFs)~\cite{green2005high}. \\
-\indent For a particular production process, e.g. $pp \ra \ttbar$ or $pp \ra \bar{g}\bar{g}$, there are 
+\indent For a particular production process, e.g. $pp \ra \ttbar$ or $pp \ra g\bar{g}$, there are 
 various parton scattering processes, e.g. from initial gg or $q\bar{q}$, which contribute; their cross sections 
 are integrated over momentum fraction according to the PDFs and summed to obtain a total production cross section.
 Results of such cross section computations for a variety of processes are shown
@@ -134,7 +134,7 @@ to measure muons with great precision; with the ability to resolve a muon's $\pt
 1\% in some cases. Its last name refers to to the superconducting solenoid of diameter 
 6~m and length 12.5~m. When ramped up to 18~kA, it produces a magnetic field of 3.8~T providing
 a means of measuring kinematic properties of charged particles. The magnet is kept at a 
-superconducting temperature of 4.8 Kelvin. The detector is segmented into a ``barrel'' 
+superconducting temperature of 4.8~K. The detector is segmented into a ``barrel'' 
 section, flanked on each side by an ``endcap''. The fact that the tracking and calorimeter 
 instrumentation is located in the magnet bore lends to the detector's compact design. 
 CMS nearly completely encloses the interaction point of the two beams, and provide an 
@@ -150,7 +150,7 @@ overview is given below.
       \caption{\label{fig:cms} Top: a view of one quadrant of CMS. The volume enclosing 
       the tracker is shown in light red, the electromagnetic calorimeter in light green, 
       the hadron calorimeter in lavender, and the forward calorimeter in magenta. 
-      The muon detectors are labeled, from Ref.~\cite{2012JInst...7P0002T},
+      The muon detectors are labeled, from Ref.~\cite{2012JInst...7P0002T}.
       Bottom: a perspective view of CMS from Ref.~\cite{1748-0221-3-08-S08004}.}
   \end{center}
 \end{figure}
@@ -167,20 +167,20 @@ resolutions.\\
 \indent Surrounding the tracker is the electromagnetic calorimeter (ECAL) consisting of over 60 thousand scintillating 
 lead tungstate crystals in the barrel ($|\eta| < 1.48$) and a further 7,500 crystals in each endcap extending
 the coverage up to each measuring $|\eta| < 2.5$. The crystals have a front-face cross section
-of approximately $22 \times 22~\texttt{mm}^2$ (resp. $28.6 \times 28.6~\texttt{mm}^2$) in the barrel (resp. endcap) with a
-length of 23~cm corresponding to $\sim25$ radiation lengths, i.e. the length which an electron loses
+of approximately $22 \times 22~\texttt{mm}^2$ ($28.6 \times 28.6~\texttt{mm}^2$) in the barrel (endcap) with a
+length of 23~cm, corresponding to $\sim25$ radiation lengths, i.e. the length which an electron loses
 all but $1/e$ of its energy or 7/9 of the mean free path for pair production by a high-energy photons.  
-Avalanche photo-diodes detect the scintillated light in the barrel $(|\eta| < 1.479)$ vacuum photo-triodes 
+Avalanche photo-diodes detect the scintillated light in the barrel $(|\eta| < 1.479)$, vacuum photo-triodes 
 in the endcap $(1.479 < |\eta| < 3.0)$. For extra spatial precision, the ECAL also contains lead-silicon 
 sampling detector that sit in front of the endcaps. These allow CMS to distinguish between single high-energy 
 photons and close pairs of low-energy photons.\\
-\indent Surrounding ECAL is the hadronic calorimeter (HCAL), which measures a particle’s position, 
-energy and arrival time using alternating layers of brass absorber and plastic fluorescent scintillator.
+\indent Surrounding the ECAL is the hadronic calorimeter (HCAL), which measures a particle's position, 
+energy, and arrival time using alternating layers of brass absorber and plastic fluorescent scintillator.
 It is divided into two hemisphere composing the barrel section and two endcap covering $|\eta| < 3.0$. 
 The light from the scintillators is summed up over the layers and segmented into 
 ``towers'' of area $\Delta\eta \times \Delta\phi = 0.087 \times 0.087$ for $|\eta| < 1.6$, 
 and approximately $0.17 \times 0.17$ for $|\eta| > 1.6$. These summed optical signals are converted 
-into fast electronic signals by photosensors called Hybrid Photodiodes (HPDs). When lights hit the 
+into fast electronic signals by photosensors called Hybrid Photodiodes (HPDs). When light hits the 
 light sensitive photocathode in the HPD, it is converted into electrons which are accelerated across 
 a gap of a few millimeters onto a silicon diode target. The target is divided up into 19 pixels each 
 of which can generate its own amplified electronic signal and allows the detection and amplification 
@@ -196,7 +196,7 @@ is also provided in larger time granularity called ``lumi sections'' which consi
 \indent Muons are measured in the range  $|\eta| < 2.4$ with instrumentation interlaced between the magnet's
 return yoke as shown in Figure~\ref{fig:cms}. Three types of technologies are used depending
 on pseudo-rapidity: drift tubes ($|\eta| < 1.2$), cathode strip chambers ($0.9 < |\eta| < 2.4$), and
-resistive-plate chambers ($|\eta| < 1.6$). The ﬁrst two technologies provide a precise position measurement 
+resistive-plate chambers ($|\eta| < 1.6$). The first two technologies provide a precise position measurement 
 and trigger, whilst the third one provides precise timing information, as well as a second independent 
 trigger mechanism. \\
 \indent Recording each collision event would require storing 40 Terabytes per second of data, which
@@ -226,7 +226,7 @@ As detector instrumentation vary greatly throughout a particle's path, reconstru
 of an event and its objects relies on various strategies and algorithms. Yet the common goal 
 remains the same throughout: to reconstruct, from raw detector information,
 higher-level objects which represent as best as possible properties of: individual
-particles, groups of particles e.g. jets, or global event variables e.g. total energy
+particles, groups of particles, e.g. jets, or global event variables, e.g. total energy
 recorded. The following gives an overview of the reconstruction sequence relevant for this search
 while many details of the reconstruction technique can be found in Ref.~\cite{Bayatian:922757,Bayatian:942733}. 
 
@@ -246,7 +246,7 @@ while many details of the reconstruction technique can be found in Ref.~\cite{Ba
 %detector locations at particular times.\\
 
 
-\indent The collection of tracks left by charged particles in the tracker during an events are 
+\indent The collection of tracks left by charged particles in the tracker during an event are 
 reconstructed using an iterative process. The initial iteration searches for tracks 
 that are easiest to find (e.g., of relatively large $\pt$, and produced near the 
 interaction region). After each iteration, hits associated with tracks are removed, 
@@ -274,15 +274,15 @@ For instance, single photons impinging at the center of a crystal deposit about 
 incident energy in a cluster of crystals 5 $\times$ 5 in $\eta-\phi$ space~\cite{Bayatian:922757}. 
 But the situation is in general more complicated for the average electron, as they bend while 
 passing through the tracker under the influence of the magnetic field and radiate photons through 
-bremsstrahlung. Clustering algorithm are therefore designed to take into account their spread of 
-hits in $\phi$ and collect the bremsstrahlung energy. The average cluster size from electrons end 
+Bremsstrahlung. Clustering algorithms are therefore designed to take into account their spread of 
+hits in $\phi$ and collect the Bremsstrahlung energy. The average cluster size from electrons end 
 up being 5 crystals in $\eta$ by 35 in $\phi$ in the barrel, or one or more group of 5 by 5 
 crystals in the endcaps. The crystals with the highest deposited energy are matched with nearby 
 hits in the tracker layer which seed a dedicated radiative loss model to build the electron track.\\
-\indent Jets are reconstructed using the anti-kt algorithm~\cite{antikt} set to sequentially clusters 
-particle tracks or energy deposits within a cone of radius R=0.5. The input to the algorithm define
-the jet type; two types of jets are studied in the analysis calorimeter (calo) jets and Particle-Flow 
-(PF) jets the are defined below.\\
+\indent Jets are reconstructed using the anti-kt algorithm~\cite{antikt} set to sequentially cluster 
+particle tracks or energy deposits within a cone of radius R=0.5. The input to the algorithm defines
+the jet type; two types of jets are studied in the analysis calorimeter: (calo) jets and Particle-Flow 
+(PF) jets, they are defined below.\\
 \indent Calorimeter jets are reconstructed using energy deposits in the ECAL and HCAL which are 
 combined into calorimeter towers as inputs. A calorimeter tower consists of one or more HCAL cells 
 and the geometrically corresponding (ECAL) crystals.\\
@@ -299,8 +299,8 @@ assumption that they are pions. As a result of the PF reconstruction, the inputs
 are almost fully calibrated and the resulting higher level objects (jets) require small a posteriori 
 energy corrections~\cite{Chatrchyan:2011ds}.\\
 \indent The relative simplicity of calo-jet reconstruction allows for fast computational time while 
-the complexity of PF-jets reconstruction provides better angular and $\pt$ resolutions. This search 
-uses calo-jets in the HLT trigger algorithm and PF-jets in the offline analysis; the consequences are 
+the complexity of PF-jets reconstruction provides better angular and $\pt$ resolutions. \\
+\indent This search uses calo-jets in the HLT trigger algorithm and PF-jets in the offline analysis; the consequences are 
 discussed in Section~\ref{sec:signal_triggers}. The relative $\pt$ resolution for central jets for both 
 jet types determined using dijet $\pt$-asymmetry~\cite{CMS-PAS-JME-10-014}, is shown in Figure~\ref{fig:jetRes}. 
 
