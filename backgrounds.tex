@@ -212,7 +212,71 @@ contamination from multijet QCD events negligible. Because the control
 sample is used to extrapolate yields in a hadronic search region, 
 which includes the \alphat requirement, a closure test as been devised 
 and explained in Section~\ref{sec:closure-tests-desc} to demonstrate that no 
-significant biases are seen from the exclusion of the \alphat cut.
+significant biases are seen from the exclusion of the \alphat cut. Comparisons
+of data and simulated SM processes key variables relevant to 
+the muon control sample are shown in Figure~\ref{fig:control-plots-muon}. 
+
+\begin{figure}[h!]
+  \centering
+  \subfigure[muon \pt distribution ($\njet \geq 2$, $\nb \geq 0$).]{
+    \label{fig:figures_pt_all}
+    \includegraphics[width=0.4\textwidth]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375_pt.pdf}
+  } 
+  \subfigure[muon $\eta$ distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_eta_all}
+    \includegraphics[width=0.4\textwidth]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375_eta.pdf}
+  } \\
+  \subfigure[\nb distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_nb_1}
+    \includegraphics[width=0.4\textwidth]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375_xcak5JetPFIndicesBtagged2Pat.pdf}
+  } 
+  \subfigure[\scalht distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_HT_0}
+    \includegraphics[width=0.4\textwidth,]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375_xcak5JetPFSumEtPat.pdf}
+  } \\
+  \subfigure[\njet distribution (\njethigh, $\nb = 2$)]{
+    \label{fig:figures_nj_0}
+    \includegraphics[width=0.4\textwidth,]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375_xcak5JetPFIndicesPat_ge4j_eq2b.pdf}
+  } 
+  \subfigure[\scalht distribution (\njetlow, $\nb = 1$)]{
+    \label{fig:figures_HT_1}
+    \includegraphics[width=0.4\textwidth,]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375_xcak5JetPFSumEtPat_le3j_eq1b.pdf}
+  } \\
+%\begin{figure}[h!]
+%  \centering
+%  \subfigure[muon \pt distribution ($\njet \geq 2$, $\nb \geq 0$).]{
+%    \label{fig:figures_pt_all}
+%    \includegraphics[width=0.4\textwidth,page=163]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+%  } 
+%  \subfigure[muon $\eta$ distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+%    \label{fig:figures_eta_all}
+%    \includegraphics[width=0.4\textwidth,page=164]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+%  } \\
+%  \subfigure[\nb distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+%    \label{fig:figures_nb_1}
+%    \includegraphics[width=0.4\textwidth,page=187]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+%  } 
+%  \subfigure[\scalht distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+%    \label{fig:figures_HT_0}
+%    \includegraphics[width=0.4\textwidth,page=123]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+%  } \\
+%  \subfigure[\njet distribution (\njethigh, $\nb = 2$)]{
+%    \label{fig:figures_nj_0}
+%    \includegraphics[width=0.4\textwidth,page=179]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+%  } 
+%  \subfigure[\scalht distribution (\njetlow, $\nb = 1$)]{
+%    \label{fig:figures_HT_1}
+%    \includegraphics[width=0.4\textwidth,page=119]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+%  } \\
+%
+  \caption{\label{fig:control-plots-muon} Data--MC comparisons of key
+    variables for the muon control region, following the
+    application of the full muon control selection selection criteria 
+    and the requirements $\scalht > 375\GeV$: (a) muon \pt, (b) muon $\eta$,
+    (c) \nb, and (d) \scalht distributions for an inclusive 
+    selection on \njet and \nb, and (e) \njet , (f) \scalht distributions for the two 
+    event categories (\njethigh, $\nb = 2$) and (\njetlow, $\nb = 1$). }
+\end{figure}
 
 \subsubsection{The \texorpdfstring{\gj}{photon plus jets} control sample}
 
@@ -227,42 +291,45 @@ and to not overlap with any reconstructed jets $\Delta R(\gamma,\textrm{jet}) < 
 As in the muon control sample, the $\metvec$ is modified to exclude the photon 
 when imposing the $\mht/\pfmet<1.25$ selection cut.  All other selections are 
 consistent with the hadronic search region including the $\alphat > 0.55$ cut.
-
+Comparisons of data and simulated SM processes key variables relevant to 
+the muon control sample are shown in Figure~\ref{fig:control-plots-phot}.
 
 \begin{figure}[h!]
   \centering
-  \subfigure[muon \pt distribution ($\njet \geq 2$, $\nb \geq 0$).]{
+  \subfigure[photon \pt distribution ($\njet \geq 2$, $\nb \geq 0$).]{
     \label{fig:figures_pt_all}
-    \includegraphics[width=0.4\textwidth,page=163]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+    \includegraphics[width=0.4\textwidth,page=23]{figures/data-mc/v22/phot/photonLook_g_barrel_375_pfJet_ge2j_.pdf}
   } 
-  \subfigure[muon $\eta$ distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+  \subfigure[photon $\eta$ distribution ($\njet \geq 2$, $\nb \geq 0$)]{
     \label{fig:figures_eta_all}
-    \includegraphics[width=0.4\textwidth,page=164]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+    \includegraphics[width=0.4\textwidth,page=27]{figures/data-mc/v22/phot/photonLook_g_barrel_375_pfJet_ge2j_.pdf}
   } \\
-  \subfigure[\njet distribution (\njethigh, $\nb = 2$)]{
-    \label{fig:figures_nj_0}
-    \includegraphics[width=0.4\textwidth,page=179]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+  \subfigure[\alphat distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_at_1}
+    \includegraphics[width=0.4\textwidth,page=47]{figures/data-mc/v22/phot/photonLook_g_barrel_375_pfJet_ge2j_.pdf}
   } 
-  \subfigure[\nb distribution ($\njet \geq 2$, $\nb \geq 0$)]{
-    \label{fig:figures_nb_1}
-    \includegraphics[width=0.4\textwidth,page=187]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+  \subfigure[\bdphi distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_dphi_0}
+    \includegraphics[width=0.4\textwidth,page=57]{figures/data-mc/v22/phot/photonLook_g_barrel_375_pfJet_ge2j_.pdf}
   } \\
-  \subfigure[\scalht distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+  \subfigure[\scalht distribution (\njetlow, $\nb = 0$)]{
     \label{fig:figures_HT_0}
-    \includegraphics[width=0.4\textwidth,page=123]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+    \includegraphics[width=0.4\textwidth,page=90]{figures/data-mc/v22/phot/photonLook_g_barrel_375_pfJet_ge2j_.pdf}
   } 
-  \subfigure[\scalht distribution (\njetlow, $\nb = 1$)]{
+  \subfigure[\scalht distribution (\njethigh, $\nb = 0$)]{
     \label{fig:figures_HT_1}
-    \includegraphics[width=0.4\textwidth,page=119]{figures/data-mc/v22/mu/muonLook_pfJet_ge2j_375.pdf}
+    \includegraphics[width=0.4\textwidth,page=101]{figures/data-mc/v22/phot/photonLook_g_barrel_375_pfJet_ge2j_.pdf}
   } \\
-  \caption{\label{fig:control-plots-sig} Data--MC comparisons of key
-    variables for the hadronic search region, following the
-    application of the full hadronic selection criteria and the
-    requirements $\scalht > 375\GeV$ and $\alphat > 0.55$: (a) \njet,
-    (b) \nb, (c) \mht, and (d) \met distributions for an inclusive 
-    selection on \njet and \nb, and (e,f) \scalht  for the two 
-    event categories (\njetlow, $\nb = 0$) and (\njethigh, $\nb = 1$). }
+  \caption{\label{fig:control-plots-phot} Data--MC comparisons of key
+    variables for the photon control region, following the
+    application of the full muon control selection selection criteria 
+    and the requirements $\scalht > 375\GeV$: (a) photon \pt, (b) photon $\eta$,
+    (c) \nb, and (d) \scalht distributions for an inclusive 
+    selection on \njet and \nb, and (e,f) \scalht distributions for the two 
+    event categories (\njetlow, $\nb = 0$) and (\njethigh, $\nb = 0$). }
 \end{figure}
+
+
 
 
 %\subsection{Increasing the acceptance of the muon control samples\label{sec:larger}}
