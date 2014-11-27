@@ -1,22 +1,6 @@
-%\includeonly{Introduction_thesis, The_Belle_Experiment, event_selection, cut_summary_table, continuum_suppression, branching_fraction_measurement, determination_of_signal_yield, gsim_and_toy_test, calibration, four_d_data_fit, bkgd_sub_mkpi, 4d_2d_toy, gsim_bias_correction, syst_wkst_wkpi, br_ul_sig, polarization, conclusion, bibliography}
-
-%\includeonly{syst_wkst_wkpi, bibliography}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%  PhD Thesis: master LATEX file 
-%  -----------------------------
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\documentclass[11pt,letter,twoside,psfig,epsfig,titlepage]{article}
-\documentclass[11pt,letter,twoside,psfig,epsfig,]{article}
-%\documentclass[11pt,a4paper,twoside,psfig,epsfig,titlepage]{report}
-%\documentclass[11pt,a4paper,,psfig,epsfig, titlepage]{report}
-%\newcommand{\squeezeup}{\vspace{-2.5mm}}
+\documentclass[12pt,twoside,notitlepage]{article}
 \usepackage{chngcntr}
 \counterwithin{figure}{section}
-\usepackage{a4wide}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[square,numbers,sort&compress]{natbib}
@@ -25,7 +9,7 @@
 \usepackage[normal,small]{caption2}
 \usepackage{afterpage}
 \usepackage{float}
-\setlength{\textfloatsep}{5pt}
+%\setlength{\textfloatsep}{5pt}
 
 \usepackage{subfigure}
 \usepackage{fancyheadings}
@@ -34,109 +18,114 @@
 %\usepackage[mediumspace]{SIunits}
 \usepackage{enumerate}
 \usepackage{setspace}
-
+\usepackage{lscape}
 \input epsf
 \usepackage{tabularx}
 \usepackage{epsfig}
 \usepackage{verbatim}
 \usepackage{subfigure}
-\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+
+\usepackage[paperwidth=8.5in,paperheight=11in,margin=1.25in]{geometry}
+
 \usepackage{graphicx}
 \usepackage{amssymb}
-%\usepackage{header}
 \usepackage{epstopdf}
 \usepackage{feynmf}
 \usepackage{color}
 \usepackage[section]{placeins}
-%\input{ptdr-definitions}
 \input{symbols}
 \input{mydefs}
 \usepackage{natbib}
-\usepackage[hidelinks,bookmarksnumbered,bookmarksopen,bookmarksopenlevel=1,colorlinks=false,pdfborder=0,plainpages=false,pdfpagelabels]{hyperref}
+\usepackage[hidelinks,bookmarksnumbered,bookmarksopen,bookmarksopenlevel=1,colorlinks=false,pdfborder=0,plainpages=False,pdfpagelabels]{hyperref}
 %\usepackage[T1]{fontenc}
 
 %\unitlength=1mm
 %\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-\usepackage{titlesec}
+%\usepackage{titlesec}
 
-\titleformat*{\section}{\Large\bfseries}
-\titleformat*{\subsection}{\Large\bfseries}
-\titleformat*{\subsubsection}{\large\bfseries}
-\titleformat*{\paragraph}{\large\bfseries}
-\titleformat*{\subparagraph}{\large\bfseries}
+%\titleformat*{\section}{\Large\bfseries}
+%\titleformat*{\subsection}{\Large\bfseries}
+%\titleformat*{\subsubsection}{\large\bfseries}
+%\titleformat*{\paragraph}{\large\bfseries}
+%\titleformat*{\subparagraph}{\large\bfseries}
 
 
-\setlength{\captionmargin}{1.2cm}
+%\setlength{\captionmargin}{1.25in}
 
 % Use the Adobe Postscript fonts...
 \renewcommand{\rmdefault}{ptm}%{ptm}
-%%\renewcommand{\ttdefault}{pcr}%{pcr}
+%\renewcommand{\ttdefault}{pcr}%{pcr}
 \renewcommand{\sfdefault}{phv}%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% This part does a nice little line on the top of every page with
-% chapter number and page number..
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\include{headings}
-\pagestyle{fancyplain}
-
-\addtolength{\headwidth}{\marginparsep}
-\addtolength{\headwidth}{\marginparwidth}
-
-\addtolength{\extrarowheight}{1pt}
-
-% remember chapter title
-%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-% section number and title
-%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
-\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
-\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
-\cfoot{}
-
-\setlength{\unitlength}{2mm}
 \newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
 \newcommand{\pageone}{}
 
-\doublespacing
-
 \begin{document}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{{\boldmath Search for New Physics in All-hadronic Events with AlphaT in 8 TeV Data at CERN}}
+\pagenumbering{roman}
+\thispagestyle{plain}
+\begin{titlepage}
 
-\author{
-  by\\
-  Yossof Eshaq\vspace{4mm}\\
-  %\scalebox{0.3}{\includegraphics{belle.eps}} \vspace{5.0mm} \\
-  {Submitted in Partial Fulfillment of the }\\
-  {Requirements for the Degree}\\
-  {Doctor of Philosophy}\\[1cm]
-  Supervised by Professor Aran Garcia-Bellido\\[4mm]
-  Department of Physics \& Astronomy\\
-  Arts, Sciences and Engineering \\
-  School of Arts and Sciences\\[1cm]
-  University of Rochester\\
-  Rochester, New York\\
-  2014
-}
+  \title{{\boldmath Search for New Physics in All-hadronic Events with AlphaT in 8 TeV Data with CMS}}
+
+  \author{
+    by\\[0.3cm]
+    Yossof Eshaq\\[0.8cm]
+    %\scalebox{0.3}{\includegraphics{belle.eps}} \vspace{5.0mm} \\
+    {Submitted in Partial Fulfillment of the }\\[0.3cm]
+    {Requirements for the Degree}\\[0.3cm]
+    {Doctor of Philosophy}\\[0.8cm]
+    Supervised by Professor Aran Garcia-Bellido\\[0.8cm]
+    Department of Physics \& Astronomy\\[0.3cm]
+    Arts, Sciences and Engineering \\[0.3cm]
+    School of Arts and Sciences\\[0.8cm]
+    University of Rochester\\[0.3cm]
+    Rochester, New York\\[0.3cm]
+    2014
+  }
 \date{}
+
 \maketitle
-\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\end{titlepage}
+
 \clearemptydoublepage
 
-\pagenumbering{roman}
+\pagestyle{fancyplain}
+\renewcommand\headrule{}
+\lhead{}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
 
-\addcontentsline{toc}{section}{Abstract} 
+\doublespacing
+\clearemptydoublepage
 
-\abstract{ An inclusive search for supersymmetric processes that
+%%%% ACKNOWLEDGEMENTS -----------------------------------------------------------
+%\addcontentsline{toc}{section}{Biographical Sketch}
+\input{bio}
+
+\clearemptydoublepage
+
+
+%\addcontentsline{toc}{section}{Acknowledgments}
+\include{acknowledgements}
+
+\clearemptydoublepage
+%\addcontentsline{toc}{section}{Contents}
+%\addcontentsline{toc}{section}{Abstract} 
+%\pagenumbering{roman}
+\begin{abstract}
+%\thispagestyle{plain}
+
+
+An inclusive search for supersymmetric processes that
 produce final states with jets and missing transverse energy is
-performed in pp collisions at a centre-of-mass energy of $\sqrt{s} =
+performed in pp collisions at a center-of-mass energy of $\sqrt{s} =
 8\TeV$. The data sample corresponds to an integrated luminosity of
 19.5\fbinv collected by the CMS experiment at the LHC. In this search,
 a dimensionless kinematic variable, \alphat, is used to discriminate
@@ -145,64 +134,61 @@ energy. The search is based on an examination of the number of
 reconstructed jets per event, the scalar sum of transverse energies of
 these jets, and the number of these jets identified as originating
 from bottom quarks. The results are interpreted in two
-simplified models with direct stop production.}
-
-%%%% ACKNOWLEDGEMENTS -----------------------------------------------------------
+simplified models with direct stop production.
 %\clearemptydoublepage
-%\clearemptydoublepage
-%\include{acknowledgements}
-%\addcontentsline{toc}{section}{Acknowledgments}
-\clearpage
+\end{abstract}
+\clearemptydoublepage
 
-
+%\addcontentsline{toc}{section}{Contributors and Funding Sources}
+\input{contribution}
+\clearemptydoublepage
 % CONTENTS--------------------------------------------------------------
-\clearemptydoublepage
-\addcontentsline{toc}{section}{Contents}
-\tableofcontents
 
-\clearemptydoublepage
-\addcontentsline{toc}{section}{List of Figures}
-\listoffigures
+\tableofcontents
 %
 \clearemptydoublepage
-\addcontentsline{toc}{section}{List of Tables}
+%\addcontentsline{toc}{section}{List of Tables}
 \listoftables
+%
+\clearemptydoublepage
+%\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
 %
 \clearemptydoublepage
 
 
 %%% CHAPTERS-------------------------------------------------------------
 \pagenumbering{arabic}
-
 \input introduction
 \input theory
 \input lhcAndCms
 \input samples
-%%\input reconstruction
+%%%\input reconstruction
 \input eventSelection
-%%\input trigger
-%%\input alphat
+%%%\input trigger
+%%%\input alphat
 \input backgrounds
 \input systematics
 
 \input statistics
-\input results
 \input signal
-\input interpretation
-%\input conclusions
+\input results
 
+\clearpage
+\bibliography{alphaT}
+\bibliographystyle{unsrt}
+
+
+\clearpage
 \appendix
-
 \input{app_example}
 \input{app_background}
 \input{results_parameters}
 \input{results_tables}
 \input{app_signal}
+%\input{figures/tables/v22/cutflow}
 
 
-\clearpage
-\bibliography{alphaT}
-\bibliographystyle{unsrt}
 
 
 \end{document}   
