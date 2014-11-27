@@ -1,0 +1,649 @@
+\documentclass [serif]{beamer} % ``serif'' option for CM
+%\documentclass{beamer}
+\usetheme{Singapore}
+\usecolortheme{seagull}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows,shapes,positioning}
+\graphicspath{{graphics/}}
+\usepackage{xcolor}
+%\setbeamertemplate{navigation symbols}{\thepage}
+\usepackage{tikz}
+\usepackage{transparent}
+\usepackage{xspace}
+\usepackage{verbatim}
+\usetikzlibrary{arrows,shapes}
+\tikzstyle{every picture}+=[remember picture]
+\tikzstyle{na} = [baseline=-.5ex]
+\setbeamercovered{dynamic}
+\usepackage{tabularx}
+\usepackage[scriptsize]{subfigure}
+\usepackage[absolute,overlay]{textpos}
+\newcommand{\lenitem}[2][.7\linewidth]{\parbox[t]{#1}{\strut #2\strut}}
+\definecolor{niceRed}{rgb}{228,59,59}
+\newcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
+\newcommand{\gev}{\GeV}
+\newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
+\newcommand{\njet}{\ensuremath{n_{\text{jet}}}\xspace}
+\newcommand{\njetlow}{\ensuremath{2 \leq \njet \leq 3}\xspace}
+\newcommand{\njethigh}{\ensuremath{\njet \geq 4}\xspace}
+\newcommand{\npre}{\ensuremath{N_{\textrm{pred}}}\xspace}
+\newcommand{\nobs}{\ensuremath{N_{\textrm{obs}}}\xspace}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+
+%\def\vecmet{\mbox{$\vec{\not\!\!E_\text{T}}$}} %missing ET vector
+\def\scalht{\mbox{$H_\text{T}$}\xspace}
+\def\met{\mbox{$\not\!\!E_\text{T}$}\xspace}
+\newcommand{\alphat}{\ensuremath{\alpha_{\text{T}}}\xspace}
+\newcommand{\Et}{\ensuremath{{E_{\text T}}}\xspace}
+\def\mht{\mbox{$\not\!\!H_\text{T}$}\xspace}
+\newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
+
+\begin{document}
+
+\title{Search for New Physics in All-hadronic Events with AlphaT in 8 TeV Data with CMS}
+\author{Y.~Eshaq\\
+  \today}
+%\date{}
+%\date{\today}
+%\setbeamertemplate{footline}{}
+
+\frame{\titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% OUTLINE %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+  \frametitle{Outline}
+
+\begin{itemize}
+\item The Standard Model (SM), Supersymmetry (SUSY) \tikz[na] \node[coordinate] (s1) {}; 
+\end{itemize}
+~\\
+
+\begin{center}
+Search for 
+\tikz[baseline]{ \node[fill=red!20,anchor=base,rounded corners=2pt]
+  (d1) { New Physics}; }
+in All-hadronic Events with AlphaT in 8~TeV Data with CMS
+\end{center}
+
+\begin{tikzpicture}[overlay]
+\path[->] (s1) edge [out=-90,in=45] (d1); 
+\end{tikzpicture}
+}
+
+\frame{
+  \frametitle{Outline}
+
+\begin{itemize}
+\item The Standard Model (SM), Supersymmetry (SUSY) \tikz[na] \node[coordinate] (s1) {}; 
+\item Large Hadron Collider, Compact Muon Solenoid (CMS) \tikz[na] \node[coordinate] (s3) {};
+\end{itemize}
+~\\
+
+\begin{center}
+Search for New Physics in All-hadronic Events with AlphaT in 
+\tikz[baseline]{ \node[fill=blue!20,anchor=base,rounded corners=2pt]
+  (d4) {8~TeV Data}; } with
+\tikz[baseline]{ \node[fill=blue!20,anchor=base,rounded corners=2pt]
+  (d5) {CMS}; }
+\end{center}
+
+\begin{tikzpicture}[overlay]
+\path[->] (s3) edge [out=-115, in=45] (d4);
+\path[->] (s3) edge [out=-15, in=0] (d5);
+\end{tikzpicture}
+}
+
+\frame{
+  \frametitle{Outline}
+
+\begin{itemize}
+\item The Standard Model (SM), Supersymmetry (SUSY) \tikz[na] \node[coordinate] (s1) {}; 
+\item Large Hadron Collider, Compact Muon Solenoid (CMS) \tikz[na] \node[coordinate] (s3) {};
+\item Search strategy, analysis ingredients \tikz[na] \node[coordinate] (s2) {};
+\end{itemize}
+~\\
+
+\begin{center}
+\tikz[baseline]{ \node[fill=green!40,anchor=base,rounded corners=2pt]
+  (d2) {Search}; } for New Physics in
+%\tikz[baseline]{ \node[fill=red!20,anchor=base,rounded corners=2pt]
+%  (d1) { New Physics}; } in 
+\tikz[baseline]{ \node[fill=green!40,anchor=base,rounded corners=2pt]
+  (d3) {All-hadronic}; } Events with 
+\tikz[baseline]{ \node[fill=green!40,anchor=base,rounded corners=2pt]
+  (d4) {AlphaT}; } in 8~TeV Data with CMS
+%\tikz[baseline]{ \node[fill=green!20,anchor=base,rounded corners=2pt]
+%  (d5) {CMS}; } 
+\end{center}
+
+\begin{tikzpicture}[overlay]
+\path[->] (s2) edge [out=-135, in=45] (d2);
+\path[->] (s2) edge [out=-90, in=105] (d3);
+\path[->] (s2) edge [out=-25, in=115] (d4);
+\end{tikzpicture}
+}
+
+\frame{
+  \frametitle{Outline}
+
+\begin{itemize}
+\item The Standard Model (SM), Supersymmetry (SUSY) \tikz[na] \node[coordinate] (s1) {}; 
+\item Large Hadron Collider (LHC), Compact Muon Solenoid (CMS) \tikz[na] \node[coordinate] (s3) {};
+\item Search strategy, analysis ingredients \tikz[na] \node[coordinate] (s2) {};
+\end{itemize}
+~\\
+
+\begin{center}
+\tikz[baseline]{ \node[fill=blue!20,anchor=base,rounded corners=2pt]
+  (d2) {Search for New Physics in All-hadronic Events with AlphaT};}
+\tikz[baseline]{ \node[fill=blue!20,anchor=base,rounded corners=2pt]{in 8~TeV Data with CMS}; }
+\end{center}
+
+\begin{itemize}
+\item Results \tikz[na] \node[coordinate] (s6) {}; 
+\end{itemize}
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% OUTLINE %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Motivation}
+\subsection{Standard Model}
+\frame{
+  \frametitle{The Standard Model}
+\begin{itemize}
+\item Very succesful model:
+  \begin{itemize}
+    \item Higgs Boson
+    \item Muon Anomalous \\ 
+      Magnetic Moment
+  \end{itemize}
+\item 
+
+The Standard Model doesn't explain everything
+\end{itemize}
+\begin{textblock*}{5cm}(6cm,2cm) % {block width} (coords)
+\includegraphics[width=0.5\paperwidth,]{../figures/Standard_Model_of_Elementary_Particles.png}
+\end{textblock*}
+}
+\frame{
+\frametitle{Shortcomings of the SM}
+\begin{itemize}
+\setlength{\itemsep}{8pt}
+\item Dark Matter: 96\% of matter remains unexplained 
+\item Gravity: The SM becomes invalid above $M_{plank} > 10^{19}~GeV$ where gravity can't be ignored
+\item First extesion of SM to allow massive neutrinos 
+\item Does not allow for unification of forces
+\item Divergent corrections to the Higgs mass
+\end{itemize}
+\begin{equation*}
+\underbrace{\mathrm{m}^2_{\text{physical}}}_{\text{what we measure}} = \underbrace{\mathrm{m}_{\mathrm{h}}^2}_{\text{tree level}} \;+\; \underbrace{\frac{3\lambda}{8\pi}\Lambda^2}_{\text{1-loop}} \;-\; \underbrace{\frac{3\lambda}{8\pi}\mathrm{m}_{\mathrm{h}}^2\text{log}\left(\frac{\Lambda^2+\mathrm{m}_{\mathrm{h}}^2}{\mathrm{m}_{\mathrm{h}}^2}\right)}_{\text{much smaller than} \Lambda^2}
+\end{equation*}
+
+%\includegraphics[width=.85\paperwidth,]{../figures/higgs_MassCorrection.png}
+
+\begin{itemize}
+\item effective theory \pause
+\end{itemize}
+\color{red!80}{Any extension of th SM should attempt to solve these shortcomings...}
+}
+\subsection{SUSY}
+\frame{
+\frametitle{Supersymmetry}
+\color{red!80}{A proposed symmetry between fermions and baryions}
+\begin{center}
+%\begin{textblock*}{5cm}(.5cm,2cm) % {block width} (coords)
+\includegraphics[width=.7\paperwidth,]{../figures/susy_spectrum.png}
+%\end{textblock*}
+\end{center}
+}
+\frame{
+\frametitle{Supersymmetry}
+Supersymmetry is theoretically well motivated:
+~\\
+\begin{itemize}
+\setlength{\itemsep}{10pt}
+\item It provides a solution to the \\hierarchy problem 
+\item Unifies the gauge couplings 
+\begin{textblock*}{5cm}(6.8cm,3.2cm) % {block width} (coords)
+\includegraphics[width=.45\paperwidth,]{../figures/phypub4highen.jpg}
+\end{textblock*}
+\item Provides a candidate for \\Dark Matter
+\item Provides additional loop \\corrections ot the Higgs mass which cancel the qudratic divergence! 
+\end{itemize}
+\begin{center}
+\includegraphics[width=.45\paperwidth,]{../figures/top_stop_higgsloop.png}
+\end{center}
+}
+\section{The Expirement}
+\subsection{LHC}
+\frame{
+\frametitle{The Large Hadron Collider}
+\begin{itemize}
+\item proton-proton (pp) collider \\housed 
+100m underground in a \\27km circular tunnel
+
+\item 2808 ``bunches'' of protons \\measuring 
+$16~\mu$m transversely \\and $\sim30$~cm long
+orbit 7~m \\apart
+
+\item $10^{11}$ protons per bunch lead to \\around 20 collsions per \\beam crossing.
+\end{itemize}
+
+\begin{textblock*}{5cm}(7.3cm,1.6cm) % {block width} (coords)
+\includegraphics[width=.4\paperwidth,]{../figures/CERN_hiRes.png}
+\end{textblock*}
+\begin{textblock*}{5cm}(7.1cm,5.2cm) % {block width} (coords)
+\includegraphics[width=.45\paperwidth,]{../figures/int_lumi_cumulative_pp_2.png}
+\end{textblock*}
+}
+\subsection{CMS}
+\frame{
+\includegraphics[width=.8\paperwidth,]{../figures/cms_complete_labelled.png}
+\begin{textblock*}{5cm}(7.0cm,1.6cm) % {block width} (coords)
+\visible<2>{\includegraphics[width=.43\paperwidth,]{../figures/bul-pho-2008-003.jpg}}
+
+\end{textblock*}
+\visible<2>{text}
+\begin{textblock*}{5cm}(.5cm,5.5cm) % {block width} (coords)
+\visible<3>{\includegraphics[width=.43\paperwidth,]{../figures/hcal-2005-001.jpg}}\par
+\end{textblock*}
+
+
+\begin{textblock*}{5cm}(3.0cm,3.0cm) % {block width} (coords)
+\visible<4>{\includegraphics[width=.43\paperwidth,]{../figures/3011_1.jpg}}\par
+\end{textblock*}
+
+\begin{textblock*}{5cm}(7.1cm,4.0cm) % {block width} (coords)
+\visible<5>{\includegraphics[width=.43\paperwidth,]{../figures/oreach-2007-001_09.jpg}}\par
+\end{textblock*}
+
+}
+\frame{
+\frametitle{A Slice of CMS}
+\begin{textblock*}{5cm}(.5cm,2cm) % {block width} (coords)
+\includegraphics[width=.9\paperwidth,]{../figures/CMS_Slice.png}
+\end{textblock*}
+}
+
+\frame{
+eta
+pT, $\scalht$, $met$ 
+particle-flow
+}
+%%
+\section{Search Strategy}
+\subsection{Models}
+\frame{
+\frametitle{Why these SUSY Models?}
+
+Early searches at LHC focused on \\high cross section production \\models $\rightarrow$ $\frac{\sigma\left(\tilde{g}\tilde{g}\right)}{\sigma\left(\tilde{t}\tilde{t}\right)} \sim 100$.
+~\\
+~\\
+Current situation: \\
+gluino masses $<1.1~TeV$ and $1^{st}$- \\and 
+$2^{nd}$-generation squark masses \\ $<800~GeV$ are excluded 
+\\
+~\\
+~\\
+~\\
+One expects relatively light top, $<1~TeV$, if SUSY 
+is to be the natural solution to the hierarchy problem 
+
+\begin{textblock*}{10cm}(10cm,4.2cm) % {block width} (coords)
+\color{red!80}{$\tilde{g}\tilde{g}$}
+\end{textblock*}
+\begin{textblock*}{10cm}(10cm,3.2cm) % {block width} (coords)
+\color{green!80}{$\tilde{q}\tilde{q}$}
+\end{textblock*}
+\begin{textblock*}{10cm}(10.6cm,5.0cm) % {block width} (coords)
+\color{blue!80}{$\tilde{t}\tilde{t}^*$}
+\end{textblock*}
+
+\begin{textblock*}{6cm}(7.2cm,2cm) % {block width} (coords)
+\includegraphics[width=0.9\textwidth, trim = .6cm .1cm .54cm .1cm, clip=true]{../figures/nlonll_lhc8_tpformat.eps}
+\end{textblock*}
+\begin{textblock*}{10cm}(8.41cm,2.5cm) % {block width} (coords)
+\begin{tikzpicture}
+\draw [->, thick] (0,0) -- (0,-3.7);
+\end{tikzpicture}
+~\\80k gluino pairs,\\2000 stops in 20$fb^{-1}$
+\end{textblock*}
+}
+
+\frame{
+\frametitle{Search Stragegy}
+\color{black}
+Conserved quantity, R-parity:
+
+\begin{equation*}
+\label{eq:r-par}
+R = \left(-1\right)^{3B+L+2s}
+\end{equation*}
+\begin{center}
+SM: R = +1, SUSY: R = -1. 
+\end{center}
+
+R-parity conserving SUSY theory implies:
+\begin{itemize}
+\item SUSY particles are pair-produced
+\item a stable ``light'' supersymmetric particle (LSP). 
+\end{itemize}
+
+In this analysis: LSP is assumed to be the neuralino: $\tilde{\chi}_1^0$ \\
+~\\
+\begin{columns}[cc]
+  \column{0.5\paperwidth}\centering
+  ``T2tt''\\
+  \includegraphics[width=.65\columnwidth,]{../figures/T2tt.png}
+  \column{0.5\paperwidth}\centering
+  ``T2cc''\\
+  \includegraphics[width=.65\columnwidth,]{../figures/T2cc.png}
+\end{columns}
+}
+%%
+\color{black}
+\frame{
+
+100\% branching fraction.
+~\\
+``T2tt'': $\tilde{t} \rightarrow t \tilde{\chi}_1^0$
+\begin{itemize}
+\item highest reach for $m_{\tilde{t}}$
+\end{itemize}
+
+``T2cc'': $\tilde{t} \rightarrow c \tilde{\chi}_1^0$
+\begin{itemize}
+\item i.e. $\Delta M \equiv m_{\tilde{t}} - m_{\tilde{\chi}_1^0} < 80~GeV$, (mass of W) 
+\item top squark can only decay to a charm quark and neutralino.
+\item dependent on initial state radiation 
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.55\textwidth,]{../figures/mstop_mLSP_plane.jpg}
+\end{center}
+final state: ``Jets'' + undetected energy
+}
+
+\frame{
+\color{black}
+Signal characteristics:
+\begin{itemize}
+\item hadronic Jets
+\item missing transverse energy, $\met$ 
+\item no leptons
+\end{itemize}
+\includegraphics[width=1.0\textwidth,]{../figures/met_schematic.png}
+
+}
+
+\subsection{backgrounds}
+\frame{
+Multi-jet events from QCD
+
+backgrounds
+Z$\rightarrow$nu nu
+W+ jets
+ttbar
+
+add diagram for backgrounds above, and describe each
+
+SingleTop
+Drell-yan
+VV}
+\subsection{Event Selection}
+\frame{
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Seek all-hadronic signature $\rightarrow$ veto isolated $e, \mu$
+\item Reduce QCD to a negligible level via \alphat.
+\item Produce data-driven estimates of remaining SM rates from 
+$Z \rightarrow \nu\bar{\nu}$ or ($t\rightarrow$)$W\rightarrow l \nu$ using
+control stamples with jet systems, containing also isoalted $\mu$ or $\gamma$.
+\item Look simultaneously over broadest possible range of \scalht (8 bins from 375--1075 GeV) and b-tag (0, 1, 2).
+\end{itemize}
+}
+
+\frame{
+\frametitle{\alphat}
+\begin{equation*}
+\label{eq:alphat}
+\alphat\, =\, \frac{\Et^{{\rm j}_2}}{M_\text{T}} \,,\;   M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
+    \right)^2 - \left( \sum_{i=1}^2 p_x^{{\rm j}_i} \right)^2 - \left(
+      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2}
+\end{equation*}
+
+%\begin{equation*}
+%  \label{eq:mt}
+%  M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
+%    \right)^2 - \left( \sum_{i=1}^2 p_x^{{\rm j}_i} \right)^2 - \left(
+%      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2}
+%\end{equation*}
+%
+~\\
+~\\
+\begin{center}
+\begin{tabular}{ccc}
+
+Mulit-jet (QCD)  & ~~\begin{tabular}[x]{@{}c@{}}Mis-measured \\ Mulit-jet (QCD)\end{tabular} & ~~Genuine $\met$\\
+\\
+
+\begin{tikzpicture}
+\draw [->, ultra thick, color=red!90] (0.0,0.0) -- (0.5,1.2);
+\draw [->, ultra thick] (-0.0,-0.0) -- (-0.5,-1.2);
+\end{tikzpicture}
+& 
+\begin{tikzpicture}
+\draw [->, ultra thick, scale=0.6, color=red!90] (0.0,0.0) -- (0.5,1.2);
+\draw [->, ultra thick] (-0.0,-0.0) -- (-0.5,-1.2);
+\end{tikzpicture} 
+&
+\begin{tikzpicture}
+\draw [->, ultra thick, color=red!90] (0.0,0.0) -- (0.7,0.4);
+\draw [->, ultra thick, dashed, color=blue!90] (0.0,0.0) -- (-0.6,0.6);
+\draw [->, ultra thick] (-0.0,-0.0) -- (-0.5,-1.2);
+\end{tikzpicture} 
+ \\
+$\alphat = \frac{1}{2}$ & $\alphat < \frac{1}{2}$ & $\alphat > \frac{1}{2}$
+\end{tabular}
+\end{center}
+~\\
+~\\
+~\\
+}
+
+\frame{
+\frametitle{HT $\times$ $\alphat$ Trigger}
+
+innefficiency in trigger due to use of Calorimeter jets in online trigger 
+
+\begin{center}
+\begin{table}[!h]
+  \centering
+  \scriptsize
+  %\footnotesize
+  \begin{tabular}{ ccccc }
+    \hline
+    \hline
+    Offline \scalht       & Offline \alphat &  Trigger (HLT)  & \multicolumn{2}{c}{Efficiency (\%)}          \\ [0.5ex]
+    bin (\gev)         & threshold       &                         & $2 \leq \njet \leq 3$ & $\njet \geq 4$       \\ [0.5ex]
+    \hline
+    $375 < \scalht < 475$ & 0.55          & HT300\_AlphaT0p53 & $94.2^{+0.5}_{-0.6}$  & $90.5^{+1.2}_{-1.3}$ \\
+    $475 < \scalht < 575$ & 0.55          & HT350\_AlphaT0p52 & $96.2^{+0.8}_{-0.9}$  & $94.6^{+1.2}_{-1.4}$ \\
+    $575 < \scalht < 675$ & 0.55          & HT400\_AlphaT0p51 & $95.4^{+1.4}_{-1.8}$  & $98.7^{+0.7}_{-1.12}$ \\
+    $\scalht > 675$       & 0.55          & HT400\_AlphaT0p51 & $100^{+0.0}_{-2.0}$  & $100^{+0.0}_{-2.0}$ \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+\end{center}
+
+Muon control samples: IsoMu24\_eta2p1 88\%\\
+
+Photon control sample: Photon150 100\% for $p_{T} > 165~\gev$
+
+}
+
+\frame{
+\frametitle{HT $\times$ $\alphat$ Trigger}
+\begin{figure}[!h]
+  \footnotesize
+  \begin{center}
+    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j_RunAtFNAL.pdf}~~~~~~
+    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j_RunAtFNAL.pdf}\\
+    \njetlow, $375 < \scalht < 475 \gev$~~~~
+    \njethigh, $375 < \scalht < 475 \gev$\\
+~\\
+    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}~~~~~~
+    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}\\
+    \njetlow, $475 < \scalht < 525 \gev$~~~~
+    \njethigh, $475 < \scalht < 525 \gev$\\
+
+  \end{center}
+\end{figure}
+
+}
+
+\frame{
+\frametitle{Event Selection}
+
+Hadronic:
+\begin{itemize}
+\item $\scalht > 275~\gev$; jet 2 $p_{T} > 100~\gev$
+\end{itemize}
+
+}
+\frame{
+\frametitle{Calorimeter Jets}
+%\begin{columns}[c c]
+%\column{0.5\paperwidth}
+\begin{itemize}
+\item ``Traditional'' jet reconstruction
+\item Calorimeter towers 
+  \begin{itemize}
+    \item 1 HCAL cell $\sim 0.1$ ($\Delta \phi \times \Delta \eta$)
+    \item 25 ECAL crystals $\sim 0.01$ ($\Delta \phi \times \Delta \eta$)
+  \end{itemize}
+\end{itemize}
+\begin{center}
+\includegraphics[width = 0.5\columnwidth]{../figures/Sketch_PartonParticleCaloJet.png}
+\end{center}
+\begin{itemize}
+\item Does not make use of ECAL granularity 
+
+\item Jet resolution driven by HCAL: 
+  \begin{itemize}
+  \item HCAL resolution $\sim 100\%/\sqrt E $
+  \item non-compensating $\rightarrow$ non-linear response 
+  \end{itemize}
+\item Low $p_{T}$ charged hadrons bent outside jet
+\end{itemize}
+%\column{0.5\paperwidth}
+
+
+%\includegraphics[width = 1.0\columnwidth]{../figures/JetConeWithTracks.png}
+%\end{columns}
+}
+\frame{
+\frametitle{Particle Flow Jets}
+\begin{columns}[c c]
+\column{0.5\paperwidth}
+Particle Flow (PF) reconstructs all stable particle in the event: $h^\pm$, $\gamma$, $h^0$, $e$, $\mu$
+\begin{itemize}
+
+\item On average jets are: 
+\item $\sim65\%$ charged hadrons, $\sim25\%$ photons, $\sim10\%$ neutral hadrons 
+\item Using the silicon tracker (vs. HCAL) to measure charged hadrons 
+  \begin{itemize}
+  \item Improves resolution, avoids non-linearity 
+  \item Decreases sensitivity to the fragmentation pattern of jets 
+  \end{itemize}
+\end{itemize}
+\column{0.4\paperwidth}
+\includegraphics[width = 1.0\columnwidth]{../figures/JetConeAndPFJet.png}
+\end{columns}
+}
+
+\frame{
+\frametitle{Jet Resolution}
+\begin{figure}[h!]
+  \begin{center}
+  \subfigure[]{
+      \includegraphics[width=0.45\textwidth,]{../figures/ak5calo_relRes}}
+      \subfigure[]{
+      \includegraphics[width=0.45\textwidth,]{../figures/ak5pf_relRes}}
+      \caption{\label{fig:jetRes} The relative $\pt$ resolution as a function of jet $\pt$
+              for calo jets (a) and PF jets (b) in the center of the barrel using the dijet
+              $\pt$-asymmetry method.}
+  \end{center}
+\end{figure}
+}
+
+\frame{
+\frametitle{Translation Factors}
+
+Translation factors = ratio of MC yields 
+
+\begin{equation*}
+  \label{equ:pred-method}
+  \npre^{\rm had} = \underbrace{\frac{N_{\rm MC}^{\rm
+      had}}{N_{\rm MC}^{\rm
+      control}}}_\text{translation factor}\! \times \; \nobs^{\rm    control},   
+\end{equation*}
+
+Benefits:
+\begin{itemize}
+\item reduced dependence on accuracy of MC modelling
+\item control and hadronic regions: 
+  \begin{itemize}
+  \item binned identically 
+  \item kinematically similar, 
+  \item similar admixtures of SM bkgds
+  \end{itemize}
+\item $N_{MC}^{had}$ and $N_{MC}^{control}$ are strongly correlated, biases largely cancel
+
+\color{red!80}Checks for biases provided by, and systematics derived from, closure testsa
+\end{itemize}
+}
+
+\frame{ 
+
+\frametitle{systematics}
+
+\begin{equation}
+  \label{equ:tf-ratio-closure}
+  \frac{N_{\rm MC}^{\rm \mj}(\scalht,\njethigh, \nb=1)}{N_{\rm MC}^{\rm \mj}(\scalht,\njetlow,\nb=1)} 
+\end{equation}
+
+
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[$2 \leq \njet \leq 3$\label{fig:closure_le3j}]{\includegraphics[width=0.7\textwidth]{figures/syst/closureTests_pf_take21_le3j.pdf}} \\
+    \subfigure[$\njet \geq 4$\label{fig:closure_ge4j}]{\includegraphics[width=0.7\textwidth]{figures/syst/closureTests_pf_take21_ge4j.pdf}} \\
+    \caption{Sets of closure tests (open symbols) overlaid on top of
+      the systematic uncertainty used for each of the \scalht
+      region (shaded bands) and for the two different jet
+      multiplicity bins: (a) $2 \leq \njet \leq 3$ and (b) $\njet \geq
+      4$.  }
+    \label{fig:closure}
+  \end{center} 
+\end{figure}
+
+
+}
+\section{Results}
+
+
+
+
+\frame{}
+\end{document}
