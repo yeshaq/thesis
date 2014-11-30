@@ -1,4 +1,13 @@
-\documentclass [serif]{beamer} % ``serif'' option for CM
+\documentclass[compress, serif]{beamer}
+%\documentclass [serif]{beamer} % ``serif'' option for CM
+
+\useoutertheme[subsection=false]{miniframes}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\slideentry}{\advance\beamer@xpos by1\relax}{}{}{}
+\def\beamer@subsectionentry#1#2#3#4#5{\advance\beamer@xpos by1\relax}%
+\makeatother
+
 %\documentclass{beamer}
 \usetheme{Singapore}
 \usecolortheme{seagull}
@@ -11,6 +20,10 @@
 \usepackage{transparent}
 \usepackage{xspace}
 \usepackage{verbatim}
+
+\makeatletter
+\@addtoreset{subfigure}{framenumber}% subfigure counter resets every frame
+\makeatother
 \usetikzlibrary{arrows,shapes}
 \tikzstyle{every picture}+=[remember picture]
 \tikzstyle{na} = [baseline=-.5ex]
@@ -28,6 +41,17 @@
 \newcommand{\njethigh}{\ensuremath{\njet \geq 4}\xspace}
 \newcommand{\npre}{\ensuremath{N_{\textrm{pred}}}\xspace}
 \newcommand{\nobs}{\ensuremath{N_{\textrm{obs}}}\xspace}
+\newcommand{\gj}{\ensuremath{\gamma} + jets\xspace}
+\newcommand{\mj}{\ensuremath{\mu} + jets\xspace}
+\newcommand{\nb}{\ensuremath{n_{\text{b}}}\xspace}
+\newcommand {\ie}{\mbox{i.e.}\xspace}     %i.e.
+\newcommand{\ra}{\ensuremath{\rightarrow}}
+\newcommand{\fZinv}[1]{\ensuremath{f_{\rm Zinv}^{#1}}\xspace}
+\newcommand{\zInv}[1]{\ensuremath{Z_{\rm inv}^{#1}}\xspace}
+\newcommand{\tev}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
+\newcommand{\st}{\ensuremath{\tilde{\rm t}}\xspace}
+
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 
 \addtobeamertemplate{navigation symbols}{}{%
     \usebeamerfont{footline}%
@@ -459,6 +483,23 @@ $\alphat = \frac{1}{2}$ & $\alphat < \frac{1}{2}$ & $\alphat > \frac{1}{2}$
 ~\\
 ~\\
 }
+\frame{
+\begin{figure}[h!t]
+  \begin{center}
+    \subfigure[\label{fig:alphat_le3j}$\njetlow$]{
+      \includegraphics[width=0.60\textwidth,]{../figures/data-mc/AlphaT_le3j.png}
+    } 
+      \caption{\label{fig:alphat-2011} The $\alphat$ distribution for 11.7~fb$^{-1}$ 
+            of data collected at {8}~\tev as well as for all SM
+            backgrounds and one example SUSY signal sample, from Ref.~\cite{RA1Paper2012}.
+            This figure is for illustrative purposes only, as this analysis relies
+            on data control samples to estimate contribution from SM process 
+            with genuine \met.}
+    \label{fig:alphat_dist}
+  \end{center}
+\end{figure}
+
+}
 
 \frame{
 \frametitle{HT $\times$ $\alphat$ Trigger}
@@ -615,34 +656,542 @@ Benefits:
 \end{itemize}
 }
 
-\frame{ 
+\frame{
+\begin{itemize}
+\item statistically independent
+\item uncover biases
+\item determine background 
+\end{itemize}
 
-\frametitle{systematics}
-
-\begin{equation}
+\begin{itemize}
+\item $\alphat < 0.55 \rightarrow \alphat > 0.55$:  *mj sample test
+\item $\nb = 0 \rightarrow \nb = 1$:  *mj sample test
+s\item $\nb = 0 \rightarrow \nb = 1$:  *mj sample test
+\end{itemize}
+an example:
+\begin{equation*}
   \label{equ:tf-ratio-closure}
   \frac{N_{\rm MC}^{\rm \mj}(\scalht,\njethigh, \nb=1)}{N_{\rm MC}^{\rm \mj}(\scalht,\njetlow,\nb=1)} 
-\end{equation}
+\end{equation*}
 
+}
+
+\frame{ 
+
+\frametitle{Closure Tests}
+
+an expample:
 
 \begin{figure}[h!]
   \begin{center}
-    \subfigure[$2 \leq \njet \leq 3$\label{fig:closure_le3j}]{\includegraphics[width=0.7\textwidth]{figures/syst/closureTests_pf_take21_le3j.pdf}} \\
-    \subfigure[$\njet \geq 4$\label{fig:closure_ge4j}]{\includegraphics[width=0.7\textwidth]{figures/syst/closureTests_pf_take21_ge4j.pdf}} \\
-    \caption{Sets of closure tests (open symbols) overlaid on top of
-      the systematic uncertainty used for each of the \scalht
-      region (shaded bands) and for the two different jet
-      multiplicity bins: (a) $2 \leq \njet \leq 3$ and (b) $\njet \geq
-      4$.  }
-    \label{fig:closure}
+    \subfigure[$2 \leq \njet \leq 3$\label{fig:closure_le3j}]{\includegraphics[width=0.8\textwidth]{../figures/syst/closureTests_pf_take21_le3j.pdf}}
+     \label{fig:closure}
   \end{center} 
 \end{figure}
 
 
 }
+
+\frame{ 
+
+\frametitle{Closure Tests}
+
+an expample:
+
+\begin{figure}[h!]
+  \begin{center}
+     \subfigure[$\njet \geq 4$]{\includegraphics[width=0.8\textwidth]{../figures/syst/closureTests_pf_take21_ge4j.pdf}} \\
+  \end{center} 
+\end{figure}
+}
+
+\frame{ 
+
+\frametitle{Closure Tests}
+
+\begin{table}[!h]
+%  \caption{A summary of the results obtained from fits of zeroth
+%    order polynomials (\ie a constant) to binned \scalht distributions for 
+%    four sets of closure tests performed in the \njetlow bin.}
+%  \label{tab:syst-fits-le3j}
+  \centering
+  \scriptsize
+  \begin{tabular}{ lrccc }
+    \hline
+    \hline
+                  & \multicolumn{4}{c}{Constant fit} \\
+    \cline{2-5}
+    Closure test  & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & $0.007 \pm 0.02$ & 3.91 & 7 & 0.79 \\ 
+    1 b-tags \ra 2 b-tags (\mj, \njet=3)  & $-0.008 \pm 0.04$ & 3.20 & 7 & 0.87 \\ 
+    0 b-tags \ra 1 b-tags (\mj, \njet=2)  & $0.111 \pm 0.03$ & 5.87 & 7 & 0.55 \\ 
+    0 b-tags \ra 1 b-tags (\mj, \njet=3)  & $0.040 \pm 0.02$ & 1.12 & 7 & 0.99 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+%  \caption{A summary of the results obtained from fits of zeroth
+%    order polynomials (\ie a constant) to three sets of closure tests
+%    performed in the \njethigh bin. $^{\dag} $Further explanation of this
+%    fit can be found in the text.}   
+%  \label{tab:syst-fits-ge4j}
+  \centering
+  \scriptsize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+                  & \multicolumn{4}{c}{Constant fit} \\
+    \cline{2-5}
+    Closure test  & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & $0.011 \pm 0.04$ & 5.81 & 7 & 0.56 \\ 
+    1 b-tags \ra 2 b-tags (\mj) & $0.045 \pm 0.03$ & 9.36 & 7 & 0.23 \\ 
+    0 b-tags \ra 1 b-tags (\mj) & $0.007 \pm 0.03$ & 25.30 & 7 & 7.6\e{-4} \\ 
+    0 b-tags \ra 1 b-tags (\mj)$^{ \dag}$ & $0.009 \pm 0.03$ & 10.12 & 6 & 0.12 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+}
+\frame{
+\begin{table}[!h]
+%  \caption{A summary of the results obtained from fits of zeroth
+%    order polynomials (\ie a constant) to four sets of closure tests
+%    (\njetlow \ra \njethigh) that probe the accuracy of the MC
+%    modeling of the \njet distribution observed in data, using the
+%    three data control samples. } 
+%  \label{tab:syst-fits-njet}
+%  \centering
+  \scriptsize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+                  & \multicolumn{4}{c}{Constant fit} \\
+    \cline{2-5}
+    Closure test  & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & $-0.053 \pm 0.03$ & 8.02 & 7 & 0.33 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) &  $0.018 \pm 0.04$ & 6.23 & 7 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 0 b-tags) &  $0.034 \pm 0.02$ & 9.24 & 7 & 0.24 \\ 
+    \njetlow \ra \njethigh (\gj, 0 b-tags) &  $0.100 \pm 0.04$ & 12.20 & 7 & 0.09 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+}
+\frame{
+In addition:
+\begin{itemize}
+\item trigger: 5\%
+\end{itemize}
+
+\begin{table}[!h]
+  \caption{A summary of the magnitude of the total systematic uncertainties (\%)
+    assigned to the translation factors, according to \njet and \scalht
+    bin.}
+  \label{tab:total-syst-values}
+  \centering
+  \tiny
+  \begin{tabular}{ ccccccccc }
+    \hline
+    \hline
+            & \multicolumn{7}{c}{\scalht bin (GeV)}                                \\
+    \cline{2-9}
+    \njet   & 375--475 & 475--525 & 525--675 & 675--775 & 775--875 & 875-975 & 975-1075 & $>1075$ \\
+    \hline                                                                                                                                  
+    2--3    & 6        & 6        & 7        & 12       & 12       & 17      & 17        & 17     \\
+    $\geq$4 & 6        & 6        & 8        & 14       & 14       & 14      & 14        & 21     \\
+    \hline                                                                                                                                  
+    \hline
+  \end{tabular}
+\end{table}
+
+}
+
 \section{Results}
+\subsection{Likelihood}{
+\frame{
+
+\begin{equation*}
+L^k = L_{hadronic}^k \times L_{\mu}^k \times L_{ph}^k \times
+L_{\rm EWK\, syst.}^k \quad .
+\end{equation*}
+
+\begin{equation*}
+L_{hadronic}=\prod_i \mathrm{Pois}(n^i |\, b^i + s^i)
+\label{eq:hadronicLikelihood}
+\end{equation*}
 
 
+\begin{equation*}
+\label{eq:photonLikelihood}
+L_{\gamma}= \prod_i \mathrm{Pois}(n_{ph}^i |\, \rho_{phZ}^i \cdot
+r_{\gamma}^{i} \cdot \zInv{i})
+\end{equation*}
+
+\begin{equation*}
+\label{eq:muonLikelihood}
+L_{\mu}=\prod_i \mathrm{Pois}(n_{\mu}^i |\, \rho_{\mu W}^i \cdot
+r_{\mu}^{i} \cdot ttW^{i})\quad ,
+\end{equation*}
+
+\begin{equation*}
+r_{\gamma}^i = \frac{MC_{ph}^i}{MC_{\zInv{}}^i};\, r_{\mu}^i =
+\frac{MC_{\mu}^i}{MC_{t\bar{t}+W}^i}\quad ,
+\end{equation*}
+}
+
+\frame{
+\frametitle{$\njetlow$, 0b}
+\begin{figure}[t!]
+  \begin{center}
+    %\stackunder[5pt]{\includegraphics[width=2in,height=.7in]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_le3j-1hp_smOnly}}{Hadronic sample (lin. scale)}%
+    \subfigure[Hadronic sample (lin. scale)]{
+      \includegraphics[width=0.40\textwidth,page=1]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_le3j-1hp_smOnly}
+    } 
+    \subfigure[Hadronic sample (log. scale)]{
+      \includegraphics[width=0.40\textwidth,page=2]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_le3j-1hp_smOnly}
+    } \\
+    \subfigure[$\mu$ + jets sample]{
+      \includegraphics[width=0.40\textwidth,page=4]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_le3j-1hp_smOnly}
+    } 
+    \subfigure[$\gamma$ + jets sample]{
+      \includegraphics[width=0.40\textwidth,page=6]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_le3j-1hp_smOnly}
+    } 
+  \end{center}
+\end{figure}
+
+}
+}
+\frame{
+\frametitle{$\njethigh$, 0b}
+\begin{figure}[t!]
+  \begin{center}
+    %\stackunder[5pt]{\includegraphics[width=2in,height=.7in]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_le3j-1hp_smOnly}}{Hadronic sample (lin. scale)}%
+    \subfigure[Hadronic sample (lin. scale)]{
+      \includegraphics[width=0.40\textwidth,page=1]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_ge4j-1hp_smOnly}
+    } 
+    \subfigure[Hadronic sample (log. scale)]{
+      \includegraphics[width=0.40\textwidth,page=2]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_ge4j-1hp_smOnly}
+    } \\
+    \subfigure[$\mu$ + jets sample]{
+      \includegraphics[width=0.40\textwidth,page=4]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_ge4j-1hp_smOnly}
+    } 
+    \subfigure[$\gamma$ + jets sample]{
+      \includegraphics[width=0.40\textwidth,page=6]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_ge4j-1hp_smOnly}
+    } 
+  \end{center}
+\end{figure}
+
+}
+
+\frame{
+\frametitle{$\njethigh$, 1b}
+\begin{figure}[t!]
+  \begin{center}
+    %\stackunder[5pt]{\includegraphics[width=2in,height=.7in]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_0b_le3j-1hp_smOnly}}{Hadronic sample (lin. scale)}%
+    \subfigure[Hadronic sample (lin. scale)]{
+      \includegraphics[width=0.40\textwidth,page=1]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_smOnly}
+    } 
+    \subfigure[Hadronic sample (log. scale)]{
+      \includegraphics[width=0.40\textwidth,page=2]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_smOnly}
+    } \\
+    \subfigure[$\mu$ + jets sample]{
+      \includegraphics[width=0.40\textwidth,page=4]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_smOnly}
+    } 
+    \subfigure[$\gamma$ + jets sample]{
+      \includegraphics[width=0.40\textwidth,page=6]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_smOnly}
+    } 
+  \end{center}
+\end{figure}
+
+}
+
+\frame{
+\frametitle{$\njetlow$, 2b}
+\begin{figure}[t!]
+    \subfigure[Hadronic sample (lin. scale)]{
+      \includegraphics[width=0.40\textwidth,page=1]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_2b_le3j-1h_smOnly}
+    } 
+    \subfigure[Hadronic sample (log. scale)]{
+      \includegraphics[width=0.40\textwidth,page=2]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_2b_le3j-1h_smOnly}
+    } \\
+    \subfigure[$\mu$ + jets sample]{
+      \includegraphics[width=0.40\textwidth,page=4]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_2b_le3j-1h_smOnly}
+    } 
+\end{figure}
+
+}
+
+\frame{
+\frametitle{$\njethigh$, 2b}
+\begin{figure}[t!]
+    \subfigure[Hadronic sample (lin. scale)]{
+      \includegraphics[width=0.40\textwidth,page=1]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_2b_ge4j-1h_smOnly}
+    } 
+    \subfigure[Hadronic sample (log. scale)]{
+      \includegraphics[width=0.40\textwidth,page=2]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_2b_ge4j-1h_smOnly}
+    } \\
+    \subfigure[$\mu$ + jets sample]{
+      \includegraphics[width=0.40\textwidth,page=4]{../figures/fit/v22/bestFit_2012pf_RQcdZero_fZinvAll_2b_ge4j-1h_smOnly}
+    } 
+\end{figure}
+}
+
+\frame{
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[p-values per event category.]{
+      \includegraphics[width=0.4\paperwidth, trim=0 190 290 20, clip=true]{../figures/fit/v22/pValues} % lbrt
+    } 
+    \subfigure[Pull versus signal region bin.\label{fig:sigVsCat}]{
+      \includegraphics[width=0.4\paperwidth, trim=0 0 0 30, clip=true]{../figures/fit/v22/significances_catVsHt_4}
+    } \\
+%    \subfigure[Pull per signal region bin.]{
+%      \includegraphics[width=0.45\textwidth, trim=0 0 0 0, clip=true]{figures/fit/v1/pull_per_bin_gaus}
+%    } 
+%    \subfigure[p-value per signal region bin.]{
+%      \includegraphics[width=0.45\textwidth, trim=0 0 0 0, clip=true]{figures/fit/v1/pvalue_per_bin}
+%    } \\
+    \caption{Pulls and p-values. See text for details}
+    \label{fig:fluct}
+  \end{center}
+\end{figure}
+}
+
+\frame{
+\frametitle{Including the Signal Models}
+
+\begin{equation*}
+L = L_{sig.\,syst}^k \times \prod_k L_{hadronic}^k
+\times L_{\mu}^k \times L_{ph}^k \times L_{\rm EWK\, syst.}^k \quad .
+\end{equation*}
+
+\begin{equation*}
+L_{hadronic}=\prod_i \mathrm{Pois}(n^i |\, b^i + s^i)
+\end{equation*}
+
+
+\begin{center}
+$s^i \equiv
+f\rho_{sig} xl\epsilon_{had}^i$
+\end{center}
+
+\begin{equation*}
+L_{sig.\,syst}=\mathrm{Logn}(1.0 |\,\rho_{sig}, \delta) \quad .
+\end{equation*}
+}
+\subsection{Signal Model}
+\frame{
+\frametitle{example signal efficiencies}
+\begin{figure}[h!]
+  \begin{center}
+%    \subfigure[Hadronic Selection Efficiency, (2--3,0)]{
+%      \includegraphics[width=0.4\textwidth,page=6]{figures/sms/t2cc/v1/T2cc_eff}
+%    } 
+    \subfigure[T2cc, Hadronic Selection Efficiency, (2--3,1)]{
+      \includegraphics[width=0.45\textwidth,page=7]{../figures/sms/t2cc/v1/T2cc_eff}
+    } 
+%    \subfigure[Hadronic Selection Efficiency, ($\geq 4$,0)]{
+%      \includegraphics[width=0.4\textwidth,page=1]{figures/sms/t2cc/v1/T2cc_eff}
+%    } 
+%    \subfigure[Hadronic Selection Efficiency, ($\geq 4$,1)]{
+%      \includegraphics[width=0.4\textwidth,page=2]{figures/sms/t2cc/v1/T2cc_eff}
+%    } 
+%    \caption{Hadronic selection efficiency times acceptance for \texttt{T2cc}
+%      for the relevant event categories defined by \njet and \nb in the $m_{\st}$--$m_{LSP}$ plane.
+%      Note the different z-axis scales.}
+%    \label{fig:sms-eff-t2cc}
+%  \end{center}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%  \begin{center}
+%    \subfigure[T2tt, Hadronic Selection Efficiency, ($\geq 4$,1)]{
+%      \includegraphics[width=0.4\textwidth,page=2]{figures/sms/t2tt/v1/T2tt_eff}
+%    } 
+    \subfigure[Hadronic Selection Efficiency, ($\geq 4$,2)]{
+      \includegraphics[width=0.45\textwidth,page=3]{../figures/sms/t2tt/v1/T2tt_eff}
+    } \\
+%    \caption{Hadronic selection efficiency times acceptance for the \texttt{T2tt}
+%      for the relevant event categories defined by \njet and \nb in the $m_{\st}$--$m_{LSP}$ plane.
+%       Note the different z-axis scales.}
+%    \label{fig:sms-eff-t2tt}
+  \end{center}
+\end{figure}
+
+}
+\frame{
+
+\begin{center}
+T2cc
+\end{center}
+\begin{table}[h!]
+%  \caption{Representative ranges for each contribution to the total
+%    relative systematic uncertainty in the signal efficiency times acceptance
+%    for each relevant event category for the \texttt{T2cc}
+%    interpretation. The luminosity, trigger, and Dead Ecal uncertainties
+%    are category indepedent i.e. they affect all categories equally. 
+%    \label{tab:sms-syst-t2cc}
+%  }   
+  \centering
+  \scriptsize
+  \begin{tabular}{ lcccccc }
+    \hline
+    \hline
+    Category   & \multicolumn{2}{c}{(2--3,0)} & \multicolumn{2}{c}{($\geq 4$,0)} & \multicolumn{2}{c}{($\geq 4$,1)}\\% & \multicolumn{2}{c}{($\geq 2$,$\geq 0$)} \\
+    Range      & Min.   & Max.                & Min.   & Max.                    & Min. & Max.                    \\ % & Min.  & Max.        \\
+    \hline                                                                                                         %
+    PDF        & 0.00   & 0.05                & 0.00   & 0.05                    & 0.00 & 0.10                    \\ % &         \\
+    JES        & 0.00   & 0.10                & 0.00   & 0.10                    & 0.00 & 0.15 	                  \\ % &             \\
+    ISR        & 0.15   & 0.25                & 0.10   & 0.15                    & 0.15 & 0.30 	                  \\ % &             \\
+    b-tag SF   & 0.00   & 0.08                & 0.00   & 0.10                    & 0.00 & 0.15 	                  \\ % &             \\
+    \hline                                                                                                         %
+    Luminosity & \multicolumn{6}{c}{0.026}                                                                      \\ %
+    Trigger & \multicolumn{6}{c}{0.05}                                                                       \\ %
+    Dead Ecal & \multicolumn{6}{c}{0.03}                                                                       \\ %
+    %    Luminosity &         &                     &        &                         &      &      	          \\ %         & 0.026 & 0.026        \\
+    %Trigger    &        &                     &        &                         &      &                        \\ %  & 0.05 & 0.05        \\
+    %Dead Ecal  &        &                     &        &                         &      &      	          \\ %         & 0.03 & 0.03        \\
+    \hline                                                                                                         %
+    Total syst & 0.18   & 0.25                & 0.19   & 0.30                    & 0.20 & 0.38                    \\ % &      &             \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+}
+\frame{
+\begin{center}
+T2tt
+\end{center}
+
+\begin{table}[h!]
+%  \caption{Representative ranges for each contribution to the total
+%    systematic uncertainty in the signal efficiency times acceptance
+%    for each relevant event category for the \texttt{T2tt}
+%    interpretation. The luminosity, trigger, and Dead Ecal uncertainties
+%    are category indepedent i.e. they affect all categories equally. 
+%    \label{tab:sms-syst-t2cc}
+%  }   
+  \centering
+  \scriptsize
+  \begin{tabular}{ lcccccc }
+    \hline
+    \hline
+    Category   & \multicolumn{2}{c}{($\geq 4$,1)} & \multicolumn{2}{c}{($\geq 4$,2)}\\%  & \multicolumn{2}{c}{($\geq 2$,$\geq 0$)} \\
+    Range      & Min.   & Max.                & Min.   & Max.                     \\%& Min.  & Max.        \\
+    \hline                                                                        %
+    PDF        & 0.00   & 0.10                & 0.00   & 0.10                     \\%&         \\
+    JES        & 0.00   & 0.10                & 0.00   & 0.05                     \\%&             \\
+    ISR        & 0.00   & 0.20                & 0.00   & 0.22                     \\%&             \\
+    b-tag SF   & 0.00   & 0.05                & 0.00   & 0.10                     \\%&             \\
+    \hline                                                                        %
+    Luminosity & \multicolumn{4}{c}{0.026}                                                                      \\ %
+    Trigger & \multicolumn{4}{c}{0.05}                                                                       \\ %
+    Dead Ecal & \multicolumn{4}{c}{0.03}                                                                       \\ %
+    \hline                                                                                                         %    
+    Total syst & 0.05   & 0.25                & 0.05   & 0.30                     \\%&      &             \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+}
+
+\frame{
+\begin{figure}[h!]
+  \begin{center}
+  \subfigure[\label{fig:upperLimits-t2cc}]{
+    \includegraphics[width=0.45\textwidth,clip=true]{../figures/limits/merged/T2cc/v2/CLs_frequentist_T2cc_2012pf_0b_le3j_0b_ge4j_1b_ge4j_xsLimit}
+    }   
+  \subfigure[\label{fig:atlas}]{     
+    \includegraphics[width=0.45\textwidth,clip=true]{../figures/limits/merged/T2cc/v2/atlas}
+    }   
+%    \caption{(a) The expected and observed upper limits at 95\% C.L. on the production cross section 
+%    for the for the model \texttt{T2cc} obtained in this analysis. See text for details on each curve.
+%    (b) Exclusion region in the same model obtained by the ATLAS collaboration, from Ref.~\cite{Aad:2014nra}
+%    Mass pairs left (and below) of the observed limit are excluded at the 95\% C.L.}
+  \end{center}
+\end{figure}
+
+}
+
+\frame{
+\begin{figure}[h!]
+  \begin{center}
+      \includegraphics[width=0.70\textwidth,clip=true,]{../figures/limits/merged/T2tt/v6/CLs_frequentist_T2tt_2012pf_1b_ge4j_2b_ge4j_xsLimit}
+    \caption{\label{fig:upperLimits-t2tt}Expected and observed upper limits on the production cross section 
+    for the models \texttt{T2tt}. Mass pairs left (and below) of the observed limit are excluded at the 95\% C.L.}
+  \end{center}
+\end{figure}
+}
+
+\frame{
+\begin{figure}[h!]
+  \begin{center}
+    %\includegraphics[width=0.75\textwidth, trim=0 0 0 30, clip=true]{../figures/fit/v22/significances_catVsHt_3}
+      \includegraphics[width=0.75\textwidth,]{../figures/fit/v22/significances_catVsHt_3}
+    \caption{Pulls in categories used in T2tt interpretation.\label{fig:sigVsCat2}}
+  \end{center}
+\end{figure}
+}
+
+\frame{
+\begin{figure}[h!]
+  \begin{center}
+     \subfigure[\njethigh, $\nb = 1$, simultaneous fit]{
+      \includegraphics[width=0.45\textwidth,page=13]{../figures/fit/v22/stackedSig/400_100/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1p_2b_ge4j-1_sel1b_ge4j_smOnly.pdf}
+    } 
+    \subfigure[\njethigh, $\nb = 2$, simultaneous fit]{
+      \includegraphics[width=0.45\textwidth,page=9]{../figures/fit/v22/stackedSig/400_100/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1p_2b_ge4j-1_sel2b_ge4j_smOnly.pdf}
+    } \\
+  \end{center}
+\end{figure}
+}
+
+\frame{
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[\njethigh, $\nb = 1$, simultaneous fit]{
+      \includegraphics[width=0.45\textwidth]{../figures/fit/v22/wSignal/400_100/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_sel1b_ge4j}
+    } 
+    \subfigure[\njethigh, $\nb = 2$, simultaneous fit]{
+      \includegraphics[width=0.45\textwidth]{../figures/fit/v22/wSignal/400_100/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_sel2b_ge4j}
+    } \\
+    \caption{\label{fig:t2tt-best-fit-400_100}The comparison of
+      the \scalht-binned observed data yields and expectations for the
+      hadronic sample, as determined by a simultaneous fit to all data
+      samples under the signal plus SM background hypothesis. The
+      observed event yields in data (black dots), the SM expectations
+      (dark blue solid line), and the signal expectations (pink solid
+      line), as determined by the simultaneous fit, for the
+      signal model \texttt{T2tt} with $m_{\st} = 400\GeV$ and
+      $m_{\text{LSP}} = 100\GeV$. Two event categories are
+      considered: (a) \njethigh and $\nb = 1$, (b) \njethigh and
+      $\nb = 2$.}
+  \end{center}
+\end{figure}
+}
+
+\frame{
+\begin{figure}[h!]
+  \begin{center}
+      \includegraphics[width=0.65\textwidth]{../figures/T2tt_ExpectedUpperLimit_ratio}
+    \caption{\label{fig:pfVsCalo} The ratio of the expected upper limit on the signal
+      cross section for the signal model T2tt between PF-jets and calo-jets. See text for 
+      details.}
+  \end{center}
+\end{figure}
+}
+%\begin{frame}{References}
+%\bibliography{alphaT}
+%\bibliographystyle{unsrt}
+%\end{frame}
+%
 
 
 \frame{}
