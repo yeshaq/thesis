@@ -300,9 +300,29 @@ orbit 7~m \\apart
 }
 
 \frame{
-eta
-pT, $\scalht$, $met$ 
-particle-flow
+\frametitle{The coordinate system}
+\begin{center}
+\includegraphics[width=.5\paperwidth,]{../figures/Figures_T_Coordinate.png}
+\end{center}
+
+Known and conserved quantities: 
+\begin{itemize}
+\item transverse momentum, $\pt \equiv P \sin\left(\theta\right)$, ,
+\item transverse energy, $E_{T} \equiv E \sin\left(\theta\right)$, 
+\end{itemize}
+$0 \leq \theta \leq \pi$ where $\theta$ is the polar angle from the beam-line; 
+
+
+\begin{itemize}
+\item pseudo-rapidity:
+\begin{equation*}
+        \eta \equiv −\ln\left( \tan\left(\theta/2\right)\right),
+        \label{pseudo}      
+\end{equation*}
+
+\end{itemize}
+
+
 }
 %%
 \section{Search Strategy}
@@ -396,7 +416,8 @@ In this analysis: LSP is assumed to be the neuralino: $\tilde{\chi}_1^0$ \\
 \end{center}
 final state: ``Jets'' + undetected energy
 }
-
+{
+\usebackgroundtemplate{{\transparent{0.3}\includegraphics[width=\paperwidth,height=\paperheight]{../figures/met_schematic.png}}}
 \frame{
 \color{black}
 Signal characteristics:
@@ -405,10 +426,8 @@ Signal characteristics:
 \item missing transverse energy, $\met$ 
 \item no leptons
 \end{itemize}
-\includegraphics[width=1.0\textwidth,]{../figures/met_schematic.png}
-
 }
-
+}
 \subsection{backgrounds}
 \frame{
 Multi-jet events from QCD
@@ -789,19 +808,41 @@ In addition:
 \item trigger: 5\%
 \end{itemize}
 
+%\begin{table}[!h]
+%  \caption{A summary of the magnitude of the total systematic uncertainties (\%)
+%    assigned to the translation factors, according to \njet and \scalht
+%    bin.}
+%  \label{tab:total-syst-values}
+%  \centering
+%  \tiny
+%  \begin{tabular}{ ccccccccc }
+%    \hline
+%    \hline
+%            & \multicolumn{7}{c}{\scalht bin (GeV)}                                \\
+%    \cline{2-9}
+%    \njet   & 375--475 & 475--525 & 525--675 & 675--775 & 775--875 & 875-975 & 975-1075 & $>1075$ \\
+%    \hline                                                                                                                                  
+%    2--3    & 6        & 6        & 7        & 12       & 12       & 17      & 17        & 17     \\
+%    $\geq$4 & 6        & 6        & 8        & 14       & 14       & 14      & 14        & 21     \\
+%    \hline                                                                                                                                  
+%    \hline
+%  \end{tabular}
+%\end{table}
+
 \begin{table}[!h]
   \caption{A summary of the magnitude of the total systematic uncertainties (\%)
     assigned to the translation factors, according to \njet and \scalht
     bin.}
   \label{tab:total-syst-values}
   \centering
-  \tiny
+  \scriptsize
   \begin{tabular}{ ccccccccc }
     \hline
     \hline
             & \multicolumn{7}{c}{\scalht bin (GeV)}                                \\
     \cline{2-9}
-    \njet   & 375--475 & 475--525 & 525--675 & 675--775 & 775--875 & 875-975 & 975-1075 & $>1075$ \\
+\\
+    \njet   & 375 & 475 & 525 & 675 & 775 & 875 & 975 & $>1075$ \\
     \hline                                                                                                                                  
     2--3    & 6        & 6        & 7        & 12       & 12       & 17      & 17        & 17     \\
     $\geq$4 & 6        & 6        & 8        & 14       & 14       & 14      & 14        & 21     \\
@@ -844,6 +885,29 @@ r_{\gamma}^i = \frac{MC_{ph}^i}{MC_{\zInv{}}^i};\, r_{\mu}^i =
 \frac{MC_{\mu}^i}{MC_{t\bar{t}+W}^i}\quad ,
 \end{equation*}
 }
+
+\frame{
+\begin{equation*}
+\label{eq:ewkSyst}
+L_{\rm EWK\, syst.}=\prod_j \mathrm{Logn}( 1.0 |\,\rho_{\mu W}^j,
+\sigma_{\mu W}^j)\times \mathrm{Logn}( 1.0 |\,\rho_{ph Z}^j,
+\sigma_{\gamma Z}^j) \quad ,
+\end{equation*}
+
+where Logn is the log-normal
+distribution~\cite{cousins-log-normal}:
+
+\begin{equation*}
+\label{eq:log-normal}
+\mathrm{Logn}(x |\,\mu,\sigma_{\mathrm{rel.}}) =
+\frac{1}{x\sqrt{2\pi}\ln{k}}\exp{\left(-\frac{\ln^2{\left(\frac{x}{\mu}\right)}}{2\ln^2{k}}\right)};\quad
+k=1+\sigma_{\mathrm rel.}\quad. 
+\end{equation*}
+
+Unlike the Gaussian distribution, the log-normal distribution is bounded below by zero and is thus well suited for modeling 
+quantities that are intrinsically non-negative. 
+}
+
 
 \frame{
 \frametitle{$\njetlow$, 0b}
