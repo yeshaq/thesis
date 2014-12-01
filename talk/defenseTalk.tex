@@ -77,8 +77,8 @@
 \begin{document}
 
 \title{Search for New Physics in All-hadronic Events with AlphaT in 8 TeV Data with CMS}
-\author{Y.~Eshaq\\
-  \today}
+\author{Y.~Eshaq\\}
+%\today}
 %\date{}
 %\date{\today}
 %\setbeamertemplate{footline}{}
@@ -571,6 +571,7 @@ control stamples with jet systems, containing also isoalted $\mu$ or $\gamma$.
       \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2}
 \end{equation*}
 
+
 %\begin{equation*}
 %  \label{eq:mt}
 %  M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
@@ -685,8 +686,99 @@ Photon control sample: Photon150 100\% for $p_{T} > 165~\gev$
 
 Hadronic:
 \begin{itemize}
-\item $\scalht > 275~\gev$; jet 2 $p_{T} > 100~\gev$
+\item $\scalht > 375~\gev$; jet 2 $p_{T} > 100~\gev$
+\item No isolated $\mu$ or $e$ with $\pt > 10 \gev$
+\item $\mht/\met < 1.25$
+\item $\Delta$R(jet, dead ECAL region) $>$ 0.3 when $\Delta \phi^{*}$
+\item HBHE Noise and $\met$ filters
 \end{itemize}
+~\\
+Control: req's above +
+\begin{itemize}
+\item photon $\pt > 165~\gev, |\eta| < 1.4442$
+\item one isolated muon $pT > 25~\gev$
+\item no $\alphat$ cut for muon samples when $\nb \geq 1$\\
+~~~$\Longrightarrow$ higher statistics\\
+~~~$\Longrightarrow$ reduced S/B from signal contamination
+\end{itemize}
+}
+
+
+\frame{
+\frametitle{Example data-MC comparison plots 1}
+\begin{figure}[h!]
+  \centering
+  \subfigure[\njet distribution ($\njet \geq 2$, $\nb \geq 0$).]{
+    \label{fig:figures_JetMulti_all}
+    \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFIndicesPat.pdf}
+  } 
+  \subfigure[\nb distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_Bjet_all}
+    \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFIndicesBtagged2Pat.pdf}
+  } \\
+\end{figure}
+}
+
+\frame{
+\frametitle{Example data-MC comparison plots 2}
+\begin{figure}[h!]
+  \centering
+  \subfigure[\mht distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_MHT_0}
+    \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFMhtPat.pdf}
+  } 
+  \subfigure[\met distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+    \label{fig:figures_MET_1}
+    \includegraphics[width=0.4\paperwidth,]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_metP4TypeIPF.pdf}
+  } \\
+\end{figure}
+}
+\frame{
+\frametitle{Example data-MC comparison plots 3}
+\begin{figure}
+  \centering
+  \subfigure[\scalht distribution (\njetlow, $\nb = 0$)]{
+    \label{fig:figures_HT_0}
+    \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFSumEtPat_le3j_eq0b.pdf}
+  } 
+  \subfigure[\scalht distribution (\njethigh, $\nb = 1$)]{
+    \label{fig:figures_HT_1}
+    \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFSumEtPat_ge4j_eq1b.pdf}
+  } \\
+%\begin{figure}[h!]
+%  \centering
+%  \subfigure[\njet distribution ($\njet \geq 2$, $\nb \geq 0$).]{
+%    \label{fig:figures_JetMulti_all}
+%    \includegraphics[width=0.4\textwidth,page=89]{figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j.pdf}
+%  } 
+%  \subfigure[\nb distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+%    \label{fig:figures_Bjet_all}
+%    \includegraphics[width=0.4\textwidth,page=100]{figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j.pdf}
+%  } \\
+%  \subfigure[\mht distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+%    \label{fig:figures_MHT_0}
+%    \includegraphics[width=0.4\textwidth,page=83]{figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j.pdf}
+%  } 
+%  \subfigure[\mht distribution ($\njet \geq 2$, $\nb \geq 0$)]{
+%    \label{fig:figures_MET_1}
+%    \includegraphics[width=0.4\textwidth,page=69]{figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j.pdf}
+%  } \\
+%  \subfigure[\scalht distribution (\njetlow, $\nb = 0$)]{
+%    \label{fig:figures_HT_0}
+%    \includegraphics[width=0.4\textwidth,page=123]{figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j.pdf}
+%  } 
+%  \subfigure[\scalht distribution (\njethigh, $\nb = 1$)]{
+%    \label{fig:figures_HT_1}
+%    \includegraphics[width=0.4\textwidth,page=119]{figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j.pdf}
+%  } \\
+%  \caption{\label{fig:control-plots-sig} Data--MC comparisons of key
+%    variables for the hadronic search region, following the
+%    application of the full hadronic selection criteria and the
+%    requirements $\scalht > 375\GeV$ and $\alphat > 0.55$: (a) \njet,
+%    (b) \nb, (c) \mht, and (d) \met distributions for an inclusive 
+%    selection on \njet and \nb, and (e,f) \scalht  for the two 
+%    event categories (\njetlow, $\nb = 0$) and (\njethigh, $\nb = 1$). }
+\end{figure}
 
 }
 
@@ -725,9 +817,9 @@ Benefits:
 \end{itemize}
 
 \begin{itemize}
-\item $\alphat < 0.55 \rightarrow \alphat > 0.55$:  *mj sample test
-\item $\nb = 0 \rightarrow \nb = 1$:  *mj sample test
-s\item $\nb = 0 \rightarrow \nb = 1$:  *mj sample test
+\item $\alphat < 0.55 \rightarrow \alphat > 0.55$: check \mj 
+\item between b-tag multiplicities: check bkg ad-mixture
+\item between \njet multiplicities: check jes, kinetmatics 
 \end{itemize}
 an example:
 \begin{equation*}
@@ -766,84 +858,6 @@ an expample:
 \end{figure}
 }
 
-\frame{ 
-
-\frametitle{Closure Tests}
-
-\begin{table}[!h]
-%  \caption{A summary of the results obtained from fits of zeroth
-%    order polynomials (\ie a constant) to binned \scalht distributions for 
-%    four sets of closure tests performed in the \njetlow bin.}
-%  \label{tab:syst-fits-le3j}
-  \centering
-  \scriptsize
-  \begin{tabular}{ lrccc }
-    \hline
-    \hline
-                  & \multicolumn{4}{c}{Constant fit} \\
-    \cline{2-5}
-    Closure test  & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
-    \hline
-    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & $0.007 \pm 0.02$ & 3.91 & 7 & 0.79 \\ 
-    1 b-tags \ra 2 b-tags (\mj, \njet=3)  & $-0.008 \pm 0.04$ & 3.20 & 7 & 0.87 \\ 
-    0 b-tags \ra 1 b-tags (\mj, \njet=2)  & $0.111 \pm 0.03$ & 5.87 & 7 & 0.55 \\ 
-    0 b-tags \ra 1 b-tags (\mj, \njet=3)  & $0.040 \pm 0.02$ & 1.12 & 7 & 0.99 \\ 
-    \hline
-    \hline
-  \end{tabular}
-\end{table}
-
-\begin{table}[!h]
-%  \caption{A summary of the results obtained from fits of zeroth
-%    order polynomials (\ie a constant) to three sets of closure tests
-%    performed in the \njethigh bin. $^{\dag} $Further explanation of this
-%    fit can be found in the text.}   
-%  \label{tab:syst-fits-ge4j}
-  \centering
-  \scriptsize
-  \begin{tabular}{ llrccc }
-    \hline
-    \hline
-                  & \multicolumn{4}{c}{Constant fit} \\
-    \cline{2-5}
-    Closure test  & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
-    \hline
-    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & $0.011 \pm 0.04$ & 5.81 & 7 & 0.56 \\ 
-    1 b-tags \ra 2 b-tags (\mj) & $0.045 \pm 0.03$ & 9.36 & 7 & 0.23 \\ 
-    0 b-tags \ra 1 b-tags (\mj) & $0.007 \pm 0.03$ & 25.30 & 7 & 7.6\e{-4} \\ 
-    0 b-tags \ra 1 b-tags (\mj)$^{ \dag}$ & $0.009 \pm 0.03$ & 10.12 & 6 & 0.12 \\ 
-    \hline
-    \hline
-  \end{tabular}
-\end{table}
-}
-\frame{
-\begin{table}[!h]
-%  \caption{A summary of the results obtained from fits of zeroth
-%    order polynomials (\ie a constant) to four sets of closure tests
-%    (\njetlow \ra \njethigh) that probe the accuracy of the MC
-%    modeling of the \njet distribution observed in data, using the
-%    three data control samples. } 
-%  \label{tab:syst-fits-njet}
-%  \centering
-  \scriptsize
-  \begin{tabular}{ llrccc }
-    \hline
-    \hline
-                  & \multicolumn{4}{c}{Constant fit} \\
-    \cline{2-5}
-    Closure test  & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
-    \hline
-    \njetlow \ra \njethigh (\mj, 1 b-tags) & $-0.053 \pm 0.03$ & 8.02 & 7 & 0.33 \\ 
-    \njetlow \ra \njethigh (\mj, 1 b-tags) &  $0.018 \pm 0.04$ & 6.23 & 7 & 0.51 \\ 
-    \njetlow \ra \njethigh (\mj, 0 b-tags) &  $0.034 \pm 0.02$ & 9.24 & 7 & 0.24 \\ 
-    \njetlow \ra \njethigh (\gj, 0 b-tags) &  $0.100 \pm 0.04$ & 12.20 & 7 & 0.09 \\ 
-    \hline
-    \hline
-  \end{tabular}
-\end{table}
-
-}
 \frame{
 In addition:
 \begin{itemize}
@@ -897,6 +911,29 @@ In addition:
 
 \section{Results}
 \subsection{Likelihood}{
+\frame{
+Likelihood Model
+
+Setup:
+
+\begin{itemize}
+\item Each observation is modeled as Poisson
+\item Hadronic SM EWK expectations are related to $\mu$, $\gamma$
+\item expectations via ``translation factors'' from MC
+\end{itemize}
+
+Pick a signal model, a given value of signal cross section
+(e.g. 0=SM or 1=nominal), and a particular category of \nb. The
+parameters ﬂoated are:
+\begin{itemize}
+\item the yields of SM EWK events in each hadronic bin
+\item those determining the relative contributions from ($t$ $\rightarrow$) W
+and Z
+\item those accommodating systematic uncertainty on the
+  background translations and on the signal eﬃciency
+\end{itemize}
+}
+
 \frame{
 
 \begin{equation*}
@@ -1299,6 +1336,90 @@ T2tt
 %\end{frame}
 %
 
+\begin{frame}[noframenumbering]
+\begin{center}
+Backup
+\end{center}
+\end{frame}
 
-\frame{}
+
+\frame{ 
+
+\frametitle{Closure Tests}
+
+\begin{table}[!h]
+%  \caption{A summary of the results obtained from fits of zeroth
+%    order polynomials (\ie a constant) to binned \scalht distributions for 
+%    four sets of closure tests performed in the \njetlow bin.}
+%  \label{tab:syst-fits-le3j}
+  \centering
+  \scriptsize
+  \begin{tabular}{ lrccc }
+    \hline
+    \hline
+                  & \multicolumn{4}{c}{Constant fit} \\
+    \cline{2-5}
+    Closure test  & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & $0.007 \pm 0.02$ & 3.91 & 7 & 0.79 \\ 
+    1 b-tags \ra 2 b-tags (\mj, \njet=3)  & $-0.008 \pm 0.04$ & 3.20 & 7 & 0.87 \\ 
+    0 b-tags \ra 1 b-tags (\mj, \njet=2)  & $0.111 \pm 0.03$ & 5.87 & 7 & 0.55 \\ 
+    0 b-tags \ra 1 b-tags (\mj, \njet=3)  & $0.040 \pm 0.02$ & 1.12 & 7 & 0.99 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+%  \caption{A summary of the results obtained from fits of zeroth
+%    order polynomials (\ie a constant) to three sets of closure tests
+%    performed in the \njethigh bin. $^{\dag} $Further explanation of this
+%    fit can be found in the text.}   
+%  \label{tab:syst-fits-ge4j}
+  \centering
+  \scriptsize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+                  & \multicolumn{4}{c}{Constant fit} \\
+    \cline{2-5}
+    Closure test  & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    $\alphat < 0.55 \ra \alphat > 0.55$ (\mj) & $0.011 \pm 0.04$ & 5.81 & 7 & 0.56 \\ 
+    1 b-tags \ra 2 b-tags (\mj) & $0.045 \pm 0.03$ & 9.36 & 7 & 0.23 \\ 
+    0 b-tags \ra 1 b-tags (\mj) & $0.007 \pm 0.03$ & 25.30 & 7 & 7.6\e{-4} \\ 
+    0 b-tags \ra 1 b-tags (\mj)$^{ \dag}$ & $0.009 \pm 0.03$ & 10.12 & 6 & 0.12 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+}
+\frame{
+\begin{table}[!h]
+%  \caption{A summary of the results obtained from fits of zeroth
+%    order polynomials (\ie a constant) to four sets of closure tests
+%    (\njetlow \ra \njethigh) that probe the accuracy of the MC
+%    modeling of the \njet distribution observed in data, using the
+%    three data control samples. } 
+%  \label{tab:syst-fits-njet}
+%  \centering
+  \scriptsize
+  \begin{tabular}{ llrccc }
+    \hline
+    \hline
+                  & \multicolumn{4}{c}{Constant fit} \\
+    \cline{2-5}
+    Closure test  & Best fit value & $\chi^2$ & d.o.f. & $p$-value \\
+    \hline
+    \njetlow \ra \njethigh (\mj, 1 b-tags) & $-0.053 \pm 0.03$ & 8.02 & 7 & 0.33 \\ 
+    \njetlow \ra \njethigh (\mj, 1 b-tags) &  $0.018 \pm 0.04$ & 6.23 & 7 & 0.51 \\ 
+    \njetlow \ra \njethigh (\mj, 0 b-tags) &  $0.034 \pm 0.02$ & 9.24 & 7 & 0.24 \\ 
+    \njetlow \ra \njethigh (\gj, 0 b-tags) &  $0.100 \pm 0.04$ & 12.20 & 7 & 0.09 \\ 
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+}
+
 \end{document}
