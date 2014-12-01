@@ -50,9 +50,14 @@
 \newcommand{\zInv}[1]{\ensuremath{Z_{\rm inv}^{#1}}\xspace}
 \newcommand{\tev}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
 \newcommand{\st}{\ensuremath{\tilde{\rm t}}\xspace}
-
+\newcommand{\VEtmiss}{\ensuremath{{\vec E}_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\znunu}{\ensuremath{{\text Z} \ra \nu\bar{\nu}}\xspace}
+\newcommand{\ttj}{\ensuremath{\rm{t}\bar{\rm{t}} + jets}\xspace}
+\newcommand{\wj}{\ensuremath{\rm W + jets}\xspace}
+\newcommand{\wlnu}{\ensuremath{{\text W}\!\ra\!l\nu}\xspace}
+\newcommand{\zj}{\ensuremath{\rm Z + jets}\xspace}
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
-
+\newcommand{\dyll}{\ensuremath{{\text Z/\gamma^{*}} \rightarrow l^{+}l^{-}}\xspace}
 \addtobeamertemplate{navigation symbols}{}{%
     \usebeamerfont{footline}%
     \usebeamercolor[fg]{footline}%
@@ -416,32 +421,134 @@ In this analysis: LSP is assumed to be the neuralino: $\tilde{\chi}_1^0$ \\
 \end{center}
 final state: ``Jets'' + undetected energy
 }
-{
-\usebackgroundtemplate{{\transparent{0.3}\includegraphics[width=\paperwidth,height=\paperheight]{../figures/met_schematic.png}}}
+
 \frame{
-\color{black}
-Signal characteristics:
+\frametitle{Calorimeter Jets}
+%\begin{columns}[c c]
+%\column{0.5\paperwidth}
 \begin{itemize}
-\item hadronic Jets
-\item missing transverse energy, $\met$ 
+\item ``Traditional'' jet reconstruction
+\item Calorimeter towers 
+  \begin{itemize}
+    \item 1 HCAL cell $\sim 0.1$ ($\Delta \phi \times \Delta \eta$)
+    \item 25 ECAL crystals $\sim 0.01$ ($\Delta \phi \times \Delta \eta$)
+  \end{itemize}
+\end{itemize}
+\begin{center}
+\includegraphics[width = 0.5\columnwidth]{../figures/Sketch_PartonParticleCaloJet.png}
+\end{center}
+\begin{itemize}
+\item Does not make use of ECAL granularity 
+
+\item Jet resolution driven by HCAL: 
+  \begin{itemize}
+  \item HCAL resolution $\sim 100\%/\sqrt E $
+  \item non-compensating $\rightarrow$ non-linear response 
+  \end{itemize}
+\item Low $p_{T}$ charged hadrons bent outside jet
+\end{itemize}
+%\column{0.5\paperwidth}
+
+
+%\includegraphics[width = 1.0\columnwidth]{../figures/JetConeWithTracks.png}
+%\end{columns}
+}
+\frame{
+\frametitle{Particle Flow Jets}
+\begin{columns}[c c]
+\column{0.5\paperwidth}
+Particle Flow (PF) reconstructs all stable particle in the event: $h^\pm$, $\gamma$, $h^0$, $e$, $\mu$
+\begin{itemize}
+
+\item On average jets are: 
+\item $\sim65\%$ charged hadrons, $\sim25\%$ photons, $\sim10\%$ neutral hadrons 
+\item Using the silicon tracker (vs. HCAL) to measure charged hadrons 
+  \begin{itemize}
+  \item Improves resolution, avoids non-linearity 
+  \item Decreases sensitivity to the fragmentation pattern of jets 
+  \end{itemize}
+\end{itemize}
+\column{0.4\paperwidth}
+\includegraphics[width = 1.0\columnwidth]{../figures/JetConeAndPFJet.png}
+\end{columns}
+}
+
+\frame{
+\frametitle{Jet Resolution}
+\begin{figure}[h!]
+  \begin{center}
+  \subfigure[]{
+      \includegraphics[width=0.45\textwidth,]{../figures/ak5calo_relRes}}
+      \subfigure[]{
+      \includegraphics[width=0.45\textwidth,]{../figures/ak5pf_relRes}}
+      \caption{\label{fig:jetRes} The relative $\pt$ resolution as a function of jet $\pt$
+              for calo jets (a) and PF jets (b) in the center of the barrel using the dijet
+              $\pt$-asymmetry method.}
+  \end{center}
+\end{figure}
+}
+
+
+{
+\usebackgroundtemplate{{\transparent{0.2}\includegraphics[width=\paperwidth,height=\paperheight]{../figures/met_schematic.png}}}
+\frame{
+
+\frametitle{Summary of Signal Characteritics}
+
+\color{black}
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Signficant hadronic content:
+\begin{center}
+$\scalht = \sum\limits_{j} \Et^j$
+\end{center}
+\item missing transverse energy: 
+\begin{center}
+$\mht$ =$\sum\limits_{j} \vec{\Et}^j$ , $\VEtmiss$,$\met = \sum\limits_{all objects} \Et^j$ 
+\end{center}
 \item no leptons
+\item T2tt $\rightarrow$ b-quarks
 \end{itemize}
 }
+
+
 }
+
 \subsection{backgrounds}
+
 \frame{
-Multi-jet events from QCD
+\frametitle{Backgrounds}
+\begin{columns}[cc]
+\column{0.3\paperwidth}\centering
+~\\
+\wj; \wlnu\\
+\includegraphics[height = 0.3\paperheight]{../figures/feynman/feynman_Wbb_ljets_green.png}\\
+~\\
+~\\
+\zj; \znunu\\
+\includegraphics[height = 0.3\paperheight]{../figures/feynman/feynman_Z_llbb_bold_khaki.png}
+%\column{0.3\paperwidth}\centering
+\column{0.7\paperwidth}\centering
+\begin{itemize} 
+\setlength{\itemsep}{10pt}
+\item Largest background: multi-jet (QCD)
+\item Electroweak backrounds with genuine \met 
+\begin{itemize}
+\setlength{\itemsep}{7pt}
+\item \wj 
+\item \ttj 
+\item \znunu
+\item \dyll, $t$, Vector Boson
+%\item irreducible background: \znunu
+\end{itemize}
+\end{itemize}
+~\\
+\ttj\\
+\includegraphics[height = 0.3\paperheight]{../figures/feynman/feynman_ttbar_ljets_longt.png}\\
+\end{columns}
 
-backgrounds
-Z$\rightarrow$nu nu
-W+ jets
-ttbar
+}
 
-add diagram for backgrounds above, and describe each
-
-SingleTop
-Drell-yan
-VV}
 \subsection{Event Selection}
 \frame{
 \begin{itemize}
@@ -451,7 +558,7 @@ VV}
 \item Produce data-driven estimates of remaining SM rates from 
 $Z \rightarrow \nu\bar{\nu}$ or ($t\rightarrow$)$W\rightarrow l \nu$ using
 control stamples with jet systems, containing also isoalted $\mu$ or $\gamma$.
-\item Look simultaneously over broadest possible range of \scalht (8 bins from 375--1075 GeV) and b-tag (0, 1, 2).
+\item Look simultaneously over broadest possible range of \scalht (8 bins from 375--1075 GeV), jet multiplicity ( \njetlow, \njethigh), b-tag (0, 1, 2),.
 \end{itemize}
 }
 
@@ -581,71 +688,6 @@ Hadronic:
 \item $\scalht > 275~\gev$; jet 2 $p_{T} > 100~\gev$
 \end{itemize}
 
-}
-\frame{
-\frametitle{Calorimeter Jets}
-%\begin{columns}[c c]
-%\column{0.5\paperwidth}
-\begin{itemize}
-\item ``Traditional'' jet reconstruction
-\item Calorimeter towers 
-  \begin{itemize}
-    \item 1 HCAL cell $\sim 0.1$ ($\Delta \phi \times \Delta \eta$)
-    \item 25 ECAL crystals $\sim 0.01$ ($\Delta \phi \times \Delta \eta$)
-  \end{itemize}
-\end{itemize}
-\begin{center}
-\includegraphics[width = 0.5\columnwidth]{../figures/Sketch_PartonParticleCaloJet.png}
-\end{center}
-\begin{itemize}
-\item Does not make use of ECAL granularity 
-
-\item Jet resolution driven by HCAL: 
-  \begin{itemize}
-  \item HCAL resolution $\sim 100\%/\sqrt E $
-  \item non-compensating $\rightarrow$ non-linear response 
-  \end{itemize}
-\item Low $p_{T}$ charged hadrons bent outside jet
-\end{itemize}
-%\column{0.5\paperwidth}
-
-
-%\includegraphics[width = 1.0\columnwidth]{../figures/JetConeWithTracks.png}
-%\end{columns}
-}
-\frame{
-\frametitle{Particle Flow Jets}
-\begin{columns}[c c]
-\column{0.5\paperwidth}
-Particle Flow (PF) reconstructs all stable particle in the event: $h^\pm$, $\gamma$, $h^0$, $e$, $\mu$
-\begin{itemize}
-
-\item On average jets are: 
-\item $\sim65\%$ charged hadrons, $\sim25\%$ photons, $\sim10\%$ neutral hadrons 
-\item Using the silicon tracker (vs. HCAL) to measure charged hadrons 
-  \begin{itemize}
-  \item Improves resolution, avoids non-linearity 
-  \item Decreases sensitivity to the fragmentation pattern of jets 
-  \end{itemize}
-\end{itemize}
-\column{0.4\paperwidth}
-\includegraphics[width = 1.0\columnwidth]{../figures/JetConeAndPFJet.png}
-\end{columns}
-}
-
-\frame{
-\frametitle{Jet Resolution}
-\begin{figure}[h!]
-  \begin{center}
-  \subfigure[]{
-      \includegraphics[width=0.45\textwidth,]{../figures/ak5calo_relRes}}
-      \subfigure[]{
-      \includegraphics[width=0.45\textwidth,]{../figures/ak5pf_relRes}}
-      \caption{\label{fig:jetRes} The relative $\pt$ resolution as a function of jet $\pt$
-              for calo jets (a) and PF jets (b) in the center of the barrel using the dijet
-              $\pt$-asymmetry method.}
-  \end{center}
-\end{figure}
 }
 
 \frame{
