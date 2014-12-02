@@ -189,21 +189,24 @@ Search for New Physics in All-hadronic Events with AlphaT in
 \subsection{Standard Model}
 \frame{
   \frametitle{The Standard Model}
+\begin{columns}[lc]
+\column{0.4\paperwidth}
 \begin{itemize}
-\item Very succesful model:
-  \begin{itemize}
+  \item Very succesful model:
+    \begin{itemize}
     \item Higgs Boson
     \item Muon Anomalous \\ 
       Magnetic Moment
-  \end{itemize}
-\item 
-
-The Standard Model doesn't explain everything
+    \end{itemize}
+  \item The Standard Model doesn't explain everything
 \end{itemize}
-\begin{textblock*}{5cm}(6cm,2cm) % {block width} (coords)
-\includegraphics[width=0.5\paperwidth,]{../figures/Standard_Model_of_Elementary_Particles.png}
-\end{textblock*}
+\column{0.5\paperwidth}
+%\begin{textblock*}{5cm}(6cm,2cm) % {block width} (coords)
+\includegraphics[width=1.0\textwidth,]{../figures/Standard_Model_of_Elementary_Particles.png}
+%\end{textblock*}
+\end{columns}
 }
+
 \frame{
 \frametitle{Shortcomings of the SM}
 \begin{itemize}
@@ -305,7 +308,7 @@ orbit 7~m \\apart
 }
 
 \frame{
-\frametitle{The coordinate system}
+\frametitle{The Coordinate System}
 \begin{center}
 \includegraphics[width=.5\paperwidth,]{../figures/Figures_T_Coordinate.png}
 \end{center}
@@ -333,7 +336,7 @@ $0 \leq \theta \leq \pi$ where $\theta$ is the polar angle from the beam-line;
 \section{Search Strategy}
 \subsection{Models}
 \frame{
-\frametitle{Why these SUSY Models?}
+\frametitle{Search Stategy}
 
 Early searches at LHC focused on \\high cross section production \\models $\rightarrow$ $\frac{\sigma\left(\tilde{g}\tilde{g}\right)}{\sigma\left(\tilde{t}\tilde{t}\right)} \sim 100$.
 ~\\
@@ -370,7 +373,7 @@ is to be the natural solution to the hierarchy problem
 }
 
 \frame{
-\frametitle{Search Stragegy}
+\frametitle{Search Strategy}
 \color{black}
 Conserved quantity, R-parity:
 
@@ -402,8 +405,8 @@ In this analysis: LSP is assumed to be the neuralino: $\tilde{\chi}_1^0$ \\
 %%
 \color{black}
 \frame{
-
-100\% branching fraction.
+\frametitle{Search strategy}
+%100\% branching fraction.
 ~\\
 ``T2tt'': $\tilde{t} \rightarrow t \tilde{\chi}_1^0$
 \begin{itemize}
@@ -504,7 +507,7 @@ $\scalht = \sum\limits_{j} \Et^j$
 \end{center}
 \item missing transverse energy: 
 \begin{center}
-$\mht$ =$\sum\limits_{j} \vec{\Et}^j$ , $\VEtmiss$,$\met = \sum\limits_{all objects} \Et^j$ 
+$\mht$ =$\sum\limits_{j} \vec{\Et}^j$ , $\met = \sum\limits_{\texttt{all objects}} \Et^j$ 
 \end{center}
 \item no leptons
 \item T2tt $\rightarrow$ b-quarks
@@ -551,6 +554,7 @@ $\mht$ =$\sum\limits_{j} \vec{\Et}^j$ , $\VEtmiss$,$\met = \sum\limits_{all obje
 
 \subsection{Event Selection}
 \frame{
+\frametitle{Overview of the Search Strategy}
 \begin{itemize}
 \setlength{\itemsep}{20pt}
 \item Seek all-hadronic signature $\rightarrow$ veto isolated $e, \mu$
@@ -558,19 +562,24 @@ $\mht$ =$\sum\limits_{j} \vec{\Et}^j$ , $\VEtmiss$,$\met = \sum\limits_{all obje
 \item Produce data-driven estimates of remaining SM rates from 
 $Z \rightarrow \nu\bar{\nu}$ or ($t\rightarrow$)$W\rightarrow l \nu$ using
 control stamples with jet systems, containing also isoalted $\mu$ or $\gamma$.
-\item Look simultaneously over broadest possible range of \scalht (8 bins from 375--1075 GeV), jet multiplicity ( \njetlow, \njethigh), b-tag (0, 1, 2),.
+\item Look simultaneously over broadest possible range of \scalht (8 bins from 375--1075 GeV), jet multiplicity (\njetlow, \njethigh), b-tag (0, 1, 2).
 \end{itemize}
 }
 
 \frame{
 \frametitle{\alphat}
+%\begin{equation*}
+%\label{eq:alphat}
+%\alphat\, =\, \frac{\Et^{{\rm j}_2}}{M_\text{T}} \,,\;   M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
+%    \right)^2 - \left( \sum_{i=1}^2 p_x^{{\rm j}_i} \right)^2 - \left(
+%      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2}
+%\end{equation*}
+%
 \begin{equation*}
-\label{eq:alphat}
-\alphat\, =\, \frac{\Et^{{\rm j}_2}}{M_\text{T}} \,,\;   M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
-    \right)^2 - \left( \sum_{i=1}^2 p_x^{{\rm j}_i} \right)^2 - \left(
-      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2}
+  \label{eq:alphat2}
+  \alphat\, =\, \frac{\Et^{{\rm j}_2}}{M_\text{T}} \,= \,\frac{1}{2} \times 
+  \frac{1 - (\Delta \scalht/\scalht)}{\sqrt{1 - (\mht/\scalht)^2}} \, . 
 \end{equation*}
-
 
 %\begin{equation*}
 %  \label{eq:mt}
@@ -631,7 +640,10 @@ $\alphat = \frac{1}{2}$ & $\alphat < \frac{1}{2}$ & $\alphat > \frac{1}{2}$
 \frame{
 \frametitle{HT $\times$ $\alphat$ Trigger}
 
-innefficiency in trigger due to use of Calorimeter jets in online trigger 
+innefficiency in trigger:
+\begin{itemize}
+\item Online: calo jets $\rightarrow$ Offline: PF jets
+\end{itemize}
 
 \begin{center}
 \begin{table}[!h]
@@ -696,8 +708,8 @@ Hadronic:
 Control: req's above +
 \begin{itemize}
 \item photon $\pt > 165~\gev, |\eta| < 1.4442$
-\item one isolated muon $pT > 25~\gev$
-\item no $\alphat$ cut for muon samples when $\nb \geq 1$\\
+\item one isolated muon $\pt > 25~\gev$
+\item no $\alphat$ cut for muon samples\\
 ~~~$\Longrightarrow$ higher statistics\\
 ~~~$\Longrightarrow$ reduced S/B from signal contamination
 \end{itemize}
@@ -779,7 +791,6 @@ Control: req's above +
 %    selection on \njet and \nb, and (e,f) \scalht  for the two 
 %    event categories (\njetlow, $\nb = 0$) and (\njethigh, $\nb = 1$). }
 \end{figure}
-
 }
 
 \frame{
@@ -810,30 +821,29 @@ Benefits:
 }
 
 \frame{
+\frametitle{Translation Factors}
+
 \begin{itemize}
 \item statistically independent
 \item uncover biases
 \item determine background 
 \end{itemize}
 
+Tests:
 \begin{itemize}
 \item $\alphat < 0.55 \rightarrow \alphat > 0.55$: check \mj 
 \item between b-tag multiplicities: check bkg ad-mixture
 \item between \njet multiplicities: check jes, kinetmatics 
 \end{itemize}
-an example:
+~\\
 \begin{equation*}
   \label{equ:tf-ratio-closure}
   \frac{N_{\rm MC}^{\rm \mj}(\scalht,\njethigh, \nb=1)}{N_{\rm MC}^{\rm \mj}(\scalht,\njetlow,\nb=1)} 
 \end{equation*}
-
 }
 
 \frame{ 
-
 \frametitle{Closure Tests}
-
-an expample:
 
 \begin{figure}[h!]
   \begin{center}
@@ -841,15 +851,11 @@ an expample:
      \label{fig:closure}
   \end{center} 
 \end{figure}
-
-
 }
 
+
 \frame{ 
-
 \frametitle{Closure Tests}
-
-an expample:
 
 \begin{figure}[h!]
   \begin{center}
@@ -859,6 +865,8 @@ an expample:
 }
 
 \frame{
+\frametitle{Background Uncertainty}
+
 In addition:
 \begin{itemize}
 \item trigger: 5\%
@@ -912,14 +920,14 @@ In addition:
 \section{Results}
 \subsection{Likelihood}{
 \frame{
-Likelihood Model
+\frametitle{Likelihood Model Overview}
 
 Setup:
 
 \begin{itemize}
 \item Each observation is modeled as Poisson
 \item Hadronic SM EWK expectations are related to $\mu$, $\gamma$
-\item expectations via ``translation factors'' from MC
+expectations via ``translation factors'' from MC
 \end{itemize}
 
 Pick a signal model, a given value of signal cross section
@@ -935,42 +943,64 @@ and Z
 }
 
 \frame{
-
+\setlength{\belowdisplayskip}{0pt} \setlength{\belowdisplayshortskip}{1pt}
+\setlength{\abovedisplayskip}{0pt} \setlength{\abovedisplayshortskip}{1pt}
+\frametitle{The Likelihood}
 \begin{equation*}
-L^k = L_{hadronic}^k \times L_{\mu}^k \times L_{ph}^k \times
-L_{\rm EWK\, syst.}^k \quad .
+L^k = L_{hadronic}^k \times L_{\mu}^k \times L_{\gamma}^k \times
+L_{\rm EWK\, syst.}^k \quad
 \end{equation*}
-
-\begin{equation*}
+~\\
+\visible<2,3,4>{For a given an analysis category,}
+\visible<2,3,4>{\begin{equation*}
 L_{hadronic}=\prod_i \mathrm{Pois}(n^i |\, b^i + s^i)
 \label{eq:hadronicLikelihood}
 \end{equation*}
-
-
-\begin{equation*}
+for \scalht bin $i$. }
+\visible<3,4>{\begin{equation*}
 \label{eq:photonLikelihood}
-L_{\gamma}= \prod_i \mathrm{Pois}(n_{ph}^i |\, \rho_{phZ}^i \cdot
+L_{\gamma}= \prod_i \mathrm{Pois}(n_{\gamma}^i |\, \rho_{\gamma Z}^i \cdot
 r_{\gamma}^{i} \cdot \zInv{i})
-\end{equation*}
+\end{equation*}}
 
-\begin{equation*}
+\visible<3,4>{\begin{equation*}
 \label{eq:muonLikelihood}
 L_{\mu}=\prod_i \mathrm{Pois}(n_{\mu}^i |\, \rho_{\mu W}^i \cdot
-r_{\mu}^{i} \cdot ttW^{i})\quad ,
-\end{equation*}
+r_{\mu}^{i} \cdot ttW^{i})\quad
+\end{equation*}}
 
-\begin{equation*}
-r_{\gamma}^i = \frac{MC_{ph}^i}{MC_{\zInv{}}^i};\, r_{\mu}^i =
-\frac{MC_{\mu}^i}{MC_{t\bar{t}+W}^i}\quad ,
-\end{equation*}
+\visible<4>{\begin{equation*}
+r_{\gamma}^i = \frac{MC_{\gamma}^i}{MC_{\zInv{}}^i};\, r_{\mu}^i =
+\frac{MC_{\mu}^i}{MC_{t\bar{t}+W}^i}\quad
+\end{equation*}}
 }
 
+%\visible<3,4>{\begin{equation*}
+%\label{eq:muonLikelihood}
+%L_{\mu}=\prod_i \mathrm{Pois}(n_{\mu}^i |\, \rho_{\mu W}^i \cdot
+%r_{\mu}^{i} \cdot ttW^{i})\quad
+%\end{equation*}}
+%
+%\visible<4>{\begin{equation*}
+%r_{\gamma}^i = \frac{MC_{\gamma}^i}{MC_{\zInv{}}^i};\, r_{\mu}^i =
+%\frac{MC_{\mu}^i}{MC_{t\bar{t}+W}^i}\quad ,
+%\end{equation*}}
+
+
 \frame{
+\setlength{\belowdisplayskip}{3pt} \setlength{\belowdisplayshortskip}{1pt}
+\setlength{\abovedisplayskip}{3pt} \setlength{\abovedisplayshortskip}{1pt}
+\frametitle{The Likelihood}
+\begin{equation*}
+L^k = L_{hadronic}^k \times L_{\mu}^k \times L_{\gamma}^k \times
+L_{\rm EWK\, syst.}^k \quad
+\end{equation*}
+
 \begin{equation*}
 \label{eq:ewkSyst}
-L_{\rm EWK\, syst.}=\prod_j \mathrm{Logn}( 1.0 |\,\rho_{\mu W}^j,
-\sigma_{\mu W}^j)\times \mathrm{Logn}( 1.0 |\,\rho_{ph Z}^j,
-\sigma_{\gamma Z}^j) \quad ,
+L_{\rm EWK\, syst.}=\prod_i \mathrm{Logn}( 1.0 |\,\rho_{\mu W}^i,
+\sigma_{\mu W}^i)\times \mathrm{Logn}( 1.0 |\,\rho_{\gamma Z}^i,
+\sigma_{\gamma Z}^i) \quad
 \end{equation*}
 
 where Logn is the log-normal
@@ -982,9 +1012,10 @@ distribution~\cite{cousins-log-normal}:
 \frac{1}{x\sqrt{2\pi}\ln{k}}\exp{\left(-\frac{\ln^2{\left(\frac{x}{\mu}\right)}}{2\ln^2{k}}\right)};\quad
 k=1+\sigma_{\mathrm rel.}\quad. 
 \end{equation*}
-
-Unlike the Gaussian distribution, the log-normal distribution is bounded below by zero and is thus well suited for modeling 
-quantities that are intrinsically non-negative. 
+\begin{itemize}
+\item non-negative
+\item relative uncertainty 
+\end{itemize}
 }
 
 
@@ -1086,6 +1117,7 @@ quantities that are intrinsically non-negative.
 }
 
 \frame{
+\frametitle{p-values and pulls}
 \begin{figure}[h!]
   \begin{center}
     \subfigure[p-values per event category.]{
@@ -1100,7 +1132,7 @@ quantities that are intrinsically non-negative.
 %    \subfigure[p-value per signal region bin.]{
 %      \includegraphics[width=0.45\textwidth, trim=0 0 0 0, clip=true]{figures/fit/v1/pvalue_per_bin}
 %    } \\
-    \caption{Pulls and p-values. See text for details}
+    %\caption{Pulls and p-values. See text for details}
     \label{fig:fluct}
   \end{center}
 \end{figure}
@@ -1169,7 +1201,13 @@ L_{sig.\,syst}=\mathrm{Logn}(1.0 |\,\rho_{sig}, \delta) \quad .
 
 }
 \frame{
-
+\frametitle{Uncertainty on Signal Efficiency}
+\begin{itemize}
+\item PDF - Parton Distribution Function
+\item JES - Jet Energy Scale
+\item ISR - Initial State Radiation
+\end{itemize}
+~\\
 \begin{center}
 T2cc
 \end{center}
@@ -1208,6 +1246,13 @@ T2cc
 \end{table}
 }
 \frame{
+\frametitle{Uncertainty on Signal Efficiency}
+\begin{itemize}
+\item PDF - Parton Distribution Function
+\item JES - Jet Energy Scale
+\item ISR - Initial State Radiation
+\end{itemize}
+~\\
 \begin{center}
 T2tt
 \end{center}
@@ -1246,12 +1291,13 @@ T2tt
 }
 
 \frame{
+\frametitle{T2cc: Limits on Upper Cross Sections}
 \begin{figure}[h!]
   \begin{center}
-  \subfigure[\label{fig:upperLimits-t2cc}]{
+  \subfigure[\label{fig:upperLimits-t2cc}Analysis T2cc Limits]{
     \includegraphics[width=0.45\textwidth,clip=true]{../figures/limits/merged/T2cc/v2/CLs_frequentist_T2cc_2012pf_0b_le3j_0b_ge4j_1b_ge4j_xsLimit}
     }   
-  \subfigure[\label{fig:atlas}]{     
+  \subfigure[\label{fig:atlas}ATLAS T2cc Limits]{     
     \includegraphics[width=0.45\textwidth,clip=true]{../figures/limits/merged/T2cc/v2/atlas}
     }   
 %    \caption{(a) The expected and observed upper limits at 95\% C.L. on the production cross section 
@@ -1264,16 +1310,18 @@ T2tt
 }
 
 \frame{
+\frametitle{T2tt: Limits on Upper Cross Sections}
 \begin{figure}[h!]
   \begin{center}
       \includegraphics[width=0.70\textwidth,clip=true,]{../figures/limits/merged/T2tt/v6/CLs_frequentist_T2tt_2012pf_1b_ge4j_2b_ge4j_xsLimit}
-    \caption{\label{fig:upperLimits-t2tt}Expected and observed upper limits on the production cross section 
-    for the models \texttt{T2tt}. Mass pairs left (and below) of the observed limit are excluded at the 95\% C.L.}
+     %\caption{\label{fig:upperLimits-t2tt}Expected and observed upper limits on the production cross section 
+    %for the models \texttt{T2tt}. Mass pairs left (and below) of the observed limit are excluded at the 95\% C.L.}
   \end{center}
 \end{figure}
 }
 
 \frame{
+\frametitle{pulls}
 \begin{figure}[h!]
   \begin{center}
     %\includegraphics[width=0.75\textwidth, trim=0 0 0 30, clip=true]{../figures/fit/v22/significances_catVsHt_3}
@@ -1284,6 +1332,11 @@ T2tt
 }
 
 \frame{
+\frametitle{Signal Significance}
+\LARGE{
+\begin{center}
+ $\frac{s}{\sqrt{b+(0.1b)^2}}$
+\end{center}}
 \begin{figure}[h!]
   \begin{center}
      \subfigure[\njethigh, $\nb = 1$, simultaneous fit]{
@@ -1297,6 +1350,11 @@ T2tt
 }
 
 \frame{
+\frametitle{Fit with Signal}
+Example mass point ($m_{\st} = 400 \gev, m_{LSP} = 100 \gev$)
+\begin{itemize}
+\item fluctuations consistant signal
+\end{itemize}
 \begin{figure}[h!]
   \begin{center}
     \subfigure[\njethigh, $\nb = 1$, simultaneous fit]{
@@ -1305,22 +1363,23 @@ T2tt
     \subfigure[\njethigh, $\nb = 2$, simultaneous fit]{
       \includegraphics[width=0.45\textwidth]{../figures/fit/v22/wSignal/400_100/bestFit_2012pf_RQcdZero_fZinvAll_1b_ge4j-1hp_2b_ge4j-1h_signal_sel2b_ge4j}
     } \\
-    \caption{\label{fig:t2tt-best-fit-400_100}The comparison of
-      the \scalht-binned observed data yields and expectations for the
-      hadronic sample, as determined by a simultaneous fit to all data
-      samples under the signal plus SM background hypothesis. The
-      observed event yields in data (black dots), the SM expectations
-      (dark blue solid line), and the signal expectations (pink solid
-      line), as determined by the simultaneous fit, for the
-      signal model \texttt{T2tt} with $m_{\st} = 400\GeV$ and
-      $m_{\text{LSP}} = 100\GeV$. Two event categories are
-      considered: (a) \njethigh and $\nb = 1$, (b) \njethigh and
-      $\nb = 2$.}
+%    \caption{\label{fig:t2tt-best-fit-400_100}The comparison of
+%      the \scalht-binned observed data yields and expectations for the
+%      hadronic sample, as determined by a simultaneous fit to all data
+%      samples under the signal plus SM background hypothesis. The
+%      observed event yields in data (black dots), the SM expectations
+%      (dark blue solid line), and the signal expectations (pink solid
+%      line), as determined by the simultaneous fit, for the
+%      signal model \texttt{T2tt} with $m_{\st} = 400\GeV$ and
+%      $m_{\text{LSP}} = 100\GeV$. Two event categories are
+%      considered: (a) \njethigh and $\nb = 1$, (b) \njethigh and
+%      $\nb = 2$.}
   \end{center}
 \end{figure}
 }
 
 \frame{
+\frametitle{Calo and PF Upper Limit Comparison}
 \begin{figure}[h!]
   \begin{center}
       \includegraphics[width=0.65\textwidth]{../figures/T2tt_ExpectedUpperLimit_ratio}
@@ -1330,11 +1389,21 @@ T2tt
   \end{center}
 \end{figure}
 }
-%\begin{frame}{References}
-%\bibliography{alphaT}
-%\bibliographystyle{unsrt}
-%\end{frame}
-%
+
+\frame{
+\frametitle{Summary}
+
+\begin{itemize}
+\item Limits with calo $\&$ PF comparable $\rightarrow$ inneficency in trigger
+\end{itemize}
+
+}
+
+\begin{frame}{References}
+\bibliography{alphaT}
+\bibliographystyle{unsrt}
+\end{frame}
+
 
 \begin{frame}[noframenumbering]
 \begin{center}
