@@ -79,7 +79,7 @@
 \title{Search for New Physics in All-hadronic Events with AlphaT in 8 TeV Data with CMS}
 \author{Y.~Eshaq\\}
 %\today}
-%\date{}
+\date{December 5, 2014}
 %\date{\today}
 %\setbeamertemplate{footline}{}
 
@@ -190,13 +190,13 @@ Search for New Physics in All-hadronic Events with AlphaT in
 \frame{
   \frametitle{The Standard Model}
 \begin{columns}[lc]
-\column{0.4\paperwidth}
+\column{0.5\paperwidth}
 \begin{itemize}
   \item Very succesful model:
     \begin{itemize}
-    \item Higgs Boson
-    \item Muon Anomalous \\ 
-      Magnetic Moment
+    \item Predicts all known particles and interaction
+    \item Muon Anomalous Magnetic Moment
+      \item Z Boson $\rightarrow$ cross section, branching fraction
     \end{itemize}
   \item The Standard Model doesn't explain everything
 \end{itemize}
@@ -213,9 +213,9 @@ Search for New Physics in All-hadronic Events with AlphaT in
 \setlength{\itemsep}{8pt}
 \item Dark Matter: 96\% of matter remains unexplained 
 \item Gravity: The SM becomes invalid above $M_{plank} > 10^{19}~GeV$ where gravity can't be ignored
-\item First extesion of SM to allow massive neutrinos 
+\item Massless Neurinos
 \item Does not allow for unification of forces
-\item Divergent corrections to the Higgs mass
+\item Divergent corrections to the Higgs mass - ``Hiearchy problem''
 \end{itemize}
 \begin{equation*}
 \underbrace{\mathrm{m}^2_{\text{physical}}}_{\text{what we measure}} = \underbrace{\mathrm{m}_{\mathrm{h}}^2}_{\text{tree level}} \;+\; \underbrace{\frac{3\lambda}{8\pi}\Lambda^2}_{\text{1-loop}} \;-\; \underbrace{\frac{3\lambda}{8\pi}\mathrm{m}_{\mathrm{h}}^2\text{log}\left(\frac{\Lambda^2+\mathrm{m}_{\mathrm{h}}^2}{\mathrm{m}_{\mathrm{h}}^2}\right)}_{\text{much smaller than} \Lambda^2}
@@ -223,21 +223,38 @@ Search for New Physics in All-hadronic Events with AlphaT in
 
 %\includegraphics[width=.85\paperwidth,]{../figures/higgs_MassCorrection.png}
 
-\begin{itemize}
-\item effective theory \pause
-\end{itemize}
+%\begin{itemize}
+%\item effective theory \pause
+%\end{itemize}
 \color{red!80}{Any extension of th SM should attempt to solve these shortcomings...}
 }
 \subsection{SUSY}
 \frame{
 \frametitle{Supersymmetry}
-\color{red!80}{A proposed symmetry between fermions and baryions}
 \begin{center}
-%\begin{textblock*}{5cm}(.5cm,2cm) % {block width} (coords)
-\includegraphics[width=.7\paperwidth,]{../figures/susy_spectrum.png}
-%\end{textblock*}
+\color{red!80}{A proposed symmetry of spin}
+\end{center}
+\begin{center}
+\begin{textblock*}{3cm}(-0.5cm,4.5cm) % {block width} (coords)
+\color{blue!80}{spin 1/2}
+\end{textblock*}
+\begin{textblock*}{3cm}(10cm,4.5cm) % {block width} (coords)
+\color{blue!80}{spin 0}
+\end{textblock*}
+\begin{textblock*}{3cm}(0.5cm,7cm) % {block width} (coords)
+\color{blue!80}{spin 1}
+\end{textblock*}
+\begin{textblock*}{3cm}(10.1cm,7cm) % {block width} (coords)
+\color{blue!80}{spin 1/2}
+\end{textblock*}
+\color{black}
+\includegraphics[width=.6\paperwidth,]{../figures/susy_spectrum.png}\\
+
+\small{Higgsino $\Longleftrightarrow$ Bino/Wino = 4 Neutralino ($\tilde{\chi}_{1-4}^0$)\\
+Higgsino $\Longleftrightarrow$ Wino = 2 Charginos ($\tilde{\chi}_{1-2}^+$)}
 \end{center}
 }
+\color{black}
 \frame{
 \frametitle{Supersymmetry}
 Supersymmetry is theoretically well motivated:
@@ -261,6 +278,7 @@ Supersymmetry is theoretically well motivated:
 \frame{
 \frametitle{The Large Hadron Collider}
 \begin{itemize}
+\setlength{\itemsep}{15pt}
 \item proton-proton (pp) collider \\housed 
 100m underground in a \\27km circular tunnel
 
@@ -285,7 +303,6 @@ orbit 7~m \\apart
 \visible<2>{\includegraphics[width=.43\paperwidth,]{../figures/bul-pho-2008-003.jpg}}
 
 \end{textblock*}
-\visible<2>{text}
 \begin{textblock*}{5cm}(.5cm,5.5cm) % {block width} (coords)
 \visible<3>{\includegraphics[width=.43\paperwidth,]{../figures/hcal-2005-001.jpg}}\par
 \end{textblock*}
@@ -310,13 +327,16 @@ orbit 7~m \\apart
 \frame{
 \frametitle{The Coordinate System}
 \begin{center}
-\includegraphics[width=.5\paperwidth,]{../figures/Figures_T_Coordinate.png}
-\end{center}
+\includegraphics[width=.48\paperwidth,]{../figures/Figures_T_Coordinate.png}
+\includegraphics[width=.28\paperwidth,]{../figures/Pseudorapidity2.png}
 
+\end{center}
+\small{
+Azymuthal angle ($\phi$): angle around beam line\\
 Known and conserved quantities: 
 \begin{itemize}
-\item transverse momentum, $\pt \equiv P \sin\left(\theta\right)$, ,
-\item transverse energy, $E_{T} \equiv E \sin\left(\theta\right)$, 
+\item transverse momentum, $\pt \equiv P \sin\theta$
+\item transverse energy, $E_{T} \equiv E \sin\theta$
 \end{itemize}
 $0 \leq \theta \leq \pi$ where $\theta$ is the polar angle from the beam-line; 
 
@@ -324,12 +344,12 @@ $0 \leq \theta \leq \pi$ where $\theta$ is the polar angle from the beam-line;
 \begin{itemize}
 \item pseudo-rapidity:
 \begin{equation*}
-        \eta \equiv −\ln\left( \tan\left(\theta/2\right)\right),
+        \eta \equiv −\ln\left( \tan\left(\theta/2\right)\right)
         \label{pseudo}      
 \end{equation*}
 
 \end{itemize}
-
+}
 
 }
 %%
@@ -338,7 +358,7 @@ $0 \leq \theta \leq \pi$ where $\theta$ is the polar angle from the beam-line;
 \frame{
 \frametitle{Search Stategy}
 
-Early searches at LHC focused on \\high cross section production \\models $\rightarrow$ $\frac{\sigma\left(\tilde{g}\tilde{g}\right)}{\sigma\left(\tilde{t}\tilde{t}\right)} \sim 100$.
+\color{black}{Early searches at LHC focused on \\high cross section production \\models $\rightarrow$ $\frac{\sigma\left(\tilde{g}\tilde{g}\right)}{\sigma\left(\tilde{t}\tilde{t}\right)} \sim 100$.}
 ~\\
 ~\\
 Current situation: \\
@@ -367,6 +387,33 @@ is to be the natural solution to the hierarchy problem
 \begin{textblock*}{10cm}(8.41cm,2.5cm) % {block width} (coords)
 \begin{tikzpicture}
 \draw [->, thick] (0,0) -- (0,-3.7);
+\end{tikzpicture}
+\color{black}{~\\80k gluino pairs,\\2000 stops in 20$fb^{-1}$}
+\end{textblock*}
+}
+
+\section{Search Strategy}
+\subsection{Models}
+\frame{
+\frametitle{Search Stategy}
+
+Early searches at LHC focused on high cross section production models $\rightarrow$ $\frac{\sigma\left(\tilde{g}\tilde{g}\right)}{\sigma\left(\tilde{t}\tilde{t}\right)} \sim 100$.\\
+
+\begin{textblock*}{10cm}(5cm,5.3cm) % {block width} (coords)
+\color{red!80}{$\tilde{g}\tilde{g}$}
+\end{textblock*}
+\begin{textblock*}{10cm}(5cm,4.2cm) % {block width} (coords)
+\color{green!80}{$\tilde{q}\tilde{q}$}
+\end{textblock*}
+\begin{textblock*}{10cm}(5.6cm,6.4cm) % {block width} (coords)
+\color{blue!80}{$\tilde{t}\tilde{t}^*$}
+\end{textblock*}
+\begin{center}
+\includegraphics[width=0.7\textwidth, trim = .6cm .1cm .54cm .1cm, clip=true]{../figures/nlonll_lhc8_tpformat.eps}
+\end{center}
+\begin{textblock*}{10cm}(4.31cm,4.0cm) % {block width} (coords)
+\begin{tikzpicture}
+\draw [->, very thick] (0,0) -- (0,-4.4);
 \end{tikzpicture}
 ~\\80k gluino pairs,\\2000 stops in 20$fb^{-1}$
 \end{textblock*}
