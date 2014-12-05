@@ -15,7 +15,7 @@
 \usetikzlibrary{arrows,shapes,positioning}
 \graphicspath{{graphics/}}
 \usepackage{xcolor}
-%\setbeamertemplate{navigation symbols}{\thepage}
+\setbeamertemplate{navigation symbols}{\thepage}
 \usepackage{tikz}
 \usepackage{transparent}
 \usepackage{xspace}
@@ -58,6 +58,11 @@
 \newcommand{\zj}{\ensuremath{\rm Z + jets}\xspace}
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 \newcommand{\dyll}{\ensuremath{{\text Z/\gamma^{*}} \rightarrow l^{+}l^{-}}\xspace}
+\newcommand{\sTop}{\ensuremath{\tilde{t}}\xspace}
+\newcommand{\chiz}{\ensuremath{\tilde{\chi}^{0}}\xspace}
+\newcommand{\Ttwocc}{\ensuremath{\text{pp}\,\ra\,\sTop\sTop^{*}\,\ra\,\text{c}\chiz\,\bar{\text{c}}\chiz}}
+\newcommand{\Ttwott}{\ensuremath{\text{pp}\,\ra\,\sTop\sTop^{*}\,\ra\,\text{t}\chiz\,\bar{\text{t}}\chiz}}
+
 \addtobeamertemplate{navigation symbols}{}{%
     \usebeamerfont{footline}%
     \usebeamercolor[fg]{footline}%
@@ -322,32 +327,34 @@ orbit 7~m \\apart
 \begin{textblock*}{5cm}(.5cm,2cm) % {block width} (coords)
 \includegraphics[width=.9\paperwidth,]{../figures/CMS_Slice.png}
 \end{textblock*}
+
+\begin{textblock*}{5cm}(.5cm,2cm) % {block width} (coords)
+\visible<2>{\includegraphics[width=.9\paperwidth,]{../figures/CMS_Slice_Neu.png}}\par
+\end{textblock*}
+
 }
+
 
 \frame{
 \frametitle{The Coordinate System}
 \begin{center}
-\includegraphics[width=.48\paperwidth,]{../figures/Figures_T_Coordinate.png}
+\includegraphics[width=.48\paperwidth,]{../figures/detector_coordinates.jpg}
 \includegraphics[width=.28\paperwidth,]{../figures/Pseudorapidity2.png}
 
 \end{center}
 \small{
-Azymuthal angle ($\phi$): angle around beam line\\
-Known and conserved quantities: 
+\begin{itemize}
+\item Azymuthal ($\phi$): $2\pi$ angle around beam line\\
+\item polar ($\theta$): $0 \leq \theta \leq \pi$ from the beam-line\\
+\end{itemize}
+\color{blue!80}{Known and conserved quantities: }
 \begin{itemize}
 \item transverse momentum, $\pt \equiv P \sin\theta$
 \item transverse energy, $E_{T} \equiv E \sin\theta$
-\end{itemize}
-$0 \leq \theta \leq \pi$ where $\theta$ is the polar angle from the beam-line; 
-
-
-\begin{itemize}
 \item pseudo-rapidity:
 \begin{equation*}
         \eta \equiv −\ln\left( \tan\left(\theta/2\right)\right)
-        \label{pseudo}      
 \end{equation*}
-
 \end{itemize}
 }
 
@@ -355,42 +362,42 @@ $0 \leq \theta \leq \pi$ where $\theta$ is the polar angle from the beam-line;
 %%
 \section{Search Strategy}
 \subsection{Models}
-\frame{
-\frametitle{Search Stategy}
-
-\color{black}{Early searches at LHC focused on \\high cross section production \\models $\rightarrow$ $\frac{\sigma\left(\tilde{g}\tilde{g}\right)}{\sigma\left(\tilde{t}\tilde{t}\right)} \sim 100$.}
-~\\
-~\\
-Current situation: \\
-gluino masses $<1.1~TeV$ and $1^{st}$- \\and 
-$2^{nd}$-generation squark masses \\ $<800~GeV$ are excluded 
-\\
-~\\
-~\\
-~\\
-One expects relatively light top, $<1~TeV$, if SUSY 
-is to be the natural solution to the hierarchy problem 
-
-\begin{textblock*}{10cm}(10cm,4.2cm) % {block width} (coords)
-\color{red!80}{$\tilde{g}\tilde{g}$}
-\end{textblock*}
-\begin{textblock*}{10cm}(10cm,3.2cm) % {block width} (coords)
-\color{green!80}{$\tilde{q}\tilde{q}$}
-\end{textblock*}
-\begin{textblock*}{10cm}(10.6cm,5.0cm) % {block width} (coords)
-\color{blue!80}{$\tilde{t}\tilde{t}^*$}
-\end{textblock*}
-
-\begin{textblock*}{6cm}(7.2cm,2cm) % {block width} (coords)
-\includegraphics[width=0.9\textwidth, trim = .6cm .1cm .54cm .1cm, clip=true]{../figures/nlonll_lhc8_tpformat.eps}
-\end{textblock*}
-\begin{textblock*}{10cm}(8.41cm,2.5cm) % {block width} (coords)
-\begin{tikzpicture}
-\draw [->, thick] (0,0) -- (0,-3.7);
-\end{tikzpicture}
-\color{black}{~\\80k gluino pairs,\\2000 stops in 20$fb^{-1}$}
-\end{textblock*}
-}
+%\frame{
+%\frametitle{Search Stategy}
+%
+%\color{black}{Early searches at LHC focused on \\high cross section production \\models $\rightarrow$ $\frac{\sigma\left(\tilde{g}\tilde{g}\right)}{\sigma\left(\tilde{t}\tilde{t}\right)} \sim 100$.}
+%~\\
+%~\\
+%Current situation: \\
+%gluino masses $<1.1~TeV$ and $1^{st}$- \\and 
+%$2^{nd}$-generation squark masses \\ $<800~GeV$ are excluded 
+%\\
+%~\\
+%~\\
+%~\\
+%One expects relatively light top, $<1~TeV$, if SUSY 
+%is to be the natural solution to the hierarchy problem 
+%
+%\begin{textblock*}{10cm}(10cm,4.2cm) % {block width} (coords)
+%\color{red!80}{$\tilde{g}\tilde{g}$}
+%\end{textblock*}
+%\begin{textblock*}{10cm}(10cm,3.2cm) % {block width} (coords)
+%\color{green!80}{$\tilde{q}\tilde{q}$}
+%\end{textblock*}
+%\begin{textblock*}{10cm}(10.6cm,5.0cm) % {block width} (coords)
+%\color{blue!80}{$\tilde{t}\tilde{t}^*$}
+%\end{textblock*}
+%
+%\begin{textblock*}{6cm}(7.2cm,2cm) % {block width} (coords)
+%\includegraphics[width=0.9\textwidth, trim = .6cm .1cm .54cm .1cm, clip=true]{../figures/nlonll_lhc8_tpformat.eps}
+%\end{textblock*}
+%\begin{textblock*}{10cm}(8.41cm,2.5cm) % {block width} (coords)
+%\begin{tikzpicture}
+%\draw [->, thick] (0,0) -- (0,-3.7);
+%\end{tikzpicture}
+%\color{black}{~\\80k gluino pairs,\\2000 stops in 20$fb^{-1}$}
+%\end{textblock*}
+%}
 
 \section{Search Strategy}
 \subsection{Models}
@@ -400,13 +407,13 @@ is to be the natural solution to the hierarchy problem
 Early searches at LHC focused on high cross section production models $\rightarrow$ $\frac{\sigma\left(\tilde{g}\tilde{g}\right)}{\sigma\left(\tilde{t}\tilde{t}\right)} \sim 100$.\\
 
 \begin{textblock*}{10cm}(5cm,5.3cm) % {block width} (coords)
-\color{red!80}{$\tilde{g}\tilde{g}$}
+\Large{\color{red!80}{$\tilde{g}\tilde{g}$}}
 \end{textblock*}
 \begin{textblock*}{10cm}(5cm,4.2cm) % {block width} (coords)
-\color{green!80}{$\tilde{q}\tilde{q}$}
+\Large{\color{green!80}{$\tilde{q}\tilde{q}$}}
 \end{textblock*}
 \begin{textblock*}{10cm}(5.6cm,6.4cm) % {block width} (coords)
-\color{blue!80}{$\tilde{t}\tilde{t}^*$}
+\Large{\color{blue!80}{$\tilde{t}\tilde{t}^*$}}
 \end{textblock*}
 \begin{center}
 \includegraphics[width=0.7\textwidth, trim = .6cm .1cm .54cm .1cm, clip=true]{../figures/nlonll_lhc8_tpformat.eps}
@@ -419,6 +426,23 @@ Early searches at LHC focused on high cross section production models $\rightarr
 \end{textblock*}
 }
 
+\frame{
+\begin{columns}
+  \column{0.5\paperwidth}\centering
+\includegraphics[width=.75\textwidth,]{../figures/T1_ICHEP2014_All.pdf}\\
+\includegraphics[width=.75\textwidth,]{../figures/T2_ICHEP2014.pdf}
+\column{0.5\paperwidth}
+\includegraphics[height=0.40\paperheight,]{../figures/SPS1a_spectrum.jpg}\\
+current exclusions:
+\begin{itemize}
+\item gluinos masses $<1.1~TeV$
+\item $1^{st}$- and $2^{nd}$-gen. squarks masses$ < ~800~\gev$
+\end{itemize}
+One expects relatively light top, $<1~TeV$, if SUSY 
+is to be the natural solution to the hierarchy problem 
+
+\end{columns}
+}
 \frame{
 \frametitle{Search Strategy}
 \color{black}
@@ -473,6 +497,14 @@ final state: ``Jets'' + undetected energy
 }
 
 \frame{
+\frametitle{An Event Display}
+\begin{center}
+\includegraphics[width=.87\paperwidth]{../figures/supersymmetry-event-720.jpg}
+%Jets balanced by undetected energy
+\end{center}
+
+}
+\frame{
 \frametitle{Calorimeter Jets}
 %\begin{columns}[c c]
 %\column{0.5\paperwidth}
@@ -525,17 +557,12 @@ Particle Flow (PF) reconstructs all stable particle in the event: $h^\pm$, $\gam
 
 \frame{
 \frametitle{Jet Resolution}
-\begin{figure}[h!]
-  \begin{center}
-  \subfigure[]{
-      \includegraphics[width=0.45\textwidth,]{../figures/ak5calo_relRes}}
-      \subfigure[]{
-      \includegraphics[width=0.45\textwidth,]{../figures/ak5pf_relRes}}
-      \caption{\label{fig:jetRes} The relative $\pt$ resolution as a function of jet $\pt$
-              for calo jets (a) and PF jets (b) in the center of the barrel using the dijet
-              $\pt$-asymmetry method.}
-  \end{center}
-\end{figure}
+\begin{columns}
+\column{0.5\paperwidth}\centering
+      \includegraphics[width=\columnwidth,]{../figures/ak5calo_relRes}
+\column{0.5\paperwidth}\centering
+      \includegraphics[width=\columnwidth,]{../figures/ak5pf_relRes}
+\end{columns}
 }
 
 
@@ -547,20 +574,41 @@ Particle Flow (PF) reconstructs all stable particle in the event: $h^\pm$, $\gam
 
 \color{black}
 \begin{itemize}
-\setlength{\itemsep}{20pt}
+\setlength{\itemsep}{12pt}
 \item Signficant hadronic content:
+~\\
 \begin{center}
 $\scalht = \sum\limits_{j} \Et^j$
 \end{center}
 \item missing transverse energy: 
 \begin{center}
-$\mht$ =$\sum\limits_{j} \vec{\Et}^j$ , $\met = \sum\limits_{\texttt{all objects}} \Et^j$ 
+~\\
+$\mht$ =$\sum\limits_{j} - \vec{\Et}^j$ ,~~~~ $\met = \sum\limits_{\texttt{all objects}} - \vec{\Et}^j$ 
 \end{center}
 \item no leptons
-\item T2tt $\rightarrow$ b-quarks
+%\item binning
+%\begin{itemize}
+%  \setlength{\itemsep}{5pt}
+%\item $\scalht>375\gev$, binned in 100~\GeV bins
+%\item Two jet multiplicity bins : $\njetlow$, $\njethigh$, 
+%\item b-tag muliplicty bins: (0,1,2)
 \end{itemize}
+%\begin{itemize}
+%\begin{center}
+%\scriptsize
+%  \begin{tabular}{ llcc }
+%    \hline
+%    \hline
+%    Model             & Production/decay mode & (\njet,\nb) event categories considered        \\ 
+%    \hline
+%    \texttt{T2cc}     & \Ttwocc               & (2--3,0), ($\geq 4$,0), ($\geq 4$,1) \\ % (2--3,1), 
+%    \texttt{T2tt}     & \Ttwott               & ($\geq 4$,1), ($\geq 4$,2) \\
+%    \hline
+%    \hline
+%  \end{tabular}
+%\end{center}
+%\end{itemize}
 }
-
 
 }
 
@@ -588,8 +636,7 @@ $\mht$ =$\sum\limits_{j} \vec{\Et}^j$ , $\met = \sum\limits_{\texttt{all objects
 \item \wj 
 \item \ttj 
 \item \znunu
-\item \dyll, $t$, Vector Boson
-%\item irreducible background: \znunu
+\item \dyll, Single Top, WW, ZZ, WZ
 \end{itemize}
 \end{itemize}
 ~\\
@@ -609,7 +656,14 @@ $\mht$ =$\sum\limits_{j} \vec{\Et}^j$ , $\met = \sum\limits_{\texttt{all objects
 \item Produce data-driven estimates of remaining SM rates from 
 $Z \rightarrow \nu\bar{\nu}$ or ($t\rightarrow$)$W\rightarrow l \nu$ using
 control stamples with jet systems, containing also isoalted $\mu$ or $\gamma$.
-\item Look simultaneously over broadest possible range of \scalht (8 bins from 375--1075 GeV), jet multiplicity (\njetlow, \njethigh), b-tag (0, 1, 2).
+\item Two search channels (optimized on expected sensitivity)
+\begin{itemize}
+  \item T2cc: 2--3 jets, 0 b-tags, and $\geq 4$ jets, 0, 1 b-tag.
+  \item T2tt: $\geq 4$ jets, 1, 2 b-tag.
+  \item Look simultaneously in 8 \scalht bins from 375--1075 GeV.
+\end{itemize}
+
+
 \end{itemize}
 }
 
@@ -625,15 +679,14 @@ control stamples with jet systems, containing also isoalted $\mu$ or $\gamma$.
 \begin{equation*}
   \label{eq:alphat2}
   \alphat\, =\, \frac{\Et^{{\rm j}_2}}{M_\text{T}} \,= \,\frac{1}{2} \times 
-  \frac{1 - (\Delta \scalht/\scalht)}{\sqrt{1 - (\mht/\scalht)^2}} \, . 
+  \frac{1 - (\Delta \scalht/\scalht)}{\sqrt{1 - (\mht/\scalht)^2}} \, 
 \end{equation*}
-
 %\begin{equation*}
-%  \label{eq:mt}
 %  M_\text{T}\, = \,\sqrt{ \left( \sum_{i=1}^2 \Et^{{\rm j}_i}
 %    \right)^2 - \left( \sum_{i=1}^2 p_x^{{\rm j}_i} \right)^2 - \left(
 %      \sum_{i=1}^2 p_y^{{\rm j}_i} \right)^2}
 %\end{equation*}
+%
 %
 ~\\
 ~\\
@@ -667,76 +720,12 @@ $\alphat = \frac{1}{2}$ & $\alphat < \frac{1}{2}$ & $\alphat > \frac{1}{2}$
 ~\\
 }
 \frame{
-\begin{figure}[h!t]
-  \begin{center}
-    \subfigure[\label{fig:alphat_le3j}$\njetlow$]{
-      \includegraphics[width=0.60\textwidth,]{../figures/data-mc/AlphaT_le3j.png}
-    } 
-      \caption{\label{fig:alphat-2011} The $\alphat$ distribution for 11.7~fb$^{-1}$ 
-            of data collected at {8}~\tev as well as for all SM
-            backgrounds and one example SUSY signal sample, from Ref.~\cite{RA1Paper2012}.
-            This figure is for illustrative purposes only, as this analysis relies
-            on data control samples to estimate contribution from SM process 
-            with genuine \met.}
-    \label{fig:alphat_dist}
-  \end{center}
-\end{figure}
-
-}
-
-\frame{
-\frametitle{HT $\times$ $\alphat$ Trigger}
-
-innefficiency in trigger:
-\begin{itemize}
-\item Online: calo jets $\rightarrow$ Offline: PF jets
-\end{itemize}
-
+  
 \begin{center}
-\begin{table}[!h]
-  \centering
-  \scriptsize
-  %\footnotesize
-  \begin{tabular}{ ccccc }
-    \hline
-    \hline
-    Offline \scalht       & Offline \alphat &  Trigger (HLT)  & \multicolumn{2}{c}{Efficiency (\%)}          \\ [0.5ex]
-    bin (\gev)         & threshold       &                         & $2 \leq \njet \leq 3$ & $\njet \geq 4$       \\ [0.5ex]
-    \hline
-    $375 < \scalht < 475$ & 0.55          & HT300\_AlphaT0p53 & $94.2^{+0.5}_{-0.6}$  & $90.5^{+1.2}_{-1.3}$ \\
-    $475 < \scalht < 575$ & 0.55          & HT350\_AlphaT0p52 & $96.2^{+0.8}_{-0.9}$  & $94.6^{+1.2}_{-1.4}$ \\
-    $575 < \scalht < 675$ & 0.55          & HT400\_AlphaT0p51 & $95.4^{+1.4}_{-1.8}$  & $98.7^{+0.7}_{-1.12}$ \\
-    $\scalht > 675$       & 0.55          & HT400\_AlphaT0p51 & $100^{+0.0}_{-2.0}$  & $100^{+0.0}_{-2.0}$ \\
-    \hline
-    \hline
-  \end{tabular}
-\end{table}
-
+  $\njetlow$\\
+  \includegraphics[width=0.80\textwidth,]{../figures/data-mc/AlphaT_le3j.png}
 \end{center}
 
-Muon control samples: IsoMu24\_eta2p1 88\%\\
-
-Photon control sample: Photon150 100\% for $p_{T} > 165~\gev$
-
-}
-
-\frame{
-\frametitle{HT $\times$ $\alphat$ Trigger}
-\begin{figure}[!h]
-  \footnotesize
-  \begin{center}
-    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j_RunAtFNAL.pdf}~~~~~~
-    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j_RunAtFNAL.pdf}\\
-    \njetlow, $375 < \scalht < 475 \gev$~~~~
-    \njethigh, $375 < \scalht < 475 \gev$\\
-~\\
-    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}~~~~~~
-    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}\\
-    \njetlow, $475 < \scalht < 525 \gev$~~~~
-    \njethigh, $475 < \scalht < 525 \gev$\\
-
-  \end{center}
-\end{figure}
 
 }
 
@@ -745,10 +734,15 @@ Photon control sample: Photon150 100\% for $p_{T} > 165~\gev$
 
 Hadronic:
 \begin{itemize}
-\item $\scalht > 375~\gev$; jet 2 $p_{T} > 100~\gev$
+\item $\scalht > 375~\gev$
+  \begin{itemize}
+    \item all jets: $p_{T} > 50~\gev$
+    \item $\geq 2$ jets with $p_{T} > 100~\gev$
+  \end{itemize}
 \item No isolated $\mu$ or $e$ with $\pt > 10 \gev$
+\item $\alphat > 0.55$
 \item $\mht/\met < 1.25$
-\item $\Delta$R(jet, dead ECAL region) $>$ 0.3 when $\Delta \phi^{*}$
+%\item $\Delta$R(jet, dead ECAL region) $>$ 0.3 when $\Delta \phi^{*}$
 \item HBHE Noise and $\met$ filters
 \end{itemize}
 ~\\
@@ -756,54 +750,95 @@ Control: req's above +
 \begin{itemize}
 \item photon $\pt > 165~\gev, |\eta| < 1.4442$
 \item one isolated muon $\pt > 25~\gev$
+\begin{itemize}
 \item no $\alphat$ cut for muon samples\\
 ~~~$\Longrightarrow$ higher statistics\\
 ~~~$\Longrightarrow$ reduced S/B from signal contamination
 \end{itemize}
+\end{itemize}
 }
-
 
 \frame{
 \frametitle{Example data-MC comparison plots 1}
+\begin{center}
+Hadronic
+\end{center}
 \begin{figure}[h!]
   \centering
-  \subfigure[\njet distribution ($\njet \geq 2$, $\nb \geq 0$).]{
-    \label{fig:figures_JetMulti_all}
+  \subfigure[$\njet \geq 2$, $\nb \geq 0$]{
+    \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_jet1pt.pdf}
+  } 
+  \subfigure[$\njet \geq 2$, $\nb \geq 0$]{
+    \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_jet2pt.pdf}
+  } \\
+\end{figure}
+}
+
+
+
+\frame{
+\frametitle{Example data-MC comparison plots 2}
+\begin{center}
+Hadronic
+\end{center}
+\begin{figure}[h!]
+  \centering
+  \subfigure[$\njet \geq 2$, $\nb \geq 0$]{
     \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFIndicesPat.pdf}
   } 
-  \subfigure[\nb distribution ($\njet \geq 2$, $\nb \geq 0$)]{
-    \label{fig:figures_Bjet_all}
+  \subfigure[$\njet \geq 2$, $\nb \geq 0$]{
     \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFIndicesBtagged2Pat.pdf}
   } \\
 \end{figure}
 }
 
 \frame{
-\frametitle{Example data-MC comparison plots 2}
+\frametitle{Example data-MC comparison plots 3}
+\begin{center}
+Hadronic
+\end{center}
 \begin{figure}[h!]
   \centering
-  \subfigure[\mht distribution ($\njet \geq 2$, $\nb \geq 0$)]{
-    \label{fig:figures_MHT_0}
+  \subfigure[$\njet \geq 2$, $\nb \geq 0$]{
     \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFMhtPat.pdf}
   } 
-  \subfigure[\met distribution ($\njet \geq 2$, $\nb \geq 0$)]{
-    \label{fig:figures_MET_1}
+  \subfigure[$\njet \geq 2$, $\nb \geq 0$]{
     \includegraphics[width=0.4\paperwidth,]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_metP4TypeIPF.pdf}
   } \\
 \end{figure}
 }
 \frame{
-\frametitle{Example data-MC comparison plots 3}
+\frametitle{Example data-MC comparison plots 4}
+\begin{center}
+Hadronic
+\end{center}
 \begin{figure}
   \centering
-  \subfigure[\scalht distribution (\njetlow, $\nb = 0$)]{
-    \label{fig:figures_HT_0}
+  \subfigure[\njetlow, $\nb = 0$]{
     \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFSumEtPat_le3j_eq0b.pdf}
   } 
-  \subfigure[\scalht distribution (\njethigh, $\nb = 1$)]{
-    \label{fig:figures_HT_1}
+  \subfigure[\njethigh, $\nb = 1$]{
     \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFSumEtPat_ge4j_eq1b.pdf}
   } \\
+\end{figure}
+}
+
+\frame{
+\frametitle{Example data-MC comparison plots 5}
+\begin{center}
+Hadronic
+\end{center}
+\begin{figure}
+  \centering
+  \subfigure[$\njet \geq 2$, $\nb \geq 0$]{
+    \includegraphics[width=0.4\paperwidth]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_dhtOverht.pdf}
+  } 
+  \subfigure[$\njet \geq 2$, $\nb \geq 0$]{
+    \includegraphics[width=0.4\paperwidth,]{../figures/data-mc/v22/had/hadronicLook_375_pfJet_ge2j_xcak5JetPFAlphaTRoughPat.pdf}
+  } \\
+\end{figure}
+}
+
 %\begin{figure}[h!]
 %  \centering
 %  \subfigure[\njet distribution ($\njet \geq 2$, $\nb \geq 0$).]{
@@ -837,8 +872,6 @@ Control: req's above +
 %    (b) \nb, (c) \mht, and (d) \met distributions for an inclusive 
 %    selection on \njet and \nb, and (e,f) \scalht  for the two 
 %    event categories (\njetlow, $\nb = 0$) and (\njethigh, $\nb = 1$). }
-\end{figure}
-}
 
 \frame{
 \frametitle{Translation Factors}
@@ -861,19 +894,26 @@ Benefits:
   \item kinematically similar, 
   \item similar admixtures of SM bkgds
   \end{itemize}
-\item $N_{MC}^{had}$ and $N_{MC}^{control}$ are strongly correlated, biases largely cancel
+%\item Use ratio of $N_{MC}^{had}$ and $N_{MC}^{control}$: systematics largely cancel
 
-\color{red!80}Checks for biases provided by, and systematics derived from, closure testsa
+\color{red!80}Checks for biases provided by, and systematics derived from, closure tests
 \end{itemize}
 }
 
 \frame{
-\frametitle{Translation Factors}
-
+\frametitle{Closure Tests}
+\small
+\begin{equation*}
+ \npre = \frac{N_{\rm MC}^{\rm \mj}(\scalht,\njethigh, \nb=1)}{N_{\rm MC}^{\rm \mj}(\scalht,\njethigh,\nb=0)} \times N_{\rm Data}^{\rm \mj}(\scalht,\njethigh,\nb=0)
+\end{equation*}
+\normalsize
+\begin{center}
+Compare $\npre$ with $\nobs$ (i.e. $N_{\rm Data}^{\rm \mj}(\scalht,\njethigh,\nb=1)$)
+\end{center}
 \begin{itemize}
 \item statistically independent
 \item uncover biases
-\item determine background 
+\item determine background systematics
 \end{itemize}
 
 Tests:
@@ -883,12 +923,7 @@ Tests:
 \item between \njet multiplicities: check jes, kinetmatics 
 \end{itemize}
 ~\\
-\begin{equation*}
-  \label{equ:tf-ratio-closure}
-  \frac{N_{\rm MC}^{\rm \mj}(\scalht,\njethigh, \nb=1)}{N_{\rm MC}^{\rm \mj}(\scalht,\njetlow,\nb=1)} 
-\end{equation*}
 }
-
 \frame{ 
 \frametitle{Closure Tests}
 
@@ -993,6 +1028,8 @@ and Z
 \setlength{\belowdisplayskip}{0pt} \setlength{\belowdisplayshortskip}{1pt}
 \setlength{\abovedisplayskip}{0pt} \setlength{\abovedisplayshortskip}{1pt}
 \frametitle{The Likelihood}
+\begin{columns}[lc]
+\column{0.8\textwidth}
 \begin{equation*}
 L^k = L_{hadronic}^k \times L_{\mu}^k \times L_{\gamma}^k \times
 L_{\rm EWK\, syst.}^k \quad
@@ -1020,6 +1057,11 @@ r_{\mu}^{i} \cdot ttW^{i})\quad
 r_{\gamma}^i = \frac{MC_{\gamma}^i}{MC_{\zInv{}}^i};\, r_{\mu}^i =
 \frac{MC_{\mu}^i}{MC_{t\bar{t}+W}^i}\quad
 \end{equation*}}
+\column{0.2\textwidth}\centering
+\includegraphics[width=\textwidth]{../figures/statBin.jpg}\\
+\scalht
+\end{columns}
+
 }
 
 %\visible<3,4>{\begin{equation*}
@@ -1535,6 +1577,63 @@ Backup
     \hline
   \end{tabular}
 \end{table}
+
+}
+
+
+\frame{
+\frametitle{HT $\times$ $\alphat$ Trigger}
+
+innefficiency in trigger:
+\begin{itemize}
+\item Online: calo jets $\rightarrow$ Offline: PF jets
+\end{itemize}
+
+\begin{center}
+\begin{table}[!h]
+  \centering
+  \scriptsize
+  %\footnotesize
+  \begin{tabular}{ ccccc }
+    \hline
+    \hline
+    Offline \scalht       & Offline \alphat &  Trigger (HLT)  & \multicolumn{2}{c}{Efficiency (\%)}          \\ [0.5ex]
+    bin (\gev)         & threshold       &                         & $2 \leq \njet \leq 3$ & $\njet \geq 4$       \\ [0.5ex]
+    \hline
+    $375 < \scalht < 475$ & 0.55          & HT300\_AlphaT0p53 & $94.2^{+0.5}_{-0.6}$  & $90.5^{+1.2}_{-1.3}$ \\
+    $475 < \scalht < 575$ & 0.55          & HT350\_AlphaT0p52 & $96.2^{+0.8}_{-0.9}$  & $94.6^{+1.2}_{-1.4}$ \\
+    $575 < \scalht < 675$ & 0.55          & HT400\_AlphaT0p51 & $95.4^{+1.4}_{-1.8}$  & $98.7^{+0.7}_{-1.12}$ \\
+    $\scalht > 675$       & 0.55          & HT400\_AlphaT0p51 & $100^{+0.0}_{-2.0}$  & $100^{+0.0}_{-2.0}$ \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+\end{center}
+
+Muon control samples: IsoMu24\_eta2p1 88\%\\
+
+Photon control sample: Photon150 100\% for $p_{T} > 165~\gev$
+
+}
+
+\frame{
+\frametitle{HT $\times$ $\alphat$ Trigger}
+\begin{figure}[!h]
+  \footnotesize
+  \begin{center}
+    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_le3j_RunAtFNAL.pdf}~~~~~~
+    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT375_475_100_100_50_AlphaT_HT300xaT0p53_PF_ge4j_RunAtFNAL.pdf}\\
+    \njetlow, $375 < \scalht < 475 \gev$~~~~
+    \njethigh, $375 < \scalht < 475 \gev$\\
+~\\
+    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_le3j_RunAtFNAL.pdf}~~~~~~
+    \includegraphics[width=0.4\textwidth,page=30]{../figures/trigger/plotDump/v29/HT475_575_100_100_50_AlphaT_HT350xaT0p52_PF_ge4j_RunAtFNAL.pdf}\\
+    \njetlow, $475 < \scalht < 525 \gev$~~~~
+    \njethigh, $475 < \scalht < 525 \gev$\\
+
+  \end{center}
+\end{figure}
 
 }
 
