@@ -37,6 +37,11 @@
 \input{mydefs}
 \usepackage{natbib}
 \usepackage[hidelinks,bookmarksnumbered,bookmarksopen,bookmarksopenlevel=1,colorlinks=false,pdfborder=0,plainpages=False,pdfpagelabels]{hyperref}
+%z\usepackage[titletoc]{appendix}
+\usepackage[titletoc,title]{appendix}
+
+%\renewcommand*{\appendixname}{ANNEX}% Change ``chapter name'' for Appendix chapters
+%\renewcommand*{\cftappendixname}{ANNEX~}% Addition to chapter numberf
 %\usepackage[T1]{fontenc}
 
 %\unitlength=1mm
@@ -64,7 +69,7 @@
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagenumbering{roman}
+
 \thispagestyle{plain}
 \begin{titlepage}
 
@@ -83,15 +88,17 @@
     School of Arts and Sciences\\[0.8cm]
     University of Rochester\\[0.3cm]
     Rochester, New York\\[0.3cm]
-    2014
+    2015
   }
 \date{}
 
 \maketitle
 \thispagestyle{empty}
-\end{titlepage}
 
-\clearemptydoublepage
+\end{titlepage}
+%\clearemptydoublepage
+
+
 
 \pagestyle{fancyplain}
 \renewcommand\headrule{}
@@ -107,42 +114,31 @@
 
 %%%% ACKNOWLEDGEMENTS -----------------------------------------------------------
 %\addcontentsline{toc}{section}{Biographical Sketch}
+\pagenumbering{roman}
+\setcounter{page}{2}
+
 \input{bio}
+\pagestyle{fancyplain}
 
-\clearemptydoublepage
+\input{empty}
 
-
-%\addcontentsline{toc}{section}{Acknowledgments}
-\include{acknowledgements}
-
-\clearemptydoublepage
-%\addcontentsline{toc}{section}{Contents}
-%\addcontentsline{toc}{section}{Abstract} 
-%\pagenumbering{roman}
-\begin{abstract}
-%\thispagestyle{plain}
-
-
-An inclusive search for supersymmetric processes that
-produce final states with jets and missing transverse energy is
-performed in pp collisions at a center-of-mass energy of $\sqrt{s} =
-8\TeV$. The data sample corresponds to an integrated luminosity of
-19.5\fbinv collected by the CMS experiment at the LHC. In this search,
-a dimensionless kinematic variable, \alphat, is used to discriminate
-between events with genuine and misreconstructed missing transverse
-energy. The search is based on an examination of the number of
-reconstructed jets per event, the scalar sum of transverse energies of
-these jets, and the number of these jets identified as originating
-from bottom quarks. The results are interpreted in two
-simplified models with direct stop production.
 %\clearemptydoublepage
-\end{abstract}
-\clearemptydoublepage
+%\clearemptydoublepage
 
-%\addcontentsline{toc}{section}{Contributors and Funding Sources}
+
+\input{acknowledgements}
+
+%\clearemptydoublepage
+\clearpage
+\input{abstract}
+\input{empty}
+%\clearemptydoublepage
+
 \input{contribution}
-\clearemptydoublepage
+\input{empty}
+%\clearemptydoublepage
 % CONTENTS--------------------------------------------------------------
+\renewcommand*\contentsname{Table of Contents}
 
 \tableofcontents
 %
@@ -178,14 +174,17 @@ simplified models with direct stop production.
 \bibliography{alphaT}
 \bibliographystyle{unsrt}
 
-
 \clearpage
-\appendix
+%\appendix
+\begin{appendices}
+%\chapter{An appendix} \chapter{An appendix}
+
 \input{app_example}
 \input{app_background}
 \input{results_parameters}
 \input{results_tables}
 \input{app_signal}
+\end{appendices}
 %\input{figures/tables/v22/cutflow}
 
 
