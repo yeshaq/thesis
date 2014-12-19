@@ -341,9 +341,12 @@ q_{\mu} =
 
 To test a specific signal model, one approach would be to perform many 
 pseudo-experiments under the two separate hypotheses: background-only 
-(i.e. $\mu=0$) and background with signal (i.e. $\mu=1$). $CL_{b}$ and 
-$CL_{s+b}$~\cite{read,Junk} are defined as 1 - the quantile of $q_{\mu(obs)}$ in each of 
-these distributions, where $q_{\mu(obs)}$ is the test statistic evaluated 
+(i.e. $\mu=0$) and background with signal (i.e. $\mu=1$). 
+$CL_{b} = \rm{Prob}\left(q_{\mu} \geq q_{\mu(obs)}| \mu=0 \right)$ 
+gives the probability to get a result less compatible with the 
+bakground-only hypothesis than the observed, and $CL_{s+b} = \rm{Prob}\left(q_{\mu} \leq q_{\mu(obs)}| \mu=1 \right)$ 
+gives the probability to get a result which is less compatible with a signal when the 
+signal hypothesis is true~\cite{read,Junk}. In each case $q_{\mu(obs)}$ is the test statistic evaluated 
 with the observed data. Figure~\ref{fig:hybrid_plot} illustrates two example distributions of
 the test statistic under each hypothesis.  $CL_{s}$ is then defined as $CL_{s} \equiv CL_{s+b}/CL_{b}$, 
 and a value $CL_{s} < 0.05$ excludes the signal hypothesis at 95\% confidence level. 
